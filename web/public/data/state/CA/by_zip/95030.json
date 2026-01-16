@@ -1,0 +1,26 @@
+[
+  {
+    "id": "070001295",
+    "name": "SACRED HEART JESUIT CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "OTHER",
+    "categoryCode": "UNLICEN",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "300 COLLEGE AVE",
+    "city": "LOS GATOS",
+    "zip": "95030",
+    "county": "SANTA CLARA",
+    "phone": "(408) 354-9240",
+    "lat": 37.214307,
+    "lng": -121.9830435
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "040001021",
+    "name": "CASTLE FAMILY HEALTH CENTER AT WINTON",
+    "npi": "1447281746",
+    "hcaiId": "306240492",
+    "businessName": "CASTLE FAMILY HEALTH CENTERS, INC.",
+    "contactEmail": "MOJARRASP@CFHCINC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "FQHC/COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550001158",
+    "licenseEffectiveDate": "11/02/2025",
+    "licenseExpirationDate": "11/01/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6029 N WINTON WAY",
+    "city": "WINTON",
+    "zip": "95388",
+    "county": "MERCED",
+    "phone": "(209) 357-7755",
+    "lat": 37.375164,
+    "lng": -120.614265
+  }
+]

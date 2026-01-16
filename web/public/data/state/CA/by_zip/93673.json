@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016452",
+    "name": "FAMILY HEALTHCARE NETWORK",
+    "npi": "1790154862",
+    "hcaiId": "306544102",
+    "businessName": "FAMILY HEALTHCARE NETWORK",
+    "contactEmail": "RISKMANAGEMENT@FHCN.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003369",
+    "licenseEffectiveDate": "01/22/2025",
+    "licenseExpirationDate": "01/21/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "4177 AVENUE 368",
+    "city": "TRAVER",
+    "zip": "93673",
+    "county": "TULARE",
+    "phone": "(559) 737-4700",
+    "lat": 36.45897591,
+    "lng": -119.4803174
+  }
+]

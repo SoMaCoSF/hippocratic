@@ -1,0 +1,26 @@
+[
+  {
+    "id": "960000203",
+    "name": "PLANNED PARENTHOOD LOS ANGELES - LAKEWOOD CENTER",
+    "npi": null,
+    "hcaiId": "306191065",
+    "businessName": "PLANNED PARENTHOOD LOS ANGELES",
+    "contactEmail": "BRENDA.GUERRERO@PP-LA.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "960000212",
+    "licenseEffectiveDate": "04/13/2025",
+    "licenseExpirationDate": "04/12/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "5525 DEL AMO BLVD",
+    "city": "LAKEWOOD",
+    "zip": "90713",
+    "county": "LOS ANGELES",
+    "phone": "(213) 284-3200",
+    "lat": 33.847452,
+    "lng": -118.124136
+  }
+]

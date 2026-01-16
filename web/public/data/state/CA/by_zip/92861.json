@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630012756",
+    "name": "ROBIN HOOD HOME",
+    "npi": "1285722876",
+    "hcaiId": null,
+    "businessName": "HARRIS CARE CENTERS, INC.",
+    "contactEmail": "ROSE.MARIEGARCIA@YAHOO.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550001780",
+    "licenseEffectiveDate": "11/14/2025",
+    "licenseExpirationDate": "11/13/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "10271 ROBIN HOOD CIR",
+    "city": "VILLA PARK",
+    "zip": "92861",
+    "county": "ORANGE",
+    "phone": "(714) 948-3352",
+    "lat": 33.812964,
+    "lng": -117.82161
+  }
+]

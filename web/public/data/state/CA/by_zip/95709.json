@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630005062",
+    "name": "WESTERN SIERRA MEDICAL CENTER",
+    "npi": "1457557126",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/MD",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "3070 CAMINO HEIGHTS DRIVE, SUITE B",
+    "city": "CAMINO",
+    "zip": "95709",
+    "county": "EL DORADO",
+    "phone": "(530) 647-9762",
+    "lat": 38.735973,
+    "lng": -120.711312
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "090001087",
+    "name": "INNERCARE - NILAND",
+    "npi": "1679654750",
+    "hcaiId": "306134005",
+    "businessName": "CLINICAS DE SALUD DEL PUEBLO, INC.",
+    "contactEmail": "YVONNEB@INNERCARE.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "090000456",
+    "licenseEffectiveDate": "11/07/2025",
+    "licenseExpirationDate": "11/06/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "8027 HIGHWAY 111",
+    "city": "NILAND",
+    "zip": "92257",
+    "county": "IMPERIAL",
+    "phone": "(760) 359-0110",
+    "lat": 33.235524,
+    "lng": -115.52085
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "110000870",
+    "name": "RIVER COUNSELING",
+    "npi": null,
+    "hcaiId": "306494069",
+    "businessName": "REDWOOD PSYCHOLOGY CENTER, INC.",
+    "contactEmail": "DENISE_HORNER@COMCAST.NET",
+    "categoryName": "PSYCHOLOGY CLINIC",
+    "categoryCode": "PSYCHC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "110000330",
+    "licenseEffectiveDate": "11/17/2024",
+    "licenseExpirationDate": "11/16/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "19375 HIGHWAY 116",
+    "city": "MONTE RIO",
+    "zip": "95462",
+    "county": "SONOMA",
+    "phone": "(707) 865-1200",
+    "lat": 38.47800933,
+    "lng": -122.997751
+  }
+]

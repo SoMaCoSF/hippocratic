@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016871",
+    "name": "ARIA COMMUNITY HEALTH CENTER STRATFORD",
+    "npi": "1992176267",
+    "hcaiId": "306164041",
+    "businessName": "AVENAL COMMUNITY HEALTH CENTER",
+    "contactEmail": "MPADILLA3@ARIACHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003670",
+    "licenseEffectiveDate": "09/18/2025",
+    "licenseExpirationDate": "09/17/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "20326 MAIN STREET",
+    "city": "STRATFORD",
+    "zip": "93266",
+    "county": "KINGS",
+    "phone": "(559) 386-4500",
+    "lat": 36.189882,
+    "lng": -119.8229805
+  }
+]

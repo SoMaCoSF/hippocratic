@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017174",
+    "name": "GOLDEN VALLEY HEALTH CENTER",
+    "npi": null,
+    "hcaiId": "306504093",
+    "businessName": "GOLDEN VALLEY HEALTH CENTERS",
+    "contactEmail": "EVILLARAMA@GVHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003841",
+    "licenseEffectiveDate": "04/07/2025",
+    "licenseExpirationDate": "04/06/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "198 N. G ST.",
+    "city": "EMPIRE",
+    "zip": "95319",
+    "county": "STANISLAUS",
+    "phone": "(209) 385-5554",
+    "lat": 37.6408414,
+    "lng": -120.9011313
+  }
+]

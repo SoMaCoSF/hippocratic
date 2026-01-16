@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016490",
+    "name": "STANTON HEALTHCARE MOBILE CLINIC",
+    "npi": null,
+    "hcaiId": "306364591",
+    "businessName": "LOVE MERCY",
+    "contactEmail": "INFO@STANTONSOCAL.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003537",
+    "licenseEffectiveDate": "06/03/2025",
+    "licenseExpirationDate": "06/02/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1003 SNOWBIRD ROAD",
+    "city": "WRIGHTWOOD",
+    "zip": "92397",
+    "county": "SAN BERNARDINO",
+    "phone": "(760) 684-8860",
+    "lat": 34.36318462,
+    "lng": -117.6400568
+  }
+]

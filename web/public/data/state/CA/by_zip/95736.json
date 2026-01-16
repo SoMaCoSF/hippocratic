@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015503",
+    "name": "BLUE STONE HEALTH & WELLNESS",
+    "npi": "1588072698",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": "DAVIDYOO@BLUESTONEHW.COM",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/MD",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "20601 WEST PAOLI LANE",
+    "city": "WEIMAR",
+    "zip": "95736",
+    "county": "PLACER",
+    "phone": "(805) 630-3667",
+    "lat": 39.035187,
+    "lng": -120.9760965
+  }
+]

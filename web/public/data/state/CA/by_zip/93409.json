@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630014428",
+    "name": "CA MENS COLONY-CORRECTIONAL TREATMENT CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "CA DEPARTMENT OF CORRECTIONS AND REHABILITATION",
+    "contactEmail": "LIBBY.WILSON@CDCR.CA.GOV",
+    "categoryName": "CORRECTIONAL TREATMENT CENTER",
+    "categoryCode": "CTC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002339",
+    "licenseEffectiveDate": "08/23/2025",
+    "licenseExpirationDate": "08/22/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 87,
+    "address": "N HWY 1",
+    "city": "SAN LUIS OBISPO",
+    "zip": "93409",
+    "county": "SAN LUIS OBISPO",
+    "phone": "(805) 547-7900",
+    "lat": 35.2486577,
+    "lng": -120.6799279
+  }
+]

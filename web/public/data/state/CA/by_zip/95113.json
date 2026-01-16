@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630027759",
+    "name": "EVERGREEN VALLEY HOME HEALTH LLC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "EVERGREEN VALLEY HOME HEALTH LLC",
+    "contactEmail": "EVERGREENVALLEYHH@GMAIL.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550009878",
+    "licenseEffectiveDate": "07/10/2025",
+    "licenseExpirationDate": "01/09/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "325 S 1ST ST, #207",
+    "city": "SAN JOSE",
+    "zip": "95113",
+    "county": "SANTA CLARA",
+    "phone": "(408) 416-3030",
+    "lat": 37.33090102,
+    "lng": -121.887113
+  }
+]

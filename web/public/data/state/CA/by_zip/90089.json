@@ -1,0 +1,26 @@
+[
+  {
+    "id": "930000163",
+    "name": "USC KENNETH NORRIS JR. CANCER HOSPITAL",
+    "npi": "1417554528",
+    "hcaiId": "106191216",
+    "businessName": "KECK MEDICAL CENTER OF USC",
+    "contactEmail": "SLHALL@MED.USC.EDU",
+    "categoryName": "GENERAL ACUTE CARE HOSPITAL",
+    "categoryCode": "GACH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "930000267",
+    "licenseEffectiveDate": "10/09/2025",
+    "licenseExpirationDate": "03/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 60,
+    "address": "1441 EASTLAKE AVE",
+    "city": "LOS ANGELES",
+    "zip": "90089",
+    "county": "LOS ANGELES",
+    "phone": "(323) 442-9939",
+    "lat": 34.06196373,
+    "lng": -118.2047311
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000447",
+    "name": "AMPLA HEALTH HAMILTON CITY MEDICAL",
+    "npi": "1689699415",
+    "hcaiId": "306114005",
+    "businessName": "AMPLA HEALTH",
+    "contactEmail": "AMARTINEZ@AMPLAHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000196",
+    "licenseEffectiveDate": "04/28/2025",
+    "licenseExpirationDate": "04/27/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "278 MAIN STREET",
+    "city": "HAMILTON CITY",
+    "zip": "95951",
+    "county": "GLENN",
+    "phone": "(530) 826-3694",
+    "lat": 39.741462,
+    "lng": -122.0113305
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "040000209",
+    "name": "GOLDEN VALLEY HEALTH CENTER - PLANADA",
+    "npi": "1235114745",
+    "hcaiId": "306242217",
+    "businessName": "GOLDEN VALLEY HEALTH CENTERS",
+    "contactEmail": "EVILLARAMA@GVHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "040000214",
+    "licenseEffectiveDate": "11/21/2024",
+    "licenseExpirationDate": "11/20/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "9235 E BROADWAY ST",
+    "city": "PLANADA",
+    "zip": "95365",
+    "county": "MERCED",
+    "phone": "(209) 385-5554",
+    "lat": 37.290339,
+    "lng": -120.3206895
+  }
+]

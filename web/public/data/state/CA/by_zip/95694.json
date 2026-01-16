@@ -1,0 +1,26 @@
+[
+  {
+    "id": "030001805",
+    "name": "WINTERS HEALTHCARE CLINIC",
+    "npi": "1992736086",
+    "hcaiId": "306570561",
+    "businessName": "WINTERS HEALTHCARE FOUNDATION, INC.",
+    "contactEmail": "VBARAJAS@WINTERSHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "030000787",
+    "licenseEffectiveDate": "11/28/2024",
+    "licenseExpirationDate": "11/27/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "172 E GRANT AVE",
+    "city": "WINTERS",
+    "zip": "95694",
+    "county": "YOLO",
+    "phone": "(530) 212-1025",
+    "lat": 38.526138,
+    "lng": -121.966542
+  }
+]

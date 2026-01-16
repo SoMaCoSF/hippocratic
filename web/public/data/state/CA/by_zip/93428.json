@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630005221",
+    "name": "COMMUNITY HEALTH CENTERS CAMBRIA",
+    "npi": "1881911705",
+    "hcaiId": "306404056",
+    "businessName": "COMMUNITY HEALTH CENTERS OF THE CENTRAL COAST, INC.",
+    "contactEmail": "SSOSA@CHCCC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550009620",
+    "licenseEffectiveDate": "02/11/2025",
+    "licenseExpirationDate": "02/10/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1276 TAMSEN ST",
+    "city": "CAMBRIA",
+    "zip": "93428",
+    "county": "SAN LUIS OBISPO",
+    "phone": "(805) 346-3911",
+    "lat": 35.56351546,
+    "lng": -121.0905336
+  }
+]

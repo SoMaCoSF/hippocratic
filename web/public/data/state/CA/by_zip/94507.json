@@ -1,0 +1,26 @@
+[
+  {
+    "id": "020001287",
+    "name": "EAST BAY INTEGRATED CARE, INC. - BRUNS HOUSE",
+    "npi": null,
+    "hcaiId": "206074104",
+    "businessName": "EAST BAY INTEGRATED CARE, INC.",
+    "contactEmail": "LAURAB@HOSPICEEASTBAY.ORG",
+    "categoryName": "HOSPICE FACILITY",
+    "categoryCode": "HOFA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "020000650",
+    "licenseEffectiveDate": "03/25/2025",
+    "licenseExpirationDate": "03/24/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "2849 MIRANDA AVENUE",
+    "city": "ALAMO",
+    "zip": "94507",
+    "county": "CONTRA COSTA",
+    "phone": "(925) 945-8924",
+    "lat": 37.861515,
+    "lng": -122.0211
+  }
+]

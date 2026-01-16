@@ -1,0 +1,26 @@
+[
+  {
+    "id": "150001221",
+    "name": "PELICAN BAY STATE PRISON C.T.C.",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "CA DEPARTMENT OF CORRECTIONS AND REHABILITATION",
+    "contactEmail": "CHRISTINE.HONEYCUTT@CDCR.CA.GOV",
+    "categoryName": "CORRECTIONAL TREATMENT CENTER",
+    "categoryCode": "CTC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "150000491",
+    "licenseEffectiveDate": "03/03/2025",
+    "licenseExpirationDate": "03/02/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 19,
+    "address": "5905 LAKE EARL DR",
+    "city": "CRESCENT CITY",
+    "zip": "95532",
+    "county": "DEL NORTE",
+    "phone": "(707) 951-9080",
+    "lat": 41.847759,
+    "lng": -124.1599815
+  }
+]

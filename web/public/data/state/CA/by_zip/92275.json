@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630011682",
+    "name": "INNERCARE - WEST SHORES",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "CLINICAS DE SALUD DEL PUEBLO, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "090000030",
+    "licenseEffectiveDate": "05/31/2025",
+    "licenseExpirationDate": "05/30/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1289 S MARINA DR, SUITE A",
+    "city": "SALTON CITY",
+    "zip": "92275",
+    "county": "IMPERIAL",
+    "phone": "(760) 394-4338",
+    "lat": 33.275826,
+    "lng": -115.969941
+  }
+]

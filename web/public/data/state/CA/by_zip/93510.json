@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630011043",
+    "name": "ELITE HOME CARE, INC.",
+    "npi": "1326207655",
+    "hcaiId": "406197055",
+    "businessName": "ELITE HOME CARE, INC.",
+    "contactEmail": "ELITEHHA1@YAHOO.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550000624",
+    "licenseEffectiveDate": "11/09/2024",
+    "licenseExpirationDate": "11/08/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "3807 SIERRA HWY, SUITE 207",
+    "city": "ACTON",
+    "zip": "93510",
+    "county": "LOS ANGELES",
+    "phone": "(661) 269-2279",
+    "lat": 34.493715,
+    "lng": -118.1990025
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630021539",
+    "name": "LIVING LEGACY HOSPICE",
+    "npi": null,
+    "hcaiId": "406370027",
+    "businessName": "DIGNITY HOSPICE CARE INC",
+    "contactEmail": "DIGNITYHOSPICECAREINC@GMAIL.COM",
+    "categoryName": "HOSPICE",
+    "categoryCode": "HOSPICE",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550007565",
+    "licenseEffectiveDate": "12/10/2023",
+    "licenseExpirationDate": "12/09/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "2870 WHIPTAIL LOOP, SUITE 214",
+    "city": "CARLSBAD",
+    "zip": "92010",
+    "county": "SAN DIEGO",
+    "phone": "(909) 677-2331",
+    "lat": 33.1437539,
+    "lng": -117.2543818
+  }
+]

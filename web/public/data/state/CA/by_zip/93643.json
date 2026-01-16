@@ -1,0 +1,26 @@
+[
+  {
+    "id": "040000208",
+    "name": "NORTH FORK INDIAN & COMMUNITY HEALTH CENTER",
+    "npi": null,
+    "hcaiId": "306200054",
+    "businessName": "CENTRAL VALLEY INDIAN HEALTH, INC.",
+    "contactEmail": "JRAMSEY@CVIH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "040000038",
+    "licenseEffectiveDate": "11/20/2024",
+    "licenseExpirationDate": "11/19/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "32938 ROAD 222, SUITE 2",
+    "city": "NORTH FORK",
+    "zip": "93643",
+    "county": "MADERA",
+    "phone": "(559) 299-2578",
+    "lat": 37.226268,
+    "lng": -119.510208
+  }
+]

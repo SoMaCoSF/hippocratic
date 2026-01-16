@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017100",
+    "name": "WECARE AT SCOTIA BLUFFS",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "THE WECARE GROUP",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000060",
+    "licenseEffectiveDate": "11/27/2024",
+    "licenseExpirationDate": "11/26/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "115 MAIN ST",
+    "city": "SCOTIA",
+    "zip": "95565",
+    "county": "HUMBOLDT",
+    "phone": null,
+    "lat": 40.48427151,
+    "lng": -124.1019519
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630003201",
+    "name": "KLAMATH HOME ICF DD-N",
+    "npi": "1205002904",
+    "hcaiId": null,
+    "businessName": "ANTELOPE HILLS MANOR ICF-DDN, INC.",
+    "contactEmail": "AGRANITRN1961@COMCAST.NET",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDN",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550000069",
+    "licenseEffectiveDate": "11/26/2024",
+    "licenseExpirationDate": "11/25/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "5355 KLAMATH DRIVE",
+    "city": "SACRAMENTO",
+    "zip": "95842",
+    "county": "SACRAMENTO",
+    "phone": "(916) 548-1397",
+    "lat": 38.683575,
+    "lng": -121.3397145
+  }
+]

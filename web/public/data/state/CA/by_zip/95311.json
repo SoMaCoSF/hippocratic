@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630026835",
+    "name": "JOHN C. FREMONT HEALTHCARE DISTRICT - NORTHSIDE CLINIC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "JOHN C. FREMONT HEALTHCARE DISTRICT",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "040000108",
+    "licenseEffectiveDate": "04/30/2025",
+    "licenseExpirationDate": "04/29/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6386 GREELEY HILL RD",
+    "city": "COULTERVILLE",
+    "zip": "95311",
+    "county": "MARIPOSA",
+    "phone": null,
+    "lat": 37.741563,
+    "lng": -120.131559
+  }
+]

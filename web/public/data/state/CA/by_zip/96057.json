@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630012325",
+    "name": "MCCLOUD HEALTHCARE CLINIC, INC.",
+    "npi": "1164428488",
+    "hcaiId": "306474014",
+    "businessName": "MCCLOUD HEALTHCARE CLINIC, INC.",
+    "contactEmail": "RACHAELL@SHASTACASCADEHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "FQHC/COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550001195",
+    "licenseEffectiveDate": "12/23/2024",
+    "licenseExpirationDate": "12/22/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "116 W. MINNESOTA AVENUE",
+    "city": "MCCLOUD",
+    "zip": "96057",
+    "county": "SISKIYOU",
+    "phone": "(530) 926-6309",
+    "lat": 41.251761,
+    "lng": -122.136561
+  }
+]

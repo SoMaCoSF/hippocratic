@@ -1,0 +1,26 @@
+[
+  {
+    "id": "220000085",
+    "name": "THE SEQUOIAS",
+    "npi": null,
+    "hcaiId": "206410893",
+    "businessName": "SEQUOIA LIVING, INC.",
+    "contactEmail": "GHEIMLICH@SEQUOIALIVING.ORG",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "220000047",
+    "licenseEffectiveDate": "11/30/2024",
+    "licenseExpirationDate": "11/29/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 43,
+    "address": "501 PORTOLA RD",
+    "city": "PORTOLA VALLEY",
+    "zip": "94028",
+    "county": "SAN MATEO",
+    "phone": "(650) 851-1501",
+    "lat": 37.372329,
+    "lng": -122.2211835
+  }
+]

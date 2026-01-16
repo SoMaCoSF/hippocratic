@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015534",
+    "name": "ST. JOSEPH'S TOWER ICF/DD-N",
+    "npi": "1366845380",
+    "hcaiId": null,
+    "businessName": "ST. JOSEPH'S TOWER INC.",
+    "contactEmail": "DESCARTIN8@YAHOO.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDN",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003148",
+    "licenseEffectiveDate": "07/09/2025",
+    "licenseExpirationDate": "07/08/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "1844 C STREET",
+    "city": "RIO LINDA",
+    "zip": "95673",
+    "county": "SACRAMENTO",
+    "phone": "(916) 238-4454",
+    "lat": 38.671938,
+    "lng": -121.423077
+  }
+]

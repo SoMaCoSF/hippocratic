@@ -1,0 +1,26 @@
+[
+  {
+    "id": "080001585",
+    "name": "MISSION VIEJO DIALYSIS",
+    "npi": "1740254648",
+    "hcaiId": "306300163",
+    "businessName": "DVA RENAL HEALTHCARE, INC.",
+    "contactEmail": "CAL_C@DAVITA.COM",
+    "categoryName": "CHRONIC DIALYSIS CLINIC",
+    "categoryCode": "ESRD/CDC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "080000677",
+    "licenseEffectiveDate": "06/11/2025",
+    "licenseExpirationDate": "06/10/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 24,
+    "address": "27640 MARGUERITE PKWY, SUITE B",
+    "city": "MISSION VIEJO",
+    "zip": "92692",
+    "county": "ORANGE",
+    "phone": "(949) 347-2433",
+    "lat": 33.562323,
+    "lng": -117.6573285
+  }
+]

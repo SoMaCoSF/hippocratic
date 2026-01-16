@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000527",
+    "name": "GRAEAGLE MEDICAL CLINIC RHC",
+    "npi": "1487650313",
+    "hcaiId": null,
+    "businessName": "EASTERN PLUMAS HEALTH CARE DISTRICT",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000014",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "7597 HIGHWAY 89",
+    "city": "GRAEAGLE",
+    "zip": "96103",
+    "county": "PLUMAS",
+    "phone": "(530) 836-1122",
+    "lat": 39.768696,
+    "lng": -120.6201195
+  }
+]

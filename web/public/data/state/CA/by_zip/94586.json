@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017644",
+    "name": "SUNOL HILLS LLC",
+    "npi": null,
+    "hcaiId": "206010216",
+    "businessName": "SUNOL HILLS LLC",
+    "contactEmail": "EMAAN.ZAKRIA@SUNOLHILLS.COM",
+    "categoryName": "CONGREGATE LIVING HEALTH FACILITY",
+    "categoryCode": "CLHF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550005272",
+    "licenseEffectiveDate": "12/17/2024",
+    "licenseExpirationDate": "12/16/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "23 CARVER LN",
+    "city": "SUNOL",
+    "zip": "94586",
+    "county": "ALAMEDA",
+    "phone": "(925) 522-6903",
+    "lat": 37.607184,
+    "lng": -121.881744
+  }
+]

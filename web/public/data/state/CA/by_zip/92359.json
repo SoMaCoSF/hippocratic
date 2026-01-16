@@ -1,0 +1,26 @@
+[
+  {
+    "id": "240000029",
+    "name": "UNIVERSITY POST ACUTE",
+    "npi": "1407243355",
+    "hcaiId": "206361221",
+    "businessName": "UNICA HC, LLC",
+    "contactEmail": "JOSEP@ROCKWELL.CARE",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "240000158",
+    "licenseEffectiveDate": "10/29/2025",
+    "licenseExpirationDate": "10/28/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 50,
+    "address": "2278 NICE AVE",
+    "city": "MENTONE",
+    "zip": "92359",
+    "county": "SAN BERNARDINO",
+    "phone": "(909) 794-1189",
+    "lat": 34.065594,
+    "lng": -117.1058535
+  }
+]

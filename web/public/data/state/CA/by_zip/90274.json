@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016826",
+    "name": "PALOS VERDES SKIN SURGERY CENTER, INC.",
+    "npi": "1285028803",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "SURGICAL CLINIC",
+    "categoryCode": "ASC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "550 DEEP VALLEY DRIVE, SUITE 283",
+    "city": "ROLLING HILLS ESTATE",
+    "zip": "90274",
+    "county": "LOS ANGELES",
+    "phone": null,
+    "lat": 33.772176,
+    "lng": -118.3734
+  }
+]

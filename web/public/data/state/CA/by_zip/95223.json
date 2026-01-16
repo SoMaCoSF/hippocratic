@@ -1,0 +1,26 @@
+[
+  {
+    "id": "030001692",
+    "name": "FAMILY MEDICAL CENTER - ARNOLD",
+    "npi": "1790846301",
+    "hcaiId": null,
+    "businessName": "MARK TWAIN MEDICAL CENTER",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "030000058",
+    "licenseEffectiveDate": "12/20/2024",
+    "licenseExpirationDate": "12/19/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "2182 HIGHWAY 4, SUITE A-100",
+    "city": "ARNOLD",
+    "zip": "95223",
+    "county": "CALAVERAS",
+    "phone": "(209) 795-4193",
+    "lat": 38.240316,
+    "lng": -120.3633405
+  }
+]

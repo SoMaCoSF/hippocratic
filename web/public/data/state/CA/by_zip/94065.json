@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630021917",
+    "name": "PENINSULA SURGERY CENTER, LLC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": "THUNT@PENINSULASURGERYCENTER.COM",
+    "categoryName": "SURGICAL CLINIC",
+    "categoryCode": "ASC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "350 MARINE PKWY, SUITE 100",
+    "city": "REDWOOD CITY",
+    "zip": "94065",
+    "county": "SAN MATEO",
+    "phone": "(510) 406-9731",
+    "lat": 37.528929,
+    "lng": -122.2577235
+  }
+]

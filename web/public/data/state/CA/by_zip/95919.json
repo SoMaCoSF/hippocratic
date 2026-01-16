@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000759",
+    "name": "SUTTER NORTH BROWNSVILLE FAMILY PRACTICE CENTER",
+    "npi": "1740422286",
+    "hcaiId": "306584004",
+    "businessName": "SUTTER VALLEY MEDICAL FOUNDATION",
+    "contactEmail": "CONNIE.BAKER@SUTTERHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000331",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "16911 WILLOW GLEN RD",
+    "city": "BROWNSVILLE",
+    "zip": "95919",
+    "county": "YUBA",
+    "phone": "(530) 749-3636",
+    "lat": 39.460842,
+    "lng": -121.2827085
+  }
+]

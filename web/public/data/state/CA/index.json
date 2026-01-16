@@ -1,0 +1,4780 @@
+{
+  "generatedAt": "2026-01-16T17:14:57Z",
+  "state": "CA",
+  "sourceFile": "D:\\somacosf\\outputs\\hippocratic\\data\\ca_lic_health_facilities.json",
+  "recordCount": 15743,
+  "zipCount": 1184,
+  "zips": {
+    "89449": {
+      "count": 1,
+      "file": "by_zip/89449.json"
+    },
+    "90001": {
+      "count": 5,
+      "file": "by_zip/90001.json"
+    },
+    "90002": {
+      "count": 3,
+      "file": "by_zip/90002.json"
+    },
+    "90003": {
+      "count": 5,
+      "file": "by_zip/90003.json"
+    },
+    "90004": {
+      "count": 12,
+      "file": "by_zip/90004.json"
+    },
+    "90005": {
+      "count": 8,
+      "file": "by_zip/90005.json"
+    },
+    "90006": {
+      "count": 22,
+      "file": "by_zip/90006.json"
+    },
+    "90007": {
+      "count": 11,
+      "file": "by_zip/90007.json"
+    },
+    "90008": {
+      "count": 8,
+      "file": "by_zip/90008.json"
+    },
+    "90010": {
+      "count": 42,
+      "file": "by_zip/90010.json"
+    },
+    "90011": {
+      "count": 20,
+      "file": "by_zip/90011.json"
+    },
+    "90012": {
+      "count": 13,
+      "file": "by_zip/90012.json"
+    },
+    "90013": {
+      "count": 8,
+      "file": "by_zip/90013.json"
+    },
+    "90014": {
+      "count": 14,
+      "file": "by_zip/90014.json"
+    },
+    "90015": {
+      "count": 18,
+      "file": "by_zip/90015.json"
+    },
+    "90016": {
+      "count": 11,
+      "file": "by_zip/90016.json"
+    },
+    "90017": {
+      "count": 24,
+      "file": "by_zip/90017.json"
+    },
+    "90018": {
+      "count": 10,
+      "file": "by_zip/90018.json"
+    },
+    "90019": {
+      "count": 15,
+      "file": "by_zip/90019.json"
+    },
+    "90020": {
+      "count": 12,
+      "file": "by_zip/90020.json"
+    },
+    "90021": {
+      "count": 4,
+      "file": "by_zip/90021.json"
+    },
+    "90022": {
+      "count": 26,
+      "file": "by_zip/90022.json"
+    },
+    "90023": {
+      "count": 11,
+      "file": "by_zip/90023.json"
+    },
+    "90024": {
+      "count": 6,
+      "file": "by_zip/90024.json"
+    },
+    "90025": {
+      "count": 20,
+      "file": "by_zip/90025.json"
+    },
+    "90026": {
+      "count": 17,
+      "file": "by_zip/90026.json"
+    },
+    "90027": {
+      "count": 36,
+      "file": "by_zip/90027.json"
+    },
+    "90028": {
+      "count": 20,
+      "file": "by_zip/90028.json"
+    },
+    "90029": {
+      "count": 30,
+      "file": "by_zip/90029.json"
+    },
+    "90031": {
+      "count": 5,
+      "file": "by_zip/90031.json"
+    },
+    "90032": {
+      "count": 4,
+      "file": "by_zip/90032.json"
+    },
+    "90033": {
+      "count": 31,
+      "file": "by_zip/90033.json"
+    },
+    "90034": {
+      "count": 9,
+      "file": "by_zip/90034.json"
+    },
+    "90035": {
+      "count": 11,
+      "file": "by_zip/90035.json"
+    },
+    "90036": {
+      "count": 22,
+      "file": "by_zip/90036.json"
+    },
+    "90037": {
+      "count": 11,
+      "file": "by_zip/90037.json"
+    },
+    "90038": {
+      "count": 4,
+      "file": "by_zip/90038.json"
+    },
+    "90039": {
+      "count": 26,
+      "file": "by_zip/90039.json"
+    },
+    "90040": {
+      "count": 5,
+      "file": "by_zip/90040.json"
+    },
+    "90041": {
+      "count": 34,
+      "file": "by_zip/90041.json"
+    },
+    "90042": {
+      "count": 10,
+      "file": "by_zip/90042.json"
+    },
+    "90043": {
+      "count": 6,
+      "file": "by_zip/90043.json"
+    },
+    "90044": {
+      "count": 13,
+      "file": "by_zip/90044.json"
+    },
+    "90045": {
+      "count": 10,
+      "file": "by_zip/90045.json"
+    },
+    "90046": {
+      "count": 7,
+      "file": "by_zip/90046.json"
+    },
+    "90047": {
+      "count": 9,
+      "file": "by_zip/90047.json"
+    },
+    "90048": {
+      "count": 19,
+      "file": "by_zip/90048.json"
+    },
+    "90049": {
+      "count": 6,
+      "file": "by_zip/90049.json"
+    },
+    "90056": {
+      "count": 1,
+      "file": "by_zip/90056.json"
+    },
+    "90057": {
+      "count": 36,
+      "file": "by_zip/90057.json"
+    },
+    "90058": {
+      "count": 4,
+      "file": "by_zip/90058.json"
+    },
+    "90059": {
+      "count": 12,
+      "file": "by_zip/90059.json"
+    },
+    "90061": {
+      "count": 7,
+      "file": "by_zip/90061.json"
+    },
+    "90062": {
+      "count": 3,
+      "file": "by_zip/90062.json"
+    },
+    "90063": {
+      "count": 1,
+      "file": "by_zip/90063.json"
+    },
+    "90064": {
+      "count": 8,
+      "file": "by_zip/90064.json"
+    },
+    "90065": {
+      "count": 15,
+      "file": "by_zip/90065.json"
+    },
+    "90066": {
+      "count": 8,
+      "file": "by_zip/90066.json"
+    },
+    "90067": {
+      "count": 6,
+      "file": "by_zip/90067.json"
+    },
+    "90068": {
+      "count": 23,
+      "file": "by_zip/90068.json"
+    },
+    "90069": {
+      "count": 5,
+      "file": "by_zip/90069.json"
+    },
+    "90071": {
+      "count": 1,
+      "file": "by_zip/90071.json"
+    },
+    "90077": {
+      "count": 1,
+      "file": "by_zip/90077.json"
+    },
+    "90089": {
+      "count": 1,
+      "file": "by_zip/90089.json"
+    },
+    "90094": {
+      "count": 1,
+      "file": "by_zip/90094.json"
+    },
+    "90095": {
+      "count": 2,
+      "file": "by_zip/90095.json"
+    },
+    "90201": {
+      "count": 18,
+      "file": "by_zip/90201.json"
+    },
+    "90210": {
+      "count": 22,
+      "file": "by_zip/90210.json"
+    },
+    "90211": {
+      "count": 43,
+      "file": "by_zip/90211.json"
+    },
+    "90212": {
+      "count": 10,
+      "file": "by_zip/90212.json"
+    },
+    "90220": {
+      "count": 8,
+      "file": "by_zip/90220.json"
+    },
+    "90221": {
+      "count": 11,
+      "file": "by_zip/90221.json"
+    },
+    "90222": {
+      "count": 7,
+      "file": "by_zip/90222.json"
+    },
+    "90230": {
+      "count": 20,
+      "file": "by_zip/90230.json"
+    },
+    "90232": {
+      "count": 10,
+      "file": "by_zip/90232.json"
+    },
+    "90240": {
+      "count": 6,
+      "file": "by_zip/90240.json"
+    },
+    "90241": {
+      "count": 16,
+      "file": "by_zip/90241.json"
+    },
+    "90242": {
+      "count": 11,
+      "file": "by_zip/90242.json"
+    },
+    "90245": {
+      "count": 3,
+      "file": "by_zip/90245.json"
+    },
+    "90247": {
+      "count": 17,
+      "file": "by_zip/90247.json"
+    },
+    "90248": {
+      "count": 7,
+      "file": "by_zip/90248.json"
+    },
+    "90249": {
+      "count": 8,
+      "file": "by_zip/90249.json"
+    },
+    "90250": {
+      "count": 27,
+      "file": "by_zip/90250.json"
+    },
+    "90254": {
+      "count": 1,
+      "file": "by_zip/90254.json"
+    },
+    "90255": {
+      "count": 28,
+      "file": "by_zip/90255.json"
+    },
+    "90260": {
+      "count": 7,
+      "file": "by_zip/90260.json"
+    },
+    "90262": {
+      "count": 24,
+      "file": "by_zip/90262.json"
+    },
+    "90266": {
+      "count": 5,
+      "file": "by_zip/90266.json"
+    },
+    "90270": {
+      "count": 5,
+      "file": "by_zip/90270.json"
+    },
+    "90272": {
+      "count": 2,
+      "file": "by_zip/90272.json"
+    },
+    "90274": {
+      "count": 1,
+      "file": "by_zip/90274.json"
+    },
+    "90275": {
+      "count": 1,
+      "file": "by_zip/90275.json"
+    },
+    "90277": {
+      "count": 4,
+      "file": "by_zip/90277.json"
+    },
+    "90278": {
+      "count": 3,
+      "file": "by_zip/90278.json"
+    },
+    "90280": {
+      "count": 16,
+      "file": "by_zip/90280.json"
+    },
+    "90291": {
+      "count": 10,
+      "file": "by_zip/90291.json"
+    },
+    "90292": {
+      "count": 8,
+      "file": "by_zip/90292.json"
+    },
+    "90293": {
+      "count": 1,
+      "file": "by_zip/90293.json"
+    },
+    "90301": {
+      "count": 19,
+      "file": "by_zip/90301.json"
+    },
+    "90302": {
+      "count": 11,
+      "file": "by_zip/90302.json"
+    },
+    "90303": {
+      "count": 3,
+      "file": "by_zip/90303.json"
+    },
+    "90304": {
+      "count": 4,
+      "file": "by_zip/90304.json"
+    },
+    "90305": {
+      "count": 3,
+      "file": "by_zip/90305.json"
+    },
+    "90401": {
+      "count": 6,
+      "file": "by_zip/90401.json"
+    },
+    "90403": {
+      "count": 4,
+      "file": "by_zip/90403.json"
+    },
+    "90404": {
+      "count": 26,
+      "file": "by_zip/90404.json"
+    },
+    "90405": {
+      "count": 4,
+      "file": "by_zip/90405.json"
+    },
+    "90501": {
+      "count": 30,
+      "file": "by_zip/90501.json"
+    },
+    "90502": {
+      "count": 16,
+      "file": "by_zip/90502.json"
+    },
+    "90503": {
+      "count": 24,
+      "file": "by_zip/90503.json"
+    },
+    "90504": {
+      "count": 4,
+      "file": "by_zip/90504.json"
+    },
+    "90505": {
+      "count": 44,
+      "file": "by_zip/90505.json"
+    },
+    "90601": {
+      "count": 2,
+      "file": "by_zip/90601.json"
+    },
+    "90602": {
+      "count": 9,
+      "file": "by_zip/90602.json"
+    },
+    "90603": {
+      "count": 6,
+      "file": "by_zip/90603.json"
+    },
+    "90604": {
+      "count": 5,
+      "file": "by_zip/90604.json"
+    },
+    "90605": {
+      "count": 6,
+      "file": "by_zip/90605.json"
+    },
+    "90606": {
+      "count": 5,
+      "file": "by_zip/90606.json"
+    },
+    "90620": {
+      "count": 36,
+      "file": "by_zip/90620.json"
+    },
+    "90621": {
+      "count": 13,
+      "file": "by_zip/90621.json"
+    },
+    "90623": {
+      "count": 8,
+      "file": "by_zip/90623.json"
+    },
+    "90630": {
+      "count": 7,
+      "file": "by_zip/90630.json"
+    },
+    "90631": {
+      "count": 27,
+      "file": "by_zip/90631.json"
+    },
+    "90638": {
+      "count": 18,
+      "file": "by_zip/90638.json"
+    },
+    "90640": {
+      "count": 33,
+      "file": "by_zip/90640.json"
+    },
+    "90650": {
+      "count": 29,
+      "file": "by_zip/90650.json"
+    },
+    "90660": {
+      "count": 13,
+      "file": "by_zip/90660.json"
+    },
+    "90670": {
+      "count": 19,
+      "file": "by_zip/90670.json"
+    },
+    "90680": {
+      "count": 23,
+      "file": "by_zip/90680.json"
+    },
+    "90701": {
+      "count": 22,
+      "file": "by_zip/90701.json"
+    },
+    "90703": {
+      "count": 35,
+      "file": "by_zip/90703.json"
+    },
+    "90704": {
+      "count": 3,
+      "file": "by_zip/90704.json"
+    },
+    "90706": {
+      "count": 30,
+      "file": "by_zip/90706.json"
+    },
+    "90710": {
+      "count": 15,
+      "file": "by_zip/90710.json"
+    },
+    "90712": {
+      "count": 9,
+      "file": "by_zip/90712.json"
+    },
+    "90713": {
+      "count": 1,
+      "file": "by_zip/90713.json"
+    },
+    "90715": {
+      "count": 2,
+      "file": "by_zip/90715.json"
+    },
+    "90716": {
+      "count": 4,
+      "file": "by_zip/90716.json"
+    },
+    "90717": {
+      "count": 11,
+      "file": "by_zip/90717.json"
+    },
+    "90720": {
+      "count": 16,
+      "file": "by_zip/90720.json"
+    },
+    "90723": {
+      "count": 19,
+      "file": "by_zip/90723.json"
+    },
+    "90731": {
+      "count": 4,
+      "file": "by_zip/90731.json"
+    },
+    "90732": {
+      "count": 10,
+      "file": "by_zip/90732.json"
+    },
+    "90740": {
+      "count": 2,
+      "file": "by_zip/90740.json"
+    },
+    "90744": {
+      "count": 12,
+      "file": "by_zip/90744.json"
+    },
+    "90745": {
+      "count": 10,
+      "file": "by_zip/90745.json"
+    },
+    "90746": {
+      "count": 16,
+      "file": "by_zip/90746.json"
+    },
+    "90755": {
+      "count": 11,
+      "file": "by_zip/90755.json"
+    },
+    "90802": {
+      "count": 6,
+      "file": "by_zip/90802.json"
+    },
+    "90803": {
+      "count": 2,
+      "file": "by_zip/90803.json"
+    },
+    "90804": {
+      "count": 13,
+      "file": "by_zip/90804.json"
+    },
+    "90805": {
+      "count": 18,
+      "file": "by_zip/90805.json"
+    },
+    "90806": {
+      "count": 39,
+      "file": "by_zip/90806.json"
+    },
+    "90807": {
+      "count": 27,
+      "file": "by_zip/90807.json"
+    },
+    "90808": {
+      "count": 6,
+      "file": "by_zip/90808.json"
+    },
+    "90810": {
+      "count": 3,
+      "file": "by_zip/90810.json"
+    },
+    "90813": {
+      "count": 27,
+      "file": "by_zip/90813.json"
+    },
+    "90814": {
+      "count": 3,
+      "file": "by_zip/90814.json"
+    },
+    "90815": {
+      "count": 7,
+      "file": "by_zip/90815.json"
+    },
+    "91001": {
+      "count": 2,
+      "file": "by_zip/91001.json"
+    },
+    "91006": {
+      "count": 43,
+      "file": "by_zip/91006.json"
+    },
+    "91007": {
+      "count": 14,
+      "file": "by_zip/91007.json"
+    },
+    "91010": {
+      "count": 14,
+      "file": "by_zip/91010.json"
+    },
+    "91011": {
+      "count": 6,
+      "file": "by_zip/91011.json"
+    },
+    "91016": {
+      "count": 10,
+      "file": "by_zip/91016.json"
+    },
+    "91020": {
+      "count": 24,
+      "file": "by_zip/91020.json"
+    },
+    "91024": {
+      "count": 1,
+      "file": "by_zip/91024.json"
+    },
+    "91030": {
+      "count": 4,
+      "file": "by_zip/91030.json"
+    },
+    "91040": {
+      "count": 43,
+      "file": "by_zip/91040.json"
+    },
+    "91042": {
+      "count": 44,
+      "file": "by_zip/91042.json"
+    },
+    "91101": {
+      "count": 43,
+      "file": "by_zip/91101.json"
+    },
+    "91103": {
+      "count": 16,
+      "file": "by_zip/91103.json"
+    },
+    "91104": {
+      "count": 23,
+      "file": "by_zip/91104.json"
+    },
+    "91105": {
+      "count": 33,
+      "file": "by_zip/91105.json"
+    },
+    "91106": {
+      "count": 19,
+      "file": "by_zip/91106.json"
+    },
+    "91107": {
+      "count": 66,
+      "file": "by_zip/91107.json"
+    },
+    "91108": {
+      "count": 3,
+      "file": "by_zip/91108.json"
+    },
+    "91201": {
+      "count": 67,
+      "file": "by_zip/91201.json"
+    },
+    "91202": {
+      "count": 33,
+      "file": "by_zip/91202.json"
+    },
+    "91203": {
+      "count": 151,
+      "file": "by_zip/91203.json"
+    },
+    "91204": {
+      "count": 154,
+      "file": "by_zip/91204.json"
+    },
+    "91205": {
+      "count": 196,
+      "file": "by_zip/91205.json"
+    },
+    "91206": {
+      "count": 64,
+      "file": "by_zip/91206.json"
+    },
+    "91207": {
+      "count": 15,
+      "file": "by_zip/91207.json"
+    },
+    "91208": {
+      "count": 54,
+      "file": "by_zip/91208.json"
+    },
+    "91210": {
+      "count": 4,
+      "file": "by_zip/91210.json"
+    },
+    "91214": {
+      "count": 71,
+      "file": "by_zip/91214.json"
+    },
+    "91301": {
+      "count": 26,
+      "file": "by_zip/91301.json"
+    },
+    "91302": {
+      "count": 12,
+      "file": "by_zip/91302.json"
+    },
+    "91303": {
+      "count": 94,
+      "file": "by_zip/91303.json"
+    },
+    "91304": {
+      "count": 19,
+      "file": "by_zip/91304.json"
+    },
+    "91306": {
+      "count": 40,
+      "file": "by_zip/91306.json"
+    },
+    "91307": {
+      "count": 15,
+      "file": "by_zip/91307.json"
+    },
+    "91311": {
+      "count": 84,
+      "file": "by_zip/91311.json"
+    },
+    "91316": {
+      "count": 59,
+      "file": "by_zip/91316.json"
+    },
+    "91320": {
+      "count": 18,
+      "file": "by_zip/91320.json"
+    },
+    "91321": {
+      "count": 23,
+      "file": "by_zip/91321.json"
+    },
+    "91324": {
+      "count": 112,
+      "file": "by_zip/91324.json"
+    },
+    "91325": {
+      "count": 27,
+      "file": "by_zip/91325.json"
+    },
+    "91326": {
+      "count": 9,
+      "file": "by_zip/91326.json"
+    },
+    "91331": {
+      "count": 31,
+      "file": "by_zip/91331.json"
+    },
+    "91335": {
+      "count": 114,
+      "file": "by_zip/91335.json"
+    },
+    "91340": {
+      "count": 28,
+      "file": "by_zip/91340.json"
+    },
+    "91342": {
+      "count": 28,
+      "file": "by_zip/91342.json"
+    },
+    "91343": {
+      "count": 42,
+      "file": "by_zip/91343.json"
+    },
+    "91344": {
+      "count": 77,
+      "file": "by_zip/91344.json"
+    },
+    "91345": {
+      "count": 56,
+      "file": "by_zip/91345.json"
+    },
+    "91350": {
+      "count": 10,
+      "file": "by_zip/91350.json"
+    },
+    "91351": {
+      "count": 12,
+      "file": "by_zip/91351.json"
+    },
+    "91352": {
+      "count": 85,
+      "file": "by_zip/91352.json"
+    },
+    "91354": {
+      "count": 1,
+      "file": "by_zip/91354.json"
+    },
+    "91355": {
+      "count": 43,
+      "file": "by_zip/91355.json"
+    },
+    "91356": {
+      "count": 135,
+      "file": "by_zip/91356.json"
+    },
+    "91360": {
+      "count": 44,
+      "file": "by_zip/91360.json"
+    },
+    "91361": {
+      "count": 23,
+      "file": "by_zip/91361.json"
+    },
+    "91362": {
+      "count": 18,
+      "file": "by_zip/91362.json"
+    },
+    "91364": {
+      "count": 93,
+      "file": "by_zip/91364.json"
+    },
+    "91367": {
+      "count": 39,
+      "file": "by_zip/91367.json"
+    },
+    "91381": {
+      "count": 3,
+      "file": "by_zip/91381.json"
+    },
+    "91384": {
+      "count": 2,
+      "file": "by_zip/91384.json"
+    },
+    "91387": {
+      "count": 7,
+      "file": "by_zip/91387.json"
+    },
+    "91401": {
+      "count": 235,
+      "file": "by_zip/91401.json"
+    },
+    "91402": {
+      "count": 72,
+      "file": "by_zip/91402.json"
+    },
+    "91403": {
+      "count": 105,
+      "file": "by_zip/91403.json"
+    },
+    "91405": {
+      "count": 183,
+      "file": "by_zip/91405.json"
+    },
+    "91406": {
+      "count": 86,
+      "file": "by_zip/91406.json"
+    },
+    "91411": {
+      "count": 270,
+      "file": "by_zip/91411.json"
+    },
+    "91423": {
+      "count": 66,
+      "file": "by_zip/91423.json"
+    },
+    "91436": {
+      "count": 119,
+      "file": "by_zip/91436.json"
+    },
+    "91501": {
+      "count": 6,
+      "file": "by_zip/91501.json"
+    },
+    "91502": {
+      "count": 198,
+      "file": "by_zip/91502.json"
+    },
+    "91504": {
+      "count": 60,
+      "file": "by_zip/91504.json"
+    },
+    "91505": {
+      "count": 131,
+      "file": "by_zip/91505.json"
+    },
+    "91506": {
+      "count": 74,
+      "file": "by_zip/91506.json"
+    },
+    "91601": {
+      "count": 78,
+      "file": "by_zip/91601.json"
+    },
+    "91602": {
+      "count": 46,
+      "file": "by_zip/91602.json"
+    },
+    "91604": {
+      "count": 28,
+      "file": "by_zip/91604.json"
+    },
+    "91605": {
+      "count": 54,
+      "file": "by_zip/91605.json"
+    },
+    "91606": {
+      "count": 185,
+      "file": "by_zip/91606.json"
+    },
+    "91607": {
+      "count": 75,
+      "file": "by_zip/91607.json"
+    },
+    "91701": {
+      "count": 7,
+      "file": "by_zip/91701.json"
+    },
+    "91702": {
+      "count": 10,
+      "file": "by_zip/91702.json"
+    },
+    "91706": {
+      "count": 26,
+      "file": "by_zip/91706.json"
+    },
+    "91709": {
+      "count": 7,
+      "file": "by_zip/91709.json"
+    },
+    "91710": {
+      "count": 38,
+      "file": "by_zip/91710.json"
+    },
+    "91711": {
+      "count": 15,
+      "file": "by_zip/91711.json"
+    },
+    "91722": {
+      "count": 12,
+      "file": "by_zip/91722.json"
+    },
+    "91723": {
+      "count": 25,
+      "file": "by_zip/91723.json"
+    },
+    "91724": {
+      "count": 16,
+      "file": "by_zip/91724.json"
+    },
+    "91730": {
+      "count": 80,
+      "file": "by_zip/91730.json"
+    },
+    "91731": {
+      "count": 24,
+      "file": "by_zip/91731.json"
+    },
+    "91732": {
+      "count": 13,
+      "file": "by_zip/91732.json"
+    },
+    "91733": {
+      "count": 18,
+      "file": "by_zip/91733.json"
+    },
+    "91737": {
+      "count": 2,
+      "file": "by_zip/91737.json"
+    },
+    "91739": {
+      "count": 2,
+      "file": "by_zip/91739.json"
+    },
+    "91740": {
+      "count": 42,
+      "file": "by_zip/91740.json"
+    },
+    "91741": {
+      "count": 11,
+      "file": "by_zip/91741.json"
+    },
+    "91744": {
+      "count": 16,
+      "file": "by_zip/91744.json"
+    },
+    "91745": {
+      "count": 12,
+      "file": "by_zip/91745.json"
+    },
+    "91746": {
+      "count": 4,
+      "file": "by_zip/91746.json"
+    },
+    "91748": {
+      "count": 10,
+      "file": "by_zip/91748.json"
+    },
+    "91750": {
+      "count": 12,
+      "file": "by_zip/91750.json"
+    },
+    "91754": {
+      "count": 27,
+      "file": "by_zip/91754.json"
+    },
+    "91755": {
+      "count": 2,
+      "file": "by_zip/91755.json"
+    },
+    "91761": {
+      "count": 21,
+      "file": "by_zip/91761.json"
+    },
+    "91762": {
+      "count": 26,
+      "file": "by_zip/91762.json"
+    },
+    "91763": {
+      "count": 54,
+      "file": "by_zip/91763.json"
+    },
+    "91764": {
+      "count": 22,
+      "file": "by_zip/91764.json"
+    },
+    "91765": {
+      "count": 25,
+      "file": "by_zip/91765.json"
+    },
+    "91766": {
+      "count": 14,
+      "file": "by_zip/91766.json"
+    },
+    "91767": {
+      "count": 30,
+      "file": "by_zip/91767.json"
+    },
+    "91768": {
+      "count": 14,
+      "file": "by_zip/91768.json"
+    },
+    "91770": {
+      "count": 23,
+      "file": "by_zip/91770.json"
+    },
+    "91773": {
+      "count": 21,
+      "file": "by_zip/91773.json"
+    },
+    "91775": {
+      "count": 4,
+      "file": "by_zip/91775.json"
+    },
+    "91776": {
+      "count": 26,
+      "file": "by_zip/91776.json"
+    },
+    "91780": {
+      "count": 13,
+      "file": "by_zip/91780.json"
+    },
+    "91784": {
+      "count": 4,
+      "file": "by_zip/91784.json"
+    },
+    "91786": {
+      "count": 100,
+      "file": "by_zip/91786.json"
+    },
+    "91789": {
+      "count": 13,
+      "file": "by_zip/91789.json"
+    },
+    "91790": {
+      "count": 46,
+      "file": "by_zip/91790.json"
+    },
+    "91791": {
+      "count": 24,
+      "file": "by_zip/91791.json"
+    },
+    "91792": {
+      "count": 10,
+      "file": "by_zip/91792.json"
+    },
+    "91801": {
+      "count": 21,
+      "file": "by_zip/91801.json"
+    },
+    "91803": {
+      "count": 12,
+      "file": "by_zip/91803.json"
+    },
+    "91901": {
+      "count": 5,
+      "file": "by_zip/91901.json"
+    },
+    "91902": {
+      "count": 1,
+      "file": "by_zip/91902.json"
+    },
+    "91906": {
+      "count": 2,
+      "file": "by_zip/91906.json"
+    },
+    "91910": {
+      "count": 25,
+      "file": "by_zip/91910.json"
+    },
+    "91911": {
+      "count": 21,
+      "file": "by_zip/91911.json"
+    },
+    "91913": {
+      "count": 2,
+      "file": "by_zip/91913.json"
+    },
+    "91914": {
+      "count": 5,
+      "file": "by_zip/91914.json"
+    },
+    "91915": {
+      "count": 1,
+      "file": "by_zip/91915.json"
+    },
+    "91932": {
+      "count": 3,
+      "file": "by_zip/91932.json"
+    },
+    "91941": {
+      "count": 8,
+      "file": "by_zip/91941.json"
+    },
+    "91942": {
+      "count": 34,
+      "file": "by_zip/91942.json"
+    },
+    "91945": {
+      "count": 10,
+      "file": "by_zip/91945.json"
+    },
+    "91950": {
+      "count": 27,
+      "file": "by_zip/91950.json"
+    },
+    "91977": {
+      "count": 8,
+      "file": "by_zip/91977.json"
+    },
+    "92004": {
+      "count": 3,
+      "file": "by_zip/92004.json"
+    },
+    "92008": {
+      "count": 11,
+      "file": "by_zip/92008.json"
+    },
+    "92009": {
+      "count": 4,
+      "file": "by_zip/92009.json"
+    },
+    "92010": {
+      "count": 1,
+      "file": "by_zip/92010.json"
+    },
+    "92011": {
+      "count": 5,
+      "file": "by_zip/92011.json"
+    },
+    "92014": {
+      "count": 1,
+      "file": "by_zip/92014.json"
+    },
+    "92019": {
+      "count": 5,
+      "file": "by_zip/92019.json"
+    },
+    "92020": {
+      "count": 34,
+      "file": "by_zip/92020.json"
+    },
+    "92021": {
+      "count": 21,
+      "file": "by_zip/92021.json"
+    },
+    "92024": {
+      "count": 18,
+      "file": "by_zip/92024.json"
+    },
+    "92025": {
+      "count": 62,
+      "file": "by_zip/92025.json"
+    },
+    "92026": {
+      "count": 24,
+      "file": "by_zip/92026.json"
+    },
+    "92027": {
+      "count": 6,
+      "file": "by_zip/92027.json"
+    },
+    "92028": {
+      "count": 7,
+      "file": "by_zip/92028.json"
+    },
+    "92029": {
+      "count": 6,
+      "file": "by_zip/92029.json"
+    },
+    "92036": {
+      "count": 1,
+      "file": "by_zip/92036.json"
+    },
+    "92037": {
+      "count": 13,
+      "file": "by_zip/92037.json"
+    },
+    "92040": {
+      "count": 10,
+      "file": "by_zip/92040.json"
+    },
+    "92054": {
+      "count": 13,
+      "file": "by_zip/92054.json"
+    },
+    "92056": {
+      "count": 19,
+      "file": "by_zip/92056.json"
+    },
+    "92057": {
+      "count": 6,
+      "file": "by_zip/92057.json"
+    },
+    "92058": {
+      "count": 9,
+      "file": "by_zip/92058.json"
+    },
+    "92061": {
+      "count": 3,
+      "file": "by_zip/92061.json"
+    },
+    "92064": {
+      "count": 11,
+      "file": "by_zip/92064.json"
+    },
+    "92065": {
+      "count": 4,
+      "file": "by_zip/92065.json"
+    },
+    "92067": {
+      "count": 1,
+      "file": "by_zip/92067.json"
+    },
+    "92069": {
+      "count": 17,
+      "file": "by_zip/92069.json"
+    },
+    "92071": {
+      "count": 12,
+      "file": "by_zip/92071.json"
+    },
+    "92075": {
+      "count": 1,
+      "file": "by_zip/92075.json"
+    },
+    "92078": {
+      "count": 14,
+      "file": "by_zip/92078.json"
+    },
+    "92081": {
+      "count": 15,
+      "file": "by_zip/92081.json"
+    },
+    "92082": {
+      "count": 8,
+      "file": "by_zip/92082.json"
+    },
+    "92083": {
+      "count": 16,
+      "file": "by_zip/92083.json"
+    },
+    "92084": {
+      "count": 12,
+      "file": "by_zip/92084.json"
+    },
+    "92101": {
+      "count": 13,
+      "file": "by_zip/92101.json"
+    },
+    "92102": {
+      "count": 13,
+      "file": "by_zip/92102.json"
+    },
+    "92103": {
+      "count": 27,
+      "file": "by_zip/92103.json"
+    },
+    "92104": {
+      "count": 5,
+      "file": "by_zip/92104.json"
+    },
+    "92105": {
+      "count": 29,
+      "file": "by_zip/92105.json"
+    },
+    "92108": {
+      "count": 26,
+      "file": "by_zip/92108.json"
+    },
+    "92109": {
+      "count": 5,
+      "file": "by_zip/92109.json"
+    },
+    "92110": {
+      "count": 4,
+      "file": "by_zip/92110.json"
+    },
+    "92111": {
+      "count": 17,
+      "file": "by_zip/92111.json"
+    },
+    "92113": {
+      "count": 11,
+      "file": "by_zip/92113.json"
+    },
+    "92114": {
+      "count": 9,
+      "file": "by_zip/92114.json"
+    },
+    "92115": {
+      "count": 12,
+      "file": "by_zip/92115.json"
+    },
+    "92117": {
+      "count": 1,
+      "file": "by_zip/92117.json"
+    },
+    "92118": {
+      "count": 2,
+      "file": "by_zip/92118.json"
+    },
+    "92119": {
+      "count": 2,
+      "file": "by_zip/92119.json"
+    },
+    "92120": {
+      "count": 4,
+      "file": "by_zip/92120.json"
+    },
+    "92121": {
+      "count": 16,
+      "file": "by_zip/92121.json"
+    },
+    "92122": {
+      "count": 7,
+      "file": "by_zip/92122.json"
+    },
+    "92123": {
+      "count": 56,
+      "file": "by_zip/92123.json"
+    },
+    "92126": {
+      "count": 28,
+      "file": "by_zip/92126.json"
+    },
+    "92127": {
+      "count": 8,
+      "file": "by_zip/92127.json"
+    },
+    "92128": {
+      "count": 13,
+      "file": "by_zip/92128.json"
+    },
+    "92129": {
+      "count": 3,
+      "file": "by_zip/92129.json"
+    },
+    "92130": {
+      "count": 5,
+      "file": "by_zip/92130.json"
+    },
+    "92131": {
+      "count": 4,
+      "file": "by_zip/92131.json"
+    },
+    "92139": {
+      "count": 4,
+      "file": "by_zip/92139.json"
+    },
+    "92154": {
+      "count": 11,
+      "file": "by_zip/92154.json"
+    },
+    "92173": {
+      "count": 10,
+      "file": "by_zip/92173.json"
+    },
+    "92179": {
+      "count": 2,
+      "file": "by_zip/92179.json"
+    },
+    "92201": {
+      "count": 15,
+      "file": "by_zip/92201.json"
+    },
+    "92203": {
+      "count": 1,
+      "file": "by_zip/92203.json"
+    },
+    "92210": {
+      "count": 1,
+      "file": "by_zip/92210.json"
+    },
+    "92211": {
+      "count": 17,
+      "file": "by_zip/92211.json"
+    },
+    "92220": {
+      "count": 7,
+      "file": "by_zip/92220.json"
+    },
+    "92223": {
+      "count": 10,
+      "file": "by_zip/92223.json"
+    },
+    "92225": {
+      "count": 9,
+      "file": "by_zip/92225.json"
+    },
+    "92227": {
+      "count": 10,
+      "file": "by_zip/92227.json"
+    },
+    "92231": {
+      "count": 8,
+      "file": "by_zip/92231.json"
+    },
+    "92234": {
+      "count": 13,
+      "file": "by_zip/92234.json"
+    },
+    "92236": {
+      "count": 6,
+      "file": "by_zip/92236.json"
+    },
+    "92240": {
+      "count": 16,
+      "file": "by_zip/92240.json"
+    },
+    "92242": {
+      "count": 2,
+      "file": "by_zip/92242.json"
+    },
+    "92243": {
+      "count": 19,
+      "file": "by_zip/92243.json"
+    },
+    "92251": {
+      "count": 6,
+      "file": "by_zip/92251.json"
+    },
+    "92252": {
+      "count": 5,
+      "file": "by_zip/92252.json"
+    },
+    "92253": {
+      "count": 3,
+      "file": "by_zip/92253.json"
+    },
+    "92254": {
+      "count": 2,
+      "file": "by_zip/92254.json"
+    },
+    "92257": {
+      "count": 1,
+      "file": "by_zip/92257.json"
+    },
+    "92260": {
+      "count": 24,
+      "file": "by_zip/92260.json"
+    },
+    "92262": {
+      "count": 23,
+      "file": "by_zip/92262.json"
+    },
+    "92264": {
+      "count": 4,
+      "file": "by_zip/92264.json"
+    },
+    "92270": {
+      "count": 24,
+      "file": "by_zip/92270.json"
+    },
+    "92274": {
+      "count": 4,
+      "file": "by_zip/92274.json"
+    },
+    "92275": {
+      "count": 1,
+      "file": "by_zip/92275.json"
+    },
+    "92276": {
+      "count": 1,
+      "file": "by_zip/92276.json"
+    },
+    "92277": {
+      "count": 3,
+      "file": "by_zip/92277.json"
+    },
+    "92283": {
+      "count": 1,
+      "file": "by_zip/92283.json"
+    },
+    "92284": {
+      "count": 11,
+      "file": "by_zip/92284.json"
+    },
+    "92301": {
+      "count": 7,
+      "file": "by_zip/92301.json"
+    },
+    "92307": {
+      "count": 19,
+      "file": "by_zip/92307.json"
+    },
+    "92308": {
+      "count": 3,
+      "file": "by_zip/92308.json"
+    },
+    "92311": {
+      "count": 11,
+      "file": "by_zip/92311.json"
+    },
+    "92313": {
+      "count": 7,
+      "file": "by_zip/92313.json"
+    },
+    "92314": {
+      "count": 2,
+      "file": "by_zip/92314.json"
+    },
+    "92315": {
+      "count": 5,
+      "file": "by_zip/92315.json"
+    },
+    "92316": {
+      "count": 2,
+      "file": "by_zip/92316.json"
+    },
+    "92320": {
+      "count": 1,
+      "file": "by_zip/92320.json"
+    },
+    "92324": {
+      "count": 38,
+      "file": "by_zip/92324.json"
+    },
+    "92335": {
+      "count": 10,
+      "file": "by_zip/92335.json"
+    },
+    "92336": {
+      "count": 6,
+      "file": "by_zip/92336.json"
+    },
+    "92337": {
+      "count": 3,
+      "file": "by_zip/92337.json"
+    },
+    "92344": {
+      "count": 2,
+      "file": "by_zip/92344.json"
+    },
+    "92345": {
+      "count": 6,
+      "file": "by_zip/92345.json"
+    },
+    "92346": {
+      "count": 11,
+      "file": "by_zip/92346.json"
+    },
+    "92350": {
+      "count": 1,
+      "file": "by_zip/92350.json"
+    },
+    "92352": {
+      "count": 4,
+      "file": "by_zip/92352.json"
+    },
+    "92354": {
+      "count": 26,
+      "file": "by_zip/92354.json"
+    },
+    "92359": {
+      "count": 1,
+      "file": "by_zip/92359.json"
+    },
+    "92363": {
+      "count": 3,
+      "file": "by_zip/92363.json"
+    },
+    "92369": {
+      "count": 2,
+      "file": "by_zip/92369.json"
+    },
+    "92373": {
+      "count": 20,
+      "file": "by_zip/92373.json"
+    },
+    "92374": {
+      "count": 20,
+      "file": "by_zip/92374.json"
+    },
+    "92376": {
+      "count": 5,
+      "file": "by_zip/92376.json"
+    },
+    "92377": {
+      "count": 1,
+      "file": "by_zip/92377.json"
+    },
+    "92392": {
+      "count": 9,
+      "file": "by_zip/92392.json"
+    },
+    "92394": {
+      "count": 1,
+      "file": "by_zip/92394.json"
+    },
+    "92395": {
+      "count": 26,
+      "file": "by_zip/92395.json"
+    },
+    "92397": {
+      "count": 1,
+      "file": "by_zip/92397.json"
+    },
+    "92399": {
+      "count": 13,
+      "file": "by_zip/92399.json"
+    },
+    "92401": {
+      "count": 11,
+      "file": "by_zip/92401.json"
+    },
+    "92404": {
+      "count": 24,
+      "file": "by_zip/92404.json"
+    },
+    "92405": {
+      "count": 12,
+      "file": "by_zip/92405.json"
+    },
+    "92407": {
+      "count": 4,
+      "file": "by_zip/92407.json"
+    },
+    "92408": {
+      "count": 37,
+      "file": "by_zip/92408.json"
+    },
+    "92410": {
+      "count": 4,
+      "file": "by_zip/92410.json"
+    },
+    "92411": {
+      "count": 8,
+      "file": "by_zip/92411.json"
+    },
+    "92415": {
+      "count": 1,
+      "file": "by_zip/92415.json"
+    },
+    "92501": {
+      "count": 13,
+      "file": "by_zip/92501.json"
+    },
+    "92503": {
+      "count": 33,
+      "file": "by_zip/92503.json"
+    },
+    "92504": {
+      "count": 14,
+      "file": "by_zip/92504.json"
+    },
+    "92505": {
+      "count": 23,
+      "file": "by_zip/92505.json"
+    },
+    "92506": {
+      "count": 32,
+      "file": "by_zip/92506.json"
+    },
+    "92507": {
+      "count": 12,
+      "file": "by_zip/92507.json"
+    },
+    "92508": {
+      "count": 2,
+      "file": "by_zip/92508.json"
+    },
+    "92509": {
+      "count": 22,
+      "file": "by_zip/92509.json"
+    },
+    "92518": {
+      "count": 2,
+      "file": "by_zip/92518.json"
+    },
+    "92530": {
+      "count": 7,
+      "file": "by_zip/92530.json"
+    },
+    "92532": {
+      "count": 1,
+      "file": "by_zip/92532.json"
+    },
+    "92539": {
+      "count": 7,
+      "file": "by_zip/92539.json"
+    },
+    "92543": {
+      "count": 23,
+      "file": "by_zip/92543.json"
+    },
+    "92544": {
+      "count": 4,
+      "file": "by_zip/92544.json"
+    },
+    "92545": {
+      "count": 7,
+      "file": "by_zip/92545.json"
+    },
+    "92551": {
+      "count": 1,
+      "file": "by_zip/92551.json"
+    },
+    "92553": {
+      "count": 24,
+      "file": "by_zip/92553.json"
+    },
+    "92555": {
+      "count": 9,
+      "file": "by_zip/92555.json"
+    },
+    "92557": {
+      "count": 8,
+      "file": "by_zip/92557.json"
+    },
+    "92561": {
+      "count": 1,
+      "file": "by_zip/92561.json"
+    },
+    "92562": {
+      "count": 23,
+      "file": "by_zip/92562.json"
+    },
+    "92563": {
+      "count": 11,
+      "file": "by_zip/92563.json"
+    },
+    "92567": {
+      "count": 1,
+      "file": "by_zip/92567.json"
+    },
+    "92570": {
+      "count": 2,
+      "file": "by_zip/92570.json"
+    },
+    "92571": {
+      "count": 7,
+      "file": "by_zip/92571.json"
+    },
+    "92582": {
+      "count": 1,
+      "file": "by_zip/92582.json"
+    },
+    "92583": {
+      "count": 7,
+      "file": "by_zip/92583.json"
+    },
+    "92585": {
+      "count": 2,
+      "file": "by_zip/92585.json"
+    },
+    "92586": {
+      "count": 7,
+      "file": "by_zip/92586.json"
+    },
+    "92590": {
+      "count": 30,
+      "file": "by_zip/92590.json"
+    },
+    "92591": {
+      "count": 2,
+      "file": "by_zip/92591.json"
+    },
+    "92592": {
+      "count": 7,
+      "file": "by_zip/92592.json"
+    },
+    "92595": {
+      "count": 4,
+      "file": "by_zip/92595.json"
+    },
+    "92602": {
+      "count": 1,
+      "file": "by_zip/92602.json"
+    },
+    "92603": {
+      "count": 1,
+      "file": "by_zip/92603.json"
+    },
+    "92604": {
+      "count": 1,
+      "file": "by_zip/92604.json"
+    },
+    "92606": {
+      "count": 4,
+      "file": "by_zip/92606.json"
+    },
+    "92610": {
+      "count": 4,
+      "file": "by_zip/92610.json"
+    },
+    "92612": {
+      "count": 8,
+      "file": "by_zip/92612.json"
+    },
+    "92614": {
+      "count": 18,
+      "file": "by_zip/92614.json"
+    },
+    "92618": {
+      "count": 17,
+      "file": "by_zip/92618.json"
+    },
+    "92620": {
+      "count": 3,
+      "file": "by_zip/92620.json"
+    },
+    "92624": {
+      "count": 1,
+      "file": "by_zip/92624.json"
+    },
+    "92625": {
+      "count": 2,
+      "file": "by_zip/92625.json"
+    },
+    "92626": {
+      "count": 28,
+      "file": "by_zip/92626.json"
+    },
+    "92627": {
+      "count": 16,
+      "file": "by_zip/92627.json"
+    },
+    "92629": {
+      "count": 1,
+      "file": "by_zip/92629.json"
+    },
+    "92630": {
+      "count": 13,
+      "file": "by_zip/92630.json"
+    },
+    "92637": {
+      "count": 5,
+      "file": "by_zip/92637.json"
+    },
+    "92646": {
+      "count": 2,
+      "file": "by_zip/92646.json"
+    },
+    "92647": {
+      "count": 13,
+      "file": "by_zip/92647.json"
+    },
+    "92648": {
+      "count": 5,
+      "file": "by_zip/92648.json"
+    },
+    "92649": {
+      "count": 6,
+      "file": "by_zip/92649.json"
+    },
+    "92651": {
+      "count": 5,
+      "file": "by_zip/92651.json"
+    },
+    "92653": {
+      "count": 30,
+      "file": "by_zip/92653.json"
+    },
+    "92656": {
+      "count": 4,
+      "file": "by_zip/92656.json"
+    },
+    "92660": {
+      "count": 18,
+      "file": "by_zip/92660.json"
+    },
+    "92663": {
+      "count": 16,
+      "file": "by_zip/92663.json"
+    },
+    "92672": {
+      "count": 3,
+      "file": "by_zip/92672.json"
+    },
+    "92673": {
+      "count": 4,
+      "file": "by_zip/92673.json"
+    },
+    "92675": {
+      "count": 10,
+      "file": "by_zip/92675.json"
+    },
+    "92677": {
+      "count": 3,
+      "file": "by_zip/92677.json"
+    },
+    "92683": {
+      "count": 24,
+      "file": "by_zip/92683.json"
+    },
+    "92691": {
+      "count": 43,
+      "file": "by_zip/92691.json"
+    },
+    "92692": {
+      "count": 1,
+      "file": "by_zip/92692.json"
+    },
+    "92694": {
+      "count": 1,
+      "file": "by_zip/92694.json"
+    },
+    "92701": {
+      "count": 27,
+      "file": "by_zip/92701.json"
+    },
+    "92703": {
+      "count": 11,
+      "file": "by_zip/92703.json"
+    },
+    "92704": {
+      "count": 22,
+      "file": "by_zip/92704.json"
+    },
+    "92705": {
+      "count": 27,
+      "file": "by_zip/92705.json"
+    },
+    "92706": {
+      "count": 11,
+      "file": "by_zip/92706.json"
+    },
+    "92707": {
+      "count": 10,
+      "file": "by_zip/92707.json"
+    },
+    "92708": {
+      "count": 35,
+      "file": "by_zip/92708.json"
+    },
+    "92780": {
+      "count": 29,
+      "file": "by_zip/92780.json"
+    },
+    "92782": {
+      "count": 5,
+      "file": "by_zip/92782.json"
+    },
+    "92801": {
+      "count": 52,
+      "file": "by_zip/92801.json"
+    },
+    "92802": {
+      "count": 10,
+      "file": "by_zip/92802.json"
+    },
+    "92804": {
+      "count": 42,
+      "file": "by_zip/92804.json"
+    },
+    "92805": {
+      "count": 24,
+      "file": "by_zip/92805.json"
+    },
+    "92806": {
+      "count": 12,
+      "file": "by_zip/92806.json"
+    },
+    "92807": {
+      "count": 9,
+      "file": "by_zip/92807.json"
+    },
+    "92808": {
+      "count": 3,
+      "file": "by_zip/92808.json"
+    },
+    "92821": {
+      "count": 10,
+      "file": "by_zip/92821.json"
+    },
+    "92831": {
+      "count": 11,
+      "file": "by_zip/92831.json"
+    },
+    "92832": {
+      "count": 9,
+      "file": "by_zip/92832.json"
+    },
+    "92833": {
+      "count": 6,
+      "file": "by_zip/92833.json"
+    },
+    "92835": {
+      "count": 18,
+      "file": "by_zip/92835.json"
+    },
+    "92840": {
+      "count": 24,
+      "file": "by_zip/92840.json"
+    },
+    "92841": {
+      "count": 10,
+      "file": "by_zip/92841.json"
+    },
+    "92843": {
+      "count": 16,
+      "file": "by_zip/92843.json"
+    },
+    "92844": {
+      "count": 7,
+      "file": "by_zip/92844.json"
+    },
+    "92845": {
+      "count": 3,
+      "file": "by_zip/92845.json"
+    },
+    "92860": {
+      "count": 6,
+      "file": "by_zip/92860.json"
+    },
+    "92861": {
+      "count": 1,
+      "file": "by_zip/92861.json"
+    },
+    "92865": {
+      "count": 6,
+      "file": "by_zip/92865.json"
+    },
+    "92866": {
+      "count": 6,
+      "file": "by_zip/92866.json"
+    },
+    "92867": {
+      "count": 6,
+      "file": "by_zip/92867.json"
+    },
+    "92868": {
+      "count": 49,
+      "file": "by_zip/92868.json"
+    },
+    "92869": {
+      "count": 6,
+      "file": "by_zip/92869.json"
+    },
+    "92870": {
+      "count": 8,
+      "file": "by_zip/92870.json"
+    },
+    "92878": {
+      "count": 3,
+      "file": "by_zip/92878.json"
+    },
+    "92879": {
+      "count": 24,
+      "file": "by_zip/92879.json"
+    },
+    "92880": {
+      "count": 13,
+      "file": "by_zip/92880.json"
+    },
+    "92881": {
+      "count": 9,
+      "file": "by_zip/92881.json"
+    },
+    "92882": {
+      "count": 17,
+      "file": "by_zip/92882.json"
+    },
+    "92883": {
+      "count": 4,
+      "file": "by_zip/92883.json"
+    },
+    "92886": {
+      "count": 6,
+      "file": "by_zip/92886.json"
+    },
+    "92887": {
+      "count": 2,
+      "file": "by_zip/92887.json"
+    },
+    "93001": {
+      "count": 6,
+      "file": "by_zip/93001.json"
+    },
+    "93003": {
+      "count": 35,
+      "file": "by_zip/93003.json"
+    },
+    "93004": {
+      "count": 8,
+      "file": "by_zip/93004.json"
+    },
+    "93010": {
+      "count": 26,
+      "file": "by_zip/93010.json"
+    },
+    "93012": {
+      "count": 9,
+      "file": "by_zip/93012.json"
+    },
+    "93013": {
+      "count": 3,
+      "file": "by_zip/93013.json"
+    },
+    "93015": {
+      "count": 6,
+      "file": "by_zip/93015.json"
+    },
+    "93021": {
+      "count": 8,
+      "file": "by_zip/93021.json"
+    },
+    "93022": {
+      "count": 2,
+      "file": "by_zip/93022.json"
+    },
+    "93023": {
+      "count": 10,
+      "file": "by_zip/93023.json"
+    },
+    "93030": {
+      "count": 25,
+      "file": "by_zip/93030.json"
+    },
+    "93033": {
+      "count": 14,
+      "file": "by_zip/93033.json"
+    },
+    "93035": {
+      "count": 1,
+      "file": "by_zip/93035.json"
+    },
+    "93036": {
+      "count": 17,
+      "file": "by_zip/93036.json"
+    },
+    "93041": {
+      "count": 2,
+      "file": "by_zip/93041.json"
+    },
+    "93060": {
+      "count": 10,
+      "file": "by_zip/93060.json"
+    },
+    "93063": {
+      "count": 52,
+      "file": "by_zip/93063.json"
+    },
+    "93065": {
+      "count": 61,
+      "file": "by_zip/93065.json"
+    },
+    "93101": {
+      "count": 13,
+      "file": "by_zip/93101.json"
+    },
+    "93103": {
+      "count": 6,
+      "file": "by_zip/93103.json"
+    },
+    "93105": {
+      "count": 20,
+      "file": "by_zip/93105.json"
+    },
+    "93108": {
+      "count": 1,
+      "file": "by_zip/93108.json"
+    },
+    "93109": {
+      "count": 1,
+      "file": "by_zip/93109.json"
+    },
+    "93110": {
+      "count": 7,
+      "file": "by_zip/93110.json"
+    },
+    "93111": {
+      "count": 5,
+      "file": "by_zip/93111.json"
+    },
+    "93117": {
+      "count": 3,
+      "file": "by_zip/93117.json"
+    },
+    "93203": {
+      "count": 7,
+      "file": "by_zip/93203.json"
+    },
+    "93204": {
+      "count": 7,
+      "file": "by_zip/93204.json"
+    },
+    "93206": {
+      "count": 1,
+      "file": "by_zip/93206.json"
+    },
+    "93210": {
+      "count": 11,
+      "file": "by_zip/93210.json"
+    },
+    "93212": {
+      "count": 6,
+      "file": "by_zip/93212.json"
+    },
+    "93215": {
+      "count": 31,
+      "file": "by_zip/93215.json"
+    },
+    "93219": {
+      "count": 3,
+      "file": "by_zip/93219.json"
+    },
+    "93221": {
+      "count": 6,
+      "file": "by_zip/93221.json"
+    },
+    "93222": {
+      "count": 1,
+      "file": "by_zip/93222.json"
+    },
+    "93223": {
+      "count": 5,
+      "file": "by_zip/93223.json"
+    },
+    "93227": {
+      "count": 2,
+      "file": "by_zip/93227.json"
+    },
+    "93230": {
+      "count": 26,
+      "file": "by_zip/93230.json"
+    },
+    "93234": {
+      "count": 3,
+      "file": "by_zip/93234.json"
+    },
+    "93235": {
+      "count": 1,
+      "file": "by_zip/93235.json"
+    },
+    "93239": {
+      "count": 1,
+      "file": "by_zip/93239.json"
+    },
+    "93240": {
+      "count": 6,
+      "file": "by_zip/93240.json"
+    },
+    "93241": {
+      "count": 2,
+      "file": "by_zip/93241.json"
+    },
+    "93243": {
+      "count": 1,
+      "file": "by_zip/93243.json"
+    },
+    "93245": {
+      "count": 8,
+      "file": "by_zip/93245.json"
+    },
+    "93247": {
+      "count": 14,
+      "file": "by_zip/93247.json"
+    },
+    "93249": {
+      "count": 1,
+      "file": "by_zip/93249.json"
+    },
+    "93250": {
+      "count": 6,
+      "file": "by_zip/93250.json"
+    },
+    "93254": {
+      "count": 1,
+      "file": "by_zip/93254.json"
+    },
+    "93256": {
+      "count": 2,
+      "file": "by_zip/93256.json"
+    },
+    "93257": {
+      "count": 30,
+      "file": "by_zip/93257.json"
+    },
+    "93263": {
+      "count": 9,
+      "file": "by_zip/93263.json"
+    },
+    "93265": {
+      "count": 3,
+      "file": "by_zip/93265.json"
+    },
+    "93266": {
+      "count": 1,
+      "file": "by_zip/93266.json"
+    },
+    "93267": {
+      "count": 1,
+      "file": "by_zip/93267.json"
+    },
+    "93268": {
+      "count": 3,
+      "file": "by_zip/93268.json"
+    },
+    "93270": {
+      "count": 2,
+      "file": "by_zip/93270.json"
+    },
+    "93271": {
+      "count": 1,
+      "file": "by_zip/93271.json"
+    },
+    "93272": {
+      "count": 1,
+      "file": "by_zip/93272.json"
+    },
+    "93274": {
+      "count": 26,
+      "file": "by_zip/93274.json"
+    },
+    "93277": {
+      "count": 23,
+      "file": "by_zip/93277.json"
+    },
+    "93280": {
+      "count": 10,
+      "file": "by_zip/93280.json"
+    },
+    "93285": {
+      "count": 1,
+      "file": "by_zip/93285.json"
+    },
+    "93286": {
+      "count": 4,
+      "file": "by_zip/93286.json"
+    },
+    "93291": {
+      "count": 20,
+      "file": "by_zip/93291.json"
+    },
+    "93292": {
+      "count": 3,
+      "file": "by_zip/93292.json"
+    },
+    "93301": {
+      "count": 41,
+      "file": "by_zip/93301.json"
+    },
+    "93303": {
+      "count": 1,
+      "file": "by_zip/93303.json"
+    },
+    "93304": {
+      "count": 13,
+      "file": "by_zip/93304.json"
+    },
+    "93305": {
+      "count": 3,
+      "file": "by_zip/93305.json"
+    },
+    "93306": {
+      "count": 17,
+      "file": "by_zip/93306.json"
+    },
+    "93307": {
+      "count": 7,
+      "file": "by_zip/93307.json"
+    },
+    "93308": {
+      "count": 12,
+      "file": "by_zip/93308.json"
+    },
+    "93309": {
+      "count": 49,
+      "file": "by_zip/93309.json"
+    },
+    "93311": {
+      "count": 16,
+      "file": "by_zip/93311.json"
+    },
+    "93312": {
+      "count": 10,
+      "file": "by_zip/93312.json"
+    },
+    "93313": {
+      "count": 7,
+      "file": "by_zip/93313.json"
+    },
+    "93314": {
+      "count": 1,
+      "file": "by_zip/93314.json"
+    },
+    "93401": {
+      "count": 39,
+      "file": "by_zip/93401.json"
+    },
+    "93402": {
+      "count": 1,
+      "file": "by_zip/93402.json"
+    },
+    "93405": {
+      "count": 9,
+      "file": "by_zip/93405.json"
+    },
+    "93409": {
+      "count": 1,
+      "file": "by_zip/93409.json"
+    },
+    "93420": {
+      "count": 17,
+      "file": "by_zip/93420.json"
+    },
+    "93422": {
+      "count": 9,
+      "file": "by_zip/93422.json"
+    },
+    "93423": {
+      "count": 1,
+      "file": "by_zip/93423.json"
+    },
+    "93428": {
+      "count": 1,
+      "file": "by_zip/93428.json"
+    },
+    "93433": {
+      "count": 2,
+      "file": "by_zip/93433.json"
+    },
+    "93434": {
+      "count": 2,
+      "file": "by_zip/93434.json"
+    },
+    "93436": {
+      "count": 13,
+      "file": "by_zip/93436.json"
+    },
+    "93440": {
+      "count": 1,
+      "file": "by_zip/93440.json"
+    },
+    "93442": {
+      "count": 3,
+      "file": "by_zip/93442.json"
+    },
+    "93444": {
+      "count": 7,
+      "file": "by_zip/93444.json"
+    },
+    "93445": {
+      "count": 1,
+      "file": "by_zip/93445.json"
+    },
+    "93446": {
+      "count": 6,
+      "file": "by_zip/93446.json"
+    },
+    "93449": {
+      "count": 8,
+      "file": "by_zip/93449.json"
+    },
+    "93451": {
+      "count": 1,
+      "file": "by_zip/93451.json"
+    },
+    "93454": {
+      "count": 37,
+      "file": "by_zip/93454.json"
+    },
+    "93455": {
+      "count": 9,
+      "file": "by_zip/93455.json"
+    },
+    "93458": {
+      "count": 7,
+      "file": "by_zip/93458.json"
+    },
+    "93460": {
+      "count": 1,
+      "file": "by_zip/93460.json"
+    },
+    "93463": {
+      "count": 5,
+      "file": "by_zip/93463.json"
+    },
+    "93465": {
+      "count": 16,
+      "file": "by_zip/93465.json"
+    },
+    "93501": {
+      "count": 2,
+      "file": "by_zip/93501.json"
+    },
+    "93505": {
+      "count": 3,
+      "file": "by_zip/93505.json"
+    },
+    "93510": {
+      "count": 1,
+      "file": "by_zip/93510.json"
+    },
+    "93514": {
+      "count": 10,
+      "file": "by_zip/93514.json"
+    },
+    "93516": {
+      "count": 1,
+      "file": "by_zip/93516.json"
+    },
+    "93534": {
+      "count": 45,
+      "file": "by_zip/93534.json"
+    },
+    "93535": {
+      "count": 5,
+      "file": "by_zip/93535.json"
+    },
+    "93536": {
+      "count": 10,
+      "file": "by_zip/93536.json"
+    },
+    "93545": {
+      "count": 4,
+      "file": "by_zip/93545.json"
+    },
+    "93546": {
+      "count": 3,
+      "file": "by_zip/93546.json"
+    },
+    "93550": {
+      "count": 22,
+      "file": "by_zip/93550.json"
+    },
+    "93551": {
+      "count": 18,
+      "file": "by_zip/93551.json"
+    },
+    "93552": {
+      "count": 1,
+      "file": "by_zip/93552.json"
+    },
+    "93555": {
+      "count": 17,
+      "file": "by_zip/93555.json"
+    },
+    "93561": {
+      "count": 7,
+      "file": "by_zip/93561.json"
+    },
+    "93562": {
+      "count": 1,
+      "file": "by_zip/93562.json"
+    },
+    "93609": {
+      "count": 2,
+      "file": "by_zip/93609.json"
+    },
+    "93610": {
+      "count": 9,
+      "file": "by_zip/93610.json"
+    },
+    "93611": {
+      "count": 10,
+      "file": "by_zip/93611.json"
+    },
+    "93612": {
+      "count": 13,
+      "file": "by_zip/93612.json"
+    },
+    "93614": {
+      "count": 1,
+      "file": "by_zip/93614.json"
+    },
+    "93615": {
+      "count": 1,
+      "file": "by_zip/93615.json"
+    },
+    "93618": {
+      "count": 17,
+      "file": "by_zip/93618.json"
+    },
+    "93620": {
+      "count": 1,
+      "file": "by_zip/93620.json"
+    },
+    "93622": {
+      "count": 3,
+      "file": "by_zip/93622.json"
+    },
+    "93625": {
+      "count": 7,
+      "file": "by_zip/93625.json"
+    },
+    "93630": {
+      "count": 7,
+      "file": "by_zip/93630.json"
+    },
+    "93631": {
+      "count": 5,
+      "file": "by_zip/93631.json"
+    },
+    "93635": {
+      "count": 14,
+      "file": "by_zip/93635.json"
+    },
+    "93636": {
+      "count": 6,
+      "file": "by_zip/93636.json"
+    },
+    "93637": {
+      "count": 27,
+      "file": "by_zip/93637.json"
+    },
+    "93638": {
+      "count": 11,
+      "file": "by_zip/93638.json"
+    },
+    "93640": {
+      "count": 5,
+      "file": "by_zip/93640.json"
+    },
+    "93643": {
+      "count": 1,
+      "file": "by_zip/93643.json"
+    },
+    "93644": {
+      "count": 6,
+      "file": "by_zip/93644.json"
+    },
+    "93646": {
+      "count": 3,
+      "file": "by_zip/93646.json"
+    },
+    "93647": {
+      "count": 6,
+      "file": "by_zip/93647.json"
+    },
+    "93648": {
+      "count": 3,
+      "file": "by_zip/93648.json"
+    },
+    "93651": {
+      "count": 1,
+      "file": "by_zip/93651.json"
+    },
+    "93652": {
+      "count": 2,
+      "file": "by_zip/93652.json"
+    },
+    "93654": {
+      "count": 18,
+      "file": "by_zip/93654.json"
+    },
+    "93656": {
+      "count": 2,
+      "file": "by_zip/93656.json"
+    },
+    "93657": {
+      "count": 8,
+      "file": "by_zip/93657.json"
+    },
+    "93660": {
+      "count": 2,
+      "file": "by_zip/93660.json"
+    },
+    "93662": {
+      "count": 14,
+      "file": "by_zip/93662.json"
+    },
+    "93668": {
+      "count": 1,
+      "file": "by_zip/93668.json"
+    },
+    "93673": {
+      "count": 1,
+      "file": "by_zip/93673.json"
+    },
+    "93675": {
+      "count": 1,
+      "file": "by_zip/93675.json"
+    },
+    "93701": {
+      "count": 6,
+      "file": "by_zip/93701.json"
+    },
+    "93702": {
+      "count": 2,
+      "file": "by_zip/93702.json"
+    },
+    "93703": {
+      "count": 8,
+      "file": "by_zip/93703.json"
+    },
+    "93704": {
+      "count": 11,
+      "file": "by_zip/93704.json"
+    },
+    "93705": {
+      "count": 3,
+      "file": "by_zip/93705.json"
+    },
+    "93706": {
+      "count": 9,
+      "file": "by_zip/93706.json"
+    },
+    "93710": {
+      "count": 48,
+      "file": "by_zip/93710.json"
+    },
+    "93711": {
+      "count": 36,
+      "file": "by_zip/93711.json"
+    },
+    "93720": {
+      "count": 38,
+      "file": "by_zip/93720.json"
+    },
+    "93721": {
+      "count": 17,
+      "file": "by_zip/93721.json"
+    },
+    "93722": {
+      "count": 13,
+      "file": "by_zip/93722.json"
+    },
+    "93725": {
+      "count": 5,
+      "file": "by_zip/93725.json"
+    },
+    "93726": {
+      "count": 26,
+      "file": "by_zip/93726.json"
+    },
+    "93727": {
+      "count": 26,
+      "file": "by_zip/93727.json"
+    },
+    "93728": {
+      "count": 4,
+      "file": "by_zip/93728.json"
+    },
+    "93901": {
+      "count": 16,
+      "file": "by_zip/93901.json"
+    },
+    "93905": {
+      "count": 8,
+      "file": "by_zip/93905.json"
+    },
+    "93906": {
+      "count": 12,
+      "file": "by_zip/93906.json"
+    },
+    "93907": {
+      "count": 5,
+      "file": "by_zip/93907.json"
+    },
+    "93908": {
+      "count": 3,
+      "file": "by_zip/93908.json"
+    },
+    "93920": {
+      "count": 1,
+      "file": "by_zip/93920.json"
+    },
+    "93923": {
+      "count": 3,
+      "file": "by_zip/93923.json"
+    },
+    "93926": {
+      "count": 2,
+      "file": "by_zip/93926.json"
+    },
+    "93927": {
+      "count": 2,
+      "file": "by_zip/93927.json"
+    },
+    "93930": {
+      "count": 7,
+      "file": "by_zip/93930.json"
+    },
+    "93933": {
+      "count": 5,
+      "file": "by_zip/93933.json"
+    },
+    "93940": {
+      "count": 31,
+      "file": "by_zip/93940.json"
+    },
+    "93950": {
+      "count": 7,
+      "file": "by_zip/93950.json"
+    },
+    "93955": {
+      "count": 3,
+      "file": "by_zip/93955.json"
+    },
+    "93960": {
+      "count": 5,
+      "file": "by_zip/93960.json"
+    },
+    "94002": {
+      "count": 2,
+      "file": "by_zip/94002.json"
+    },
+    "94010": {
+      "count": 20,
+      "file": "by_zip/94010.json"
+    },
+    "94014": {
+      "count": 8,
+      "file": "by_zip/94014.json"
+    },
+    "94015": {
+      "count": 24,
+      "file": "by_zip/94015.json"
+    },
+    "94019": {
+      "count": 4,
+      "file": "by_zip/94019.json"
+    },
+    "94022": {
+      "count": 2,
+      "file": "by_zip/94022.json"
+    },
+    "94024": {
+      "count": 3,
+      "file": "by_zip/94024.json"
+    },
+    "94025": {
+      "count": 6,
+      "file": "by_zip/94025.json"
+    },
+    "94027": {
+      "count": 2,
+      "file": "by_zip/94027.json"
+    },
+    "94028": {
+      "count": 1,
+      "file": "by_zip/94028.json"
+    },
+    "94030": {
+      "count": 1,
+      "file": "by_zip/94030.json"
+    },
+    "94038": {
+      "count": 2,
+      "file": "by_zip/94038.json"
+    },
+    "94040": {
+      "count": 16,
+      "file": "by_zip/94040.json"
+    },
+    "94043": {
+      "count": 1,
+      "file": "by_zip/94043.json"
+    },
+    "94044": {
+      "count": 3,
+      "file": "by_zip/94044.json"
+    },
+    "94061": {
+      "count": 2,
+      "file": "by_zip/94061.json"
+    },
+    "94062": {
+      "count": 5,
+      "file": "by_zip/94062.json"
+    },
+    "94063": {
+      "count": 10,
+      "file": "by_zip/94063.json"
+    },
+    "94065": {
+      "count": 1,
+      "file": "by_zip/94065.json"
+    },
+    "94066": {
+      "count": 10,
+      "file": "by_zip/94066.json"
+    },
+    "94070": {
+      "count": 5,
+      "file": "by_zip/94070.json"
+    },
+    "94080": {
+      "count": 22,
+      "file": "by_zip/94080.json"
+    },
+    "94085": {
+      "count": 6,
+      "file": "by_zip/94085.json"
+    },
+    "94086": {
+      "count": 2,
+      "file": "by_zip/94086.json"
+    },
+    "94087": {
+      "count": 4,
+      "file": "by_zip/94087.json"
+    },
+    "94102": {
+      "count": 14,
+      "file": "by_zip/94102.json"
+    },
+    "94103": {
+      "count": 15,
+      "file": "by_zip/94103.json"
+    },
+    "94105": {
+      "count": 1,
+      "file": "by_zip/94105.json"
+    },
+    "94107": {
+      "count": 5,
+      "file": "by_zip/94107.json"
+    },
+    "94108": {
+      "count": 3,
+      "file": "by_zip/94108.json"
+    },
+    "94109": {
+      "count": 23,
+      "file": "by_zip/94109.json"
+    },
+    "94110": {
+      "count": 19,
+      "file": "by_zip/94110.json"
+    },
+    "94111": {
+      "count": 3,
+      "file": "by_zip/94111.json"
+    },
+    "94112": {
+      "count": 11,
+      "file": "by_zip/94112.json"
+    },
+    "94114": {
+      "count": 2,
+      "file": "by_zip/94114.json"
+    },
+    "94115": {
+      "count": 20,
+      "file": "by_zip/94115.json"
+    },
+    "94116": {
+      "count": 9,
+      "file": "by_zip/94116.json"
+    },
+    "94117": {
+      "count": 12,
+      "file": "by_zip/94117.json"
+    },
+    "94118": {
+      "count": 12,
+      "file": "by_zip/94118.json"
+    },
+    "94121": {
+      "count": 4,
+      "file": "by_zip/94121.json"
+    },
+    "94122": {
+      "count": 9,
+      "file": "by_zip/94122.json"
+    },
+    "94124": {
+      "count": 5,
+      "file": "by_zip/94124.json"
+    },
+    "94127": {
+      "count": 2,
+      "file": "by_zip/94127.json"
+    },
+    "94129": {
+      "count": 1,
+      "file": "by_zip/94129.json"
+    },
+    "94131": {
+      "count": 2,
+      "file": "by_zip/94131.json"
+    },
+    "94133": {
+      "count": 13,
+      "file": "by_zip/94133.json"
+    },
+    "94134": {
+      "count": 4,
+      "file": "by_zip/94134.json"
+    },
+    "94143": {
+      "count": 5,
+      "file": "by_zip/94143.json"
+    },
+    "94158": {
+      "count": 3,
+      "file": "by_zip/94158.json"
+    },
+    "94301": {
+      "count": 7,
+      "file": "by_zip/94301.json"
+    },
+    "94303": {
+      "count": 5,
+      "file": "by_zip/94303.json"
+    },
+    "94304": {
+      "count": 6,
+      "file": "by_zip/94304.json"
+    },
+    "94305": {
+      "count": 3,
+      "file": "by_zip/94305.json"
+    },
+    "94306": {
+      "count": 2,
+      "file": "by_zip/94306.json"
+    },
+    "94401": {
+      "count": 14,
+      "file": "by_zip/94401.json"
+    },
+    "94402": {
+      "count": 10,
+      "file": "by_zip/94402.json"
+    },
+    "94403": {
+      "count": 13,
+      "file": "by_zip/94403.json"
+    },
+    "94404": {
+      "count": 2,
+      "file": "by_zip/94404.json"
+    },
+    "94501": {
+      "count": 24,
+      "file": "by_zip/94501.json"
+    },
+    "94502": {
+      "count": 1,
+      "file": "by_zip/94502.json"
+    },
+    "94503": {
+      "count": 5,
+      "file": "by_zip/94503.json"
+    },
+    "94506": {
+      "count": 2,
+      "file": "by_zip/94506.json"
+    },
+    "94507": {
+      "count": 1,
+      "file": "by_zip/94507.json"
+    },
+    "94509": {
+      "count": 28,
+      "file": "by_zip/94509.json"
+    },
+    "94510": {
+      "count": 4,
+      "file": "by_zip/94510.json"
+    },
+    "94513": {
+      "count": 12,
+      "file": "by_zip/94513.json"
+    },
+    "94515": {
+      "count": 1,
+      "file": "by_zip/94515.json"
+    },
+    "94518": {
+      "count": 9,
+      "file": "by_zip/94518.json"
+    },
+    "94519": {
+      "count": 5,
+      "file": "by_zip/94519.json"
+    },
+    "94520": {
+      "count": 31,
+      "file": "by_zip/94520.json"
+    },
+    "94521": {
+      "count": 5,
+      "file": "by_zip/94521.json"
+    },
+    "94523": {
+      "count": 14,
+      "file": "by_zip/94523.json"
+    },
+    "94526": {
+      "count": 6,
+      "file": "by_zip/94526.json"
+    },
+    "94530": {
+      "count": 6,
+      "file": "by_zip/94530.json"
+    },
+    "94531": {
+      "count": 9,
+      "file": "by_zip/94531.json"
+    },
+    "94533": {
+      "count": 22,
+      "file": "by_zip/94533.json"
+    },
+    "94534": {
+      "count": 10,
+      "file": "by_zip/94534.json"
+    },
+    "94535": {
+      "count": 1,
+      "file": "by_zip/94535.json"
+    },
+    "94536": {
+      "count": 14,
+      "file": "by_zip/94536.json"
+    },
+    "94538": {
+      "count": 56,
+      "file": "by_zip/94538.json"
+    },
+    "94539": {
+      "count": 11,
+      "file": "by_zip/94539.json"
+    },
+    "94541": {
+      "count": 33,
+      "file": "by_zip/94541.json"
+    },
+    "94544": {
+      "count": 14,
+      "file": "by_zip/94544.json"
+    },
+    "94545": {
+      "count": 42,
+      "file": "by_zip/94545.json"
+    },
+    "94546": {
+      "count": 15,
+      "file": "by_zip/94546.json"
+    },
+    "94547": {
+      "count": 2,
+      "file": "by_zip/94547.json"
+    },
+    "94549": {
+      "count": 4,
+      "file": "by_zip/94549.json"
+    },
+    "94550": {
+      "count": 14,
+      "file": "by_zip/94550.json"
+    },
+    "94551": {
+      "count": 10,
+      "file": "by_zip/94551.json"
+    },
+    "94553": {
+      "count": 6,
+      "file": "by_zip/94553.json"
+    },
+    "94556": {
+      "count": 2,
+      "file": "by_zip/94556.json"
+    },
+    "94558": {
+      "count": 26,
+      "file": "by_zip/94558.json"
+    },
+    "94559": {
+      "count": 8,
+      "file": "by_zip/94559.json"
+    },
+    "94560": {
+      "count": 6,
+      "file": "by_zip/94560.json"
+    },
+    "94561": {
+      "count": 6,
+      "file": "by_zip/94561.json"
+    },
+    "94563": {
+      "count": 3,
+      "file": "by_zip/94563.json"
+    },
+    "94564": {
+      "count": 7,
+      "file": "by_zip/94564.json"
+    },
+    "94565": {
+      "count": 24,
+      "file": "by_zip/94565.json"
+    },
+    "94566": {
+      "count": 16,
+      "file": "by_zip/94566.json"
+    },
+    "94568": {
+      "count": 16,
+      "file": "by_zip/94568.json"
+    },
+    "94572": {
+      "count": 1,
+      "file": "by_zip/94572.json"
+    },
+    "94574": {
+      "count": 2,
+      "file": "by_zip/94574.json"
+    },
+    "94577": {
+      "count": 23,
+      "file": "by_zip/94577.json"
+    },
+    "94578": {
+      "count": 24,
+      "file": "by_zip/94578.json"
+    },
+    "94579": {
+      "count": 1,
+      "file": "by_zip/94579.json"
+    },
+    "94580": {
+      "count": 2,
+      "file": "by_zip/94580.json"
+    },
+    "94583": {
+      "count": 25,
+      "file": "by_zip/94583.json"
+    },
+    "94585": {
+      "count": 3,
+      "file": "by_zip/94585.json"
+    },
+    "94586": {
+      "count": 1,
+      "file": "by_zip/94586.json"
+    },
+    "94587": {
+      "count": 16,
+      "file": "by_zip/94587.json"
+    },
+    "94588": {
+      "count": 21,
+      "file": "by_zip/94588.json"
+    },
+    "94589": {
+      "count": 11,
+      "file": "by_zip/94589.json"
+    },
+    "94590": {
+      "count": 14,
+      "file": "by_zip/94590.json"
+    },
+    "94591": {
+      "count": 14,
+      "file": "by_zip/94591.json"
+    },
+    "94592": {
+      "count": 1,
+      "file": "by_zip/94592.json"
+    },
+    "94595": {
+      "count": 4,
+      "file": "by_zip/94595.json"
+    },
+    "94596": {
+      "count": 13,
+      "file": "by_zip/94596.json"
+    },
+    "94597": {
+      "count": 2,
+      "file": "by_zip/94597.json"
+    },
+    "94598": {
+      "count": 25,
+      "file": "by_zip/94598.json"
+    },
+    "94599": {
+      "count": 2,
+      "file": "by_zip/94599.json"
+    },
+    "94601": {
+      "count": 26,
+      "file": "by_zip/94601.json"
+    },
+    "94602": {
+      "count": 5,
+      "file": "by_zip/94602.json"
+    },
+    "94603": {
+      "count": 5,
+      "file": "by_zip/94603.json"
+    },
+    "94605": {
+      "count": 12,
+      "file": "by_zip/94605.json"
+    },
+    "94606": {
+      "count": 8,
+      "file": "by_zip/94606.json"
+    },
+    "94607": {
+      "count": 25,
+      "file": "by_zip/94607.json"
+    },
+    "94608": {
+      "count": 8,
+      "file": "by_zip/94608.json"
+    },
+    "94609": {
+      "count": 24,
+      "file": "by_zip/94609.json"
+    },
+    "94610": {
+      "count": 5,
+      "file": "by_zip/94610.json"
+    },
+    "94611": {
+      "count": 7,
+      "file": "by_zip/94611.json"
+    },
+    "94612": {
+      "count": 20,
+      "file": "by_zip/94612.json"
+    },
+    "94618": {
+      "count": 2,
+      "file": "by_zip/94618.json"
+    },
+    "94619": {
+      "count": 5,
+      "file": "by_zip/94619.json"
+    },
+    "94621": {
+      "count": 15,
+      "file": "by_zip/94621.json"
+    },
+    "94702": {
+      "count": 5,
+      "file": "by_zip/94702.json"
+    },
+    "94703": {
+      "count": 3,
+      "file": "by_zip/94703.json"
+    },
+    "94704": {
+      "count": 9,
+      "file": "by_zip/94704.json"
+    },
+    "94705": {
+      "count": 4,
+      "file": "by_zip/94705.json"
+    },
+    "94706": {
+      "count": 1,
+      "file": "by_zip/94706.json"
+    },
+    "94709": {
+      "count": 1,
+      "file": "by_zip/94709.json"
+    },
+    "94710": {
+      "count": 3,
+      "file": "by_zip/94710.json"
+    },
+    "94801": {
+      "count": 2,
+      "file": "by_zip/94801.json"
+    },
+    "94803": {
+      "count": 5,
+      "file": "by_zip/94803.json"
+    },
+    "94804": {
+      "count": 11,
+      "file": "by_zip/94804.json"
+    },
+    "94805": {
+      "count": 2,
+      "file": "by_zip/94805.json"
+    },
+    "94806": {
+      "count": 12,
+      "file": "by_zip/94806.json"
+    },
+    "94901": {
+      "count": 19,
+      "file": "by_zip/94901.json"
+    },
+    "94903": {
+      "count": 16,
+      "file": "by_zip/94903.json"
+    },
+    "94904": {
+      "count": 11,
+      "file": "by_zip/94904.json"
+    },
+    "94920": {
+      "count": 2,
+      "file": "by_zip/94920.json"
+    },
+    "94924": {
+      "count": 2,
+      "file": "by_zip/94924.json"
+    },
+    "94925": {
+      "count": 1,
+      "file": "by_zip/94925.json"
+    },
+    "94928": {
+      "count": 6,
+      "file": "by_zip/94928.json"
+    },
+    "94930": {
+      "count": 1,
+      "file": "by_zip/94930.json"
+    },
+    "94939": {
+      "count": 4,
+      "file": "by_zip/94939.json"
+    },
+    "94941": {
+      "count": 3,
+      "file": "by_zip/94941.json"
+    },
+    "94945": {
+      "count": 10,
+      "file": "by_zip/94945.json"
+    },
+    "94947": {
+      "count": 4,
+      "file": "by_zip/94947.json"
+    },
+    "94949": {
+      "count": 1,
+      "file": "by_zip/94949.json"
+    },
+    "94952": {
+      "count": 8,
+      "file": "by_zip/94952.json"
+    },
+    "94954": {
+      "count": 11,
+      "file": "by_zip/94954.json"
+    },
+    "94956": {
+      "count": 3,
+      "file": "by_zip/94956.json"
+    },
+    "94963": {
+      "count": 1,
+      "file": "by_zip/94963.json"
+    },
+    "94964": {
+      "count": 2,
+      "file": "by_zip/94964.json"
+    },
+    "94965": {
+      "count": 4,
+      "file": "by_zip/94965.json"
+    },
+    "95002": {
+      "count": 1,
+      "file": "by_zip/95002.json"
+    },
+    "95005": {
+      "count": 2,
+      "file": "by_zip/95005.json"
+    },
+    "95008": {
+      "count": 10,
+      "file": "by_zip/95008.json"
+    },
+    "95010": {
+      "count": 4,
+      "file": "by_zip/95010.json"
+    },
+    "95012": {
+      "count": 2,
+      "file": "by_zip/95012.json"
+    },
+    "95014": {
+      "count": 3,
+      "file": "by_zip/95014.json"
+    },
+    "95019": {
+      "count": 4,
+      "file": "by_zip/95019.json"
+    },
+    "95020": {
+      "count": 21,
+      "file": "by_zip/95020.json"
+    },
+    "95023": {
+      "count": 12,
+      "file": "by_zip/95023.json"
+    },
+    "95030": {
+      "count": 1,
+      "file": "by_zip/95030.json"
+    },
+    "95032": {
+      "count": 16,
+      "file": "by_zip/95032.json"
+    },
+    "95035": {
+      "count": 18,
+      "file": "by_zip/95035.json"
+    },
+    "95037": {
+      "count": 7,
+      "file": "by_zip/95037.json"
+    },
+    "95045": {
+      "count": 1,
+      "file": "by_zip/95045.json"
+    },
+    "95050": {
+      "count": 6,
+      "file": "by_zip/95050.json"
+    },
+    "95051": {
+      "count": 4,
+      "file": "by_zip/95051.json"
+    },
+    "95054": {
+      "count": 6,
+      "file": "by_zip/95054.json"
+    },
+    "95060": {
+      "count": 6,
+      "file": "by_zip/95060.json"
+    },
+    "95062": {
+      "count": 14,
+      "file": "by_zip/95062.json"
+    },
+    "95065": {
+      "count": 6,
+      "file": "by_zip/95065.json"
+    },
+    "95066": {
+      "count": 1,
+      "file": "by_zip/95066.json"
+    },
+    "95070": {
+      "count": 8,
+      "file": "by_zip/95070.json"
+    },
+    "95076": {
+      "count": 25,
+      "file": "by_zip/95076.json"
+    },
+    "95110": {
+      "count": 5,
+      "file": "by_zip/95110.json"
+    },
+    "95111": {
+      "count": 4,
+      "file": "by_zip/95111.json"
+    },
+    "95112": {
+      "count": 14,
+      "file": "by_zip/95112.json"
+    },
+    "95113": {
+      "count": 1,
+      "file": "by_zip/95113.json"
+    },
+    "95116": {
+      "count": 14,
+      "file": "by_zip/95116.json"
+    },
+    "95117": {
+      "count": 3,
+      "file": "by_zip/95117.json"
+    },
+    "95118": {
+      "count": 2,
+      "file": "by_zip/95118.json"
+    },
+    "95119": {
+      "count": 8,
+      "file": "by_zip/95119.json"
+    },
+    "95121": {
+      "count": 7,
+      "file": "by_zip/95121.json"
+    },
+    "95122": {
+      "count": 9,
+      "file": "by_zip/95122.json"
+    },
+    "95123": {
+      "count": 4,
+      "file": "by_zip/95123.json"
+    },
+    "95124": {
+      "count": 17,
+      "file": "by_zip/95124.json"
+    },
+    "95125": {
+      "count": 11,
+      "file": "by_zip/95125.json"
+    },
+    "95126": {
+      "count": 13,
+      "file": "by_zip/95126.json"
+    },
+    "95127": {
+      "count": 14,
+      "file": "by_zip/95127.json"
+    },
+    "95128": {
+      "count": 42,
+      "file": "by_zip/95128.json"
+    },
+    "95129": {
+      "count": 3,
+      "file": "by_zip/95129.json"
+    },
+    "95131": {
+      "count": 10,
+      "file": "by_zip/95131.json"
+    },
+    "95132": {
+      "count": 1,
+      "file": "by_zip/95132.json"
+    },
+    "95133": {
+      "count": 2,
+      "file": "by_zip/95133.json"
+    },
+    "95134": {
+      "count": 4,
+      "file": "by_zip/95134.json"
+    },
+    "95135": {
+      "count": 4,
+      "file": "by_zip/95135.json"
+    },
+    "95136": {
+      "count": 3,
+      "file": "by_zip/95136.json"
+    },
+    "95138": {
+      "count": 3,
+      "file": "by_zip/95138.json"
+    },
+    "95148": {
+      "count": 4,
+      "file": "by_zip/95148.json"
+    },
+    "95202": {
+      "count": 14,
+      "file": "by_zip/95202.json"
+    },
+    "95203": {
+      "count": 5,
+      "file": "by_zip/95203.json"
+    },
+    "95204": {
+      "count": 16,
+      "file": "by_zip/95204.json"
+    },
+    "95205": {
+      "count": 12,
+      "file": "by_zip/95205.json"
+    },
+    "95206": {
+      "count": 6,
+      "file": "by_zip/95206.json"
+    },
+    "95207": {
+      "count": 31,
+      "file": "by_zip/95207.json"
+    },
+    "95209": {
+      "count": 20,
+      "file": "by_zip/95209.json"
+    },
+    "95210": {
+      "count": 14,
+      "file": "by_zip/95210.json"
+    },
+    "95212": {
+      "count": 1,
+      "file": "by_zip/95212.json"
+    },
+    "95215": {
+      "count": 3,
+      "file": "by_zip/95215.json"
+    },
+    "95219": {
+      "count": 7,
+      "file": "by_zip/95219.json"
+    },
+    "95222": {
+      "count": 5,
+      "file": "by_zip/95222.json"
+    },
+    "95223": {
+      "count": 1,
+      "file": "by_zip/95223.json"
+    },
+    "95228": {
+      "count": 1,
+      "file": "by_zip/95228.json"
+    },
+    "95231": {
+      "count": 5,
+      "file": "by_zip/95231.json"
+    },
+    "95240": {
+      "count": 10,
+      "file": "by_zip/95240.json"
+    },
+    "95242": {
+      "count": 14,
+      "file": "by_zip/95242.json"
+    },
+    "95249": {
+      "count": 5,
+      "file": "by_zip/95249.json"
+    },
+    "95252": {
+      "count": 2,
+      "file": "by_zip/95252.json"
+    },
+    "95258": {
+      "count": 1,
+      "file": "by_zip/95258.json"
+    },
+    "95301": {
+      "count": 10,
+      "file": "by_zip/95301.json"
+    },
+    "95304": {
+      "count": 2,
+      "file": "by_zip/95304.json"
+    },
+    "95307": {
+      "count": 4,
+      "file": "by_zip/95307.json"
+    },
+    "95311": {
+      "count": 1,
+      "file": "by_zip/95311.json"
+    },
+    "95315": {
+      "count": 1,
+      "file": "by_zip/95315.json"
+    },
+    "95319": {
+      "count": 1,
+      "file": "by_zip/95319.json"
+    },
+    "95320": {
+      "count": 2,
+      "file": "by_zip/95320.json"
+    },
+    "95322": {
+      "count": 2,
+      "file": "by_zip/95322.json"
+    },
+    "95324": {
+      "count": 1,
+      "file": "by_zip/95324.json"
+    },
+    "95326": {
+      "count": 3,
+      "file": "by_zip/95326.json"
+    },
+    "95327": {
+      "count": 2,
+      "file": "by_zip/95327.json"
+    },
+    "95329": {
+      "count": 1,
+      "file": "by_zip/95329.json"
+    },
+    "95330": {
+      "count": 2,
+      "file": "by_zip/95330.json"
+    },
+    "95333": {
+      "count": 1,
+      "file": "by_zip/95333.json"
+    },
+    "95334": {
+      "count": 7,
+      "file": "by_zip/95334.json"
+    },
+    "95336": {
+      "count": 13,
+      "file": "by_zip/95336.json"
+    },
+    "95337": {
+      "count": 11,
+      "file": "by_zip/95337.json"
+    },
+    "95338": {
+      "count": 10,
+      "file": "by_zip/95338.json"
+    },
+    "95340": {
+      "count": 19,
+      "file": "by_zip/95340.json"
+    },
+    "95341": {
+      "count": 8,
+      "file": "by_zip/95341.json"
+    },
+    "95348": {
+      "count": 15,
+      "file": "by_zip/95348.json"
+    },
+    "95350": {
+      "count": 35,
+      "file": "by_zip/95350.json"
+    },
+    "95351": {
+      "count": 11,
+      "file": "by_zip/95351.json"
+    },
+    "95354": {
+      "count": 14,
+      "file": "by_zip/95354.json"
+    },
+    "95355": {
+      "count": 20,
+      "file": "by_zip/95355.json"
+    },
+    "95356": {
+      "count": 13,
+      "file": "by_zip/95356.json"
+    },
+    "95358": {
+      "count": 3,
+      "file": "by_zip/95358.json"
+    },
+    "95360": {
+      "count": 3,
+      "file": "by_zip/95360.json"
+    },
+    "95361": {
+      "count": 5,
+      "file": "by_zip/95361.json"
+    },
+    "95363": {
+      "count": 5,
+      "file": "by_zip/95363.json"
+    },
+    "95365": {
+      "count": 1,
+      "file": "by_zip/95365.json"
+    },
+    "95366": {
+      "count": 1,
+      "file": "by_zip/95366.json"
+    },
+    "95367": {
+      "count": 4,
+      "file": "by_zip/95367.json"
+    },
+    "95368": {
+      "count": 4,
+      "file": "by_zip/95368.json"
+    },
+    "95370": {
+      "count": 17,
+      "file": "by_zip/95370.json"
+    },
+    "95376": {
+      "count": 18,
+      "file": "by_zip/95376.json"
+    },
+    "95377": {
+      "count": 4,
+      "file": "by_zip/95377.json"
+    },
+    "95379": {
+      "count": 1,
+      "file": "by_zip/95379.json"
+    },
+    "95380": {
+      "count": 7,
+      "file": "by_zip/95380.json"
+    },
+    "95382": {
+      "count": 16,
+      "file": "by_zip/95382.json"
+    },
+    "95386": {
+      "count": 4,
+      "file": "by_zip/95386.json"
+    },
+    "95387": {
+      "count": 1,
+      "file": "by_zip/95387.json"
+    },
+    "95388": {
+      "count": 1,
+      "file": "by_zip/95388.json"
+    },
+    "95401": {
+      "count": 17,
+      "file": "by_zip/95401.json"
+    },
+    "95403": {
+      "count": 11,
+      "file": "by_zip/95403.json"
+    },
+    "95404": {
+      "count": 11,
+      "file": "by_zip/95404.json"
+    },
+    "95405": {
+      "count": 13,
+      "file": "by_zip/95405.json"
+    },
+    "95407": {
+      "count": 8,
+      "file": "by_zip/95407.json"
+    },
+    "95409": {
+      "count": 6,
+      "file": "by_zip/95409.json"
+    },
+    "95415": {
+      "count": 1,
+      "file": "by_zip/95415.json"
+    },
+    "95422": {
+      "count": 8,
+      "file": "by_zip/95422.json"
+    },
+    "95425": {
+      "count": 3,
+      "file": "by_zip/95425.json"
+    },
+    "95428": {
+      "count": 1,
+      "file": "by_zip/95428.json"
+    },
+    "95436": {
+      "count": 2,
+      "file": "by_zip/95436.json"
+    },
+    "95437": {
+      "count": 14,
+      "file": "by_zip/95437.json"
+    },
+    "95445": {
+      "count": 2,
+      "file": "by_zip/95445.json"
+    },
+    "95446": {
+      "count": 4,
+      "file": "by_zip/95446.json"
+    },
+    "95448": {
+      "count": 5,
+      "file": "by_zip/95448.json"
+    },
+    "95451": {
+      "count": 2,
+      "file": "by_zip/95451.json"
+    },
+    "95453": {
+      "count": 15,
+      "file": "by_zip/95453.json"
+    },
+    "95454": {
+      "count": 2,
+      "file": "by_zip/95454.json"
+    },
+    "95457": {
+      "count": 2,
+      "file": "by_zip/95457.json"
+    },
+    "95461": {
+      "count": 1,
+      "file": "by_zip/95461.json"
+    },
+    "95462": {
+      "count": 1,
+      "file": "by_zip/95462.json"
+    },
+    "95465": {
+      "count": 1,
+      "file": "by_zip/95465.json"
+    },
+    "95467": {
+      "count": 1,
+      "file": "by_zip/95467.json"
+    },
+    "95468": {
+      "count": 3,
+      "file": "by_zip/95468.json"
+    },
+    "95470": {
+      "count": 2,
+      "file": "by_zip/95470.json"
+    },
+    "95472": {
+      "count": 9,
+      "file": "by_zip/95472.json"
+    },
+    "95476": {
+      "count": 12,
+      "file": "by_zip/95476.json"
+    },
+    "95482": {
+      "count": 15,
+      "file": "by_zip/95482.json"
+    },
+    "95490": {
+      "count": 7,
+      "file": "by_zip/95490.json"
+    },
+    "95492": {
+      "count": 4,
+      "file": "by_zip/95492.json"
+    },
+    "95501": {
+      "count": 23,
+      "file": "by_zip/95501.json"
+    },
+    "95503": {
+      "count": 8,
+      "file": "by_zip/95503.json"
+    },
+    "95519": {
+      "count": 4,
+      "file": "by_zip/95519.json"
+    },
+    "95521": {
+      "count": 8,
+      "file": "by_zip/95521.json"
+    },
+    "95526": {
+      "count": 2,
+      "file": "by_zip/95526.json"
+    },
+    "95531": {
+      "count": 17,
+      "file": "by_zip/95531.json"
+    },
+    "95532": {
+      "count": 1,
+      "file": "by_zip/95532.json"
+    },
+    "95536": {
+      "count": 1,
+      "file": "by_zip/95536.json"
+    },
+    "95540": {
+      "count": 13,
+      "file": "by_zip/95540.json"
+    },
+    "95542": {
+      "count": 3,
+      "file": "by_zip/95542.json"
+    },
+    "95546": {
+      "count": 2,
+      "file": "by_zip/95546.json"
+    },
+    "95548": {
+      "count": 1,
+      "file": "by_zip/95548.json"
+    },
+    "95553": {
+      "count": 1,
+      "file": "by_zip/95553.json"
+    },
+    "95556": {
+      "count": 1,
+      "file": "by_zip/95556.json"
+    },
+    "95560": {
+      "count": 6,
+      "file": "by_zip/95560.json"
+    },
+    "95562": {
+      "count": 1,
+      "file": "by_zip/95562.json"
+    },
+    "95565": {
+      "count": 1,
+      "file": "by_zip/95565.json"
+    },
+    "95567": {
+      "count": 3,
+      "file": "by_zip/95567.json"
+    },
+    "95573": {
+      "count": 2,
+      "file": "by_zip/95573.json"
+    },
+    "95602": {
+      "count": 7,
+      "file": "by_zip/95602.json"
+    },
+    "95603": {
+      "count": 12,
+      "file": "by_zip/95603.json"
+    },
+    "95605": {
+      "count": 3,
+      "file": "by_zip/95605.json"
+    },
+    "95608": {
+      "count": 20,
+      "file": "by_zip/95608.json"
+    },
+    "95610": {
+      "count": 9,
+      "file": "by_zip/95610.json"
+    },
+    "95616": {
+      "count": 6,
+      "file": "by_zip/95616.json"
+    },
+    "95618": {
+      "count": 1,
+      "file": "by_zip/95618.json"
+    },
+    "95619": {
+      "count": 2,
+      "file": "by_zip/95619.json"
+    },
+    "95620": {
+      "count": 5,
+      "file": "by_zip/95620.json"
+    },
+    "95621": {
+      "count": 6,
+      "file": "by_zip/95621.json"
+    },
+    "95624": {
+      "count": 8,
+      "file": "by_zip/95624.json"
+    },
+    "95626": {
+      "count": 1,
+      "file": "by_zip/95626.json"
+    },
+    "95627": {
+      "count": 2,
+      "file": "by_zip/95627.json"
+    },
+    "95628": {
+      "count": 7,
+      "file": "by_zip/95628.json"
+    },
+    "95630": {
+      "count": 20,
+      "file": "by_zip/95630.json"
+    },
+    "95632": {
+      "count": 4,
+      "file": "by_zip/95632.json"
+    },
+    "95634": {
+      "count": 1,
+      "file": "by_zip/95634.json"
+    },
+    "95640": {
+      "count": 2,
+      "file": "by_zip/95640.json"
+    },
+    "95642": {
+      "count": 8,
+      "file": "by_zip/95642.json"
+    },
+    "95648": {
+      "count": 2,
+      "file": "by_zip/95648.json"
+    },
+    "95654": {
+      "count": 1,
+      "file": "by_zip/95654.json"
+    },
+    "95660": {
+      "count": 9,
+      "file": "by_zip/95660.json"
+    },
+    "95661": {
+      "count": 35,
+      "file": "by_zip/95661.json"
+    },
+    "95662": {
+      "count": 8,
+      "file": "by_zip/95662.json"
+    },
+    "95663": {
+      "count": 1,
+      "file": "by_zip/95663.json"
+    },
+    "95667": {
+      "count": 10,
+      "file": "by_zip/95667.json"
+    },
+    "95669": {
+      "count": 1,
+      "file": "by_zip/95669.json"
+    },
+    "95670": {
+      "count": 17,
+      "file": "by_zip/95670.json"
+    },
+    "95671": {
+      "count": 2,
+      "file": "by_zip/95671.json"
+    },
+    "95673": {
+      "count": 1,
+      "file": "by_zip/95673.json"
+    },
+    "95677": {
+      "count": 1,
+      "file": "by_zip/95677.json"
+    },
+    "95678": {
+      "count": 4,
+      "file": "by_zip/95678.json"
+    },
+    "95682": {
+      "count": 7,
+      "file": "by_zip/95682.json"
+    },
+    "95687": {
+      "count": 12,
+      "file": "by_zip/95687.json"
+    },
+    "95688": {
+      "count": 9,
+      "file": "by_zip/95688.json"
+    },
+    "95691": {
+      "count": 8,
+      "file": "by_zip/95691.json"
+    },
+    "95692": {
+      "count": 1,
+      "file": "by_zip/95692.json"
+    },
+    "95694": {
+      "count": 1,
+      "file": "by_zip/95694.json"
+    },
+    "95695": {
+      "count": 18,
+      "file": "by_zip/95695.json"
+    },
+    "95697": {
+      "count": 1,
+      "file": "by_zip/95697.json"
+    },
+    "95709": {
+      "count": 1,
+      "file": "by_zip/95709.json"
+    },
+    "95736": {
+      "count": 1,
+      "file": "by_zip/95736.json"
+    },
+    "95742": {
+      "count": 6,
+      "file": "by_zip/95742.json"
+    },
+    "95746": {
+      "count": 2,
+      "file": "by_zip/95746.json"
+    },
+    "95747": {
+      "count": 1,
+      "file": "by_zip/95747.json"
+    },
+    "95757": {
+      "count": 2,
+      "file": "by_zip/95757.json"
+    },
+    "95758": {
+      "count": 13,
+      "file": "by_zip/95758.json"
+    },
+    "95762": {
+      "count": 3,
+      "file": "by_zip/95762.json"
+    },
+    "95765": {
+      "count": 3,
+      "file": "by_zip/95765.json"
+    },
+    "95776": {
+      "count": 7,
+      "file": "by_zip/95776.json"
+    },
+    "95811": {
+      "count": 10,
+      "file": "by_zip/95811.json"
+    },
+    "95814": {
+      "count": 6,
+      "file": "by_zip/95814.json"
+    },
+    "95815": {
+      "count": 26,
+      "file": "by_zip/95815.json"
+    },
+    "95816": {
+      "count": 15,
+      "file": "by_zip/95816.json"
+    },
+    "95817": {
+      "count": 11,
+      "file": "by_zip/95817.json"
+    },
+    "95818": {
+      "count": 1,
+      "file": "by_zip/95818.json"
+    },
+    "95819": {
+      "count": 3,
+      "file": "by_zip/95819.json"
+    },
+    "95820": {
+      "count": 7,
+      "file": "by_zip/95820.json"
+    },
+    "95821": {
+      "count": 9,
+      "file": "by_zip/95821.json"
+    },
+    "95822": {
+      "count": 3,
+      "file": "by_zip/95822.json"
+    },
+    "95823": {
+      "count": 29,
+      "file": "by_zip/95823.json"
+    },
+    "95824": {
+      "count": 4,
+      "file": "by_zip/95824.json"
+    },
+    "95825": {
+      "count": 29,
+      "file": "by_zip/95825.json"
+    },
+    "95826": {
+      "count": 4,
+      "file": "by_zip/95826.json"
+    },
+    "95827": {
+      "count": 11,
+      "file": "by_zip/95827.json"
+    },
+    "95828": {
+      "count": 6,
+      "file": "by_zip/95828.json"
+    },
+    "95829": {
+      "count": 1,
+      "file": "by_zip/95829.json"
+    },
+    "95831": {
+      "count": 7,
+      "file": "by_zip/95831.json"
+    },
+    "95832": {
+      "count": 1,
+      "file": "by_zip/95832.json"
+    },
+    "95833": {
+      "count": 7,
+      "file": "by_zip/95833.json"
+    },
+    "95834": {
+      "count": 20,
+      "file": "by_zip/95834.json"
+    },
+    "95838": {
+      "count": 4,
+      "file": "by_zip/95838.json"
+    },
+    "95841": {
+      "count": 11,
+      "file": "by_zip/95841.json"
+    },
+    "95842": {
+      "count": 1,
+      "file": "by_zip/95842.json"
+    },
+    "95843": {
+      "count": 3,
+      "file": "by_zip/95843.json"
+    },
+    "95864": {
+      "count": 2,
+      "file": "by_zip/95864.json"
+    },
+    "95901": {
+      "count": 16,
+      "file": "by_zip/95901.json"
+    },
+    "95912": {
+      "count": 2,
+      "file": "by_zip/95912.json"
+    },
+    "95919": {
+      "count": 1,
+      "file": "by_zip/95919.json"
+    },
+    "95926": {
+      "count": 23,
+      "file": "by_zip/95926.json"
+    },
+    "95928": {
+      "count": 14,
+      "file": "by_zip/95928.json"
+    },
+    "95932": {
+      "count": 8,
+      "file": "by_zip/95932.json"
+    },
+    "95936": {
+      "count": 2,
+      "file": "by_zip/95936.json"
+    },
+    "95945": {
+      "count": 20,
+      "file": "by_zip/95945.json"
+    },
+    "95946": {
+      "count": 1,
+      "file": "by_zip/95946.json"
+    },
+    "95947": {
+      "count": 1,
+      "file": "by_zip/95947.json"
+    },
+    "95948": {
+      "count": 6,
+      "file": "by_zip/95948.json"
+    },
+    "95951": {
+      "count": 1,
+      "file": "by_zip/95951.json"
+    },
+    "95953": {
+      "count": 2,
+      "file": "by_zip/95953.json"
+    },
+    "95954": {
+      "count": 2,
+      "file": "by_zip/95954.json"
+    },
+    "95959": {
+      "count": 3,
+      "file": "by_zip/95959.json"
+    },
+    "95961": {
+      "count": 3,
+      "file": "by_zip/95961.json"
+    },
+    "95962": {
+      "count": 2,
+      "file": "by_zip/95962.json"
+    },
+    "95963": {
+      "count": 5,
+      "file": "by_zip/95963.json"
+    },
+    "95965": {
+      "count": 6,
+      "file": "by_zip/95965.json"
+    },
+    "95966": {
+      "count": 18,
+      "file": "by_zip/95966.json"
+    },
+    "95969": {
+      "count": 6,
+      "file": "by_zip/95969.json"
+    },
+    "95971": {
+      "count": 4,
+      "file": "by_zip/95971.json"
+    },
+    "95973": {
+      "count": 12,
+      "file": "by_zip/95973.json"
+    },
+    "95987": {
+      "count": 2,
+      "file": "by_zip/95987.json"
+    },
+    "95988": {
+      "count": 7,
+      "file": "by_zip/95988.json"
+    },
+    "95991": {
+      "count": 28,
+      "file": "by_zip/95991.json"
+    },
+    "95993": {
+      "count": 5,
+      "file": "by_zip/95993.json"
+    },
+    "96001": {
+      "count": 32,
+      "file": "by_zip/96001.json"
+    },
+    "96002": {
+      "count": 21,
+      "file": "by_zip/96002.json"
+    },
+    "96003": {
+      "count": 12,
+      "file": "by_zip/96003.json"
+    },
+    "96007": {
+      "count": 4,
+      "file": "by_zip/96007.json"
+    },
+    "96009": {
+      "count": 3,
+      "file": "by_zip/96009.json"
+    },
+    "96013": {
+      "count": 5,
+      "file": "by_zip/96013.json"
+    },
+    "96015": {
+      "count": 1,
+      "file": "by_zip/96015.json"
+    },
+    "96019": {
+      "count": 3,
+      "file": "by_zip/96019.json"
+    },
+    "96020": {
+      "count": 3,
+      "file": "by_zip/96020.json"
+    },
+    "96021": {
+      "count": 5,
+      "file": "by_zip/96021.json"
+    },
+    "96022": {
+      "count": 2,
+      "file": "by_zip/96022.json"
+    },
+    "96023": {
+      "count": 3,
+      "file": "by_zip/96023.json"
+    },
+    "96025": {
+      "count": 2,
+      "file": "by_zip/96025.json"
+    },
+    "96027": {
+      "count": 1,
+      "file": "by_zip/96027.json"
+    },
+    "96028": {
+      "count": 4,
+      "file": "by_zip/96028.json"
+    },
+    "96055": {
+      "count": 1,
+      "file": "by_zip/96055.json"
+    },
+    "96057": {
+      "count": 1,
+      "file": "by_zip/96057.json"
+    },
+    "96067": {
+      "count": 8,
+      "file": "by_zip/96067.json"
+    },
+    "96080": {
+      "count": 13,
+      "file": "by_zip/96080.json"
+    },
+    "96084": {
+      "count": 1,
+      "file": "by_zip/96084.json"
+    },
+    "96088": {
+      "count": 1,
+      "file": "by_zip/96088.json"
+    },
+    "96093": {
+      "count": 5,
+      "file": "by_zip/96093.json"
+    },
+    "96094": {
+      "count": 3,
+      "file": "by_zip/96094.json"
+    },
+    "96097": {
+      "count": 4,
+      "file": "by_zip/96097.json"
+    },
+    "96101": {
+      "count": 4,
+      "file": "by_zip/96101.json"
+    },
+    "96103": {
+      "count": 1,
+      "file": "by_zip/96103.json"
+    },
+    "96104": {
+      "count": 3,
+      "file": "by_zip/96104.json"
+    },
+    "96107": {
+      "count": 1,
+      "file": "by_zip/96107.json"
+    },
+    "96118": {
+      "count": 2,
+      "file": "by_zip/96118.json"
+    },
+    "96122": {
+      "count": 4,
+      "file": "by_zip/96122.json"
+    },
+    "96130": {
+      "count": 7,
+      "file": "by_zip/96130.json"
+    },
+    "96134": {
+      "count": 3,
+      "file": "by_zip/96134.json"
+    },
+    "96137": {
+      "count": 1,
+      "file": "by_zip/96137.json"
+    },
+    "96143": {
+      "count": 1,
+      "file": "by_zip/96143.json"
+    },
+    "96150": {
+      "count": 6,
+      "file": "by_zip/96150.json"
+    },
+    "96161": {
+      "count": 8,
+      "file": "by_zip/96161.json"
+    },
+    "96401": {
+      "count": 1,
+      "file": "by_zip/96401.json"
+    },
+    "97415": {
+      "count": 1,
+      "file": "by_zip/97415.json"
+    }
+  },
+  "summary": {
+    "categoryNameCountsTop50": {
+      "HOME HEALTH AGENCY": 4339,
+      "PRIMARY CARE CLINIC": 3284,
+      "HOSPICE": 2641,
+      "SKILLED NURSING FACILITY": 1191,
+      "SURGICAL CLINIC": 993,
+      "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID": 978,
+      "CHRONIC DIALYSIS CLINIC": 752,
+      "GENERAL ACUTE CARE HOSPITAL": 435,
+      "ADULT DAY HEALTH CARE": 338,
+      "CONGREGATE LIVING HEALTH FACILITY": 261,
+      "OTHER": 202,
+      "ACUTE PSYCHIATRIC HOSPITAL": 126,
+      "REHABILITATION CLINIC": 86,
+      "PSYCHOLOGY CLINIC": 30,
+      "PEDIATRIC DAY HEALTH & RESPITE CARE FACILITY": 26,
+      "CORRECTIONAL TREATMENT CENTER": 20,
+      "HOSPICE FACILITY": 13,
+      "CHEMICAL DEPENDENCY RECOVERY HOSPITAL": 10,
+      "INTERMEDIATE CARE FACILITY": 8,
+      "ALTERNATIVE BIRTHING CENTER": 6,
+      "REFERRAL AGENCY": 4
+    },
+    "licenseStatusCounts": {
+      "ACTIVE": 14054,
+      "None": 1349,
+      "INACTIVE - CAPEN DECISION": 340
+    },
+    "inServiceCounts": {
+      "True": 14004,
+      "None": 1349,
+      "False": 390
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "030001808",
+    "name": "TUOLUMNE ME-WUK INDIAN HEALTH CENTER",
+    "npi": null,
+    "hcaiId": "306554016",
+    "businessName": "TUOLUMNE ME-WUK INDIAN HEALTH CENTER, INC.",
+    "contactEmail": "BEVERLY.ABARCA@TMWIHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "030000790",
+    "licenseEffectiveDate": "01/11/2025",
+    "licenseExpirationDate": "01/10/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "18880 CHERRY VALLEY BOULEVARD",
+    "city": "TUOLUMNE",
+    "zip": "95379",
+    "county": "TUOLUMNE",
+    "phone": "(209) 928-5400",
+    "lat": 37.965204,
+    "lng": -120.2404815
+  }
+]

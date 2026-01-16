@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630019885",
+    "name": "FAMILY HEALTHCARE NETWORK",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "FAMILY HEALTHCARE NETWORK",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550004220",
+    "licenseEffectiveDate": "06/24/2025",
+    "licenseExpirationDate": "04/21/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "30924 E KINGS CANYON RD",
+    "city": "SQUAW VALLEY",
+    "zip": "93675",
+    "county": "FRESNO",
+    "phone": "(559) 332-9399",
+    "lat": 36.741357,
+    "lng": -119.2450005
+  }
+]

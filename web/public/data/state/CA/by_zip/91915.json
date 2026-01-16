@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630003341",
+    "name": "HOME DIALYSIS THERAPIES OF SAN DIEGO INC",
+    "npi": "1720114010",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": "DENISE@HOMEDIALYSISTHERAPIES.COM",
+    "categoryName": "CHRONIC DIALYSIS CLINIC",
+    "categoryCode": "ESRD",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "2060 OTAY LAKES RD, SUITE 120",
+    "city": "CHULA VISTA",
+    "zip": "91915",
+    "county": "SAN DIEGO",
+    "phone": "(619) 422-0003",
+    "lat": 32.64456291,
+    "lng": -116.9738088
+  }
+]

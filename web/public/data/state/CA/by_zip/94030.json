@@ -1,0 +1,26 @@
+[
+  {
+    "id": "220000087",
+    "name": "MILLBRAE CARE CENTER",
+    "npi": "1609429638",
+    "hcaiId": "206410896",
+    "businessName": "MILLBRAE CARE CENTER, LLC",
+    "contactEmail": "ABBY@MILLBRAECARECENTER.COM",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "220000050",
+    "licenseEffectiveDate": "12/02/2024",
+    "licenseExpirationDate": "12/01/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 140,
+    "address": "33 MATEO AVE",
+    "city": "MILLBRAE",
+    "zip": "94030",
+    "county": "SAN MATEO",
+    "phone": "(650) 689-5784",
+    "lat": 37.605447,
+    "lng": -122.394303
+  }
+]

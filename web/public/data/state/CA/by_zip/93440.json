@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630019872",
+    "name": "COMMUNITY HEALTH CENTERS LOS ALAMOS",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "COMMUNITY HEALTH CENTERS OF THE CENTRAL COAST, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550000402",
+    "licenseEffectiveDate": "01/19/2025",
+    "licenseExpirationDate": "01/18/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "490 BELL ST, SUITE 103",
+    "city": "LOS ALAMOS",
+    "zip": "93440",
+    "county": "SANTA BARBARA",
+    "phone": null,
+    "lat": 34.74369,
+    "lng": -120.278061
+  }
+]

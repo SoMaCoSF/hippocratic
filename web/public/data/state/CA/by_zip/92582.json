@@ -1,0 +1,26 @@
+[
+  {
+    "id": "250000041",
+    "name": "THE BRADLEY GARDENS",
+    "npi": "1740277037",
+    "hcaiId": "206331148",
+    "businessName": "GHC OF SAN JACINTO, LLC",
+    "contactEmail": "LAURENCALVANI@LIFEGEN.NET",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "250000129",
+    "licenseEffectiveDate": "11/17/2025",
+    "licenseExpirationDate": "11/16/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 44,
+    "address": "980 W 7TH ST",
+    "city": "SAN JACINTO",
+    "zip": "92582",
+    "county": "RIVERSIDE",
+    "phone": "(925) 786-3706",
+    "lat": 33.779646,
+    "lng": -116.977572
+  }
+]

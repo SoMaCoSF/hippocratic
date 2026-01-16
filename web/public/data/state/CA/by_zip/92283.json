@@ -1,0 +1,26 @@
+[
+  {
+    "id": "090001270",
+    "name": "INNERCARE - WINTERHAVEN",
+    "npi": "1124109202",
+    "hcaiId": "306134014",
+    "businessName": "CLINICAS DE SALUD DEL PUEBLO, INC.",
+    "contactEmail": "YVONNEB@INNERCARE.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "090000594",
+    "licenseEffectiveDate": "11/21/2025",
+    "licenseExpirationDate": "11/20/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "2133 WINTERHAVEN DR",
+    "city": "WINTERHAVEN",
+    "zip": "92283",
+    "county": "IMPERIAL",
+    "phone": "(760) 538-3073",
+    "lat": 32.73858076,
+    "lng": -114.6357792
+  }
+]

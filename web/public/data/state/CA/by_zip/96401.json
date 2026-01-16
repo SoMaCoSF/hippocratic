@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000709",
+    "name": "HAYFORK COMMUNITY HEALTH CLINIC",
+    "npi": "1669617783",
+    "hcaiId": null,
+    "businessName": "MOUNTAIN COMMUNITIES HEALTHCARE DISTRICT",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000038",
+    "licenseEffectiveDate": "11/09/2024",
+    "licenseExpirationDate": "11/08/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6961 HIGHWAY 3",
+    "city": "HAYFORK",
+    "zip": "96401",
+    "county": "TRINITY",
+    "phone": "(530) 628-5517",
+    "lat": 40.554207,
+    "lng": -123.186051
+  }
+]

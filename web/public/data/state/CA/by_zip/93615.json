@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630020969",
+    "name": "CHERRY CLINIC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": "WENBO.LIU@CHERRYRX.COM",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "40657 ROAD 128",
+    "city": "CUTLER",
+    "zip": "93615",
+    "county": "TULARE",
+    "phone": "(559) 390-0023",
+    "lat": 36.527796,
+    "lng": -119.287296
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "070000164",
+    "name": "ALVISO HEALTH CENTER",
+    "npi": "1164552931",
+    "hcaiId": "306430707",
+    "businessName": "GARDNER FAMILY HEALTH NETWORK, INC.",
+    "contactEmail": "ANASOSA@GFHN.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "070000007",
+    "licenseEffectiveDate": "06/01/2025",
+    "licenseExpirationDate": "05/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1621 GOLD STREET",
+    "city": "ALVISO",
+    "zip": "95002",
+    "county": "SANTA CLARA",
+    "phone": "(408) 935-3942",
+    "lat": 37.424772,
+    "lng": -121.9753935
+  }
+]

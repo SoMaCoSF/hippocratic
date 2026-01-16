@@ -1,0 +1,26 @@
+[
+  {
+    "id": "060001306",
+    "name": "IRVINE HEALTH FOUNDATION ADULT DAY HLTH SERV CTR",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "IRVINE ADULT DAY HEALTH SERVICES, INC.",
+    "contactEmail": "HPARMELY@IRVINEADHS.ORG",
+    "categoryName": "ADULT DAY HEALTH CARE",
+    "categoryCode": "ADHC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "060000387",
+    "licenseEffectiveDate": "11/06/2025",
+    "licenseExpirationDate": "11/05/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "20 LAKE RD",
+    "city": "IRVINE",
+    "zip": "92604",
+    "county": "ORANGE",
+    "phone": "(949) 262-1123",
+    "lat": 33.675984,
+    "lng": -117.803007
+  }
+]

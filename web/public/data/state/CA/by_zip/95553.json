@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630018590",
+    "name": "SOUTH FORK HIGH SCHOOL",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "REDWOOD RURAL HEALTH CENTER INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "110000099",
+    "licenseEffectiveDate": "11/19/2024",
+    "licenseExpirationDate": "11/18/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6831 AVENUE OF THE GIANTS",
+    "city": "MIRANDA",
+    "zip": "95553",
+    "county": "HUMBOLDT",
+    "phone": null,
+    "lat": 40.23689134,
+    "lng": -123.8242893
+  }
+]

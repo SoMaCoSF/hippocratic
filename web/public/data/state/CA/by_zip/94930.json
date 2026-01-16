@@ -1,0 +1,26 @@
+[
+  {
+    "id": "010001128",
+    "name": "NEURORESTORATIVE CALIFORNIA",
+    "npi": null,
+    "hcaiId": "206214032",
+    "businessName": "CAREMERIDIAN, LLC",
+    "contactEmail": "MATI.MIZRACHI@SEVITAHEALTH.COM",
+    "categoryName": "CONGREGATE LIVING HEALTH FACILITY",
+    "categoryCode": "CLHF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "010000424",
+    "licenseEffectiveDate": "12/01/2024",
+    "licenseExpirationDate": "11/30/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 12,
+    "address": "2390 SIR FRANCIS DRAKE BLVD",
+    "city": "FAIRFAX",
+    "zip": "94930",
+    "county": "MARIN",
+    "phone": "(415) 256-8007",
+    "lat": 37.995003,
+    "lng": -122.5950705
+  }
+]

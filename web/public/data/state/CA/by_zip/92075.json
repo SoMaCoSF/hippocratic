@@ -1,0 +1,26 @@
+[
+  {
+    "id": "080001201",
+    "name": "HOSPICE BY THE SEA",
+    "npi": "1174590594",
+    "hcaiId": "406374424",
+    "businessName": "HOSPICE BY THE SEA, LTD.",
+    "contactEmail": "KATHIEJACKSON@NETSCAPE.NET",
+    "categoryName": "HOSPICE",
+    "categoryCode": "HOSPICE",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550000907",
+    "licenseEffectiveDate": "03/13/2025",
+    "licenseExpirationDate": "03/12/2027",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "777 S HIGHWAY 101, SUITE 105",
+    "city": "SOLANA BEACH",
+    "zip": "92075",
+    "county": "SAN DIEGO",
+    "phone": "(858) 794-0195",
+    "lat": 32.98175999,
+    "lng": -117.270054
+  }
+]

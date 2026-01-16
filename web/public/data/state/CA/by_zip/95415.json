@@ -1,0 +1,26 @@
+[
+  {
+    "id": "110000134",
+    "name": "ANDERSON VALLEY HEALTH CENTER, INC.",
+    "npi": "1568449304",
+    "hcaiId": "306232313",
+    "businessName": "ANDERSON VALLEY HEALTH CENTER, INC.",
+    "contactEmail": "CGUAZZONE@AVHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "110000165",
+    "licenseEffectiveDate": "06/21/2025",
+    "licenseExpirationDate": "06/20/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "13500 AIRPORT RD",
+    "city": "BOONVILLE",
+    "zip": "95415",
+    "county": "MENDOCINO",
+    "phone": "(707) 895-3477",
+    "lat": 39.01235571,
+    "lng": -123.3794225
+  }
+]

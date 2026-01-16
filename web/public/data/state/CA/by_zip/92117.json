@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630026749",
+    "name": "TRANSGENDER HEALTH AND WELLNESS CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "TRANSGENDER HEALTH AND WELLNESS CENTER",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550007799",
+    "licenseEffectiveDate": "12/22/2024",
+    "licenseExpirationDate": "12/21/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "3737 MORAGA AVE, SUITE A204",
+    "city": "SAN DIEGO",
+    "zip": "92117",
+    "county": "SAN DIEGO",
+    "phone": null,
+    "lat": 32.80893149,
+    "lng": -117.2111266
+  }
+]

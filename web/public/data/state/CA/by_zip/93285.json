@@ -1,0 +1,26 @@
+[
+  {
+    "id": "120000343",
+    "name": "KERN RIVER HEALTH CENTER",
+    "npi": "1437151800",
+    "hcaiId": "306150030",
+    "businessName": "CLINICA SIERRA VISTA",
+    "contactEmail": "SCHILLING@CLINICASIERRAVISTA.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "120000199",
+    "licenseEffectiveDate": "06/06/2025",
+    "licenseExpirationDate": "06/05/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "67 EVANS RD",
+    "city": "WOFFORD HEIGHTS",
+    "zip": "93285",
+    "county": "KERN",
+    "phone": "(760) 376-2276",
+    "lat": 35.706321,
+    "lng": -118.4577795
+  }
+]

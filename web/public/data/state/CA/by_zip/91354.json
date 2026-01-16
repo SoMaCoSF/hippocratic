@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630028154",
+    "name": "FRISCA VILLA",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "FRISCA VILLA, INC.",
+    "contactEmail": "23029FRISCAVILLA@GMAIL.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDN",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550009951",
+    "licenseEffectiveDate": "09/16/2025",
+    "licenseExpirationDate": "03/15/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "23029 FRISCA DR",
+    "city": "SANTA CLARITA",
+    "zip": "91354",
+    "county": "LOS ANGELES",
+    "phone": "(818) 398-8070",
+    "lat": 34.43669892,
+    "lng": -118.538298
+  }
+]

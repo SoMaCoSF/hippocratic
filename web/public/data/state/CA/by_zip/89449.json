@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630006081",
+    "name": "BARTON HEALTHCARE SYSTEM HOSPICE",
+    "npi": "1356348890",
+    "hcaiId": null,
+    "businessName": "BARTON HEALTHCARE SYSTEM",
+    "contactEmail": "RSCHMIDT@BARTONHEALTH.ORG",
+    "categoryName": "HOSPICE",
+    "categoryCode": "HOSPICE",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "100000174",
+    "licenseEffectiveDate": "02/23/2025",
+    "licenseExpirationDate": "02/22/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "155 US HIGHWAY 50",
+    "city": "STATELINE",
+    "zip": "89449",
+    "county": "EL DORADO",
+    "phone": "(775) 782-1510",
+    "lat": 38.968407,
+    "lng": -119.9353005
+  }
+]

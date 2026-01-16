@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630012941",
+    "name": "MASONIC CENTER FOR YOUTH AND FAMILIES",
+    "npi": null,
+    "hcaiId": "306384217",
+    "businessName": "MASONIC HOMES OF CALIFORNIA",
+    "contactEmail": "INFORMATION@MCYAF.ORG",
+    "categoryName": "PSYCHOLOGY CLINIC",
+    "categoryCode": "PSYCHC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550001484",
+    "licenseEffectiveDate": "02/09/2025",
+    "licenseExpirationDate": "02/08/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6 FUNSTON AVE",
+    "city": "SAN FRANCISCO",
+    "zip": "94129",
+    "county": "SAN FRANCISCO",
+    "phone": "(877) 488-6293",
+    "lat": 37.799487,
+    "lng": -122.4559665
+  }
+]

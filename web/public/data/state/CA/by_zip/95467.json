@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016386",
+    "name": "ADVENTIST HEALTH CLEARLAKE",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "ADVENTIST HEALTH CLEARLAKE HOSPITAL, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "110000174",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "18990 COYOTE VALLEY ROAD, SUITE 8, 9 &10",
+    "city": "HIDDEN VALLEY LAKE",
+    "zip": "95467",
+    "county": "LAKE",
+    "phone": "(707) 987-8344",
+    "lat": 38.795022,
+    "lng": -122.5572525
+  }
+]

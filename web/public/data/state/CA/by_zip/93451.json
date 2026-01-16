@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017291",
+    "name": "COMMUNITY HEALTH CENTERS SAN MIGUEL",
+    "npi": "1295198356",
+    "hcaiId": "306400680",
+    "businessName": "COMMUNITY HEALTH CENTERS OF THE CENTRAL COAST, INC.",
+    "contactEmail": "SSOSA@CHCCC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550006263",
+    "licenseEffectiveDate": "05/04/2025",
+    "licenseExpirationDate": "05/03/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1385 MISSION ST",
+    "city": "SAN MIGUEL",
+    "zip": "93451",
+    "county": "SAN LUIS OBISPO",
+    "phone": "(805) 346-3911",
+    "lat": 35.7524137,
+    "lng": -120.6986287
+  }
+]

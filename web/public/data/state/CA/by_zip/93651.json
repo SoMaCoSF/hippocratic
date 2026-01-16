@@ -1,0 +1,26 @@
+[
+  {
+    "id": "040000979",
+    "name": "CENTRAL VALLEY INDIAN HEALTH CLINIC - PRATHER",
+    "npi": null,
+    "hcaiId": "306104069",
+    "businessName": "CENTRAL VALLEY INDIAN HEALTH, INC.",
+    "contactEmail": "CVIH@CVIH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "040000392",
+    "licenseEffectiveDate": "06/27/2025",
+    "licenseExpirationDate": "06/26/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "29323 AUBERRY RD",
+    "city": "PRATHER",
+    "zip": "93651",
+    "county": "FRESNO",
+    "phone": "(559) 299-2578",
+    "lat": 37.03876202,
+    "lng": -119.517035
+  }
+]

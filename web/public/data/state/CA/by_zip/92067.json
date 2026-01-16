@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630026424",
+    "name": "SAGE IN THE RANCH HOME HEALTH AGENCY INC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "SAGE IN THE RANCH HOME HEALTH AGENCY INC",
+    "contactEmail": "RINACHANG1023@HOTMAIL.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550009589",
+    "licenseEffectiveDate": "07/01/2025",
+    "licenseExpirationDate": "12/31/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6105 PASEO DELICIAS, SUITE 7A/B",
+    "city": "RANCHO SANTA FE",
+    "zip": "92067",
+    "county": "SAN DIEGO",
+    "phone": "(883) 348-7791",
+    "lat": 33.020172,
+    "lng": -117.202482
+  }
+]

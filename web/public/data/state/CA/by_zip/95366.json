@@ -1,0 +1,26 @@
+[
+  {
+    "id": "100000017",
+    "name": "BETHANY HOME SOCIETY SAN JOAQUIN COUNTY",
+    "npi": "1487648135",
+    "hcaiId": "206390796",
+    "businessName": "BETHANY HOME SOCIETY SAN JOAQUIN CO. INC.",
+    "contactEmail": "SMARTINS@BETHANYRIPON.ORG",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "100000015",
+    "licenseEffectiveDate": "01/01/2025",
+    "licenseExpirationDate": "12/31/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 92,
+    "address": "930 W MAIN STREET",
+    "city": "RIPON",
+    "zip": "95366",
+    "county": "SAN JOAQUIN",
+    "phone": "(209) 599-4221",
+    "lat": 37.73853,
+    "lng": -121.1342265
+  }
+]

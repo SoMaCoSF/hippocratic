@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017965",
+    "name": "SUTTER COAST HOME CARE - OREGON BRANCH",
+    "npi": "1609881499",
+    "hcaiId": "406080891",
+    "businessName": "SUTTER COAST HOSPITAL",
+    "contactEmail": null,
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "010000265",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "555 5TH STREET",
+    "city": "BROOKINGS",
+    "zip": "97415",
+    "county": "CURRY",
+    "phone": null,
+    "lat": 42.055875,
+    "lng": -124.2885825
+  }
+]

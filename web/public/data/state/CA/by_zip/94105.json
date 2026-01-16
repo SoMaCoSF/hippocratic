@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630021500",
+    "name": "MOBILE TESTING UNIT",
+    "npi": "1144515149",
+    "hcaiId": null,
+    "businessName": "THE SAN FRANCISCO AIDS FOUNDATION",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002143",
+    "licenseEffectiveDate": "11/13/2024",
+    "licenseExpirationDate": "11/12/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "PIER 26",
+    "city": "SAN FRANCISCO",
+    "zip": "94105",
+    "county": "SAN FRANCISCO",
+    "phone": null,
+    "lat": 37.7889132,
+    "lng": -122.387441
+  }
+]

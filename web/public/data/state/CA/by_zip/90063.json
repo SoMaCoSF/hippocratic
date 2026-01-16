@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630028247",
+    "name": "TRI-STATE COMMUNITY HEALTHCARE CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "TRI - STATE COMMUNITY HEALTHCARE CENTER",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550004322",
+    "licenseEffectiveDate": "08/09/2025",
+    "licenseExpirationDate": "08/08/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "3600 E 1ST ST",
+    "city": "LOS ANGELES",
+    "zip": "90063",
+    "county": "LOS ANGELES",
+    "phone": null,
+    "lat": 34.03581671,
+    "lng": -118.1890266
+  }
+]

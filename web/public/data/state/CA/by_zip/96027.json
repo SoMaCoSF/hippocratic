@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000350",
+    "name": "SCOTT VALLEY RURAL HEALTH CLINIC",
+    "npi": "1336330646",
+    "hcaiId": null,
+    "businessName": "SISKIYOU HOSPITAL, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000035",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "8 COMMERCIAL ST",
+    "city": "ETNA",
+    "zip": "96027",
+    "county": "SISKIYOU",
+    "phone": "(530) 467-5393",
+    "lat": 41.4626823,
+    "lng": -122.8945701
+  }
+]

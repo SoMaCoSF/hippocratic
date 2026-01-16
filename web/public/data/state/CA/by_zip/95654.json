@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017571",
+    "name": "WELLSPACE HEALTH AMADOR COMMUNITY HEALTH CENTER",
+    "npi": "1225550874",
+    "hcaiId": "306030896",
+    "businessName": "WELLSPACE HEALTH",
+    "contactEmail": "TDELRIO@WELLSPACEHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550004588",
+    "licenseEffectiveDate": "02/04/2025",
+    "licenseExpirationDate": "02/03/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "11333 PROSPECT DR",
+    "city": "MARTELL",
+    "zip": "95654",
+    "county": "AMADOR",
+    "phone": "(209) 271-4510",
+    "lat": 38.371788,
+    "lng": -120.8011005
+  }
+]

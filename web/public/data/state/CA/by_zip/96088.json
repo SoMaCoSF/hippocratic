@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000094",
+    "name": "SHINGLETOWN MEDICAL CENTER",
+    "npi": null,
+    "hcaiId": "306452335",
+    "businessName": "SHINGLETOWN MEDICAL CENTER",
+    "contactEmail": "DHIGHFILL@SHINGLETOWNMEDCENTER.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000091",
+    "licenseEffectiveDate": "11/10/2025",
+    "licenseExpirationDate": "11/09/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "31292 ALPINE MEADOWS RD",
+    "city": "SHINGLETOWN",
+    "zip": "96088",
+    "county": "SHASTA",
+    "phone": "(530) 474-3390",
+    "lat": 40.491621,
+    "lng": -121.8852765
+  }
+]

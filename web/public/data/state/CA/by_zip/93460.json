@@ -1,0 +1,26 @@
+[
+  {
+    "id": "050001302",
+    "name": "SANTA YNEZ TRIBAL HEALTH CLINIC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "FQHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "90 VIA JUANA RD",
+    "city": "SANTA YNEZ",
+    "zip": "93460",
+    "county": "SANTA BARBARA",
+    "phone": "(805) 688-7070",
+    "lat": 34.60515551,
+    "lng": -120.0932981
+  }
+]

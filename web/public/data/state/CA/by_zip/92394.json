@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016847",
+    "name": "VISTA DEL SOL DIALYSIS",
+    "npi": null,
+    "hcaiId": "306360900",
+    "businessName": "ROLLINS DIALYSIS LLC",
+    "contactEmail": "CAL_C@DAVITA.COM",
+    "categoryName": "CHRONIC DIALYSIS CLINIC",
+    "categoryCode": "ESRD/CDC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003822",
+    "licenseEffectiveDate": "02/21/2025",
+    "licenseExpirationDate": "02/20/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 30,
+    "address": "15002 AMARGOSA RD",
+    "city": "VICTORVILLE",
+    "zip": "92394",
+    "county": "SAN BERNARDINO",
+    "phone": "(442) 255-4023",
+    "lat": 34.52319,
+    "lng": -117.330759
+  }
+]

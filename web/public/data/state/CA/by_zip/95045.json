@@ -1,0 +1,26 @@
+[
+  {
+    "id": "070001390",
+    "name": "HAZEL HAWKINS HEALTH CLINIC",
+    "npi": "1891811907",
+    "hcaiId": null,
+    "businessName": "SAN BENITO HEALTH CARE DISTRICT",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "070000004",
+    "licenseEffectiveDate": "01/01/2025",
+    "licenseExpirationDate": "12/31/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "301 THE ALAMEDA, SUITE B-3",
+    "city": "SAN JUAN BAUTISTA",
+    "zip": "95045",
+    "county": "SAN BENITO",
+    "phone": "(831) 623-4615",
+    "lat": 36.84123,
+    "lng": -121.5349695
+  }
+]

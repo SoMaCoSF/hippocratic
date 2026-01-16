@@ -1,0 +1,26 @@
+[
+  {
+    "id": "050001424",
+    "name": "ATASCADERO FAMILY CARE CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "5575 CAPISTRANO AVE",
+    "city": "ATASCADERO",
+    "zip": "93423",
+    "county": "SAN LUIS OBISPO",
+    "phone": "(805) 461-6095",
+    "lat": 35.492634,
+    "lng": -120.663432
+  }
+]

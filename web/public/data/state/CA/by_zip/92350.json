@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630012293",
+    "name": "LOMA LINDA UNIVERSITY SPECIAL CARE DENTISTRY",
+    "npi": "1568530939",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "SURGICAL CLINIC",
+    "categoryCode": "ASC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "11092 ANDERSON ST",
+    "city": "LOMA LINDA",
+    "zip": "92350",
+    "county": "SAN BERNARDINO",
+    "phone": null,
+    "lat": 34.05231534,
+    "lng": -117.2626654
+  }
+]

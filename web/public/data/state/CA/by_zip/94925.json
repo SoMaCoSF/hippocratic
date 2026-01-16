@@ -1,0 +1,26 @@
+[
+  {
+    "id": "220000912",
+    "name": "SELECT PHYSICAL THERAPY",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "REHABILITATION CLINIC",
+    "categoryCode": "OPT/SP",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "200 TAMAL PLZ, SUITE 120",
+    "city": "CORTE MADERA",
+    "zip": "94925",
+    "county": "MARIN",
+    "phone": "(415) 461-8233",
+    "lat": 37.9358979,
+    "lng": -122.5199317
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000083",
+    "name": "HILL COUNTRY COMMUNITY CLINIC",
+    "npi": null,
+    "hcaiId": "306452320",
+    "businessName": "HILL COUNTRY COMMUNITY CLINIC",
+    "contactEmail": "ERIERA@HILLCOUNTRYCLINIC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000078",
+    "licenseEffectiveDate": "02/28/2025",
+    "licenseExpirationDate": "02/27/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "29632 STATE HIGHWAY 299 E",
+    "city": "ROUND MOUNTAIN",
+    "zip": "96084",
+    "county": "SHASTA",
+    "phone": "(530) 337-5765",
+    "lat": 40.80411568,
+    "lng": -121.9398873
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000224",
+    "name": "CANBY FAMILY PRACTICE",
+    "npi": "1376164749",
+    "hcaiId": "306254001",
+    "businessName": "LAST FRONTIER HEALTHCARE DISTRICT",
+    "contactEmail": "GJELLIOTT@CANBYCLINIC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000026",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "670 COUNTY ROAD 83",
+    "city": "CANBY",
+    "zip": "96015",
+    "county": "MODOC",
+    "phone": "(530) 233-4641",
+    "lat": 41.443047,
+    "lng": -120.8719305
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630011715",
+    "name": "DON PEDRO FAMILY PRACTICE",
+    "npi": "1104145861",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/MD",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "3191 EL PRADO RD, SUITE D",
+    "city": "LA GRANGE",
+    "zip": "95329",
+    "county": "STANISLAUS",
+    "phone": "(209) 852-2764",
+    "lat": 37.682568,
+    "lng": -120.325761
+  }
+]

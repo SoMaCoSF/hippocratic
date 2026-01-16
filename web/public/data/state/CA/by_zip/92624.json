@@ -1,0 +1,26 @@
+[
+  {
+    "id": "060000037",
+    "name": "CAPISTRANO BEACH CARE CENTER",
+    "npi": "1669162590",
+    "hcaiId": "206301118",
+    "businessName": "CAPO BEACH HEALTHCARE LLC",
+    "contactEmail": "ADMIN@CAPOBCC.COM",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "060000085",
+    "licenseEffectiveDate": "11/15/2024",
+    "licenseExpirationDate": "11/14/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 93,
+    "address": "35410 DEL REY",
+    "city": "DANA POINT",
+    "zip": "92624",
+    "county": "ORANGE",
+    "phone": "(949) 496-5786",
+    "lat": 33.449157,
+    "lng": -117.650414
+  }
+]

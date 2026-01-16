@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630013594",
+    "name": "HILMAR HEALTH CENTER",
+    "npi": "1124300207",
+    "hcaiId": "306244057",
+    "businessName": "LIVINGSTON COMMUNITY HEALTH",
+    "contactEmail": "CREDENTIALING@VISITLCH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002095",
+    "licenseEffectiveDate": "10/25/2025",
+    "licenseExpirationDate": "10/24/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "7970 LANDER AVE, SUITE A/B",
+    "city": "HILMAR",
+    "zip": "95324",
+    "county": "MERCED",
+    "phone": "(209) 850-3500",
+    "lat": 37.403847,
+    "lng": -120.8484
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630026713",
+    "name": "CALIFORNIA BIRTH CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "ROSEVILLE BIRTHING CENTER, INC.",
+    "contactEmail": "DRTRISHA@CALBIRTHCENTER.COM",
+    "categoryName": "ALTERNATIVE BIRTHING CENTER",
+    "categoryCode": "ABC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550008534",
+    "licenseEffectiveDate": "05/08/2025",
+    "licenseExpirationDate": "05/07/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6940 DESTINY DR",
+    "city": "ROCKLIN",
+    "zip": "95677",
+    "county": "PLACER",
+    "phone": "(530) 906-6844",
+    "lat": 38.777634,
+    "lng": -121.260465
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630013677",
+    "name": "STONE BAY HOME ICF",
+    "npi": "1538429253",
+    "hcaiId": null,
+    "businessName": "STONE BAY HOME ICF, LLC",
+    "contactEmail": "TASTORGA61@GMAIL.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDN",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002045",
+    "licenseEffectiveDate": "09/13/2025",
+    "licenseExpirationDate": "09/12/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "9076 STONE BAY COURT",
+    "city": "SACRAMENTO",
+    "zip": "95829",
+    "county": "SACRAMENTO",
+    "phone": "(916) 662-5684",
+    "lat": 38.45745,
+    "lng": -121.3634655
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "050000926",
+    "name": "SERENITY HOUSE",
+    "npi": null,
+    "hcaiId": "206424027",
+    "businessName": "VISITING NURSE AND HOSPICE CARE OF SANTA BARBARA",
+    "contactEmail": "ADMINISTRATION@VNA.HEALTH",
+    "categoryName": "HOSPICE FACILITY",
+    "categoryCode": "HOFA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "050000370",
+    "licenseEffectiveDate": "06/13/2025",
+    "licenseExpirationDate": "06/12/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 18,
+    "address": "930 MIRAMONTE DR",
+    "city": "SANTA BARBARA",
+    "zip": "93109",
+    "county": "SANTA BARBARA",
+    "phone": "(805) 319-1040",
+    "lat": 34.411608,
+    "lng": -119.713149
+  }
+]

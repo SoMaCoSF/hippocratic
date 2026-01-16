@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630013303",
+    "name": "GOLDEN PACIFIC HOME HEALTH, INC.",
+    "npi": "1104111483",
+    "hcaiId": "406014287",
+    "businessName": "GOLDEN PACIFIC HOME HEALTH, INC.",
+    "contactEmail": "GOLDENPACIFIC@HHRGCONNECT.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550001821",
+    "licenseEffectiveDate": "01/27/2025",
+    "licenseExpirationDate": "01/26/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1151 HARBOR BAY PKWY, SUITE 201A",
+    "city": "ALAMEDA",
+    "zip": "94502",
+    "county": "ALAMEDA",
+    "phone": "(510) 373-2799",
+    "lat": 37.72715201,
+    "lng": -122.231566
+  }
+]

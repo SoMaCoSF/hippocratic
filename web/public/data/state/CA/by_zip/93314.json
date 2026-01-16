@@ -1,0 +1,26 @@
+[
+  {
+    "id": "120000903",
+    "name": "LOYD'S LIBERTY HOMES, INC. - JOELYLE",
+    "npi": "1326255498",
+    "hcaiId": null,
+    "businessName": "LOYD'S LIBERTY HOMES, INC.",
+    "contactEmail": "GURINDER.KAUR@SEVITAHEALTH.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDN",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "120000361",
+    "licenseEffectiveDate": "03/11/2025",
+    "licenseExpirationDate": "03/10/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "304 JOELYLE ST",
+    "city": "BAKERSFIELD",
+    "zip": "93314",
+    "county": "KERN",
+    "phone": "(661) 588-1850",
+    "lat": 35.352153,
+    "lng": -119.147976
+  }
+]

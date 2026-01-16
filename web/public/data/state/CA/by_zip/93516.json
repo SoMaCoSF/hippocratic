@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630027475",
+    "name": "BARTZ-ALTADONNA COMMUNITY HEALTH CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "BARTZ-ALTADONNA COMMUNITY HEALTH CENTER",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "960001428",
+    "licenseEffectiveDate": "11/06/2025",
+    "licenseExpirationDate": "11/05/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "12560 BORON AVE",
+    "city": "BORON",
+    "zip": "93516",
+    "county": "KERN",
+    "phone": null,
+    "lat": 35.00734738,
+    "lng": -117.6497249
+  }
+]

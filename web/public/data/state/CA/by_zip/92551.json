@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630002581",
+    "name": "RELIABLE MOBILE MEDICAL SERVICES, INC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "OTHER",
+    "categoryCode": "UNLICEN",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "24660 SUPERIOR AVE",
+    "city": "MORENO VALLEY",
+    "zip": "92551",
+    "county": "RIVERSIDE",
+    "phone": null,
+    "lat": 33.876189,
+    "lng": -117.2322945
+  }
+]

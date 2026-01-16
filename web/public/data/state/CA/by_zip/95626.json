@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015512",
+    "name": "RIVERGREEN LODGE ICF/DD-N",
+    "npi": "1295154862",
+    "hcaiId": null,
+    "businessName": "ANTELOPE HILLS MANOR ICF-DDN, INC.",
+    "contactEmail": "AGRANITRN1961@COMCAST.NET",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDN",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003032",
+    "licenseEffectiveDate": "04/07/2025",
+    "licenseExpirationDate": "04/06/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "8014 RIVERGREEN DRIVE",
+    "city": "ELVERTA",
+    "zip": "95626",
+    "county": "SACRAMENTO",
+    "phone": "(916) 468-6349",
+    "lat": 38.715084,
+    "lng": -121.4184105
+  }
+]

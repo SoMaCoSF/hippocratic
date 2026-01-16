@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017418",
+    "name": "CONEJO VALLEY CONGREGATE HEALTHCARE INC.",
+    "npi": null,
+    "hcaiId": "206560127",
+    "businessName": "CONEJO VALLEY CONGREGATE HEALTHCARE INC.",
+    "contactEmail": "INFO@CONEJOVALLEYHEALTHCARE.COM",
+    "categoryName": "CONGREGATE LIVING HEALTH FACILITY",
+    "categoryCode": "CLHF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550004643",
+    "licenseEffectiveDate": "07/31/2025",
+    "licenseExpirationDate": "07/30/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "1225 LAWRENCE WAY",
+    "city": "OXNARD",
+    "zip": "93035",
+    "county": "VENTURA",
+    "phone": "(805) 663-0006",
+    "lat": 34.188165,
+    "lng": -119.2062375
+  }
+]

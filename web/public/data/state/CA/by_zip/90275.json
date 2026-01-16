@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630027216",
+    "name": "ASSISTANCE HOME HEALTHCARE INC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "ASSISTANCE HOME HEALTHCARE INC.",
+    "contactEmail": "ASSISTANCEHOMEHEALTHCARE@GMAIL.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550009811",
+    "licenseEffectiveDate": "11/12/2025",
+    "licenseExpirationDate": "05/11/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "28924 S WESTERN AVE, SUITE 104",
+    "city": "RANCHO PALOS VERDES",
+    "zip": "90275",
+    "county": "LOS ANGELES",
+    "phone": "(562) 200-5136",
+    "lat": 33.75643443,
+    "lng": -118.3101146
+  }
+]

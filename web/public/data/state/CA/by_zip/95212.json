@@ -1,0 +1,26 @@
+[
+  {
+    "id": "100000187",
+    "name": "OMEGA HOUSE",
+    "npi": "1386869584",
+    "hcaiId": null,
+    "businessName": "CASA DEL RIOS HABILITATION SERVICES",
+    "contactEmail": "CASADELRIOS@YAHOO.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "100000251",
+    "licenseEffectiveDate": "01/10/2025",
+    "licenseExpirationDate": "01/09/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "7830 OMEGA WAY",
+    "city": "STOCKTON",
+    "zip": "95212",
+    "county": "SAN JOAQUIN",
+    "phone": "(209) 954-0428",
+    "lat": 38.022156,
+    "lng": -121.2615
+  }
+]

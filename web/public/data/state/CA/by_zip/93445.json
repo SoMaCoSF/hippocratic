@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017349",
+    "name": "COMMUNITY HEALTH CENTERS DEL MAR",
+    "npi": "1417480294",
+    "hcaiId": "306404103",
+    "businessName": "COMMUNITY HEALTH CENTERS OF THE CENTRAL COAST, INC.",
+    "contactEmail": "SSOSA@CHCCC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550004014",
+    "licenseEffectiveDate": "11/20/2024",
+    "licenseExpirationDate": "11/19/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "2120 CIENAGA ST",
+    "city": "OCEANO",
+    "zip": "93445",
+    "county": "SAN LUIS OBISPO",
+    "phone": "(805) 346-3911",
+    "lat": 35.097831,
+    "lng": -120.6088515
+  }
+]

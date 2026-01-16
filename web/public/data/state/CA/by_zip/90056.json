@@ -1,0 +1,26 @@
+[
+  {
+    "id": "930000088",
+    "name": "KINDRED HOSPITAL - LOS ANGELES",
+    "npi": "1447335146",
+    "hcaiId": "106190305",
+    "businessName": "THC - ORANGE COUNTY, LLC",
+    "contactEmail": "JASON.PEREZ@KINDRED.COM",
+    "categoryName": "GENERAL ACUTE CARE HOSPITAL",
+    "categoryCode": "GACH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "930000053",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 81,
+    "address": "5525 W SLAUSON AVE",
+    "city": "LOS ANGELES",
+    "zip": "90056",
+    "county": "LOS ANGELES",
+    "phone": "(310) 981-0601",
+    "lat": 33.989157,
+    "lng": -118.3783815
+  }
+]

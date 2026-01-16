@@ -1,0 +1,26 @@
+[
+  {
+    "id": "100000175",
+    "name": "CASA DEL MAR #2",
+    "npi": "1083741250",
+    "hcaiId": null,
+    "businessName": "J & J CARE CENTERS, INC.",
+    "contactEmail": "SHARRAE.ELSTON@RESCARE.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDN",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "100000255",
+    "licenseEffectiveDate": "03/01/2025",
+    "licenseExpirationDate": "02/28/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "2525 DELMAR AVENUE",
+    "city": "PENRYN",
+    "zip": "95663",
+    "county": "PLACER",
+    "phone": "(916) 652-5448",
+    "lat": 38.846304,
+    "lng": -121.2146055
+  }
+]

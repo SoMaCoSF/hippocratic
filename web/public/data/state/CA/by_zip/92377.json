@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015764",
+    "name": "ACE ENDOSCOPY & SURGERY CENTER",
+    "npi": "1881015584",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "SURGICAL CLINIC",
+    "categoryCode": "ASC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "2006 N. RIVERSIDE AVENUE, SUITE A",
+    "city": "RIALTO",
+    "zip": "92377",
+    "county": "SAN BERNARDINO",
+    "phone": "(909) 644-4033",
+    "lat": 34.136901,
+    "lng": -117.372087
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "040000937",
+    "name": "GOLDEN VALLEY HEALTH CENTER - LE GRAND",
+    "npi": null,
+    "hcaiId": "306244038",
+    "businessName": "GOLDEN VALLEY HEALTH CENTERS",
+    "contactEmail": "EVILLARAMA@GVHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "040000373",
+    "licenseEffectiveDate": "05/14/2025",
+    "licenseExpirationDate": "05/13/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "13161 JEFFERSON ST",
+    "city": "LE GRAND",
+    "zip": "95333",
+    "county": "MERCED",
+    "phone": "(209) 385-5554",
+    "lat": 37.229292,
+    "lng": -120.2508405
+  }
+]

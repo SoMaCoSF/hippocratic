@@ -1,0 +1,26 @@
+[
+  {
+    "id": "250001210",
+    "name": "FLEMING-HEIMARK HOUSE",
+    "npi": "1538206388",
+    "hcaiId": null,
+    "businessName": "ANGEL VIEW, INC.",
+    "contactEmail": "CVALENCIA@ANGELVIEW.ORG",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "250000498",
+    "licenseEffectiveDate": "05/25/2025",
+    "licenseExpirationDate": "05/24/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "30400 DESERT PALM DR",
+    "city": "THOUSAND PALMS",
+    "zip": "92276",
+    "county": "RIVERSIDE",
+    "phone": "(760) 834-1303",
+    "lat": 33.827985,
+    "lng": -116.380458
+  }
+]

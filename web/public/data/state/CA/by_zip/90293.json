@@ -1,0 +1,26 @@
+[
+  {
+    "id": "910000069",
+    "name": "PLAYA DEL REY CENTER",
+    "npi": "1255387395",
+    "hcaiId": "206190623",
+    "businessName": "SUNBRIDGE HALLMARK HEALTH SERVICES, LLC",
+    "contactEmail": "ADMINISTRATOR@PLAYADELREYCENTER.COM",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "910000089",
+    "licenseEffectiveDate": "11/02/2024",
+    "licenseExpirationDate": "11/01/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 99,
+    "address": "7716 W MANCHESTER AVE",
+    "city": "PLAYA DEL REY",
+    "zip": "90293",
+    "county": "LOS ANGELES",
+    "phone": "(310) 823-4694",
+    "lat": 33.959025,
+    "lng": -118.431756
+  }
+]

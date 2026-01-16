@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630019778",
+    "name": "WESLEY HEALTH CENTERS - PALMDALE EAST",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "JWCH INSTITUTE, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "960001445",
+    "licenseEffectiveDate": "06/16/2025",
+    "licenseExpirationDate": "06/15/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "37926 47TH ST E",
+    "city": "PALMDALE",
+    "zip": "93552",
+    "county": "LOS ANGELES",
+    "phone": "(661) 942-2391",
+    "lat": 34.57119714,
+    "lng": -118.0449641
+  }
+]

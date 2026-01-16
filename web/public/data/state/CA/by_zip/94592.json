@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015831",
+    "name": "VALLEJO FAMILY HEALTH SERVICES",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "FQHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1055 AZUAR AVENUE",
+    "city": "VALLEJO",
+    "zip": "94592",
+    "county": "SOLANO",
+    "phone": "(707) 784-8514",
+    "lat": 38.09624114,
+    "lng": -122.2729787
+  }
+]

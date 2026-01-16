@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630026431",
+    "name": "LIFELONG MEDICAL CARE - RODEO HEALTH CENTER",
+    "npi": "1976931295",
+    "hcaiId": null,
+    "businessName": "LIFELONG MEDICAL CARE",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003292",
+    "licenseEffectiveDate": "08/12/2025",
+    "licenseExpirationDate": "11/07/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "25 CALIFORNIA ST",
+    "city": "RODEO",
+    "zip": "94572",
+    "county": "CONTRA COSTA",
+    "phone": null,
+    "lat": 38.03901057,
+    "lng": -122.2625298
+  }
+]

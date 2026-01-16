@@ -1,0 +1,26 @@
+[
+  {
+    "id": "030001520",
+    "name": "SUTTER MEDICAL FOUNDATION PLYMOUTH HEALTH CENTER",
+    "npi": "1831467653",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "9279 LOCUST STREET",
+    "city": "PLYMOUTH",
+    "zip": "95669",
+    "county": "AMADOR",
+    "phone": "(209) 245-6968",
+    "lat": 38.477637,
+    "lng": -120.85029
+  }
+]

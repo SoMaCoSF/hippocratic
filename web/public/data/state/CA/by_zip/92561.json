@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630026910",
+    "name": "SANTA ROSA INDIAN HEALTH CLINIC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "FQHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "65175 STATE HIGHWAY 74",
+    "city": "MOUNTAIN CENTER",
+    "zip": "92561",
+    "county": "RIVERSIDE",
+    "phone": "(951) 823-8882",
+    "lat": 33.56834961,
+    "lng": -116.5267814
+  }
+]

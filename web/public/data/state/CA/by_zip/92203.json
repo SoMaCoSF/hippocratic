@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017544",
+    "name": "INDIO DIALYSIS",
+    "npi": null,
+    "hcaiId": "306330418",
+    "businessName": "PETRA DIALYSIS LLC",
+    "contactEmail": "CAL_C@DAVITA.COM",
+    "categoryName": "CHRONIC DIALYSIS CLINIC",
+    "categoryCode": "ESRD/CDC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550004493",
+    "licenseEffectiveDate": "12/12/2024",
+    "licenseExpirationDate": "12/11/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 37,
+    "address": "82900 AVENUE 42, SUITE E",
+    "city": "INDIO",
+    "zip": "92203",
+    "county": "RIVERSIDE",
+    "phone": "(760) 342-6842",
+    "lat": 33.745464,
+    "lng": -116.217153
+  }
+]

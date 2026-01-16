@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630011623",
+    "name": "INDIAN VALLEY MEDICAL CLINIC",
+    "npi": "1881068708",
+    "hcaiId": null,
+    "businessName": "PLUMAS HOSPITAL DISTRICT",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000030",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "176 HOT SPRINGS RD",
+    "city": "GREENVILLE",
+    "zip": "95947",
+    "county": "PLUMAS",
+    "phone": "(530) 284-6116",
+    "lat": 40.140261,
+    "lng": -120.93714
+  }
+]

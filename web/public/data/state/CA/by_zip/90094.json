@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630020998",
+    "name": "SERENTIY ESSENTIAL THERAPY",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": "DANIEL.PERSICHETTI@JHA.ORG",
+    "categoryName": "REHABILITATION CLINIC",
+    "categoryCode": "OPT/SP",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "12490 FIELDING CIR, #174",
+    "city": "PLAYA VISTA",
+    "zip": "90094",
+    "county": "LOS ANGELES",
+    "phone": "(424) 216-7239",
+    "lat": 33.97885368,
+    "lng": -118.4117251
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "110000488",
+    "name": "OCCIDENTAL AREA HEALTH CENTER",
+    "npi": null,
+    "hcaiId": "306494014",
+    "businessName": "WEST COUNTY HEALTH CENTERS, INC.",
+    "contactEmail": "KMITCHELL@WCHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "110000063",
+    "licenseEffectiveDate": "05/04/2025",
+    "licenseExpirationDate": "05/03/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "3802 MAIN ST",
+    "city": "OCCIDENTAL",
+    "zip": "95465",
+    "county": "SONOMA",
+    "phone": "(707) 271-3308",
+    "lat": 38.40875262,
+    "lng": -122.9475398
+  }
+]

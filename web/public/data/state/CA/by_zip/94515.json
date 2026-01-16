@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630011371",
+    "name": "OLE HEALTH",
+    "npi": "1497130280",
+    "hcaiId": "306284016",
+    "businessName": "OLE HEALTH",
+    "contactEmail": "KMOSES@OLEHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003358",
+    "licenseEffectiveDate": "01/26/2025",
+    "licenseExpirationDate": "01/25/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "911 WASHINGTON ST",
+    "city": "CALISTOGA",
+    "zip": "94515",
+    "county": "NAPA",
+    "phone": "(707) 709-2308",
+    "lat": 38.577816,
+    "lng": -122.5773135
+  }
+]

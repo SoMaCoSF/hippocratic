@@ -1,0 +1,26 @@
+[
+  {
+    "id": "110000912",
+    "name": "VIBRANTCARE REHABILITATION -FAIRFIELD",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "REHABILITATION CLINIC",
+    "categoryCode": "OPT/SP",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1411 OLIVER ROAD, SUITE 200",
+    "city": "FAIRFIELD",
+    "zip": "94535",
+    "county": "SOLANO",
+    "phone": null,
+    "lat": 38.25839,
+    "lng": -122.0690745
+  }
+]

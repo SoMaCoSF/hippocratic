@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017636",
+    "name": "DELHI HEALTH CENTER",
+    "npi": null,
+    "hcaiId": "306240354",
+    "businessName": "LIVINGSTON COMMUNITY HEALTH",
+    "contactEmail": "CREDENTIALING@VISITLCH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "040000176",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "16233 KING ST",
+    "city": "DELHI",
+    "zip": "95315",
+    "county": "MERCED",
+    "phone": "(209) 850-3500",
+    "lat": 37.43321805,
+    "lng": -120.7809592
+  }
+]

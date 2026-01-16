@@ -1,0 +1,26 @@
+[
+  {
+    "id": "030001517",
+    "name": "DIVIDE WELLNESS CENTER",
+    "npi": "1346226693",
+    "hcaiId": null,
+    "businessName": "MARSHALL MEDICAL CENTER",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "030000059",
+    "licenseEffectiveDate": "09/12/2025",
+    "licenseExpirationDate": "04/30/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6065 HIGHWAY 193",
+    "city": "GEORGETOWN",
+    "zip": "95634",
+    "county": "EL DORADO",
+    "phone": "(530) 333-2548",
+    "lat": 38.908431,
+    "lng": -120.85173
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630027628",
+    "name": "PALLADIA HEALTH",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "PALLADIA HEALTH",
+    "contactEmail": "FLEVY@PALLADIAHEALTH.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550009618",
+    "licenseEffectiveDate": "07/23/2025",
+    "licenseExpirationDate": "01/22/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "21 COMMERCIAL BLVD, SUITE 14-C",
+    "city": "NOVATO",
+    "zip": "94949",
+    "county": "MARIN",
+    "phone": "(415) 531-7851",
+    "lat": 38.06911501,
+    "lng": -122.530938
+  }
+]

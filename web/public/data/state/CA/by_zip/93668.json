@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630020480",
+    "name": "GOLDEN PLAINS UNIFIED SCHOOL DISTRICT COMMUNITY HEALTH CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "VALLEY HEALTH TEAM, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003996",
+    "licenseEffectiveDate": "11/13/2025",
+    "licenseExpirationDate": "11/12/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6171 SOUTH DANIELS AVENUE",
+    "city": "TRANQUILLITY",
+    "zip": "93668",
+    "county": "FRESNO",
+    "phone": null,
+    "lat": 36.64437244,
+    "lng": -120.2533199
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630000181",
+    "name": "KCARE HOME II",
+    "npi": "1396509683",
+    "hcaiId": null,
+    "businessName": "KCARE HOMES LLC",
+    "contactEmail": "EVCUETO@GMAIL.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550000043",
+    "licenseEffectiveDate": "01/05/2025",
+    "licenseExpirationDate": "01/04/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "1756 SWANSTON WAY",
+    "city": "SAN JOSE",
+    "zip": "95132",
+    "county": "SANTA CLARA",
+    "phone": "(408) 838-1340",
+    "lat": 37.40544,
+    "lng": -121.8699405
+  }
+]

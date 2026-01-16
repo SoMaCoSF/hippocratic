@@ -1,0 +1,26 @@
+[
+  {
+    "id": "070001128",
+    "name": "BIG SUR HEALTH CENTER",
+    "npi": "1639553688",
+    "hcaiId": "306271905",
+    "businessName": "BIG SUR HEALTH CENTER",
+    "contactEmail": "KATHIE@BIGSURHEALTHCENTER.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "070000483",
+    "licenseEffectiveDate": "05/22/2025",
+    "licenseExpirationDate": "05/21/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "46896 HIGHWAY 1",
+    "city": "BIG SUR",
+    "zip": "93920",
+    "county": "MONTEREY",
+    "phone": "(831) 667-2580",
+    "lat": 36.268317,
+    "lng": -121.806837
+  }
+]

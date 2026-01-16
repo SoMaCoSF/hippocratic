@@ -1,0 +1,26 @@
+[
+  {
+    "id": "100001768",
+    "name": "WOODBRIDGE ICF",
+    "npi": "1902072473",
+    "hcaiId": null,
+    "businessName": "ARYSA, LLC",
+    "contactEmail": "LUZMARCOS@ARYSALLC.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "100000757",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "528 INDIANA STREET",
+    "city": "WOODBRIDGE",
+    "zip": "95258",
+    "county": "SAN JOAQUIN",
+    "phone": "(209) 333-1327",
+    "lat": 38.153655,
+    "lng": -121.3091955
+  }
+]

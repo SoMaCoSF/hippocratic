@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630027241",
+    "name": "HARMONY HEALTH MEDICAL CLINIC AND FAMILY RESOURCE CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "HARMONY HEALTH MEDICAL CLINIC AND FAMILY RESOURCE CENTER",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002538",
+    "licenseEffectiveDate": "10/10/2025",
+    "licenseExpirationDate": "10/09/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "114 D ST",
+    "city": "WHEATLAND",
+    "zip": "95692",
+    "county": "YUBA",
+    "phone": null,
+    "lat": 39.01058198,
+    "lng": -121.426231
+  }
+]

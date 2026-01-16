@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017182",
+    "name": "ELICA HEALTH CENTERS - V STREET MEDICAL CENTER",
+    "npi": "1366051120",
+    "hcaiId": null,
+    "businessName": "ELICA HEALTH CENTERS",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550006737",
+    "licenseEffectiveDate": "09/08/2025",
+    "licenseExpirationDate": "09/07/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "923 V ST",
+    "city": "SACRAMENTO",
+    "zip": "95818",
+    "county": "SACRAMENTO",
+    "phone": null,
+    "lat": 38.567547,
+    "lng": -121.499739
+  }
+]

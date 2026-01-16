@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015660",
+    "name": "BEVERLY GLEN CONGREGATE INC.",
+    "npi": null,
+    "hcaiId": "206190999",
+    "businessName": "BEVERLY GLEN CONGREGATE INC.",
+    "contactEmail": "ASGCORP@YAHOO.COM",
+    "categoryName": "CONGREGATE LIVING HEALTH FACILITY",
+    "categoryCode": "CLHF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003953",
+    "licenseEffectiveDate": "08/28/2023",
+    "licenseExpirationDate": "08/27/2024",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "1200 NORTH BEVERLY GLEN BLVD.",
+    "city": "BEL AIR",
+    "zip": "90077",
+    "county": "LOS ANGELES",
+    "phone": "(310) 989-1941",
+    "lat": 34.09506904,
+    "lng": -118.4406922
+  }
+]

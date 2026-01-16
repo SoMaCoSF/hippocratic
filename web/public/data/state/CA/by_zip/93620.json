@@ -1,0 +1,26 @@
+[
+  {
+    "id": "040000262",
+    "name": "GOLDEN VALLEY HEALTH CENTER - DOS PALOS",
+    "npi": null,
+    "hcaiId": "306244001",
+    "businessName": "GOLDEN VALLEY HEALTH CENTERS",
+    "contactEmail": "EVILLARAMA@GVHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "040000231",
+    "licenseEffectiveDate": "01/20/2025",
+    "licenseExpirationDate": "01/19/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1405 CALIFORNIA AVE",
+    "city": "DOS PALOS",
+    "zip": "93620",
+    "county": "MERCED",
+    "phone": "(209) 385-5554",
+    "lat": 36.98665236,
+    "lng": -120.6290306
+  }
+]

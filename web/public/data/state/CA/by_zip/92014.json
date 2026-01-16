@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630019566",
+    "name": "CASA PALMERA CARE CENTER, LLC",
+    "npi": null,
+    "hcaiId": "106370033",
+    "businessName": "CASA PALMERA CARE CENTER, LLC",
+    "contactEmail": "REGULATORYAFFAIRS@DISCOVERYBH.COM",
+    "categoryName": "CHEMICAL DEPENDENCY RECOVERY HOSPITAL",
+    "categoryCode": "CDRH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550005096",
+    "licenseEffectiveDate": "06/06/2025",
+    "licenseExpirationDate": "06/05/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 93,
+    "address": "14750 EL CAMINO REAL",
+    "city": "DEL MAR",
+    "zip": "92014",
+    "county": "SAN DIEGO",
+    "phone": "(858) 481-4411",
+    "lat": 32.983866,
+    "lng": -117.225972
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "070000506",
+    "name": "HOSPICE OF SANTA CRUZ COUNTY",
+    "npi": "1760454672",
+    "hcaiId": "406444022",
+    "businessName": "HOSPICE OF SANTA CRUZ COUNTY",
+    "contactEmail": "KTANASESCU@HOSPICESANTACRUZ.ORG",
+    "categoryName": "HOSPICE",
+    "categoryCode": "HOSPICE",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "070000246",
+    "licenseEffectiveDate": "11/27/2024",
+    "licenseExpirationDate": "11/26/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "940 DISC DR",
+    "city": "SCOTTS VALLEY",
+    "zip": "95066",
+    "county": "SANTA CRUZ",
+    "phone": "(831) 430-3000",
+    "lat": 37.047267,
+    "lng": -122.015601
+  }
+]

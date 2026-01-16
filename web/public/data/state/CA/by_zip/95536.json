@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015149",
+    "name": "FERNDALE COMMUNITY HEALTH CENTER",
+    "npi": "1598178915",
+    "hcaiId": "306124042",
+    "businessName": "OPEN DOOR COMMUNITY HEALTH CENTERS",
+    "contactEmail": "SWATKINS@OPENDOORHEALTH.COM",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003262",
+    "licenseEffectiveDate": "11/03/2025",
+    "licenseExpirationDate": "10/26/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "638 MAIN STREET",
+    "city": "FERNDALE",
+    "zip": "95536",
+    "county": "HUMBOLDT",
+    "phone": "(707) 786-4028",
+    "lat": 40.578426,
+    "lng": -124.2614205
+  }
+]

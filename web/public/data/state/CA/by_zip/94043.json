@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015321",
+    "name": "GRACE COMMUNITY HOME HEALTH INC.",
+    "npi": "1154750867",
+    "hcaiId": "406434281",
+    "businessName": "GRACE COMMUNITY HOME HEALTH INC.",
+    "contactEmail": "GRACECOMMUNITYHH@GMAIL.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002945",
+    "licenseEffectiveDate": "06/30/2025",
+    "licenseExpirationDate": "06/29/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "229 POLARIS AVE, SUITE 5",
+    "city": "MOUNTAIN VIEW",
+    "zip": "94043",
+    "county": "SANTA CLARA",
+    "phone": "(650) 784-0082",
+    "lat": 37.398456,
+    "lng": -122.0836815
+  }
+]

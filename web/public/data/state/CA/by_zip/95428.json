@@ -1,0 +1,26 @@
+[
+  {
+    "id": "110000120",
+    "name": "ROUND VALLEY INDIAN HEALTH CENTER, INC.",
+    "npi": null,
+    "hcaiId": "306231463",
+    "businessName": "ROUND VALLEY INDIAN HEALTH CENTER INC.",
+    "contactEmail": "OTIS.BROTHERTON@RVIHC.COM",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "110000097",
+    "licenseEffectiveDate": "05/18/2025",
+    "licenseExpirationDate": "05/17/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "STATE HIGHWAY 162 AND BIGGAR LN",
+    "city": "COVELO",
+    "zip": "95428",
+    "county": "MENDOCINO",
+    "phone": "(707) 983-6181",
+    "lat": 39.80623376,
+    "lng": -123.2433968
+  }
+]

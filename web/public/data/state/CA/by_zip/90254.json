@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015740",
+    "name": "HB SURGERY CENTER INC",
+    "npi": "1245679737",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "SURGICAL CLINIC",
+    "categoryCode": "ASC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1601 PACIFIC COAST HIGHWAY, SUITE 150",
+    "city": "HERMOSA BEACH",
+    "zip": "90254",
+    "county": "LOS ANGELES",
+    "phone": "(310) 402-2255",
+    "lat": 33.866937,
+    "lng": -118.394145
+  }
+]

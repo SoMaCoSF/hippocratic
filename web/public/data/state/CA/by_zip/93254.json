@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630014331",
+    "name": "COMMUNITY HEALTH CENTERS - NEW CUYAMA",
+    "npi": "1508105008",
+    "hcaiId": "306420728",
+    "businessName": "COMMUNITY HEALTH CENTERS OF THE CENTRAL COAST, INC.",
+    "contactEmail": "SSOSA@CHCC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550007970",
+    "licenseEffectiveDate": "05/06/2025",
+    "licenseExpirationDate": "05/05/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "4711 HIGHWAY 166",
+    "city": "NEW CUYAMA",
+    "zip": "93254",
+    "county": "SANTA BARBARA",
+    "phone": "(805) 346-3911",
+    "lat": 34.945992,
+    "lng": -119.683422
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "120001665",
+    "name": "TIPTON MEDICAL CLINIC",
+    "npi": "1528072527",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": "IARROYO@TIPTONMEDICALCLINIC.COM",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/MD",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "565 N THOMPSON RD",
+    "city": "TIPTON",
+    "zip": "93272",
+    "county": "TULARE",
+    "phone": "(559) 752-4147",
+    "lat": 36.06363609,
+    "lng": -119.3121948
+  }
+]

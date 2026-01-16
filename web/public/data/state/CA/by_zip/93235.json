@@ -1,0 +1,26 @@
+[
+  {
+    "id": "120001484",
+    "name": "FAMILY HEALTHCARE NETWORK",
+    "npi": "1386670610",
+    "hcaiId": "306544005",
+    "businessName": "FAMILY HEALTHCARE NETWORK",
+    "contactEmail": "RISKMANAGEMENT@FHCN.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "120000597",
+    "licenseEffectiveDate": "11/05/2025",
+    "licenseExpirationDate": "11/04/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "33025 ROAD 159",
+    "city": "IVANHOE",
+    "zip": "93235",
+    "county": "TULARE",
+    "phone": "(559) 737-4297",
+    "lat": 36.38908187,
+    "lng": -119.2180394
+  }
+]

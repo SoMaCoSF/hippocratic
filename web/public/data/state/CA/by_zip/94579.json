@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630024819",
+    "name": "TIBURCIO VASQUEZ HEALTH CENTER, INC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "TIBURCIO VASQUEZ HEALTH CENTER, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002846",
+    "licenseEffectiveDate": "09/30/2025",
+    "licenseExpirationDate": "09/29/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "750 FARGO AVE",
+    "city": "SAN LEANDRO",
+    "zip": "94579",
+    "county": "ALAMEDA",
+    "phone": null,
+    "lat": 37.687743,
+    "lng": -122.142672
+  }
+]

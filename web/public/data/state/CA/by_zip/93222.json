@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015399",
+    "name": "PINE MOUNTAIN HEALTH CENTER",
+    "npi": "1790898039",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": "SHARONSLILIES11@GMAIL.COM",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "16233 ASKIN DRIVE, SUITE A",
+    "city": "FRAZIER PARK",
+    "zip": "93222",
+    "county": "KERN",
+    "phone": "(661) 242-2592",
+    "lat": 34.850187,
+    "lng": -119.165508
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630024621",
+    "name": "SILVER HOME HEALTH CARE, INC.",
+    "npi": null,
+    "hcaiId": "406195982",
+    "businessName": "SILVER HOME HEALTH CARE, INC.",
+    "contactEmail": "SILVERHOMEHEALTHCARE@GMAIL.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550008285",
+    "licenseEffectiveDate": "12/21/2024",
+    "licenseExpirationDate": "12/20/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "122 W SIERRA MADRE BLVD, SUITE G",
+    "city": "SIERRA MADRE",
+    "zip": "91024",
+    "county": "LOS ANGELES",
+    "phone": "(818) 942-6161",
+    "lat": 34.16182076,
+    "lng": -118.0553537
+  }
+]

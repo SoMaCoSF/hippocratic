@@ -1,0 +1,26 @@
+[
+  {
+    "id": "230000098",
+    "name": "WESTWOOD FAMILY PRACTICE",
+    "npi": "1336150051",
+    "hcaiId": "306182322",
+    "businessName": "NORTHEASTERN RURAL HEALTH CLINICS, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000066",
+    "licenseEffectiveDate": "01/22/2025",
+    "licenseExpirationDate": "01/21/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "209 BIRCH ST",
+    "city": "WESTWOOD",
+    "zip": "96137",
+    "county": "LASSEN",
+    "phone": "(530) 256-3152",
+    "lat": 40.301586,
+    "lng": -121.0022685
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015627",
+    "name": "BONITAVIEW HOME",
+    "npi": null,
+    "hcaiId": "206374542",
+    "businessName": "GROSSMONT HOSPITAL CORPORATION",
+    "contactEmail": "SUZANNE.JOHNSON@SHARP.COM",
+    "categoryName": "HOSPICE FACILITY",
+    "categoryCode": "HOFA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003289",
+    "licenseEffectiveDate": "11/19/2025",
+    "licenseExpirationDate": "11/18/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "3850 VALLEY VISTA ROAD",
+    "city": "BONITA",
+    "zip": "91902",
+    "county": "SAN DIEGO",
+    "phone": "(619) 667-1911",
+    "lat": 32.660154,
+    "lng": -117.0447795
+  }
+]

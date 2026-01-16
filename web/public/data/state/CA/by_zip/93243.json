@@ -1,0 +1,26 @@
+[
+  {
+    "id": "120000337",
+    "name": "FRAZIER MOUNTAIN COMMUNITY HEALTH CENTER",
+    "npi": "1457353831",
+    "hcaiId": "306154132",
+    "businessName": "CLINICA SIERRA VISTA",
+    "contactEmail": "GRECIA.BARERRA@CLINICASIERRAVISTA.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "120000199",
+    "licenseEffectiveDate": "06/06/2025",
+    "licenseExpirationDate": "06/05/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "704 LEBEC ROAD",
+    "city": "LEBEC",
+    "zip": "93243",
+    "county": "KERN",
+    "phone": "(661) 635-3050",
+    "lat": 34.820631,
+    "lng": -118.884141
+  }
+]

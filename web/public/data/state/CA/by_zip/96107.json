@@ -1,0 +1,26 @@
+[
+  {
+    "id": "240001704",
+    "name": "TOIYABE INDIAN HEALTH PROJECT-CAMP ANTELOPE CLINIC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "FQHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "73 CAMP ANTELOPE RD",
+    "city": "COLEVILLE",
+    "zip": "96107",
+    "county": "MONO",
+    "phone": "(530) 495-2151",
+    "lat": 38.529036,
+    "lng": -119.4549255
+  }
+]

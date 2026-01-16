@@ -1,0 +1,26 @@
+[
+  {
+    "id": "250001752",
+    "name": "UNLICENSED FACILITY #109",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "OTHER",
+    "categoryCode": "UNLICEN",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "44790 SAN BENITO CIR",
+    "city": "CATHEDRAL CITY",
+    "zip": "92210",
+    "county": "RIVERSIDE",
+    "phone": "(760) 341-8312",
+    "lat": 33.72300075,
+    "lng": -116.3850999
+  }
+]

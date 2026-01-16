@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017810",
+    "name": "COARSEGOLD HEALTH CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "CAMARENA HEALTH",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "040000045",
+    "licenseEffectiveDate": "11/10/2024",
+    "licenseExpirationDate": "11/09/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "35324 HIGHWAY 41, SUITE A",
+    "city": "COARSEGOLD",
+    "zip": "93614",
+    "county": "MADERA",
+    "phone": null,
+    "lat": 37.262889,
+    "lng": -119.698938
+  }
+]

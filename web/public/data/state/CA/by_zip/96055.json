@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630014559",
+    "name": "AMPLA HEALTH LOS MOLINOS MEDICAL",
+    "npi": "1811329899",
+    "hcaiId": "306524016",
+    "businessName": "AMPLA HEALTH",
+    "contactEmail": "LWILLIAMS@AMPLAHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002512",
+    "licenseEffectiveDate": "12/05/2024",
+    "licenseExpirationDate": "12/04/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "7981 HWY 99E",
+    "city": "LOS MOLINOS",
+    "zip": "96055",
+    "county": "TEHAMA",
+    "phone": "(530) 384-2372",
+    "lat": 40.027671,
+    "lng": -122.10075
+  }
+]

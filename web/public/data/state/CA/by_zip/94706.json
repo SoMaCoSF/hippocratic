@@ -1,0 +1,26 @@
+[
+  {
+    "id": "140001038",
+    "name": "LISA S. IACOVELLI",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "OTHER",
+    "categoryCode": "UNLICEN",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "981 SAN PABLO AVE",
+    "city": "ALBANY",
+    "zip": "94706",
+    "county": "ALAMEDA",
+    "phone": "(510) 527-9535",
+    "lat": 37.887489,
+    "lng": -122.2977825
+  }
+]

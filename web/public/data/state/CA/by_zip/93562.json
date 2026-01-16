@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630014603",
+    "name": "TRONA RURAL HEALTH CLINIC",
+    "npi": "1720352685",
+    "hcaiId": null,
+    "businessName": "RIDGECREST REGIONAL HOSPITAL",
+    "contactEmail": "JAMES.SUVER@RRH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "120000186",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "82820 TRONA RD",
+    "city": "TRONA",
+    "zip": "93562",
+    "county": "SAN BERNARDINO",
+    "phone": "(760) 499-3900",
+    "lat": 35.75835,
+    "lng": -117.3782475
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630018607",
+    "name": "RIO DELL SCHOOL",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "REDWOOD RURAL HEALTH CENTER INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "110000099",
+    "licenseEffectiveDate": "11/19/2024",
+    "licenseExpirationDate": "11/18/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "95 CENTER ST",
+    "city": "RIO DELL",
+    "zip": "95562",
+    "county": "HUMBOLDT",
+    "phone": null,
+    "lat": 40.50197684,
+    "lng": -124.1047252
+  }
+]

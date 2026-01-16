@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017681",
+    "name": "SAN BERNARDINO HEALTH CENTER",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "FQHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "606 E MILL ST",
+    "city": "SAN BERNARDINO",
+    "zip": "92415",
+    "county": "SAN BERNARDINO",
+    "phone": "(909) 383-3002",
+    "lat": 34.09221304,
+    "lng": -117.2718705
+  }
+]

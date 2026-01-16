@@ -1,0 +1,26 @@
+[
+  {
+    "id": "050000046",
+    "name": "CASA DORINDA",
+    "npi": "1457429102",
+    "hcaiId": "206420607",
+    "businessName": "MONTECITO RETIREMENT ASSOCIATION",
+    "contactEmail": "TBROWN@CASADORINDA.ORG",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "050000112",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 52,
+    "address": "300 HOT SPRINGS RD",
+    "city": "SANTA BARBARA",
+    "zip": "93108",
+    "county": "SANTA BARBARA",
+    "phone": "(805) 969-8011",
+    "lat": 34.428276,
+    "lng": -119.638152
+  }
+]

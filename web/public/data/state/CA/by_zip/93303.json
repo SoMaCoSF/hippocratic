@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630015640",
+    "name": "CENTRAL VALLEY SURGERY CENTER, INC.",
+    "npi": "1487920716",
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": "ADELA@SPINEANDORTHOCENTER.COM",
+    "categoryName": "SURGICAL CLINIC",
+    "categoryCode": "ASC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "2725 16TH STREET",
+    "city": "BAKERSFIELD",
+    "zip": "93303",
+    "county": "KERN",
+    "phone": "(805) 563-3307",
+    "lat": 35.372043,
+    "lng": -119.0336085
+  }
+]

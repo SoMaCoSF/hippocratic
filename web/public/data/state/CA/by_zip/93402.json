@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016126",
+    "name": "MEDICAL CLINIC AT BAYVIEW",
+    "npi": "1922497510",
+    "hcaiId": "306404094",
+    "businessName": "PACIFIC CENTRAL COAST HEALTH CENTERS",
+    "contactEmail": "AMBER.BUHL@DIGNITYHEALTH.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003188",
+    "licenseEffectiveDate": "08/03/2025",
+    "licenseExpirationDate": "08/02/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "2238 BAYVIEW HEIGHTS, SUITE G",
+    "city": "LOS OSOS",
+    "zip": "93402",
+    "county": "SAN LUIS OBISPO",
+    "phone": "(805) 534-1305",
+    "lat": 35.31033,
+    "lng": -120.832641
+  }
+]

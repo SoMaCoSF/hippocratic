@@ -1,0 +1,26 @@
+[
+  {
+    "id": "060001314",
+    "name": "SEA BRIGHT PLACE",
+    "npi": "1689714214",
+    "hcaiId": null,
+    "businessName": "C.L.O., INC.",
+    "contactEmail": "CLO-INC@COX.NET",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDN",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "060000394",
+    "licenseEffectiveDate": "11/28/2024",
+    "licenseExpirationDate": "11/27/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "33216 SEA BRIGHT DR",
+    "city": "DANA POINT",
+    "zip": "92629",
+    "county": "ORANGE",
+    "phone": "(949) 292-5851",
+    "lat": 33.480675,
+    "lng": -117.6936795
+  }
+]

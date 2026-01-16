@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630026479",
+    "name": "CACHE CREEK HIGH SCHOOL",
+    "npi": "1558469064",
+    "hcaiId": null,
+    "businessName": "OLE HEALTH",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002588",
+    "licenseEffectiveDate": "02/13/2025",
+    "licenseExpirationDate": "02/12/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "14320 2ND ST",
+    "city": "YOLO",
+    "zip": "95697",
+    "county": "YOLO",
+    "phone": null,
+    "lat": 38.7317564,
+    "lng": -121.8077277
+  }
+]

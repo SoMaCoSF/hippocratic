@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630014726",
+    "name": "DAP HEALTH - JAY HOFFMAN COMMUNITY HEALTH CENTER",
+    "npi": "1942623657",
+    "hcaiId": "306334684",
+    "businessName": "DAP HEALTH, INC.",
+    "contactEmail": "BHEBETS@BORREGOMEDICAL.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002701",
+    "licenseEffectiveDate": "04/22/2025",
+    "licenseExpirationDate": "12/08/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "29490 LAKEVIEW AVE",
+    "city": "NUEVO",
+    "zip": "92567",
+    "county": "RIVERSIDE",
+    "phone": "(951) 928-2805",
+    "lat": 33.817698,
+    "lng": -117.132525
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "120001562",
+    "name": "FAMILY HEALTHCARE NETWORK",
+    "npi": "1558454256",
+    "hcaiId": "306544059",
+    "businessName": "FAMILY HEALTHCARE NETWORK",
+    "contactEmail": "RISKMANAGEMENT@FHCN.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "120000647",
+    "licenseEffectiveDate": "11/09/2025",
+    "licenseExpirationDate": "11/08/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "41651 SIERRA DR, SUITE A",
+    "city": "THREE RIVERS",
+    "zip": "93271",
+    "county": "TULARE",
+    "phone": "(559) 737-4294",
+    "lat": 36.438246,
+    "lng": -118.905579
+  }
+]

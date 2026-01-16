@@ -1,0 +1,26 @@
+[
+  {
+    "id": "250000998",
+    "name": "BRYANT HOUSE",
+    "npi": "1407997067",
+    "hcaiId": null,
+    "businessName": "JONBEC CARE INCORPORATED",
+    "contactEmail": "BECKYJOSEPH@JONBECCAREINC.COM",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "250000425",
+    "licenseEffectiveDate": "06/17/2025",
+    "licenseExpirationDate": "06/16/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "906 BRYANT ST",
+    "city": "CALIMESA",
+    "zip": "92320",
+    "county": "RIVERSIDE",
+    "phone": "(909) 795-0467",
+    "lat": 34.00452,
+    "lng": -117.0347715
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "080001627",
+    "name": "VITAS HEALTHCARE CORPORATION OF CALIFORNIA - BRANCH",
+    "npi": null,
+    "hcaiId": "406304250",
+    "businessName": "VITAS HEALTHCARE CORPORATION OF CALIFORNIA",
+    "contactEmail": null,
+    "categoryName": "HOSPICE",
+    "categoryCode": "HOSPICE",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "080000602",
+    "licenseEffectiveDate": "11/30/2023",
+    "licenseExpirationDate": "11/29/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "310 COMMERCE, SUITE 200",
+    "city": "IRVINE",
+    "zip": "92602",
+    "county": "ORANGE",
+    "phone": "(714) 921-2273",
+    "lat": 33.716628,
+    "lng": -117.7851735
+  }
+]

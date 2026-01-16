@@ -1,0 +1,26 @@
+[
+  {
+    "id": "110001232",
+    "name": "ADVENTIST HEALTH CLEARLAKE",
+    "npi": "1972593788",
+    "hcaiId": null,
+    "businessName": "ADVENTIST HEALTH CLEARLAKE HOSPITAL, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC/OP",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "110000174",
+    "licenseEffectiveDate": "11/01/2025",
+    "licenseExpirationDate": "10/31/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "21337 BUSH STREET",
+    "city": "MIDDLETOWN",
+    "zip": "95461",
+    "county": "LAKE",
+    "phone": null,
+    "lat": 38.748663,
+    "lng": -122.6173185
+  }
+]

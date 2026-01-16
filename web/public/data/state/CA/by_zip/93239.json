@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016664",
+    "name": "ARIA COMMUNITY HEALTH CENTER KETTLEMAN CITY",
+    "npi": "1275918674",
+    "hcaiId": "306164040",
+    "businessName": "AVENAL COMMUNITY HEALTH CENTER",
+    "contactEmail": "CCOSTA@ARIACHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003554",
+    "licenseEffectiveDate": "06/22/2024",
+    "licenseExpirationDate": "06/21/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "304 BECKY PEASE STREET",
+    "city": "KETTLEMAN CITY",
+    "zip": "93239",
+    "county": "KINGS",
+    "phone": "(559) 925-8800",
+    "lat": 36.009378,
+    "lng": -119.959929
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630012838",
+    "name": "DAVID'S HOUSE",
+    "npi": "1568771244",
+    "hcaiId": null,
+    "businessName": "DAVID'S HOUSE, LLC",
+    "contactEmail": "RAMCAM1@COX.NET",
+    "categoryName": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+    "categoryCode": "ICFDDH",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550001466",
+    "licenseEffectiveDate": "12/27/2024",
+    "licenseExpirationDate": "12/26/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 6,
+    "address": "3 CEDAR RDG",
+    "city": "IRVINE",
+    "zip": "92603",
+    "county": "ORANGE",
+    "phone": "(714) 501-8897",
+    "lat": 33.634026,
+    "lng": -117.809442
+  }
+]

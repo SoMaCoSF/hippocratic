@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016957",
+    "name": "WESTERN SIERRA MEDICAL CLINIC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": "WESTERN SIERRA MEDICAL CLINIC, INC.",
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "230000145",
+    "licenseEffectiveDate": "04/15/2025",
+    "licenseExpirationDate": "04/14/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "10544 SPENCEVILLE ROAD",
+    "city": "PENN VALLEY",
+    "zip": "95946",
+    "county": "NEVADA",
+    "phone": null,
+    "lat": 39.19635,
+    "lng": -121.178088
+  }
+]

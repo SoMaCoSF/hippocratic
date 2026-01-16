@@ -1,0 +1,26 @@
+[
+  {
+    "id": "140000212",
+    "name": "BERKELEY THERAPY INSTITUTE",
+    "npi": null,
+    "hcaiId": "306010758",
+    "businessName": "BERKELEY THERAPY INSTITUTE, INCORPORATED",
+    "contactEmail": "OFFICE@BTI.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "140000012",
+    "licenseEffectiveDate": "06/06/2025",
+    "licenseExpirationDate": "06/05/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "1749 MARTIN LUTHER KING JR WAY",
+    "city": "BERKELEY",
+    "zip": "94709",
+    "county": "ALAMEDA",
+    "phone": "(510) 841-8484",
+    "lat": 37.87443,
+    "lng": -122.2731405
+  }
+]

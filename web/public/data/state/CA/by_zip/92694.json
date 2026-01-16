@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630019714",
+    "name": "ORCHARDS SKILLED NURSING",
+    "npi": null,
+    "hcaiId": "206300323",
+    "businessName": "THE ORCHARDS HC LLC",
+    "contactEmail": "CONKK@VISITORCHARDS.COM",
+    "categoryName": "SKILLED NURSING FACILITY",
+    "categoryCode": "SNF",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550006120",
+    "licenseEffectiveDate": "03/24/2025",
+    "licenseExpirationDate": "03/23/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 49,
+    "address": "1 AMISTAD DRIVE",
+    "city": "RANCHO MISSION VIEJO",
+    "zip": "92694",
+    "county": "ORANGE",
+    "phone": "(949) 443-8900",
+    "lat": 33.5226025,
+    "lng": -117.6312183
+  }
+]

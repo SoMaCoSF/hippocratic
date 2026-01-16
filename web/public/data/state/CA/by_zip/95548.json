@@ -1,0 +1,26 @@
+[
+  {
+    "id": "110000919",
+    "name": "UNITED INDIAN HEALTH SERVICES - KLAMATH",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "FQHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "241 SALMON",
+    "city": "KLAMATH",
+    "zip": "95548",
+    "county": "DEL NORTE",
+    "phone": null,
+    "lat": 41.53247851,
+    "lng": -124.0420408
+  }
+]

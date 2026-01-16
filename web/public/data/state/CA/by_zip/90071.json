@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630021358",
+    "name": "LOVED ONE CARE INC.",
+    "npi": null,
+    "hcaiId": "406193173",
+    "businessName": "LOVED ONE CARE, INC.",
+    "contactEmail": "LOVEDONECARE.INFO@GMAIL.COM",
+    "categoryName": "HOME HEALTH AGENCY",
+    "categoryCode": "HHA",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550006939",
+    "licenseEffectiveDate": "10/05/2023",
+    "licenseExpirationDate": "10/04/2024",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "633 W 5TH ST, SUITE 810",
+    "city": "LOS ANGELES",
+    "zip": "90071",
+    "county": "LOS ANGELES",
+    "phone": "(818) 602-5443",
+    "lat": 34.050996,
+    "lng": -118.2546855
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630017847",
+    "name": "FAMILY HEALTHCARE NETWORK",
+    "npi": "1972010684",
+    "hcaiId": "306540370",
+    "businessName": "FAMILY HEALTHCARE NETWORK",
+    "contactEmail": "PESTRADA@FHCN.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550004210",
+    "licenseEffectiveDate": "04/09/2025",
+    "licenseExpirationDate": "04/08/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "22817 AVENUE 196",
+    "city": "STRATHMORE",
+    "zip": "93267",
+    "county": "TULARE",
+    "phone": "(559) 737-4717",
+    "lat": 36.144891,
+    "lng": -119.0620485
+  }
+]

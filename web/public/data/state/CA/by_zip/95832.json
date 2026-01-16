@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630014577",
+    "name": "DCI - MEADOWVIEW DIALYSIS CLINIC",
+    "npi": "1477807139",
+    "hcaiId": "306344201",
+    "businessName": "DIALYSIS CLINIC, INC.",
+    "contactEmail": "ERIC.LENZ@DCIINC.ORG",
+    "categoryName": "CHRONIC DIALYSIS CLINIC",
+    "categoryCode": "ESRD/CDC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550002549",
+    "licenseEffectiveDate": "01/27/2025",
+    "licenseExpirationDate": "01/26/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 24,
+    "address": "1545 MEADOWVIEW ROAD, SUITE 130 - 180",
+    "city": "SACRAMENTO",
+    "zip": "95832",
+    "county": "SACRAMENTO",
+    "phone": "(916) 392-1250",
+    "lat": 38.482236,
+    "lng": -121.5008865
+  }
+]

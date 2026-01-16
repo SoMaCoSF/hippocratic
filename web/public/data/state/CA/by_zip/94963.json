@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016095",
+    "name": "POINT REYES MEDICAL CLINIC",
+    "npi": null,
+    "hcaiId": null,
+    "businessName": null,
+    "contactEmail": null,
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "RHC",
+    "licenseStatus": null,
+    "inService": null,
+    "licenseNumber": null,
+    "licenseEffectiveDate": null,
+    "licenseExpirationDate": null,
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "6350 SIR FRANCIS DRAKE BLVD",
+    "city": "SAN GERONIMO",
+    "zip": "94963",
+    "county": "MARIN",
+    "phone": "(415) 663-8666",
+    "lat": 38.01667401,
+    "lng": -122.674666
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "630016157",
+    "name": "BEST QUALITY CARE HOSPICE, INC.",
+    "npi": "1568857712",
+    "hcaiId": "406336716",
+    "businessName": "BEST QUALITY CARE HOSPICE, INC.",
+    "contactEmail": "BQCHOSPICE@YAHOO.COM",
+    "categoryName": "HOSPICE",
+    "categoryCode": "HOSPICE",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "550003922",
+    "licenseEffectiveDate": "06/20/2023",
+    "licenseExpirationDate": "06/19/2025",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "28497 HIGHWAY 74, UNIT AH210",
+    "city": "LAKE ELSINORE",
+    "zip": "92532",
+    "county": "RIVERSIDE",
+    "phone": "(818) 835-2817",
+    "lat": 33.709086,
+    "lng": -117.3219885
+  }
+]

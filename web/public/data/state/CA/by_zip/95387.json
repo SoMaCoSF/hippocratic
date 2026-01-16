@@ -1,0 +1,26 @@
+[
+  {
+    "id": "030001570",
+    "name": "GOLDEN VALLEY HEALTH CENTER",
+    "npi": null,
+    "hcaiId": "306504033",
+    "businessName": "GOLDEN VALLEY HEALTH CENTERS",
+    "contactEmail": "EVILLARAMA@GVHC.ORG",
+    "categoryName": "PRIMARY CARE CLINIC",
+    "categoryCode": "COMTYC",
+    "licenseStatus": "ACTIVE",
+    "inService": true,
+    "licenseNumber": "030000654",
+    "licenseEffectiveDate": "06/15/2025",
+    "licenseExpirationDate": "06/14/2026",
+    "dataDate": "10/18/2025",
+    "capacity": 0,
+    "address": "301 HOWARD ROAD",
+    "city": "WESTLY",
+    "zip": "95387",
+    "county": "STANISLAUS",
+    "phone": "(209) 385-5554",
+    "lat": 37.54477391,
+    "lng": -121.1981318
+  }
+]
