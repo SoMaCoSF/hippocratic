@@ -324,33 +324,6 @@ export default function NetworkPage() {
       </header>
 
       <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
-        <div className="flex items-center gap-1 sm:gap-2 mb-4">
-            {/* View Toggle */}
-            <div className="flex rounded-lg overflow-hidden border border-zinc-700">
-              <button
-                onClick={() => setViewMode("graph")}
-                className={`px-3 py-1.5 text-sm ${viewMode === "graph" ? "bg-purple-600 text-white" : "bg-zinc-800 text-zinc-400"}`}
-              >
-                Graph
-              </button>
-              <button
-                onClick={() => setViewMode("list")}
-                className={`px-3 py-1.5 text-sm ${viewMode === "list" ? "bg-purple-600 text-white" : "bg-zinc-800 text-zinc-400"}`}
-              >
-                List
-              </button>
-            </div>
-            <Link
-              href="/"
-              className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium"
-            >
-              Back to Map
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
         {/* Stats Overview - CLICKABLE */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-4 sm:mb-6">
           <button
