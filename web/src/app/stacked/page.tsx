@@ -175,22 +175,22 @@ export default function StackedDashboard() {
         )}
 
         {/* Stats cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-          <div className="bg-zinc-800/50 rounded-xl p-3 border border-zinc-700">
-            <div className="text-2xl font-bold text-amber-400">{stats.addresses.toLocaleString()}</div>
-            <div className="text-xs text-zinc-400">Addresses</div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-3 sm:mb-4">
+          <div className="bg-zinc-800/50 rounded-xl p-2 sm:p-3 border border-zinc-700">
+            <div className="text-lg sm:text-2xl font-bold text-amber-400">{stats.addresses.toLocaleString()}</div>
+            <div className="text-[10px] sm:text-xs text-zinc-400">Addresses</div>
           </div>
-          <div className="bg-zinc-800/50 rounded-xl p-3 border border-zinc-700">
-            <div className="text-2xl font-bold text-blue-400">{stats.totalStacked.toLocaleString()}</div>
-            <div className="text-xs text-zinc-400">Facilities</div>
+          <div className="bg-zinc-800/50 rounded-xl p-2 sm:p-3 border border-zinc-700">
+            <div className="text-lg sm:text-2xl font-bold text-blue-400">{stats.totalStacked.toLocaleString()}</div>
+            <div className="text-[10px] sm:text-xs text-zinc-400">Facilities</div>
           </div>
-          <div className="bg-zinc-800/50 rounded-xl p-3 border border-zinc-700">
-            <div className="text-2xl font-bold text-red-400">{stats.maxStack}</div>
-            <div className="text-xs text-zinc-400">Max stack</div>
+          <div className="bg-zinc-800/50 rounded-xl p-2 sm:p-3 border border-zinc-700">
+            <div className="text-lg sm:text-2xl font-bold text-red-400">{stats.maxStack}</div>
+            <div className="text-[10px] sm:text-xs text-zinc-400">Max stack</div>
           </div>
-          <div className="bg-zinc-800/50 rounded-xl p-3 border border-zinc-700">
-            <div className="text-2xl font-bold text-purple-400">{dupeCounts.phone.toLocaleString()}</div>
-            <div className="text-xs text-zinc-400">Phone dups</div>
+          <div className="bg-zinc-800/50 rounded-xl p-2 sm:p-3 border border-zinc-700">
+            <div className="text-lg sm:text-2xl font-bold text-purple-400">{dupeCounts.phone.toLocaleString()}</div>
+            <div className="text-[10px] sm:text-xs text-zinc-400">Phone dups</div>
           </div>
         </div>
 
@@ -215,12 +215,12 @@ export default function StackedDashboard() {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            <div className="flex items-center gap-2 bg-zinc-900 rounded-lg px-3 py-1.5 border border-zinc-700">
-              <span className="text-xs text-zinc-400">Min:</span>
+            <div className="flex items-center gap-1.5 sm:gap-2 bg-zinc-900 rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 border border-zinc-700">
+              <span className="text-[10px] sm:text-xs text-zinc-400">Min:</span>
               <select
                 value={minStack}
                 onChange={(e) => setMinStack(Number(e.target.value))}
-                className="bg-transparent text-sm focus:outline-none"
+                className="bg-transparent text-xs sm:text-sm focus:outline-none"
               >
                 {[2, 3, 4, 5, 10, 20].map((n) => (
                   <option key={n} value={n}>{n}+</option>

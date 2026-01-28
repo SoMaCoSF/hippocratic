@@ -353,11 +353,11 @@ export default function Home() {
         `}
       >
         {/* Sidebar Header */}
-        <div className="p-3 border-b border-zinc-700 flex items-center justify-between min-w-[300px] md:min-w-0">
+        <div className="p-2 sm:p-3 border-b border-zinc-700 flex items-center justify-between min-w-[300px] md:min-w-0">
           {!sidebarCollapsed && (
             <div className="ml-14 md:ml-0">
-              <h1 className="font-bold text-white">Hippocratic</h1>
-              <p className="text-xs text-zinc-400">CA Healthcare Fraud Detection</p>
+              <h1 className="text-base sm:text-lg font-bold text-white">Hippocratic</h1>
+              <p className="text-[10px] sm:text-xs text-zinc-400">CA Healthcare Fraud Detection</p>
             </div>
           )}
           <button
@@ -373,38 +373,38 @@ export default function Home() {
         {!sidebarCollapsed && (
           <>
             {/* Quick Stats - Clickable Filters */}
-            <div className="p-3 border-b border-zinc-700 grid grid-cols-3 gap-2">
+            <div className="p-2 sm:p-3 border-b border-zinc-700 grid grid-cols-3 gap-1.5 sm:gap-2">
               <button
                 onClick={() => { clearFilters(); }}
-                className={`rounded-lg p-2 text-center transition-colors ${
+                className={`rounded-lg p-1.5 sm:p-2 text-center transition-colors ${
                   !hasActiveFilters ? "bg-blue-600 ring-2 ring-blue-400" : "bg-zinc-800 hover:bg-zinc-700"
                 }`}
               >
-                <div className="text-lg font-bold text-blue-400">{data?.records.length.toLocaleString() ?? 0}</div>
-                <div className="text-[10px] text-zinc-500">All Facilities</div>
+                <div className="text-base sm:text-lg font-bold text-blue-400">{data?.records.length.toLocaleString() ?? 0}</div>
+                <div className="text-[9px] sm:text-[10px] text-zinc-500">All Facilities</div>
               </button>
               <button
                 onClick={() => { setStackedOnly(!stackedOnly); setDuplicateFilter("any"); }}
-                className={`rounded-lg p-2 text-center transition-colors ${
+                className={`rounded-lg p-1.5 sm:p-2 text-center transition-colors ${
                   stackedOnly ? "bg-amber-600 ring-2 ring-amber-400" : "bg-zinc-800 hover:bg-zinc-700"
                 }`}
               >
-                <div className="text-lg font-bold text-amber-400">{stackedIds.size.toLocaleString()}</div>
-                <div className="text-[10px] text-zinc-500">Stacked</div>
+                <div className="text-base sm:text-lg font-bold text-amber-400">{stackedIds.size.toLocaleString()}</div>
+                <div className="text-[9px] sm:text-[10px] text-zinc-500">Stacked</div>
               </button>
               <button
                 onClick={() => { setDuplicateFilter(duplicateFilter === "any" && !stackedOnly ? "any" : "any"); setStackedOnly(false); setDuplicateFilter(duplicateFilter !== "none" ? "none" : "any"); }}
-                className={`rounded-lg p-2 text-center transition-colors ${
+                className={`rounded-lg p-1.5 sm:p-2 text-center transition-colors ${
                   duplicateFilter !== "any" && duplicateFilter !== "none" ? "bg-red-600 ring-2 ring-red-400" : "bg-zinc-800 hover:bg-zinc-700"
                 }`}
               >
-                <div className="text-lg font-bold text-red-400">{duplicateResult?.summary.totalFacilitiesWithDupes.toLocaleString() ?? 0}</div>
-                <div className="text-[10px] text-zinc-500">W/ Duplicates</div>
+                <div className="text-base sm:text-lg font-bold text-red-400">{duplicateResult?.summary.totalFacilitiesWithDupes.toLocaleString() ?? 0}</div>
+                <div className="text-[9px] sm:text-[10px] text-zinc-500">W/ Dupes</div>
               </button>
             </div>
 
             {/* Duplicate Type Stats - Clickable */}
-            <div className="p-3 border-b border-zinc-700 grid grid-cols-4 gap-1">
+            <div className="p-2 sm:p-3 border-b border-zinc-700 grid grid-cols-4 gap-1">
               <button
                 onClick={() => { setDuplicateFilter(duplicateFilter === "address" ? "any" : "address"); setStackedOnly(false); }}
                 className={`rounded-lg p-1.5 text-center transition-colors ${
@@ -444,14 +444,14 @@ export default function Home() {
             </div>
 
             {/* Search */}
-            <div className="p-3 border-b border-zinc-700">
+            <div className="p-2 sm:p-3 border-b border-zinc-700">
               <div className="relative">
                 <input
                   type="text"
                   value={q}
                   onChange={(e) => setQ(e.target.value)}
                   placeholder="Search facilities..."
-                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-xs sm:text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
                 />
                 {q && (
                   <button
@@ -465,9 +465,9 @@ export default function Home() {
             </div>
 
             {/* Quick Filter Buttons */}
-            <div className="p-3 border-b border-zinc-700 space-y-2">
-              <div className="text-xs text-zinc-500 font-medium">Quick Filters</div>
-              <div className="flex flex-wrap gap-2">
+            <div className="p-2 sm:p-3 border-b border-zinc-700 space-y-2">
+              <div className="text-[10px] sm:text-xs text-zinc-500 font-medium">Quick Filters</div>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 <button
                   onClick={() => { setStackedOnly(!stackedOnly); setDuplicateFilter("any"); }}
                   className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
@@ -512,12 +512,12 @@ export default function Home() {
             </div>
 
             {/* Filters */}
-            <div className="p-3 border-b border-zinc-700 space-y-2">
-              <div className="grid grid-cols-2 gap-2">
+            <div className="p-2 sm:p-3 border-b border-zinc-700 space-y-2">
+              <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-xs text-white"
+                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-[10px] sm:text-xs text-white"
                 >
                   <option value="ALL">All Categories</option>
                   {categories.map((c) => (
@@ -527,18 +527,18 @@ export default function Home() {
                 <select
                   value={status}
                   onChange={(e) => setStatus(e.target.value as typeof status)}
-                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-xs text-white"
+                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-[10px] sm:text-xs text-white"
                 >
                   <option value="ALL">All Status</option>
                   <option value="IN_SERVICE">In Service</option>
                   <option value="NOT_IN_SERVICE">Not In Service</option>
                 </select>
               </div>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as SortOption)}
-                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-xs text-white"
+                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-[10px] sm:text-xs text-white"
                 >
                   <option value="name">Sort: Name</option>
                   <option value="distance">Sort: Distance</option>
@@ -561,8 +561,8 @@ export default function Home() {
             </div>
 
             {/* Navigation Links - ABOVE results for visibility */}
-            <div className="p-3 border-b border-zinc-700">
-              <div className="grid grid-cols-4 gap-2">
+            <div className="p-2 sm:p-3 border-b border-zinc-700">
+              <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
                 <Link
                   href="/explorer"
                   className="flex flex-col items-center justify-center gap-1 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium"
@@ -603,7 +603,7 @@ export default function Home() {
             </div>
 
             {/* Results List */}
-            <div className="flex-1 overflow-auto p-3">
+            <div className="flex-1 overflow-auto p-2 sm:p-3">
               {loading ? (
                 <div className="flex items-center justify-center py-8">
                   <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
@@ -613,7 +613,7 @@ export default function Home() {
               ) : filtered.length === 0 ? (
                 <div className="text-zinc-500 text-sm text-center py-8">No facilities found</div>
               ) : (
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                   {filtered.slice(0, 100).map((f) => {
                     const dupeGroups = getDupeGroups(f.id);
                     const hasDuplicates = dupeGroups.length > 0;
@@ -642,11 +642,11 @@ export default function Home() {
                         }`}
                       >
                         {/* Card Header - always visible */}
-                        <div className="p-3">
+                        <div className="p-2 sm:p-3">
                           <div className="flex justify-between items-start gap-2">
                             <div className="min-w-0 flex-1">
-                              <div className="font-semibold text-white text-base leading-tight">{f.name}</div>
-                              <div className="text-sm text-blue-400 mt-0.5">{f.categoryName}</div>
+                              <div className="font-semibold text-white text-sm sm:text-base leading-tight">{f.name}</div>
+                              <div className="text-xs sm:text-sm text-blue-400 mt-0.5">{f.categoryName}</div>
                               {/* Clickable address */}
                               {mapsLink ? (
                                 <a

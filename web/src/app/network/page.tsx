@@ -279,12 +279,12 @@ export default function NetworkPage() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       {/* Header */}
       <header className="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
           <div>
-            <h1 className="text-xl font-bold text-white">OSINT Network Graph</h1>
-            <p className="text-sm text-zinc-400">Facility Connections: Address • Phone • Owner • Admin • Money</p>
+            <h1 className="text-base sm:text-xl font-bold text-white">OSINT Network Graph</h1>
+            <p className="text-xs sm:text-sm text-zinc-400 hidden sm:block">Facility Connections: Address • Phone • Owner • Admin • Money</p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             {/* View Toggle */}
             <div className="flex rounded-lg overflow-hidden border border-zinc-700">
               <button
@@ -310,17 +310,17 @@ export default function NetworkPage() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
         {/* Stats Overview - CLICKABLE */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-4 sm:mb-6">
           <button
             onClick={() => { setMinScore(0); setShowNegativeIncomeOnly(false); }}
-            className={`bg-zinc-900 rounded-xl border p-4 text-center transition-colors ${
+            className={`bg-zinc-900 rounded-xl border p-2 sm:p-4 text-center transition-colors ${
               minScore === 0 && !showNegativeIncomeOnly ? "border-blue-500 ring-1 ring-blue-400" : "border-zinc-800 hover:border-zinc-600"
             }`}
           >
-            <div className="text-2xl font-bold text-blue-400">{stats.totalClusters.toLocaleString()}</div>
-            <div className="text-sm text-zinc-500">Suspicious Clusters</div>
+            <div className="text-lg sm:text-2xl font-bold text-blue-400">{stats.totalClusters.toLocaleString()}</div>
+            <div className="text-xs sm:text-sm text-zinc-500">Suspicious Clusters</div>
           </button>
           <button
             onClick={() => { setMinScore(0); }}

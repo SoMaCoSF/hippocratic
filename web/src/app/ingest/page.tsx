@@ -310,16 +310,16 @@ export default function IngestPage() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       {/* Header */}
       <header className="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
           <div>
-            <h1 className="text-xl font-bold text-white">Data Ingest</h1>
-            <p className="text-sm text-zinc-400">Upload CSV files to import facility or financial data</p>
+            <h1 className="text-base sm:text-xl font-bold text-white">Data Ingest</h1>
+            <p className="text-xs sm:text-sm text-zinc-400 hidden sm:block">Upload CSV files to import facility or financial data</p>
           </div>
           <Link
             href="/"
-            className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-medium whitespace-nowrap"
           >
-            Back to Map
+            ← Map
           </Link>
         </div>
       </header>
