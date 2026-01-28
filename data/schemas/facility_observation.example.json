@@ -1,0 +1,74 @@
+{
+  "_metadata": {
+    "file_id": "SOM-DTA-0002-v0.1.0",
+    "name": "facility_observation.example.json",
+    "description": "Example observation document for facility status assessment checklist.",
+    "project_id": "HIPPOCRATIC",
+    "category": "data/schemas",
+    "tags": ["example", "observations", "checklist", "facilities"],
+    "created": "2026-01-16",
+    "modified": "2026-01-16",
+    "version": "0.1.0",
+    "agent": {
+      "id": "AGENT-CURSOR-OPENAI",
+      "name": "cursor_agent",
+      "model": "gpt-5.2"
+    },
+    "execution": {
+      "type": "example",
+      "invocation": "Use as a template for new observation rows"
+    }
+  },
+  "observationId": "obs_2026-01-16T00:00:00Z_fac_010000096",
+  "state": "CA",
+  "facilityId": "010000096",
+  "observedAt": "2026-01-16T00:00:00Z",
+  "observer": {
+    "observerId": "anon",
+    "role": "auditor"
+  },
+  "checklistVersion": "v0.1.0",
+  "context": {
+    "source": "street_view",
+    "lat": 38.12706799,
+    "lng": -122.247876,
+    "addressText": "975 SERENO DR, ROOM 1130, VALLEJO, CA 94589"
+  },
+  "assessment": {
+    "operationalStatus": "uncertain",
+    "confidence": 0.4,
+    "signals": {
+      "exterior": {
+        "signagePresent": "unknown",
+        "buildingAccessible": "unknown",
+        "windowsBoarded": "no",
+        "visibleDamage": "unknown",
+        "constructionOngoing": "unknown"
+      },
+      "entry": {
+        "doorLocked": "unknown",
+        "doorbellOrIntercomPresent": "unknown",
+        "postedHoursPresent": "unknown"
+      },
+      "activity": {
+        "staffObserved": "unknown",
+        "patientsObserved": "unknown",
+        "childrenObserved": "unknown",
+        "phonesAnswered": "unknown"
+      }
+    },
+    "notes": "Street View imagery date unknown; no clear external signage visible from the available angle."
+  },
+  "evidence": [
+    {
+      "type": "street_view",
+      "url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=38.12706799,-122.247876",
+      "notes": "Generated from facility lat/lng."
+    }
+  ]
+}
+
+
+
+
+

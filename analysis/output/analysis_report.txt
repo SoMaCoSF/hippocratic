@@ -1,0 +1,1132 @@
+================================================================================
+CA HEALTHCARE FACILITY NETWORK ANALYSIS REPORT
+Potential Fraud / Duplicate Detection with Financial Data
+================================================================================
+
+SUMMARY
+----------------------------------------
+Total nodes in graph: 63,848
+Total edges in graph: 57,335
+Connected components: 10,048
+Suspicious clusters (score > 3): 828
+
+Total revenue in suspicious clusters: $2,530,569,522
+Clusters with negative income: 81
+
+TOP 25 SUSPICIOUS CLUSTERS
+----------------------------------------
+
+============================================================
+CLUSTER #1 - Risk Score: 766.0
+============================================================
+  Facilities: 383
+  Shared Owners: 169
+  Shared Admins: 17
+  Shared Phones: 365
+  Shared Addresses: 383
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - UPLAND COLONIES DIALYSIS
+    - VALENCIA DIALYSIS
+    - GOLDEN GATE DIALYSIS
+    - TUSTIN RANCH DIALYSIS
+    - TOKAY DIALYSIS CENTER
+    - SANTA MARIA DIALYSIS
+    - CITRUS VALLEY DIALYSIS
+    - GRANT LINE DIALYSIS
+    - SATELLITE HEALTHCARE TURLOCK
+    - BERMUDA DUNES DIALYSIS
+    - PALMDALE REGIONAL
+    - DELTA VIEW DIALYSIS
+    - OAKLAND PERITONEAL DIALYSIS CENTER
+    - SOUTH VALLEY DIALYSIS
+    - SANTA MONICA DIALYSIS
+    ... and 368 more
+
+  SHARED PHONES:
+    - (310) 371-4244
+    - (626) 335-2063
+    - (209) 574-6818
+    - (760) 743-4401
+    - (650) 794-1138
+
+  SHARED ADDRESSES:
+    - 757 e washington blvd, los angeles, 90021
+    - 312 s. fairmont avenue, suite a, lodi, 95240
+    - 5807 avalon blvd., los angeles, 90011
+    - 3744 long beach blvd, long beach, 90807
+    - 1640 n lincoln st, dixon, 95620
+
+============================================================
+CLUSTER #2 - Risk Score: 507.0
+============================================================
+  Facilities: 169
+  Shared Owners: 15
+  Shared Admins: 56
+  Shared Phones: 142
+  Shared Addresses: 144
+
+  FINANCIAL DATA:
+    Total Revenue: $1,181,756
+    Avg Revenue: $590,878
+    Total Visits: 83,120
+    ⚠️  HAS NEGATIVE NET INCOME
+
+  FACILITIES IN CLUSTER:
+    - PIH HEALTH WHITTIER HOSPITAL
+    - ROBERTSON SURGICAL INSTITUTE, INC.
+    - KAISER FOUNDATION HOSPITAL - SANTA ROSA
+    - KAISER FOUNDATION HOSP HOME HEALTH - SANTA CLARA
+    - KAISER FOUNDATION HOSPITAL SAN DIEGO HHA
+    - WOODGLEN SURGERY CENTER
+    - KAISER FOUNDATION HOSPITAL VALLEY CONTINUING CARE
+    - KAISER FOUNDATION HOSPITAL HOSPICE
+    - KAISER FOUNDAION HOSPITAL BALDWIN PARK ESRD
+    - KAISER FOUNDATION HOSPITAL RIVERSIDE
+    - KAISER FOUNDATION HOSPITAL HOSPICE - SAN FRANCISCO
+    - BEVERLY HILLS MEDICAL CENTER, INC
+    - THE HOSPICE HOUSE PRESBYTERIAN INTERCOMMUNITY
+    - CERRITOS ENDOSCOPIC MEDICAL CENTER
+    - KAISER FOUNDATION HOSPITAL HOSPICE-SANTA CLARA
+    ... and 154 more
+
+  SHARED PHONES:
+    - (213) 858-4961
+    - (310) 689-3100
+    - (323) 466-7337
+    - (818) 884-9944
+    - (626) 851-6386
+
+  SHARED ADDRESSES:
+    - 436 n bedford dr, suite 103, beverly hills, 90210
+    - 1200 el camino real, south san francisco, 94080
+    - 6640 alton pkwy, irvine, 92618
+    - 1502 w west covina pkwy, west covina, 91790
+    - 1600 eureka road, roseville, 95661
+
+============================================================
+CLUSTER #3 - Risk Score: 267.5
+============================================================
+  Facilities: 107
+  Shared Owners: 2
+  Shared Admins: 27
+  Shared Phones: 35
+  Shared Addresses: 99
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - ALTAMED MEDICAL AND DENTAL GROUP - HUNTINGTON BEACH, MAIN
+    - ALTAMED DENTAL GROUP AT CENTRALIA ELEMENTARY SCHOOL
+    - ALTAMED DENTAL GROUP- MOBILE UNIT #3
+    - ALTAMED MEDICAL GROUP - MONROVIA, LIME
+    - ALTAMED DENTAL GROUP - WESTLAKE, 3RD STREET
+    - ALTAMED MEDICAL GROUP - NORTHGATE MARKET, OLYMPIC
+    - ALTAMED DENTAL GROUP AT ABRAHAM LINCOLN ELEMENTARY SCHOOL
+    - ALTAMED BEHAVIORAL HEALTH AT NIMITZ MIDDLE SCHOOL
+    - ALTAMED BEHAVIORAL HEALTH AT JOHNNIE COCHRAN JR. MIDDLE SCHOOL
+    - ALTAMED DENTAL GROUP- TRAILER #1
+    - ALTAMED DENTAL GROUP AT ANDERSON ELEMENTARY SCHOOL
+    - ALTAMED MEDICAL GROUP - EL MONTE, GARVEY
+    - ALTAMED MEDICAL&DENTAL GROUP - EAST LOS ANGELES, 1ST STREET
+    - ALTAMED MEDICAL GROUP - TRAILER #1
+    - SCHOOL BASED BH SERVICES- SOUTH GATE
+    ... and 92 more
+
+  SHARED PHONES:
+    - (213) 671-7648
+    - (323) 203-7822
+    - (323) 313-8009
+    - (714) 719-8660
+    - (714) 351-8350
+
+  SHARED ADDRESSES:
+    - 1855 n fair oaks ave, suite 200, pasadena, 91103
+    - 4650 w sunset blvd, ms #76, los angeles, 90027
+    - 381 n esplanade st, orange, 92869
+    - 1111 w civic center dr, santa ana, 92703
+    - 2100 w 3rd st, suite 301, los angeles, 90057
+
+============================================================
+CLUSTER #4 - Risk Score: 198.0
+============================================================
+  Facilities: 44
+  Shared Owners: 1
+  Shared Admins: 27
+  Shared Phones: 35
+  Shared Addresses: 39
+
+  FINANCIAL DATA:
+    Total Revenue: $22,655,706
+    Avg Revenue: $3,775,951
+    Total Visits: 77,562
+    ⚠️  HAS NEGATIVE NET INCOME
+
+  FACILITIES IN CLUSTER:
+    - DIGNITY HEALTH LASSEN MEDICAL CENTER-RED BLUFF
+    - ST. ELIZABETH COMMUNITY HOSPITAL
+    - MERCY LAKE SHASTINA COMMUNITY CLINIC
+    - DIGNITY HEALTH LASSEN MEDICAL CLINIC - COTTONWOOD
+    - ST JOHNS REGIONAL MEDICAL CENTER
+    - ST. ELIZABETH COMMUNITY HOSPITAL HHA
+    - ST. ELIZABETH HOSPICE (BRANCH) | Rev: $998,582
+    - MERCY MEDICAL CENTER REDDING
+    - MERCY HOSPICE | Rev: $4,883,366
+    - ST. BERNARDINE MEDICAL CENTER
+    - THE FAMILY CLINIC OF LONG BEACH
+    - DIGNITY HEALTH WOMEN'S HEALTH SERVICES
+    - MERCY GENERAL HOSPITAL
+    - MERCY MEDICAL CENTER
+    - ST. JOHN'S HOSPITAL CAMARILLO
+    ... and 29 more
+
+  SHARED PHONES:
+    - (916) 983-7400
+    - (805) 739-3100
+    - (661) 632-5623
+    - (530) 225-6000
+    - (530) 926-7196
+
+  SHARED ADDRESSES:
+    - 1050 linden ave, long beach, 90813
+    - 400 old river rd, bakersfield, 93311
+    - 333 mercy ave, merced, 95340
+    - 2309 antonio ave, camarillo, 93010
+    - 1555 soquel dr, santa cruz, 95065
+
+============================================================
+CLUSTER #5 - Risk Score: 187.5
+============================================================
+  Facilities: 75
+  Shared Owners: 3
+  Shared Admins: 12
+  Shared Phones: 18
+  Shared Addresses: 74
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - NEIGHBORHOOD HEALTHCARE - MENIFEE SUITE C
+    - MISSION MIDDLE SCHOOL
+    - NEIGHBORHOOD HEALTHCARE-PRENATAL
+    - NEIGHBORHOOD HEALTHCARE- MOBILE DENTAL HEALTH SERVICES
+    - ORANGE GLEN ELEMENTARY SCHOOL
+    - DEL DIOS HEAD START
+    - RAY M DICKINSON WELLNESS CENTER
+    - NEIGHBORHOOD HEALTHCARE- EASTSIDE HEALTH CENTER BUILDING B
+    - NEIGHBORHOOD HEALTHCARE- MOBILE SCHOOL- BASED HEALTH CENTER
+    - OAK HILL ELEMENTARY SCHOOL
+    - SAN JACINTO PRESCHOOL - HYATT
+    - LILAC SCHOOL
+    - GROSSMONT PEDIATRICS
+    - NEIGHBORHOOD HEALTHCARE ESCONDIDO
+    - NEIGHBORHOOD HEALTHCARE- VALLEY CENTER
+    ... and 60 more
+
+  SHARED PHONES:
+    - (818) 503-9800
+    - (833) 867-4642
+    - (760) 520-8609
+    - (760) 742-9919
+    - (760) 473-9861
+
+  SHARED ADDRESSES:
+    - 1820 oak hill dr, room mpr, escondido, 92027
+    - 1002 e grand ave, escondido, 92025
+    - 308 w 6th st, suite 109, corona, 92882
+    - 10039b vine st, lakeside, 92040
+    - 925 lehner ave, room a2 & a3, escondido, 92026
+
+============================================================
+CLUSTER #6 - Risk Score: 142.5
+============================================================
+  Facilities: 57
+  Shared Owners: 1
+  Shared Admins: 7
+  Shared Phones: 10
+  Shared Addresses: 55
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - HAWTHORNE ELEMENTARY SCHOOL-BASED CLINIC
+    - FIRST BAPTIST HEAD START: WOODS MANOR CENTER
+    - LA CLINICA MONUMENT
+    - HAVENSCOURT HEALTH CENTER
+    - LA CLINICA MARKET PLACE TESTING & VACCINATION SITE
+    - VALLEJO COMMUNITY TESTING & VACCINATION SITE
+    - OHI - HILLSIDE ELEMENTARY
+    - LA CLINICA OAKLEY
+    - FRUITVALE COMMUNITY TESTING CENTER
+    - FRUITVALE COMMUNITY TESTING CENTER 2
+    - ROOSEVELT HEALTH CENTER
+    - SOUTHGATE ELEMENTARY SCHOOL
+    - LA CLINICA NORTH VALLEJO
+    - FIRST BAPTIST HEAD START: LIDO SQUARE CENTER
+    - MARINA VISTA ELEMENTARY SCHOOL
+    ... and 42 more
+
+  SHARED PHONES:
+    - (510) 205-2141
+    - (510) 535-2906
+    - (510) 535-3302
+    - (510) 532-0918
+    - (510) 535-2893
+
+  SHARED ADDRESSES:
+    - 2555 e leland rd, pittsburg, 94565
+    - 15980 marcella st, san leandro, 94578
+    - 9475 international blvd, oakland, 94603
+    - 1700 santa clara ave, alameda, 94501
+    - 1390 66th ave, oakland, 94621
+
+============================================================
+CLUSTER #7 - Risk Score: 135.0
+============================================================
+  Facilities: 54
+  Shared Owners: 1
+  Shared Admins: 6
+  Shared Phones: 22
+  Shared Addresses: 48
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - DIAMOND NEIGHBORHOODS FAMILY HEALTH CENTER
+    - ELM STREET FAMILY HEALTH CENTER
+    - FAMILYHEALTH - EL CAJON YOUTH COUNSELING CENTER
+    - MOBILE SCREENING UNIT
+    - SWEETWATER FAMILY COUNSELING CENTER
+    - HEALTHY DEVELOPMENT SERVICES CENTER - CENTRAL REGION
+    - MOBILE COUNSELING CENTER I
+    - LOGAN HEIGHTS FAMILY COUNSELING CENTER
+    - FAMILYHEALTH ON COMMERCIAL
+    - KIDCARE EXPRESS
+    - EL CERRITO FAMILY COUNSELING CENTER
+    - DTFHC AT CONNECTIONS
+    - CHASE AVENUE FAMILY HEALTH CENTER
+    - BEACH AREA FAMILY HEALTH CENTER
+    - IBARRA FAMILY HEALTH CENTER II
+    ... and 39 more
+
+  SHARED PHONES:
+    - (615) 515-2361
+    - (619) 515-2586
+    - (619) 515-2364
+    - (619) 515-2568
+    - (619) 515-2416
+
+  SHARED ADDRESSES:
+    - 2130 national ave, san diego, 92113
+    - 128 n broadway, escondido, 92025
+    - 3514 30th st, san diego, 92104
+    - 4874 polk ave, san diego, 92105
+    - 2325 commercial street, suite 1400, san diego, 92113
+
+============================================================
+CLUSTER #8 - Risk Score: 127.5
+============================================================
+  Facilities: 51
+  Shared Owners: 1
+  Shared Admins: 3
+  Shared Phones: 9
+  Shared Addresses: 46
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - COMMUNITY MEDICAL CENTERS, TRACY DENTAL
+    - COMMUNITY MEDICAL CENTERS, CARELINK COMMUNITY RESPONSE MOBILE UNIT II
+    - COMMUNITY MEDICAL CENTERS, TRACY
+    - WALNUT EARLY HEAD START
+    - CAP KERN - EARLY HEAD START - ST. MARY'S
+    - COMMUNITY MEDICAL CENTERS, TRACY GRANT LINE
+    - CAP KERN KENNEDY
+    - COMMUNITY MEDICAL CENTERS, WEBERSTOWN
+    - COMMUNITY MEDICAL CENTERS, EAST MAIN
+    - CAPK - EARLY HEAD START
+    - COMMUNITY MEDICAL CENTERS, WEBERSTOWN MEDICAL
+    - COMMUNITY MEDICAL CENTERS, TUSD STUDENT WELLNESS CENTER
+    - COMMUNITY MEDICAL CENTERS, LODI VINE PEDIATRICS
+    - COMMUNITY MEDICAL CENTERS, 747 CHANNEL
+    - CAPC - BABY STEPS
+    ... and 36 more
+
+  SHARED PHONES:
+    - (209) 259-4546
+    - (209) 259-6546
+    - (209) 373-2800
+    - (209) 469-2229
+    - (209) 333-3121
+
+  SHARED ADDRESSES:
+    - 545 w sonora st, building #1, stockton, 95203
+    - 5151 pacific ave, room 126, stockton, 95207
+    - 2151 w grant line rd, tracy, 95377
+    - 87 w march ln, suite 3, stockton, 95207
+    - 2650 wigwam dr, unit o, stockton, 95205
+
+============================================================
+CLUSTER #9 - Risk Score: 124.0
+============================================================
+  Facilities: 62
+  Shared Owners: 4
+  Shared Admins: 14
+  Shared Phones: 55
+  Shared Addresses: 62
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - TAYLOR COMMUNITY HOME
+    - BUEN TIEMPO DRIVE
+    - MINOA WAY
+    - IONIAN STREET
+    - ANACAPA
+    - SULA WAY
+    - GROVE STREET HOME
+    - WASHINGTON AVENUE HOME
+    - FIFTEENTH STREET HOUSE
+    - CHRISTINE CIRCLE
+    - ARMSTRONG HOUSE
+    - DOUGLASS HOME
+    - EDGEMONT HOUSE
+    - GILBUCK DRIVE HOME
+    - ALFRED AND ELAINE BARRACK HOME
+    ... and 47 more
+
+  SHARED PHONES:
+    - (805) 481-3864
+    - (909) 882-6596
+    - (619) 423-1655
+    - (619) 424-7897
+    - (909) 445-0051
+
+  SHARED ADDRESSES:
+    - 818 s gilbuck dr, anaheim, 92802
+    - 6540 christine cir, buena park, 90620
+    - 988 the pike, arroyo grande, 93420
+    - 5475 college ave, riverside, 92505
+    - 501 bowling green dr, claremont, 91711
+
+============================================================
+CLUSTER #10 - Risk Score: 115.2
+============================================================
+  Facilities: 24
+  Shared Owners: 1
+  Shared Admins: 3
+  Shared Phones: 20
+  Shared Addresses: 24
+
+  FINANCIAL DATA:
+    Total Revenue: $136,029,501
+    Avg Revenue: $15,114,389
+    Total Visits: 541,763
+    ⚠️  HAS NEGATIVE NET INCOME
+
+  FACILITIES IN CLUSTER:
+    - SUTTER CARE AT HOME | Rev: $16,609,186
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME | Rev: $4,660,678
+    - SUTTER VISITING NURSE ASSOCIATION AND HOSPICE | Rev: $14,178,906
+    - SUTTER HOSPICE - SACRAMENTO | Rev: $20,857,471
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME | Rev: $14,002,029
+    - SUTTER CARE AT HOME
+    - SUTTER CARE AT HOME
+    ... and 9 more
+
+  SHARED PHONES:
+    - (916) 388-6200
+    - (415) 209-7700
+    - (925) 677-4240
+    - (831) 455-8901
+    - (530) 749-3510
+
+  SHARED ADDRESSES:
+    - 1025 atlantic ave, suite 100 b, alameda, 94501
+    - 2880 soquel ave, suite 10, santa cruz, 95062
+    - 3001 lava ridge court, suite 330b, roseville, 95661
+    - 5196 hill rd e, suite 204, lakeport, 95453
+    - 815 court st, suite 6, jackson, 95642
+
+============================================================
+CLUSTER #11 - Risk Score: 110.0
+============================================================
+  Facilities: 44
+  Shared Owners: 1
+  Shared Admins: 2
+  Shared Phones: 5
+  Shared Addresses: 40
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - FOUSSAT ELEMENTARY SCHOOL
+    - MADISON MIDDLE SCHOOL
+    - VCC:  MOBILE VAN
+    - JOHN MUIR CHARTER SCHOOL (VCC: COMMUNITY SMILES ORANGE COUNTY)
+    - HANNALEI ELEMENTARY SCHOOL
+    - CITY OF LA HABRA CLAIRE BROWN (VCC: COMMUNITY SMILES ORANGE COUNTY)
+    - NICHOLS ELEMENTARY SCHOOL
+    - FULLERTON UNION HIGH SCHOOL, ADMIN BLDG.
+    - SCHOLARSHIP PREP - SANTA ANA (VCC: COMMUNITY SMILES ORANGE COUNTY)
+    - VCC: VISTA VILLAGE PEDIATRICS
+    - TROY HIGH SCHOOL (VCC: COMMUNITY SMILES ORANGE COUNTY)
+    - SURFSIDE EDUCATIONAL ACADEMY
+    - CITY OF LA HABRA HEAD START (VCC: COMMUNITY SMILES ORANGE COUNTY)
+    - VCC: A+ MOBILE DENTAL CLINIC
+    - VISTA COMMUNITY CLINIC - HORNE STREET
+    ... and 29 more
+
+  SHARED PHONES:
+    - (442) 262-3249
+    - (714) 795-3498
+    - (760) 631-5000
+    - (760) 966-4700
+    - (760) 721-2200
+
+  SHARED ADDRESSES:
+    - 1010 w 17th st, room executive suite, santa ana, 92706
+    - 1801 warburton way, room 1, fullerton, 92833
+    - 134 grapevine rd, vista, 92083
+    - 2200 dorothy ln, room 106, fullerton, 92831
+    - 401 s palm st, room 107, la habra, 90631
+
+============================================================
+CLUSTER #12 - Risk Score: 107.5
+============================================================
+  Facilities: 43
+  Shared Owners: 1
+  Shared Admins: 5
+  Shared Phones: 6
+  Shared Addresses: 42
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    - UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY
+    ... and 28 more
+
+  SHARED PHONES:
+    - (661) 646-6618
+    - (559) 646-3561
+    - (559) 646-6618
+    - (800) 492-4227
+    - (559) 646-7400
+
+  SHARED ADDRESSES:
+    - 2610 tuolumne st, fresno, 93721
+    - 1545 mall dr, hanford, 93230
+    - 250 e hanford armona road, lemoore, 93245
+    - 445 11th st, orange cove, 93646
+    - 1201 rose ave, selma, 93662
+
+============================================================
+CLUSTER #13 - Risk Score: 105.0
+============================================================
+  Facilities: 42
+  Shared Owners: 3
+  Shared Admins: 5
+  Shared Phones: 27
+  Shared Addresses: 40
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - ADVENTIST HEALTH REEDLEY
+    - COMMUNITY MEDICAL CENTER - OAKHURST
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    - ADVENTIST HEALTH REEDLEY
+    ... and 27 more
+
+  SHARED PHONES:
+    - (559) 875-6900
+    - (559) 638-8867
+    - (559) 638-8155
+    - (559) 638-2154
+    - (559) 537-2037
+
+  SHARED ADDRESSES:
+    - 1025 n douty st, hanford, 93230
+    - 1212 hanna ave, corcoran, 93212
+    - 216 e fresno st, avenal, 93204
+    - 372 w cypress ave, reedley, 93654
+    - 1451 e el monte way, dinuba, 93618
+
+============================================================
+CLUSTER #14 - Risk Score: 105.0
+============================================================
+  Facilities: 42
+  Shared Owners: 1
+  Shared Admins: 8
+  Shared Phones: 11
+  Shared Addresses: 36
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - SAN YSIDRO HEALTH ADULT DAY HEALTH CARE - CHULA VISTA
+    - SAN YSIDRO HEALTH ALPINE FAMILY MEDICINE
+    - SAN YSIDRO HEALTH PHYSICIANS HEALTH INSTITUTE FOR WOMEN
+    - SAN YSIDRO HEALTH MOBILE HEALTH SERVICES 1G
+    - SAN YSIDRO HEALTH SOUTH BAY	PEDIATRICS
+    - SAN YSIDRO HEALTH URGENT CARE
+    - SAN YSIDRO HEALTH SOUTH BAY LATINO RESEARCH CENTER
+    - SAN YSIDRO HEALTH TIERRA DEL REY
+    - SAN YSIDRO HEALTH MATERNAL & CHILD HEALTH CENTER
+    - SAN YSIDRO HEALTH ESCONDIDO FAMILY MEDICINE
+    - SAN YSIDRO HEALTH JULIAN FAMILY MEDICINE
+    - SAN YSIDRO HEALTH SAN DIEGO PACE VISTA
+    - SAN YSIDRO HEALTH MOBILE HEALTH SERVICES 1J
+    - SAN YSIDRO HEALTH KING-CHAVEZ HEALTH CENTER
+    - SAN YSIDRO HEALTH PARADISE HILLS
+    ... and 27 more
+
+  SHARED PHONES:
+    - (619) 205-6381
+    - (619) 401-7401
+    - (619) 205-6322
+    - (619) 238-5551
+    - (619) 425-1780
+
+  SHARED ADDRESSES:
+    - 1637 3rd ave, suite b, c, f, h & i, chula vista, 91911
+    - 286 euclid ave, suite 309, san diego, 92114
+    - 1061 tierra del rey, suite 303,304, 305, chula vista, 91910
+    - 330-340 e 8th street, national city, 91950
+    - 3364 beyer blvd, san ysidro, 92173
+
+============================================================
+CLUSTER #15 - Risk Score: 105.0
+============================================================
+  Facilities: 42
+  Shared Owners: 1
+  Shared Admins: 2
+  Shared Phones: 2
+  Shared Addresses: 41
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - GVHC MOBILE UNIT - TENAYA
+    - GOLDEN VALLEY HEALTH CENTER
+    - GOLDEN VALLEY HEALTH CENTERS - MERCED NORTHVIEW
+    - GOLDEN VALLEY HEALTH CENTER - GUSTINE-NEWMAN
+    - GOLDEN VALLEY HEALTH CENTER
+    - GVHC - WEST MODESTO DENTAL
+    - GOLDEN VALLEY HEALTH CENTERS
+    - GVHC - MERCED RANCHERO
+    - GOLDEN VALLEY HEALTH CENTERS - CERES WHITMORE
+    - GVHC - MCHENRY SUITE 535
+    - GOLDEN VALLEY HEALTH CENTER
+    - GOLDEN VALLEY HEALTH CENTER
+    - GOLDEN VALLEY HEALTH CENTER - DOS PALOS
+    - GVHC - MCHENRY SUITE 550
+    - GOLDEN VALLEY HEALTH CENTER
+    ... and 27 more
+
+  SHARED PHONES:
+    - (209) 385-5554
+    - (209) 385-5400
+
+  SHARED ADDRESSES:
+    - 9235 e broadway st, planada, 95365
+    - 725 w i st, los banos, 93635
+    - 13161 jefferson st, le grand, 95333
+    - 2101 tenaya dr, modesto, 95354
+    - 821 texas ave, los banos, 93635
+
+============================================================
+CLUSTER #16 - Risk Score: 104.0
+============================================================
+  Facilities: 52
+  Shared Owners: 1
+  Shared Admins: 13
+  Shared Phones: 24
+  Shared Addresses: 52
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - SANTA MARIA WOMEN'S HEALTH CENTER
+    - STRATFORD HEALTH CENTER
+    - PISMO BEACH HEALTH CENTER
+    - DIGNITY HEALTH SURGICAL SPECIALTY CENTER
+    - MEDICAL CLINIC AT BAYVIEW
+    - MED PLUS PISMO BEACH
+    - AEROVISTA HEALTH CENTER
+    - HANCOCK HEALTH CENTER
+    - MISSION HOPE MEDICAL ONCOLOGY- SANTA MARIA
+    - SANTA MARIA SPECIALTY HEALTH CENTER
+    - EDNA VALLEY HEALTH CENTER
+    - MEDICAL CLINIC AT POSADA
+    - BISHOP'S PEAK WOMEN'S HEALTH CENTER
+    - DIGNITY HEALTH WOMEN'S CENTER - VENTURA
+    - MED PLUS ATASCADERO
+    ... and 37 more
+
+  SHARED PHONES:
+    - (805) 735-4292
+    - (805) 349-8514
+    - (809) 994-5485
+    - (805) 235-7088
+    - (805) 739-3898
+
+  SHARED ADDRESSES:
+    - 1700 n rose ave, suite 470, oxnard, 93030
+    - 1551 bishop st, suite 510, san luis obispo, 93401
+    - 350 posada lane, suite 202, templeton, 93465
+    - 2323 de la vina st, suite 205, santa barbara, 93105
+    - 3807 union ave, suite b, bakersfield, 93305
+
+============================================================
+CLUSTER #17 - Risk Score: 103.5
+============================================================
+  Facilities: 23
+  Shared Owners: 4
+  Shared Admins: 9
+  Shared Phones: 21
+  Shared Addresses: 19
+
+  FINANCIAL DATA:
+    Total Revenue: $21,610,633
+    Avg Revenue: $2,401,181
+    Total Visits: 102,523
+    ⚠️  HAS NEGATIVE NET INCOME
+
+  FACILITIES IN CLUSTER:
+    - ADVENTIST HEALTH HOME CARE SERVICES
+    - ADVENTIST HEALTH HOME CARE SERVICES - HOSPICE | Rev: $1,722,130
+    - ADVENTIST HEALTH UKIAH VALLEY
+    - ADVENTIST HEALTH HOME CARE SERVICES | Rev: $1,716,112
+    - ADVENTIST HEALTH MENDOCINO COAST
+    - ADVENTIST HEALTH UKIAH VALLEY
+    - ADVENTIST HEALTH HOME CARE SERVICES
+    - ADVENTIST HEALTH HOME CARE SERVICES | Rev: $3,697,380
+    - ADVENTIST HEALTH UKIAH VALLEY
+    - ADVENTIST HEALTH HOME CARE SERVICES
+    - ADVENTIST HEALTH UKIAH VALLEY
+    - ADVENTIST HEALTH HOWARD MEMORIAL
+    - ADVENTIST HEALTH HOWARD MEMORIAL
+    - ADVENTIST HEALTH HOME CARE SERVICES | Rev: $3,449,133
+    - ADVENTIST HEALTH HOME CARE | Rev: $1,716,112
+    ... and 8 more
+
+  SHARED PHONES:
+    - (707) 964-0574
+    - (707) 964-0259
+    - (661) 869-2700
+    - (818) 409-8011
+    - (209) 536-5685
+
+  SHARED ADDRESSES:
+    - 20100 cedar road n, sonora, 95370
+    - 1 marcela drive, willits, 95490
+    - 5500 ming ave, suite 120, bakersfield, 93309
+    - 440 greenfield avenue, suite c, hanford, 93230
+    - 5500 ming ave, suite 128, bakersfield, 93309
+
+============================================================
+CLUSTER #18 - Risk Score: 97.5
+============================================================
+  Facilities: 39
+  Shared Owners: 1
+  Shared Admins: 2
+  Shared Phones: 8
+  Shared Addresses: 38
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    - FAMILY HEALTHCARE NETWORK
+    ... and 24 more
+
+  SHARED PHONES:
+    - (559) 737-4717
+    - (559) 332-9399
+    - (559) 737-1247
+    - (559) 737-4297
+    - (559) 747-1470
+
+  SHARED ADDRESSES:
+    - 400 e oak ave, visalia, 93291
+    - 1008 n. cherry street, tulare, 93274
+    - 3837 n clark st, fresno, 93726
+    - 1850 whitson st, selma, 93662
+    - 201 east lakeview avenue, woodlake, 93286
+
+============================================================
+CLUSTER #19 - Risk Score: 95.0
+============================================================
+  Facilities: 38
+  Shared Owners: 1
+  Shared Admins: 4
+  Shared Phones: 10
+  Shared Addresses: 32
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - COMMUNITY HEALTH CENTERS LOS ROBLES
+    - CHC TEMPLETON WOMEN'S HEALTH
+    - COMMUNITY HEALTH CENTERS ARBOR
+    - COMMUNITY HEALTH CENTERS LOMPOC
+    - COMMUNITY HEALTH CENTERS SANTA MARIA  II
+    - COMMUNITY HEALTH CENTERS ATASCADERO
+    - COMMUNITY HEALTH CENTERS CAMBRIA
+    - COMMUNITY HEALTH CENTERS GUADALUPE
+    - COMMUNITY HEALTH CENTERS ADVANCED PRIMARY CARE
+    - COMMUNITY HEALTH CENTERS PASO
+    - DOCTORS OFFICE/FAIR OAKS COMMUNITY HEALTH CENTERS
+    - COMMUNITY HEALTH CENTERS ARROYO GRANDE
+    - COMMUNITY HEALTH CENTERS MOBILE MEDICAL VAN #4
+    - COMMUNITY HEALTH CENTERS MOBILE DENTAL
+    - COMMUNITY HEALTH CENTERS SAN LUIS OBISPO II
+    ... and 23 more
+
+  SHARED PHONES:
+    - (805) 347-1171
+    - (805) 549-1851
+    - (805) 348-3911
+    - (805) 346-2753
+    - (805) 792-1400
+
+  SHARED ADDRESSES:
+    - 210 n broadway, santa maria, 93454
+    - 1551 bishop st, san luis obispo, 93401
+    - 2120 cienaga st, oceano, 93445
+    - 1385 mission st, san miguel, 93451
+    - 150 tejas pl, nipomo, 93444
+
+============================================================
+CLUSTER #20 - Risk Score: 92.5
+============================================================
+  Facilities: 37
+  Shared Owners: 1
+  Shared Admins: 9
+  Shared Phones: 14
+  Shared Addresses: 27
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - BAY AREA COMMUNITY HEALTH - MOWRY I
+    - BACH MOBILE HEALTH #9
+    - MT. PLEASANT HEALTH CENTER
+    - BAY AREA COMMUNITY HEALTH - MOWRY II
+    - BAY AREA COMMUNITY HEALTH - MOWRY III CLINIC
+    - BAY AREA COMMUNITY HEALTH - INDEPENDENCE HIGH SCHOOL CLINIC
+    - BACH - MOBILE HEALTH CLINIC #7
+    - BACH SENIOR MOBILE HEALTH CLINIC I
+    - BAY AREA COMMUNITY HEALTH - LIBERTY CLINIC
+    - BACH MOBILE HEALTH CLINIC - CHOMP #3
+    - BAY AREA COMMUNITY HEALTH IRVINGTON DAVE CLINIC II
+    - BACH DENTAL MOBILE CLINIC V
+    - BAY AREA COMMUNITY HEALTH - MOMENTUM AT THE CROSSROADS
+    - MONTEREY PLAZA HEALTH CLINIC
+    - SANTEE-YERBA BUENA COMMUNITY HEALTH CENTER
+    ... and 22 more
+
+  SHARED PHONES:
+    - (510) 252-6818
+    - (510) 252-5882
+    - (510) 252-5880
+    - (408) 928-5250
+    - (408) 254-1800
+
+  SHARED ADDRESSES:
+    - 1999 mowry ave, fremont, 94538
+    - 617 n jackson ave, building 1, san jose, 95133
+    - 3200 senter rd, room s104, san jose, 95111
+    - 40910 fremont blvd, fremont, 94538
+    - 3607 main street, fremont, 94538
+
+============================================================
+CLUSTER #21 - Risk Score: 86.4
+============================================================
+  Facilities: 18
+  Shared Owners: 1
+  Shared Admins: 14
+  Shared Phones: 17
+  Shared Addresses: 18
+
+  FINANCIAL DATA:
+    Total Revenue: $217,231,839
+    Avg Revenue: $14,482,123
+    ⚠️  HAS NEGATIVE NET INCOME
+
+  FACILITIES IN CLUSTER:
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA | Rev: $23,046,812
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA - BRANCH | Rev: $28,103,612
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA | Rev: $4,797,602
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA - BRANCH | Rev: $28,103,612
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA - BRANCH | Rev: $7,402,070
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA | Rev: $12,298,928
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA | Rev: $28,103,612
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA | Rev: $12,175,324
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA | Rev: $7,510,114
+    - VITAS HOSPICE HOUSE OF ORANGE COUNTY
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA | Rev: $7,402,070
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA | Rev: $7,510,114
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA - BRANCH | Rev: $23,046,812
+    - VITAS HEALTHCARE CORPORATION OF CALIFORNIA- BRANCH | Rev: $4,797,602
+    ... and 3 more
+
+  SHARED PHONES:
+    - (661) 942-3595
+    - (626) 918-2273
+    - (650) 350-1835
+    - (707) 438-5778
+    - (818) 268-1536
+
+  SHARED ADDRESSES:
+    - 16830 ventura blvd, suite 315, encino, 91436
+    - 1343 n grand ave, suite 100, covina, 91724
+    - 7485 n palm ave, suite 106, fresno, 93711
+    - 310 commerce, suite 200, irvine, 92602
+    - 1701 g st, suite 200, bakersfield, 93301
+
+============================================================
+CLUSTER #22 - Risk Score: 85.0
+============================================================
+  Facilities: 34
+  Shared Owners: 1
+  Shared Admins: 8
+  Shared Phones: 6
+  Shared Addresses: 33
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - VIDA SANA FAMILY PRACTICE 3
+    - ARIA COMMUNITY HEALTH CENTER - MOBILE 2
+    - ARIA COMMUNITY HEALTH CENTER
+    - ARIA COMMUNITY HEALTH CENTER
+    - ARIA COMMUNITY HEALTH CENTER AMC
+    - ARIA COMMUNITY HEALTH CENTER
+    - ARIA COMMUNITY HEALTH CENTER HANFORD 111
+    - VIDA SANA PEDIATRICS
+    - ARIA COMMUNITY HEALTH CENTER
+    - VIDA SANA FAMILY PRACTICE
+    - ARIA COMMUNITY HEALTH CENTER
+    - ARIA COMMUNITY HEALTH CENTER
+    - ARIA COMMUNITY HEALTH CENTER
+    - ARIA COMMUNITY HEALTH CENTER
+    - ARIA COMMUNITY HEALTH CENTER KETTLEMAN CITY
+    ... and 19 more
+
+  SHARED PHONES:
+    - (559) 386-4500
+    - (559) 257-3230
+    - (559) 562-9399
+    - (559) 386-9000
+    - (559) 925-8800
+
+  SHARED ADDRESSES:
+    - 973 sequoia ave, lindsay, 93247
+    - 1000 skyline blvd, suite a, avenal, 93204
+    - 781 sequoia ave, suite 1, lindsay, 93247
+    - 140 c st, lemoore, 93245
+    - 555 e st, lemoore, 93245
+
+============================================================
+CLUSTER #23 - Risk Score: 84.0
+============================================================
+  Facilities: 42
+  Shared Owners: 1
+  Shared Admins: 40
+  Shared Phones: 41
+  Shared Addresses: 42
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - FMC DIALYSIS SERVICES OF BELLFLOWER
+    - FRESENIUS KIDNEY CARE PANORAMA CITY
+    - FMC DIALYSIS SERVICES OF IRWINDALE
+    - FRESENIUS KIDNEY CARE PALMDALE
+    - FRESENIUS MEDICAL CARE BAKERSFIELD NORTH EAST
+    - FRESENIUS KIDNEY CARE UNION CITY
+    - FRESENIUS MEDICAL CARE OF LOMA LINDA
+    - FRESENIUS MEDICAL CARE OF SAN FERNANDO
+    - BLYTHE DESERT DIALYSIS
+    - BMA SANTA PAULA
+    - FRESENIUS MEDICAL CARE IMPERIAL VALLEY HOME
+    - FRESENIUS MEDICAL CARE UNIVERSITY DIALYSIS CENTER OF ORANGE
+    - FMC DIALYSIS SERVICES OF WEST LOS ANGELES
+    - FRESENIUS MEDICAL CARE BURBANK
+    - FMC DIALYSIS SERVICES RANCHO CUCAMONGA
+    ... and 27 more
+
+  SHARED PHONES:
+    - (510) 468-7957
+    - (323) 269-2091
+    - (760) 344-3766
+    - (626) 337-8007
+    - (909) 987-8887
+
+  SHARED ADDRESSES:
+    - 451 s brand blvd, suite 100, san fernando, 91340
+    - 351 e birch st, calexico, 92231
+    - 14812 oxnard st, van nuys, 91411
+    - 499 raven street, san diego, 92102
+    - 145 w victoria st, long beach, 90805
+
+============================================================
+CLUSTER #24 - Risk Score: 82.5
+============================================================
+  Facilities: 33
+  Shared Owners: 1
+  Shared Admins: 6
+  Shared Phones: 11
+  Shared Addresses: 26
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - DAP HEALTH - DESERT HOT SPRINGS HEALTH AND WELLNESS CENTER
+    - DAP HEALTH - COACHELLA VALLEY COMMUNITY HEALTH CENTER
+    - DAP HEALTH - MARTHA'S VILLAGE
+    - DAP HEALTH - CENTRO MEDICO MOBILE CLINIC
+    - DAP HEALTH - SAN JACINTO COMMUNITY HEALTH CENTER
+    - DAP HEALTH - DESERT HOT SPRINGS - PALM AVENUE
+    - DAP HEALTH - MOBILE UNIT #8
+    - DAP HEALTH - STONEWALL COMMUNITY HEALTH CENTER
+    - DAP HEALTH - BORREGO SPRINGS COMMUNITY HEALTH CENTER
+    - DAP HEALTH - LA MESA PEDIATRICS
+    - DAP HEALTH
+    - DAP HEALTH - ANZA COMMUNITY HEALTH CENTER
+    - MOBILE UNIT #6
+    - WOOLCOTT DENTAL CLINIC
+    - DAP HEALTH - MOBILE DENTAL TRAILER #1
+    ... and 18 more
+
+  SHARED PHONES:
+    - (760) 676-5800
+    - (760) 871-0606
+    - (909) 453-6900
+    - (619) 781-2201
+    - (951) 928-2805
+
+  SHARED ADDRESSES:
+    - 49869 calhoun st, coachella, 92236
+    - 88775 76th ave, suite 1, thermal, 92274
+    - 58581 us highway 371, suite f,g,h, anza, 92539
+    - 11750 cholla dr, suite b, desert hot springs, 92240
+    - 55497 van buren st, thermal, 92274
+
+============================================================
+CLUSTER #25 - Risk Score: 80.0
+============================================================
+  Facilities: 32
+  Shared Owners: 1
+  Shared Admins: 7
+  Shared Phones: 10
+  Shared Addresses: 30
+
+  FINANCIAL DATA:
+    Total Revenue: N/A
+
+  FACILITIES IN CLUSTER:
+    - KERN RIVER HEALTH CENTER
+    - BAKER STREET VILLAGE COMMUNITY HEALTH CENTER
+    - ELM WOMEN'S & PEDIATRIC COMMUNITY HEALTH CENTER
+    - STEVE SCHILLING MOBILE UNIT
+    - LAMONT COMMUNITY HEALTH CENTER
+    - DELANO WALK-IN-CLINIC
+    - WEST DELANO DENTAL CENTER
+    - 34TH STREET COMMUNITY HEALTH CENTER
+    - FRAZIER MOUNTAIN COMMUNITY HEALTH CENTER
+    - SOUTH BAKERSFIELD COMMUNITY HEALTH CENTER
+    - ARVIN COMMUNITY HEALTH CENTER
+    - EAST BAKERSFIELD DENTAL CENTER
+    - EAST BAKERSFIELD COMMUNITY HEALTH CENTER
+    - FRESNO MOBILE UNIT
+    - WEST SHAW COMMUNITY HEALTH CENTER
+    ... and 17 more
+
+  SHARED PHONES:
+    - (760) 376-2276
+    - (661) 725-4780
+    - (661) 635-3050
+    - (661) 323-6086
+    - (559) 457-5800
+
+  SHARED ADDRESSES:
+    - 2000 physicians blvd, bakersfield, 93301
+    - 1305 bear mountain blvd, arvin, 93203
+    - 815 dr. martin luther king jr. blvd, bakersfield, 93307
+    - 302 fresno st, suite 101, fresno, 93706
+    - 9001 s h st, bakersfield, 93307
+
+
+================================================================================
+END OF REPORT

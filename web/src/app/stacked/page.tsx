@@ -1,13 +1,13 @@
 // ==============================================================================
-// file_id: SOM-SCR-0021-v1.1.0
+// file_id: SOM-SCR-0021-v2.0.0
 // name: web/src/app/stacked/page.tsx
-// description: Mobile-first stacked facilities dashboard
+// description: Stacked facilities dashboard with enhanced duplicate detection
 // project_id: HIPPOCRATIC
 // category: script
-// tags: [web, dashboard, fraud, stacking, mobile-first]
+// tags: [web, dashboard, fraud, stacking, mobile-first, duplicates]
 // created: 2026-01-16
-// modified: 2026-01-16
-// version: 1.1.0
+// modified: 2026-01-28
+// version: 2.0.0
 // agent_id: AGENT-PRIME-002
 // execution: Next.js page
 // ==============================================================================
@@ -20,6 +20,12 @@ import type { FacilityAllMin } from "@/lib/facilities";
 import { norm } from "@/lib/facilities";
 import { buildStacks, mapsSearchForAddress, zillowForAddress, type StackGroup } from "@/lib/stacking";
 import { StackCharts } from "@/app/components/StackCharts";
+import {
+  detectDuplicates,
+  getDuplicateBadgeClass,
+  type DuplicateResult,
+  type DuplicateType,
+} from "@/lib/duplicates";
 
 function CategoryBars({ g }: { g: StackGroup }) {
   const entries = Object.entries(g.categories).sort((a, b) => b[1] - a[1]).slice(0, 5);
@@ -45,6 +51,8 @@ function CategoryBars({ g }: { g: StackGroup }) {
   );
 }
 
+type DuplicateFilter = "all" | DuplicateType;
+
 export default function StackedDashboard() {
   const [data, setData] = useState<FacilityAllMin | null>(null);
   const [loading, setLoading] = useState(true);
@@ -53,6 +61,7 @@ export default function StackedDashboard() {
   const [q, setQ] = useState("");
   const [minStack, setMinStack] = useState(2);
   const [multiCategoryOnly, setMultiCategoryOnly] = useState(false);
+  const [duplicateTypeFilter, setDuplicateTypeFilter] = useState<DuplicateFilter>("all");
   const [showCharts, setShowCharts] = useState(true);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
 
@@ -70,6 +79,12 @@ export default function StackedDashboard() {
     })();
   }, []);
 
+  // Duplicate detection
+  const duplicateResult = useMemo<DuplicateResult | null>(() => {
+    if (!data) return null;
+    return detectDuplicates(data.records);
+  }, [data]);
+
   const stacks = useMemo(() => {
     if (!data) return [];
     return buildStacks(data.records);
@@ -80,6 +95,16 @@ export default function StackedDashboard() {
     let rows = stacks.filter((g) => g.total >= minStack);
 
     if (multiCategoryOnly) rows = rows.filter((g) => g.distinctCategories > 1);
+
+    // Filter by duplicate type
+    if (duplicateTypeFilter !== "all" && duplicateResult) {
+      rows = rows.filter((g) => {
+        return g.facilities.some((f) => {
+          const dupes = duplicateResult.byFacility.get(f.id);
+          return dupes?.some((d) => d.type === duplicateTypeFilter);
+        });
+      });
+    }
 
     if (qn) {
       rows = rows.filter((g) => {
@@ -94,7 +119,7 @@ export default function StackedDashboard() {
     }
 
     return rows;
-  }, [stacks, q, minStack, multiCategoryOnly]);
+  }, [stacks, q, minStack, multiCategoryOnly, duplicateTypeFilter, duplicateResult]);
 
   // Stats
   const stats = useMemo(() => {
@@ -103,6 +128,20 @@ export default function StackedDashboard() {
     return { totalStacked, maxStack, addresses: filtered.length };
   }, [filtered]);
 
+  // Count facilities with each duplicate type
+  const dupeCounts = useMemo(() => {
+    if (!duplicateResult) return { address: 0, phone: 0, owner: 0, admin: 0 };
+    const counts = { address: 0, phone: 0, owner: 0, admin: 0 };
+    duplicateResult.byFacility.forEach((groups) => {
+      const types = new Set(groups.map((g) => g.type));
+      if (types.has("address")) counts.address++;
+      if (types.has("phone")) counts.phone++;
+      if (types.has("owner")) counts.owner++;
+      if (types.has("admin")) counts.admin++;
+    });
+    return counts;
+  }, [duplicateResult]);
+
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
       {/* Header */}
@@ -110,9 +149,9 @@ export default function StackedDashboard() {
         <div className="px-4 py-3">
           <div className="flex items-center justify-between gap-3">
             <div>
-              <h1 className="font-semibold">Stacked Facilities</h1>
+              <h1 className="font-semibold">Fraud Detection Dashboard</h1>
               <p className="text-xs text-zinc-400">
-                {loading ? "Loading..." : `${stats.addresses.toLocaleString()} addresses`}
+                {loading ? "Loading..." : `${stats.addresses.toLocaleString()} stacked addresses`}
               </p>
             </div>
             <Link
@@ -136,7 +175,7 @@ export default function StackedDashboard() {
         )}
 
         {/* Stats cards */}
-        <div className="grid grid-cols-3 gap-3 mb-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
           <div className="bg-zinc-800/50 rounded-xl p-3 border border-zinc-700">
             <div className="text-2xl font-bold text-amber-400">{stats.addresses.toLocaleString()}</div>
             <div className="text-xs text-zinc-400">Addresses</div>
@@ -148,6 +187,10 @@ export default function StackedDashboard() {
           <div className="bg-zinc-800/50 rounded-xl p-3 border border-zinc-700">
             <div className="text-2xl font-bold text-red-400">{stats.maxStack}</div>
             <div className="text-xs text-zinc-400">Max stack</div>
+          </div>
+          <div className="bg-zinc-800/50 rounded-xl p-3 border border-zinc-700">
+            <div className="text-2xl font-bold text-purple-400">{dupeCounts.phone.toLocaleString()}</div>
+            <div className="text-xs text-zinc-400">Phone dups</div>
           </div>
         </div>
 
@@ -193,8 +236,20 @@ export default function StackedDashboard() {
                   : 'bg-zinc-900 border border-zinc-700'
               }`}
             >
-              Multi-category only
+              Multi-category
             </button>
+
+            <select
+              value={duplicateTypeFilter}
+              onChange={(e) => setDuplicateTypeFilter(e.target.value as DuplicateFilter)}
+              className="bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-1.5 text-xs"
+            >
+              <option value="all">All duplicates</option>
+              <option value="address">Address ({dupeCounts.address})</option>
+              <option value="phone">Phone ({dupeCounts.phone})</option>
+              <option value="owner">Owner ({dupeCounts.owner})</option>
+              <option value="admin">Admin ({dupeCounts.admin})</option>
+            </select>
           </div>
         </div>
 
@@ -295,33 +350,57 @@ export default function StackedDashboard() {
 
                       {/* Facility list */}
                       <div className="space-y-2">
-                        {g.facilities.map((f) => (
-                          <div
-                            key={f.id}
-                            className="p-3 rounded-lg bg-zinc-900 border border-zinc-800"
-                          >
-                            <div className="flex items-start justify-between gap-2">
-                              <div className="min-w-0">
-                                <div className="font-medium text-sm truncate">{f.name}</div>
-                                <div className="text-xs text-zinc-400 mt-0.5">{f.categoryName}</div>
+                        {g.facilities.map((f) => {
+                          const dupeGroups = duplicateResult?.byFacility.get(f.id) ?? [];
+                          const hasDupes = dupeGroups.length > 0;
+
+                          return (
+                            <div
+                              key={f.id}
+                              className={`p-3 rounded-lg border ${
+                                hasDupes
+                                  ? 'bg-red-900/20 border-red-500/30'
+                                  : 'bg-zinc-900 border-zinc-800'
+                              }`}
+                            >
+                              <div className="flex items-start justify-between gap-2">
+                                <div className="min-w-0">
+                                  <div className="font-medium text-sm truncate">{f.name}</div>
+                                  <div className="text-xs text-zinc-400 mt-0.5">{f.categoryName}</div>
+                                </div>
+                                <span className={`shrink-0 text-xs px-2 py-0.5 rounded ${
+                                  f.inService ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                                }`}>
+                                  {f.inService ? 'Active' : 'Inactive'}
+                                </span>
                               </div>
-                              <span className={`shrink-0 text-xs px-2 py-0.5 rounded ${
-                                f.inService ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-                              }`}>
-                                {f.inService ? 'Active' : 'Inactive'}
-                              </span>
-                            </div>
-                            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-zinc-500">
-                              {f.licenseNumber && <span>License: {f.licenseNumber}</span>}
-                              {f.phone && (
-                                <a href={`tel:${f.phone}`} className="text-blue-400">
-                                  {f.phone}
-                                </a>
+
+                              {/* Duplicate badges */}
+                              {hasDupes && (
+                                <div className="flex flex-wrap gap-1 mt-2">
+                                  {dupeGroups.map((dg, i) => (
+                                    <span
+                                      key={i}
+                                      className={`text-[10px] px-1.5 py-0.5 rounded border ${getDuplicateBadgeClass(dg.type)}`}
+                                    >
+                                      {dg.type}: {dg.facilityIds.length}
+                                    </span>
+                                  ))}
+                                </div>
                               )}
-                              {f.licenseExpirationDate && <span>Expires: {f.licenseExpirationDate}</span>}
+
+                              <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-zinc-500">
+                                {f.licenseNumber && <span>License: {f.licenseNumber}</span>}
+                                {f.phone && (
+                                  <a href={`tel:${f.phone}`} className="text-blue-400">
+                                    {f.phone}
+                                  </a>
+                                )}
+                                {f.licenseExpirationDate && <span>Expires: {f.licenseExpirationDate}</span>}
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
                   )}
