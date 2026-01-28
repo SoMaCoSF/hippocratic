@@ -569,6 +569,7 @@ class InteractiveNetworkScene(Scene):
     """
     Interactive network visualization where clicking a node highlights only its connections.
     Each connection type (address, phone, owner, admin) is shown in its unique color.
+    All edges are redrawn with proper color coding and animation.
     """
 
     def construct(self):
@@ -591,19 +592,27 @@ class InteractiveNetworkScene(Scene):
         
         # Title
         title = Text(
-            "Interactive Network - Click to Explore Connections",
-            font_size=32,
+            "Interactive Network - Node Selection & Connection Redraw",
+            font_size=28,
             color=WHITE
         )
-        title.to_edge(UP, buff=0.3)
+        title.to_edge(UP, buff=0.2)
         
         # Legend
         legend = create_connection_legend()
         
-        self.play(Write(title), FadeIn(legend), run_time=0.5)
+        # Instructions
+        instructions = Text(
+            "Each node shows all connections | Color = Connection Type",
+            font_size=14,
+            color=GREY_B
+        )
+        instructions.next_to(title, DOWN, buff=0.2)
         
-        # Build network
-        facilities = cluster['facilities'][:20]  # Limit for clarity
+        self.play(Write(title), FadeIn(legend), FadeIn(instructions), run_time=0.5)
+        
+        # Build network with MORE connections
+        facilities = cluster['facilities'][:25]  # More nodes for richer network
         n = len(facilities)
         
         if n == 0:
@@ -619,134 +628,233 @@ class InteractiveNetworkScene(Scene):
             angle = i * TAU / n - PI / 2
             pos = radius * np.array([np.cos(angle), np.sin(angle), 0])
             
-            dot = Dot(pos, radius=0.15, color=COLORS['standard'])
+            dot = Dot(pos, radius=0.12, color=COLORS['standard'])
             node_dots[f['id']] = dot
             facility_map[f['id']] = f
             
-            short_name = f['name'][:15] + "..." if len(f['name']) > 15 else f['name']
-            label = Text(short_name, font_size=9, color=GREY_A)
+            short_name = f['name'][:12] + "..." if len(f['name']) > 12 else f['name']
+            label = Text(short_name, font_size=8, color=GREY_A)
             label.next_to(dot, normalize(pos) * 0.25, buff=0.05)
             node_labels[f['id']] = label
         
         # Animate nodes
         self.play(
-            LaggedStart(*[GrowFromCenter(dot) for dot in node_dots.values()], lag_ratio=0.03),
+            LaggedStart(*[GrowFromCenter(dot) for dot in node_dots.values()], lag_ratio=0.02),
             run_time=1
         )
         
-        # Create connection graph (edges by type)
-        connections = defaultdict(lambda: defaultdict(list))
+        # Create REALISTIC connection graph with multiple connection types per pair
+        connections = defaultdict(lambda: defaultdict(set))
         facility_ids = [f['id'] for f in facilities]
         
-        # Simulate connections
-        random.seed(42)
-        for _ in range(min(15, n * 2)):
-            if len(facility_ids) >= 2:
-                i, j = random.sample(range(len(facility_ids)), 2)
-                conn_type = random.choice(['address', 'phone', 'owner', 'admin'])
-                connections[facility_ids[i]][conn_type].append(facility_ids[j])
-                connections[facility_ids[j]][conn_type].append(facility_ids[i])
+        # Generate connections based on cluster statistics
+        num_connections_per_type = {
+            'address': min(cluster['shared_addresses'], n * 2),
+            'phone': min(cluster['shared_phones'], n * 2),
+            'owner': min(cluster.get('shared_owners', 5), n),
+            'admin': min(cluster['shared_admins'], n)
+        }
         
-        # Demonstrate by selecting nodes sequentially
-        for selected_id in list(facility_ids)[:5]:  # Show first 5 nodes
-            self.show_node_connections(
+        random.seed(42)
+        
+        # Create connections for each type
+        for conn_type, count in num_connections_per_type.items():
+            for _ in range(count):
+                if len(facility_ids) >= 2:
+                    i, j = random.sample(range(len(facility_ids)), 2)
+                    # Bidirectional connections
+                    connections[facility_ids[i]][conn_type].add(facility_ids[j])
+                    connections[facility_ids[j]][conn_type].add(facility_ids[i])
+        
+        # Draw ALL initial connections (faded background)
+        all_background_edges = []
+        for source_id in connections:
+            for conn_type, targets in connections[source_id].items():
+                color = COLORS[conn_type]
+                for target_id in targets:
+                    if source_id < target_id and source_id in node_dots and target_id in node_dots:
+                        start = node_dots[source_id].get_center()
+                        end = node_dots[target_id].get_center()
+                        line = Line(start, end, stroke_width=0.5, color=color, stroke_opacity=0.15)
+                        all_background_edges.append(line)
+        
+        if all_background_edges:
+            self.play(
+                LaggedStart(*[Create(line) for line in all_background_edges], lag_ratio=0.005),
+                run_time=1.5
+            )
+        
+        # Demonstrate by selecting nodes sequentially with FULL connection redraw
+        for selected_id in list(facility_ids)[:6]:  # Show first 6 nodes
+            self.show_node_connections_redraw(
                 selected_id,
                 node_dots,
                 node_labels,
                 connections,
-                facility_map
+                facility_map,
+                all_background_edges
             )
         
         # Final fade
         all_elements = VGroup(
-            title, legend,
+            title, legend, instructions,
             *node_dots.values(),
-            *node_labels.values()
+            *node_labels.values(),
+            *all_background_edges
         )
         self.play(FadeOut(all_elements), run_time=0.5)
     
-    def show_node_connections(self, selected_id, node_dots, node_labels, connections, facility_map):
-        """Highlight a node and show its connections by type."""
+    def show_node_connections_redraw(self, selected_id, node_dots, node_labels, connections, facility_map, background_edges):
+        """
+        Highlight a node and REDRAW all its connections with proper color coding.
+        Shows connection statistics and animates each connection type separately.
+        """
         if selected_id not in node_dots:
             return
         
         selected_dot = node_dots[selected_id]
         selected_label = node_labels[selected_id]
         
-        # Highlight selected node
-        highlight = Circle(
-            radius=0.25,
-            color=COLORS['selected'],
-            stroke_width=4
-        )
-        highlight.move_to(selected_dot.get_center())
+        # Count connections by type
+        conn_counts = {
+            'address': len(connections[selected_id].get('address', set())),
+            'phone': len(connections[selected_id].get('phone', set())),
+            'owner': len(connections[selected_id].get('owner', set())),
+            'admin': len(connections[selected_id].get('admin', set()))
+        }
+        total_connections = sum(conn_counts.values())
         
-        # Info box
-        facility = facility_map[selected_id]
-        info_text = Text(
-            f"Selected: {facility['name'][:30]}",
-            font_size=16,
-            color=COLORS['selected']
+        # Highlight selected node with pulsing effect
+        highlight_outer = Circle(
+            radius=0.3,
+            color=COLORS['selected'],
+            stroke_width=3,
+            stroke_opacity=0.6
         )
-        info_text.to_edge(DOWN, buff=0.5)
+        highlight_inner = Circle(
+            radius=0.2,
+            color=COLORS['selected'],
+            stroke_width=2,
+            fill_color=COLORS['selected'],
+            fill_opacity=0.2
+        )
+        highlight_outer.move_to(selected_dot.get_center())
+        highlight_inner.move_to(selected_dot.get_center())
+        
+        # Info panel
+        facility = facility_map[selected_id]
+        info_title = Text(
+            facility['name'][:35] + ("..." if len(facility['name']) > 35 else ""),
+            font_size=14,
+            color=COLORS['selected'],
+            weight=BOLD
+        )
+        info_title.to_edge(DOWN, buff=1.2)
+        
+        # Connection statistics
+        stats_lines = []
+        y_offset = 0
+        for conn_type, count in conn_counts.items():
+            if count > 0:
+                stat_line = Text(
+                    f"{conn_type.upper()}: {count} connections",
+                    font_size=10,
+                    color=COLORS[conn_type]
+                )
+                stats_lines.append(stat_line)
+        
+        stats_group = VGroup(*stats_lines)
+        stats_group.arrange(RIGHT, buff=0.3)
+        stats_group.next_to(info_title, DOWN, buff=0.15)
+        
+        # Fade background edges
+        fade_background = [edge.animate.set_opacity(0.05) for edge in background_edges]
         
         self.play(
-            Create(highlight),
-            selected_dot.animate.set_color(COLORS['selected']),
-            FadeIn(info_text),
-            run_time=0.3
+            *fade_background,
+            Create(highlight_outer),
+            Create(highlight_inner),
+            selected_dot.animate.set_color(COLORS['selected']).scale(1.5),
+            FadeIn(info_title),
+            FadeIn(stats_group),
+            run_time=0.4
         )
         
-        # Draw connections by type
-        edge_lines = []
+        # REDRAW connections by type with animation
+        all_edge_lines = []
         
         for conn_type in ['address', 'phone', 'owner', 'admin']:
-            if conn_type in connections[selected_id]:
-                color = COLORS[conn_type]
-                
-                for target_id in connections[selected_id][conn_type]:
-                    if target_id in node_dots:
-                        start = selected_dot.get_center()
-                        end = node_dots[target_id].get_center()
-                        
-                        # Curved line for visual appeal
-                        line = CurvedArrow(
-                            start, end,
-                            color=color,
-                            stroke_width=3,
-                            tip_length=0.15,
-                            angle=TAU/12
-                        )
-                        edge_lines.append(line)
-                        
-                        # Highlight connected node
-                        self.play(
-                            Create(line),
-                            node_dots[target_id].animate.set_color(color).scale(1.3),
-                            run_time=0.2
-                        )
+            if conn_type not in connections[selected_id] or len(connections[selected_id][conn_type]) == 0:
+                continue
+            
+            color = COLORS[conn_type]
+            type_edges = []
+            
+            # Create label for this connection type
+            type_label = Text(
+                f"Drawing {conn_type.upper()} connections...",
+                font_size=12,
+                color=color
+            )
+            type_label.to_corner(UL, buff=0.5)
+            
+            self.play(FadeIn(type_label), run_time=0.2)
+            
+            # Draw all connections of this type
+            for target_id in connections[selected_id][conn_type]:
+                if target_id in node_dots:
+                    start = selected_dot.get_center()
+                    end = node_dots[target_id].get_center()
+                    
+                    # Straight line with color coding
+                    line = Line(
+                        start, end,
+                        color=color,
+                        stroke_width=2.5,
+                        stroke_opacity=0.9
+                    )
+                    type_edges.append(line)
+                    all_edge_lines.append(line)
+                    
+                    # Highlight connected node with type color
+                    self.add(line)
+                    self.play(
+                        node_dots[target_id].animate.set_color(color).scale(1.2),
+                        run_time=0.1
+                    )
+            
+            self.play(FadeOut(type_label), run_time=0.2)
+            self.wait(0.3)
         
-        self.wait(0.8)
+        # Hold for observation
+        self.wait(1.2)
         
-        # Reset
+        # Reset everything
         reset_anims = [
-            FadeOut(highlight),
-            FadeOut(info_text),
-            selected_dot.animate.set_color(COLORS['standard']),
+            FadeOut(highlight_outer),
+            FadeOut(highlight_inner),
+            FadeOut(info_title),
+            FadeOut(stats_group),
+            selected_dot.animate.set_color(COLORS['standard']).scale(1/1.5),
         ]
         
-        for target_id in connections[selected_id].get('address', []) + \
-                        connections[selected_id].get('phone', []) + \
-                        connections[selected_id].get('owner', []) + \
-                        connections[selected_id].get('admin', []):
-            if target_id in node_dots:
-                reset_anims.append(
-                    node_dots[target_id].animate.set_color(COLORS['standard']).scale(1/1.3)
-                )
+        # Reset all connected nodes
+        for conn_type in ['address', 'phone', 'owner', 'admin']:
+            if conn_type in connections[selected_id]:
+                for target_id in connections[selected_id][conn_type]:
+                    if target_id in node_dots:
+                        reset_anims.append(
+                            node_dots[target_id].animate.set_color(COLORS['standard']).scale(1/1.2)
+                        )
         
-        reset_anims.extend([FadeOut(line) for line in edge_lines])
+        # Fade out connection lines
+        reset_anims.extend([FadeOut(line) for line in all_edge_lines])
         
-        self.play(*reset_anims, run_time=0.3)
+        # Restore background edges
+        reset_anims.extend([edge.animate.set_opacity(0.15) for edge in background_edges])
+        
+        self.play(*reset_anims, run_time=0.4)
+        self.wait(0.3)
 
 
 class ConnectionTypeScene(Scene):
