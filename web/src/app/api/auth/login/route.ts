@@ -17,8 +17,8 @@ const authTokens = new Map<string, { email: string; expiresAt: number }>();
 const pendingVerifications = new Map<string, { email: string; password: string; expiresAt: number }>();
 
 // Authorized emails (in production, store in database)
-const AUTHORIZED_EMAILS = process.env.AUTHORIZED_EMAILS?.split(',') || [
-  'admin@hippocratic.app',
+const AUTHORIZED_EMAILS = process.env.AUTHORIZED_EMAILS?.split(',').map(e => e.trim()) || [
+  'somacosf@gmail.com',
 ];
 
 // Simple password hash (in production, use bcrypt)

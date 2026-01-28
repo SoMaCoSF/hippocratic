@@ -186,6 +186,150 @@ function ZoomTracker({ onZoomChange }: { onZoomChange: (zoom: number) => void })
   return null;
 }
 
+// Map rotation control
+function RotationControl() {
+  const map = useMap();
+  const [bearing, setBearing] = useState(0);
+  const [tilt, setTilt] = useState(0);
+
+  useEffect(() => {
+    const container = map.getContainer();
+    
+    // Apply rotation and tilt via CSS transform
+    container.style.transformOrigin = 'center center';
+    container.style.transform = `rotate(${bearing}deg) rotateX(${tilt}deg)`;
+    container.style.transition = 'transform 0.3s ease-out';
+
+    // Keyboard controls
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.shiftKey) {
+        switch (e.key) {
+          case 'ArrowLeft':
+            e.preventDefault();
+            setBearing((prev) => (prev - 15 + 360) % 360);
+            break;
+          case 'ArrowRight':
+            e.preventDefault();
+            setBearing((prev) => (prev + 15) % 360);
+            break;
+          case 'ArrowUp':
+            e.preventDefault();
+            setTilt((prev) => Math.max(0, prev - 10));
+            break;
+          case 'ArrowDown':
+            e.preventDefault();
+            setTilt((prev) => Math.min(60, prev + 10));
+            break;
+          case 'r':
+          case 'R':
+            e.preventDefault();
+            setBearing(0);
+            setTilt(0);
+            break;
+        }
+      }
+    };
+
+    // Mouse/touch rotation (right-click drag or two-finger drag)
+    let isRotating = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    const handleMouseDown = (e: MouseEvent) => {
+      if (e.button === 2 || e.ctrlKey) { // Right click or Ctrl+click
+        e.preventDefault();
+        isRotating = true;
+        lastX = e.clientX;
+        lastY = e.clientY;
+        container.style.cursor = 'grab';
+      }
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (isRotating) {
+        e.preventDefault();
+        const deltaX = e.clientX - lastX;
+        const deltaY = e.clientY - lastY;
+        
+        setBearing((prev) => (prev + deltaX * 0.5) % 360);
+        setTilt((prev) => Math.max(0, Math.min(60, prev - deltaY * 0.3)));
+        
+        lastX = e.clientX;
+        lastY = e.clientY;
+      }
+    };
+
+    const handleMouseUp = () => {
+      isRotating = false;
+      container.style.cursor = '';
+    };
+
+    const handleContextMenu = (e: Event) => {
+      e.preventDefault();
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    container.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    container.addEventListener('contextmenu', handleContextMenu);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      container.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      container.removeEventListener('contextmenu', handleContextMenu);
+      container.style.transform = '';
+    };
+  }, [map, bearing, tilt]);
+
+  return (
+    <div className="absolute top-4 right-4 z-[1000] bg-zinc-900/95 backdrop-blur rounded-lg p-3 text-xs shadow-xl border border-zinc-700">
+      <div className="font-bold text-zinc-300 mb-2">Map Controls</div>
+      <div className="space-y-2">
+        <div>
+          <div className="text-zinc-400 mb-1">Rotation: {bearing.toFixed(0)}°</div>
+          <input
+            type="range"
+            min="0"
+            max="360"
+            value={bearing}
+            onChange={(e) => setBearing(Number(e.target.value))}
+            className="w-full"
+          />
+        </div>
+        <div>
+          <div className="text-zinc-400 mb-1">Tilt: {tilt.toFixed(0)}°</div>
+          <input
+            type="range"
+            min="0"
+            max="60"
+            value={tilt}
+            onChange={(e) => setTilt(Number(e.target.value))}
+            className="w-full"
+          />
+        </div>
+        <button
+          onClick={() => {
+            setBearing(0);
+            setTilt(0);
+          }}
+          className="w-full px-2 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded text-xs"
+        >
+          Reset View
+        </button>
+        <div className="text-[10px] text-zinc-500 pt-2 border-t border-zinc-800">
+          <div>Shift + ← → : Rotate</div>
+          <div>Shift + ↑ ↓ : Tilt</div>
+          <div>Ctrl + Drag : Rotate</div>
+          <div>Shift + R : Reset</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Memoized marker
 const FacilityMarker = memo(function FacilityMarker({
   facility,
@@ -584,6 +728,7 @@ export function MapClient({
         className="h-full w-full"
         whenReady={() => setMapReady(true)}
         zoomControl={true}
+        style={{ perspective: '1000px' }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
@@ -591,6 +736,7 @@ export function MapClient({
         />
         <Recenter center={center} />
         <ZoomTracker onZoomChange={handleZoomChange} />
+        <RotationControl />
 
         {/* User location indicator */}
         {userLocation && (

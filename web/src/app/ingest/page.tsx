@@ -299,6 +299,42 @@ function IngestPageContent() {
     setExportStatus(`Saved ${convertedRecords.length} records to browser storage (${key})`);
   }, [convertedRecords, dataType]);
 
+  const handleSaveToDatabase = useCallback(async () => {
+    if (convertedRecords.length === 0) return;
+
+    setExportStatus("Saving to database...");
+
+    try {
+      const endpoint = dataType === "facilities" ? "/api/facilities" : "/api/financials";
+      const payload = dataType === "facilities" 
+        ? { facilities: convertedRecords }
+        : { financials: convertedRecords };
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${localStorage.getItem("auth_token")}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to save: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      setExportStatus(`✅ Successfully saved ${result.inserted} records to database!`);
+      
+      // Clear data after successful save
+      setTimeout(() => {
+        clearData();
+      }, 2000);
+    } catch (err) {
+      setExportStatus(`❌ Error: ${err instanceof Error ? err.message : String(err)}`);
+    }
+  }, [convertedRecords, dataType, clearData]);
+
   const clearData = useCallback(() => {
     setCsvData(null);
     setMapping({});
@@ -549,6 +585,18 @@ function IngestPageContent() {
 
             <div className="flex flex-wrap gap-3">
               <button
+                onClick={handleSaveToDatabase}
+                disabled={validationErrors.length > 0}
+                className={`px-6 py-3 rounded-xl font-medium transition-colors ${
+                  validationErrors.length > 0
+                    ? "bg-zinc-800 text-zinc-500 cursor-not-allowed"
+                    : "bg-green-600 hover:bg-green-500 text-white"
+                }`}
+              >
+                💾 Save to Database
+              </button>
+
+              <button
                 onClick={handleExportJSON}
                 disabled={validationErrors.length > 0}
                 className={`px-6 py-3 rounded-xl font-medium transition-colors ${
@@ -566,7 +614,7 @@ function IngestPageContent() {
                 className={`px-6 py-3 rounded-xl font-medium transition-colors ${
                   validationErrors.length > 0
                     ? "bg-zinc-800 text-zinc-500 cursor-not-allowed"
-                    : "bg-green-600 hover:bg-green-500 text-white"
+                    : "bg-zinc-700 hover:bg-zinc-600 text-white"
                 }`}
               >
                 Save to Browser Storage
