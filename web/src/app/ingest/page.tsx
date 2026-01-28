@@ -1,18 +1,20 @@
 // ==============================================================================
-// file_id: SOM-SCR-0028-v1.0.0
+// file_id: SOM-SCR-0028-v2.0.0
 // name: page.tsx
-// description: Data ingest page - upload CSV files and convert to facility/financial data
+// description: Data ingest page - upload CSV files and convert to facility/financial data (AUTH REQUIRED)
 // project_id: HIPPOCRATIC
 // category: script
-// tags: [web, nextjs, ingest, csv, data-import]
+// tags: [web, nextjs, ingest, csv, data-import, auth]
 // created: 2026-01-28
-// version: 1.0.0
+// modified: 2026-01-28
+// version: 2.0.0
 // ==============================================================================
 
 "use client";
 
 import Link from "next/link";
-import { useState, useCallback, useMemo, useRef } from "react";
+import { useState, useCallback, useMemo, useRef, Suspense } from "react";
+import { AuthGuard } from "@/app/components/AuthGuard";
 
 // Field definitions for mapping
 const FACILITY_FIELDS = [
@@ -182,7 +184,7 @@ function rowToRecord(row: string[], headers: string[], mapping: ColumnMapping): 
   return record;
 }
 
-export default function IngestPage() {
+function IngestPageContent() {
   const [dataType, setDataType] = useState<DataType>("facilities");
   const [csvData, setCsvData] = useState<ParsedCSV | null>(null);
   const [mapping, setMapping] = useState<ColumnMapping>({});
@@ -625,5 +627,19 @@ export default function IngestPage() {
         </div>
       </main>
     </div>
+  );
+}
+
+export default function IngestPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <AuthGuard>
+        <IngestPageContent />
+      </AuthGuard>
+    </Suspense>
   );
 }

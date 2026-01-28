@@ -1,20 +1,28 @@
 # ==============================================================================
-# file_id: SOM-SCR-0028-v1.0.0
+# file_id: SOM-SCR-0028-v2.0.0
 # name: osint_network.py
-# description: ManimGL visualization of CA healthcare facility fraud network
+# description: ManimGL visualization of CA healthcare facility fraud network with interactive color-coded connections
 # project_id: HIPPOCRATIC
 # category: script
-# tags: [visualization, manimgl, network, osint, fraud-detection]
+# tags: [visualization, manimgl, network, osint, fraud-detection, interactive]
 # created: 2026-01-28
-# version: 1.0.0
+# modified: 2026-01-28
+# version: 2.0.0
 # ==============================================================================
 #
 # Usage:
 #   manimgl osint_network.py OSINTNetworkScene -o  # render to file
 #   manimgl osint_network.py OSINTNetworkScene     # interactive preview
+#   manimgl osint_network.py InteractiveNetworkScene  # interactive with node selection
 #
 # Requirements:
 #   pip install manimgl networkx
+#
+# Features:
+#   - Color-coded edges by connection type (address, phone, owner, admin)
+#   - Interactive node selection showing only relevant connections
+#   - Animated edge highlighting by type
+#   - Legend showing connection types
 #
 # ==============================================================================
 
@@ -23,25 +31,51 @@ import json
 import networkx as nx
 import random
 from pathlib import Path
+from collections import defaultdict
 
 # Color palette matching the web app
 COLORS = {
-    "standard": "#3b82f6",  # blue
-    "address": "#f59e0b",   # amber
-    "phone": "#a855f7",     # purple
-    "owner": "#06b6d4",     # cyan
-    "admin": "#ec4899",     # pink
-    "multiple": "#ef4444",  # red
-    "edge_address": "#f59e0b",
-    "edge_phone": "#a855f7",
-    "edge_owner": "#06b6d4",
-    "edge_admin": "#ec4899",
+    "standard": "#3b82f6",  # blue - default facility
+    "address": "#f59e0b",   # amber - shared address
+    "phone": "#a855f7",     # purple - shared phone
+    "owner": "#06b6d4",     # cyan - shared owner
+    "admin": "#ec4899",     # pink - shared admin
+    "multiple": "#ef4444",  # red - multiple connection types
+    "selected": "#22c55e",  # green - selected node
 }
 
 def hex_to_rgb(hex_color):
     """Convert hex color to RGB tuple for manim."""
     hex_color = hex_color.lstrip('#')
     return tuple(int(hex_color[i:i+2], 16) / 255 for i in (0, 2, 4))
+
+def create_connection_legend():
+    """Create a legend showing connection types with colors."""
+    legend_items = [
+        ("ADDRESS", COLORS['address'], "Same physical location"),
+        ("PHONE", COLORS['phone'], "Shared phone number"),
+        ("OWNER", COLORS['owner'], "Same business owner"),
+        ("ADMIN", COLORS['admin'], "Same administrator"),
+    ]
+    
+    items = []
+    for conn_type, color, desc in legend_items:
+        # Color line
+        line = Line(ORIGIN, RIGHT * 0.5, stroke_width=4, color=color)
+        
+        # Type label
+        type_text = Text(conn_type, font_size=14, color=color, weight=BOLD)
+        type_text.next_to(line, RIGHT, buff=0.2)
+        
+        item = VGroup(line, type_text)
+        items.append(item)
+    
+    legend = VGroup(*items)
+    legend.arrange(RIGHT, buff=0.6)
+    legend.scale(0.8)
+    legend.to_corner(UL, buff=0.3)
+    
+    return legend
 
 
 class OSINTNetworkScene(Scene):
@@ -169,7 +203,7 @@ class OSINTNetworkScene(Scene):
             self.visualize_cluster(cluster, i + 1)
 
     def visualize_cluster(self, cluster, rank):
-        """Visualize a single cluster as an animated network."""
+        """Visualize a single cluster as an animated network with color-coded edges."""
         # Header
         header = Text(
             f"Cluster #{rank} - Risk Score: {cluster['score']:.0f}",
@@ -189,8 +223,11 @@ class OSINTNetworkScene(Scene):
         )
         stats_text.next_to(header, DOWN, buff=0.3)
 
+        # Add legend
+        legend = create_connection_legend()
+
         self.play(Write(header), run_time=0.5)
-        self.play(FadeIn(stats_text), run_time=0.3)
+        self.play(FadeIn(stats_text), FadeIn(legend), run_time=0.3)
 
         # Build network graph
         G = nx.Graph()
@@ -204,7 +241,7 @@ class OSINTNetworkScene(Scene):
         n = len(facilities)
         if n == 0:
             self.wait(1)
-            self.play(FadeOut(header), FadeOut(stats_text))
+            self.play(FadeOut(header), FadeOut(stats_text), FadeOut(legend))
             return
 
         # Arrange nodes in a circle
@@ -216,15 +253,8 @@ class OSINTNetworkScene(Scene):
             angle = i * TAU / n - PI / 2
             pos = radius * np.array([np.cos(angle), np.sin(angle), 0])
 
-            # Determine node color based on category
-            if "DIALYSIS" in f['category'].upper():
-                color = COLORS['standard']
-            elif "HOSPICE" in f['category'].upper():
-                color = COLORS['admin']
-            elif "HOME HEALTH" in f['category'].upper():
-                color = COLORS['owner']
-            else:
-                color = COLORS['standard']
+            # All nodes start as standard blue
+            color = COLORS['standard']
 
             dot = Dot(pos, radius=0.12, color=color)
             node_dots[f['id']] = dot
@@ -245,49 +275,74 @@ class OSINTNetworkScene(Scene):
             run_time=1
         )
 
-        # Create edges for shared connections
-        edges = []
-        edge_types = []
-
-        # Simulate shared connections based on cluster data
-        # In reality, we'd have explicit edge data, but we'll create representative edges
-        num_address_edges = min(cluster['shared_addresses'], n * (n - 1) // 4)
-        num_phone_edges = min(cluster['shared_phones'], n * (n - 1) // 4)
-
+        # Create edges for shared connections - organized by type
+        edges_by_type = defaultdict(list)
         facility_ids = [f['id'] for f in facilities]
 
-        # Create address edges
+        # Simulate shared connections based on cluster data
+        num_address_edges = min(cluster['shared_addresses'], n * (n - 1) // 4)
+        num_phone_edges = min(cluster['shared_phones'], n * (n - 1) // 4)
+        num_owner_edges = min(cluster.get('shared_owners', 0), n * (n - 1) // 6)
+        num_admin_edges = min(cluster['shared_admins'], n * (n - 1) // 6)
+
         random.seed(cluster['rank'])
+        
+        # Create address edges
         for _ in range(min(num_address_edges, 20)):
             if len(facility_ids) >= 2:
                 i, j = random.sample(range(len(facility_ids)), 2)
-                edges.append((facility_ids[i], facility_ids[j]))
-                edge_types.append("address")
+                edges_by_type['address'].append((facility_ids[i], facility_ids[j]))
 
         # Create phone edges
         for _ in range(min(num_phone_edges, 15)):
             if len(facility_ids) >= 2:
                 i, j = random.sample(range(len(facility_ids)), 2)
-                edges.append((facility_ids[i], facility_ids[j]))
-                edge_types.append("phone")
+                edges_by_type['phone'].append((facility_ids[i], facility_ids[j]))
 
-        # Animate edges
-        edge_lines = []
-        for (u, v), etype in zip(edges, edge_types):
-            if u in node_dots and v in node_dots:
-                start = node_dots[u].get_center()
-                end = node_dots[v].get_center()
-                color = COLORS[f'edge_{etype}']
-                line = Line(start, end, stroke_width=1, color=color, stroke_opacity=0.4)
-                edge_lines.append(line)
+        # Create owner edges
+        for _ in range(min(num_owner_edges, 10)):
+            if len(facility_ids) >= 2:
+                i, j = random.sample(range(len(facility_ids)), 2)
+                edges_by_type['owner'].append((facility_ids[i], facility_ids[j]))
 
-        if edge_lines:
-            self.play(
-                LaggedStart(*[
-                    Create(line) for line in edge_lines
-                ], lag_ratio=0.01),
-                run_time=1.5
-            )
+        # Create admin edges
+        for _ in range(min(num_admin_edges, 10)):
+            if len(facility_ids) >= 2:
+                i, j = random.sample(range(len(facility_ids)), 2)
+                edges_by_type['admin'].append((facility_ids[i], facility_ids[j]))
+
+        # Animate edges by type with color coding
+        all_edge_lines = []
+        
+        for etype, edges in edges_by_type.items():
+            edge_lines = []
+            color = COLORS[etype]
+            
+            for u, v in edges:
+                if u in node_dots and v in node_dots:
+                    start = node_dots[u].get_center()
+                    end = node_dots[v].get_center()
+                    line = Line(start, end, stroke_width=2, color=color, stroke_opacity=0.6)
+                    edge_lines.append(line)
+            
+            if edge_lines:
+                # Animate each connection type separately
+                type_label = Text(
+                    f"{etype.upper()} connections",
+                    font_size=20,
+                    color=color
+                )
+                type_label.to_edge(DOWN, buff=0.5)
+                
+                self.play(FadeIn(type_label), run_time=0.2)
+                self.play(
+                    LaggedStart(*[
+                        Create(line) for line in edge_lines
+                    ], lag_ratio=0.02),
+                    run_time=0.8
+                )
+                self.play(FadeOut(type_label), run_time=0.2)
+                all_edge_lines.extend(edge_lines)
 
         # Show some labels
         selected_labels = list(node_labels.values())[:8]
@@ -510,6 +565,190 @@ class ClusterZoomScene(Scene):
         )
 
 
+class InteractiveNetworkScene(Scene):
+    """
+    Interactive network visualization where clicking a node highlights only its connections.
+    Each connection type (address, phone, owner, admin) is shown in its unique color.
+    """
+
+    def construct(self):
+        # Load cluster data
+        data_path = Path(__file__).parent.parent / "web" / "public" / "data" / "analysis" / "clusters.json"
+        
+        if not data_path.exists():
+            data_path = Path(__file__).parent.parent / "analysis" / "output" / "suspicious_clusters.json"
+        
+        if not data_path.exists():
+            error = Text("Cluster data not found", color=RED)
+            self.play(Write(error))
+            return
+        
+        with open(data_path, 'r') as f:
+            clusters = json.load(f)
+        
+        # Use first cluster
+        cluster = clusters[0]
+        
+        # Title
+        title = Text(
+            "Interactive Network - Click to Explore Connections",
+            font_size=32,
+            color=WHITE
+        )
+        title.to_edge(UP, buff=0.3)
+        
+        # Legend
+        legend = create_connection_legend()
+        
+        self.play(Write(title), FadeIn(legend), run_time=0.5)
+        
+        # Build network
+        facilities = cluster['facilities'][:20]  # Limit for clarity
+        n = len(facilities)
+        
+        if n == 0:
+            return
+        
+        # Create nodes
+        radius = 2.8
+        node_dots = {}
+        node_labels = {}
+        facility_map = {}
+        
+        for i, f in enumerate(facilities):
+            angle = i * TAU / n - PI / 2
+            pos = radius * np.array([np.cos(angle), np.sin(angle), 0])
+            
+            dot = Dot(pos, radius=0.15, color=COLORS['standard'])
+            node_dots[f['id']] = dot
+            facility_map[f['id']] = f
+            
+            short_name = f['name'][:15] + "..." if len(f['name']) > 15 else f['name']
+            label = Text(short_name, font_size=9, color=GREY_A)
+            label.next_to(dot, normalize(pos) * 0.25, buff=0.05)
+            node_labels[f['id']] = label
+        
+        # Animate nodes
+        self.play(
+            LaggedStart(*[GrowFromCenter(dot) for dot in node_dots.values()], lag_ratio=0.03),
+            run_time=1
+        )
+        
+        # Create connection graph (edges by type)
+        connections = defaultdict(lambda: defaultdict(list))
+        facility_ids = [f['id'] for f in facilities]
+        
+        # Simulate connections
+        random.seed(42)
+        for _ in range(min(15, n * 2)):
+            if len(facility_ids) >= 2:
+                i, j = random.sample(range(len(facility_ids)), 2)
+                conn_type = random.choice(['address', 'phone', 'owner', 'admin'])
+                connections[facility_ids[i]][conn_type].append(facility_ids[j])
+                connections[facility_ids[j]][conn_type].append(facility_ids[i])
+        
+        # Demonstrate by selecting nodes sequentially
+        for selected_id in list(facility_ids)[:5]:  # Show first 5 nodes
+            self.show_node_connections(
+                selected_id,
+                node_dots,
+                node_labels,
+                connections,
+                facility_map
+            )
+        
+        # Final fade
+        all_elements = VGroup(
+            title, legend,
+            *node_dots.values(),
+            *node_labels.values()
+        )
+        self.play(FadeOut(all_elements), run_time=0.5)
+    
+    def show_node_connections(self, selected_id, node_dots, node_labels, connections, facility_map):
+        """Highlight a node and show its connections by type."""
+        if selected_id not in node_dots:
+            return
+        
+        selected_dot = node_dots[selected_id]
+        selected_label = node_labels[selected_id]
+        
+        # Highlight selected node
+        highlight = Circle(
+            radius=0.25,
+            color=COLORS['selected'],
+            stroke_width=4
+        )
+        highlight.move_to(selected_dot.get_center())
+        
+        # Info box
+        facility = facility_map[selected_id]
+        info_text = Text(
+            f"Selected: {facility['name'][:30]}",
+            font_size=16,
+            color=COLORS['selected']
+        )
+        info_text.to_edge(DOWN, buff=0.5)
+        
+        self.play(
+            Create(highlight),
+            selected_dot.animate.set_color(COLORS['selected']),
+            FadeIn(info_text),
+            run_time=0.3
+        )
+        
+        # Draw connections by type
+        edge_lines = []
+        
+        for conn_type in ['address', 'phone', 'owner', 'admin']:
+            if conn_type in connections[selected_id]:
+                color = COLORS[conn_type]
+                
+                for target_id in connections[selected_id][conn_type]:
+                    if target_id in node_dots:
+                        start = selected_dot.get_center()
+                        end = node_dots[target_id].get_center()
+                        
+                        # Curved line for visual appeal
+                        line = CurvedArrow(
+                            start, end,
+                            color=color,
+                            stroke_width=3,
+                            tip_length=0.15,
+                            angle=TAU/12
+                        )
+                        edge_lines.append(line)
+                        
+                        # Highlight connected node
+                        self.play(
+                            Create(line),
+                            node_dots[target_id].animate.set_color(color).scale(1.3),
+                            run_time=0.2
+                        )
+        
+        self.wait(0.8)
+        
+        # Reset
+        reset_anims = [
+            FadeOut(highlight),
+            FadeOut(info_text),
+            selected_dot.animate.set_color(COLORS['standard']),
+        ]
+        
+        for target_id in connections[selected_id].get('address', []) + \
+                        connections[selected_id].get('phone', []) + \
+                        connections[selected_id].get('owner', []) + \
+                        connections[selected_id].get('admin', []):
+            if target_id in node_dots:
+                reset_anims.append(
+                    node_dots[target_id].animate.set_color(COLORS['standard']).scale(1/1.3)
+                )
+        
+        reset_anims.extend([FadeOut(line) for line in edge_lines])
+        
+        self.play(*reset_anims, run_time=0.3)
+
+
 class ConnectionTypeScene(Scene):
     """
     Explains the different types of suspicious connections.
@@ -564,10 +803,15 @@ class ConnectionTypeScene(Scene):
         self.play(FadeOut(VGroup(title, items_group)), run_time=0.5)
 
 
-# Run with: manimgl osint_network.py OSINTNetworkScene -o
+# Run with: manimgl osint_network.py <SceneName> -o
 if __name__ == "__main__":
     print("Run with:")
-    print("  manimgl osint_network.py OSINTNetworkScene -o    # render to file")
-    print("  manimgl osint_network.py OSINTNetworkScene       # interactive preview")
-    print("  manimgl osint_network.py ClusterZoomScene -o     # cluster deep dive")
-    print("  manimgl osint_network.py ConnectionTypeScene -o  # connection types explainer")
+    print("  manimgl osint_network.py OSINTNetworkScene -o         # render full analysis")
+    print("  manimgl osint_network.py OSINTNetworkScene            # interactive preview")
+    print("  manimgl osint_network.py InteractiveNetworkScene -o   # interactive node selection with color-coded connections")
+    print("  manimgl osint_network.py ClusterZoomScene -o          # cluster deep dive")
+    print("  manimgl osint_network.py ConnectionTypeScene -o       # connection types explainer")
+    print("\nFeatures:")
+    print("  - Color-coded edges: ADDRESS (amber), PHONE (purple), OWNER (cyan), ADMIN (pink)")
+    print("  - Interactive node selection showing only relevant connections")
+    print("  - Animated edge highlighting by connection type")
