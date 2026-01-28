@@ -324,23 +324,54 @@ export default function Home() {
   const hasActiveFilters = q || category !== "ALL" || status !== "ALL" || duplicateFilter !== "any" || stackedOnly;
 
   return (
-    <div className="h-screen w-screen bg-zinc-900 flex overflow-hidden relative">
-      {/* Mobile Menu Toggle Button - always visible on mobile */}
-      <button
-        onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-        className="md:hidden fixed top-4 left-4 z-[1100] w-12 h-12 rounded-xl bg-blue-600 text-white shadow-lg flex items-center justify-center"
-        aria-label={sidebarCollapsed ? "Open menu" : "Close menu"}
-      >
-        {sidebarCollapsed ? (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        ) : (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        )}
-      </button>
+    <div className="h-screen w-screen bg-zinc-900 flex flex-col overflow-hidden relative">
+      {/* Top Navigation Bar - Always Visible */}
+      <div className="bg-zinc-900/95 backdrop-blur border-b border-zinc-700 sticky top-0 z-[1100]">
+        <div className="px-3 py-2 flex items-center gap-2 overflow-x-auto">
+          <button
+            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+            className="md:hidden flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center"
+            aria-label={sidebarCollapsed ? "Open filters" : "Close filters"}
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          
+          <Link
+            href="/"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium"
+          >
+            🗺️ Map
+          </Link>
+          <Link
+            href="/explorer"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            📊 Explorer
+          </Link>
+          <Link
+            href="/network"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            🕸️ Network
+          </Link>
+          <Link
+            href="/stacked"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            ⚠️ Fraud
+          </Link>
+          <Link
+            href="/about"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            ℹ️ About
+          </Link>
+        </div>
+      </div>
+
+      <div className="flex flex-1 overflow-hidden relative">
 
       {/* Sidebar - overlay on mobile, inline on desktop */}
       <div
@@ -560,47 +591,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Navigation Links - ABOVE results for visibility */}
-            <div className="p-2 sm:p-3 border-b border-zinc-700">
-              <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
-                <Link
-                  href="/explorer"
-                  className="flex flex-col items-center justify-center gap-1 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                  Explorer
-                </Link>
-                <Link
-                  href="/network"
-                  className="flex flex-col items-center justify-center gap-1 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white text-xs font-medium"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                  </svg>
-                  Network
-                </Link>
-                <Link
-                  href="/stacked"
-                  className="flex flex-col items-center justify-center gap-1 py-2 rounded-lg bg-amber-600 hover:bg-amber-500 text-black text-xs font-medium"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                  Fraud
-                </Link>
-                <Link
-                  href="/about"
-                  className="flex flex-col items-center justify-center gap-1 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 text-white text-xs font-medium"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  About
-                </Link>
-              </div>
-            </div>
 
             {/* Results List */}
             <div className="flex-1 overflow-auto p-2 sm:p-3">
@@ -1065,6 +1055,7 @@ export default function Home() {
             </div>
           </div>
         )}
+      </div>
       </div>
     </div>
   );

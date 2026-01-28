@@ -277,14 +277,54 @@ export default function NetworkPage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
-      {/* Header */}
-      <header className="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
+      {/* Top Navigation Bar */}
+      <div className="bg-zinc-900/95 backdrop-blur border-b border-zinc-700 sticky top-0 z-50">
+        <div className="px-3 py-2 flex items-center gap-2 overflow-x-auto">
+          <Link
+            href="/"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            🗺️ Map
+          </Link>
+          <Link
+            href="/explorer"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            📊 Explorer
+          </Link>
+          <Link
+            href="/network"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-xs font-medium"
+          >
+            🕸️ Network
+          </Link>
+          <Link
+            href="/stacked"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            ⚠️ Fraud
+          </Link>
+          <Link
+            href="/about"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            ℹ️ About
+          </Link>
+        </div>
+      </div>
+
+      {/* Page Header */}
+      <header className="bg-zinc-900/50 backdrop-blur border-b border-zinc-800">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
           <div>
-            <h1 className="text-base sm:text-xl font-bold text-white">OSINT Network Graph</h1>
-            <p className="text-xs sm:text-sm text-zinc-400 hidden sm:block">Facility Connections: Address • Phone • Owner • Admin • Money</p>
+            <h1 className="text-sm sm:text-base font-bold text-white">OSINT Network Graph</h1>
+            <p className="text-[10px] sm:text-xs text-zinc-400">Facility Connections: Address • Phone • Owner • Admin • Money</p>
           </div>
-          <div className="flex items-center gap-1 sm:gap-2">
+        </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
+        <div className="flex items-center gap-1 sm:gap-2 mb-4">
             {/* View Toggle */}
             <div className="flex rounded-lg overflow-hidden border border-zinc-700">
               <button

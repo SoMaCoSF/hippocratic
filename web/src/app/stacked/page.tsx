@@ -144,25 +144,50 @@ export default function StackedDashboard() {
 
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur border-b border-zinc-800">
-        <div className="px-4 py-3">
-          <div className="flex items-center justify-between gap-3">
-            <div>
-              <h1 className="font-semibold">Fraud Detection Dashboard</h1>
-              <p className="text-xs text-zinc-400">
-                {loading ? "Loading..." : `${stats.addresses.toLocaleString()} stacked addresses`}
-              </p>
-            </div>
-            <Link
-              href="/"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-800 border border-zinc-700 text-sm"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Map
-            </Link>
+      {/* Top Navigation Bar */}
+      <div className="bg-zinc-900/95 backdrop-blur border-b border-zinc-700 sticky top-0 z-50">
+        <div className="px-3 py-2 flex items-center gap-2 overflow-x-auto">
+          <Link
+            href="/"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            🗺️ Map
+          </Link>
+          <Link
+            href="/explorer"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            📊 Explorer
+          </Link>
+          <Link
+            href="/network"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            🕸️ Network
+          </Link>
+          <Link
+            href="/stacked"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-amber-600 hover:bg-amber-500 text-white text-xs font-medium"
+          >
+            ⚠️ Fraud
+          </Link>
+          <Link
+            href="/about"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            ℹ️ About
+          </Link>
+        </div>
+      </div>
+
+      {/* Page Header */}
+      <header className="bg-zinc-900/50 backdrop-blur border-b border-zinc-800">
+        <div className="px-3 sm:px-4 py-2 sm:py-3">
+          <div>
+            <h1 className="text-sm sm:text-base font-semibold">Fraud Detection Dashboard</h1>
+            <p className="text-[10px] sm:text-xs text-zinc-400">
+              {loading ? "Loading..." : `${stats.addresses.toLocaleString()} stacked addresses`}
+            </p>
           </div>
         </div>
       </header>
@@ -355,12 +380,13 @@ export default function StackedDashboard() {
                           const hasDupes = dupeGroups.length > 0;
 
                           return (
-                            <div
+                            <Link
                               key={f.id}
-                              className={`p-3 rounded-lg border ${
+                              href={`/?facility=${f.id}`}
+                              className={`block p-3 rounded-lg border cursor-pointer hover:border-blue-500 transition-colors ${
                                 hasDupes
-                                  ? 'bg-red-900/20 border-red-500/30'
-                                  : 'bg-zinc-900 border-zinc-800'
+                                  ? 'bg-red-900/20 border-red-500/30 hover:bg-red-900/30'
+                                  : 'bg-zinc-900 border-zinc-800 hover:bg-zinc-800'
                               }`}
                             >
                               <div className="flex items-start justify-between gap-2">
@@ -392,13 +418,15 @@ export default function StackedDashboard() {
                               <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-zinc-500">
                                 {f.licenseNumber && <span>License: {f.licenseNumber}</span>}
                                 {f.phone && (
-                                  <a href={`tel:${f.phone}`} className="text-blue-400">
+                                  <span onClick={(e) => e.preventDefault()} className="text-blue-400">
                                     {f.phone}
-                                  </a>
+                                  </span>
                                 )}
                                 {f.licenseExpirationDate && <span>Expires: {f.licenseExpirationDate}</span>}
                               </div>
-                            </div>
+                              
+                              <div className="text-[10px] text-blue-400 mt-2">Click to view on map →</div>
+                            </Link>
                           );
                         })}
                       </div>
