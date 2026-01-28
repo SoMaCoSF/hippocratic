@@ -43,7 +43,96 @@ const COLORS = {
 
 // Create icons at different sizes for zoom levels
 const createIcon = (color: string, size: number, selected: boolean = false) => {
-  const actualSize = selected ? size * 1.5 : size;
+  const actualSize = selected ? size * 1.8 : size;
+  
+  if (selected) {
+    // Pillar of light effect for selected marker
+    return L.divIcon({
+      className: "custom-marker-selected",
+      html: `
+        <div style="position: relative; width: ${actualSize}px; height: ${actualSize}px;">
+          <!-- Pillar of light beam -->
+          <div style="
+            position: absolute;
+            bottom: ${actualSize / 2}px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 200px;
+            background: linear-gradient(to top, ${color}, transparent);
+            animation: pillarPulse 2s ease-in-out infinite;
+            opacity: 0.8;
+            z-index: -1;
+          "></div>
+          
+          <!-- Outer glow rings -->
+          <div style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: ${actualSize * 2}px;
+            height: ${actualSize * 2}px;
+            background: radial-gradient(circle, ${color}40, transparent 70%);
+            border-radius: 50%;
+            animation: pulseGlow 2s ease-in-out infinite;
+          "></div>
+          
+          <!-- Middle ring -->
+          <div style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: ${actualSize * 1.5}px;
+            height: ${actualSize * 1.5}px;
+            background: ${color};
+            opacity: 0.3;
+            border-radius: 50%;
+            animation: pulseRing 2s ease-in-out infinite;
+          "></div>
+          
+          <!-- Main marker -->
+          <div style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: ${actualSize}px;
+            height: ${actualSize}px;
+            background: ${color};
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 20px ${color}, 0 0 40px ${color}80, 0 4px 12px rgba(0,0,0,0.6);
+            cursor: pointer;
+            animation: bounce 2s ease-in-out infinite;
+          "></div>
+        </div>
+        <style>
+          @keyframes pillarPulse {
+            0%, 100% { opacity: 0.4; height: 180px; }
+            50% { opacity: 0.8; height: 220px; }
+          }
+          @keyframes pulseGlow {
+            0%, 100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.6; }
+          }
+          @keyframes pulseRing {
+            0%, 100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.2; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.4; }
+          }
+          @keyframes bounce {
+            0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+            50% { transform: translate(-50%, -50%) translateY(-4px); }
+          }
+        </style>
+      `,
+      iconSize: [actualSize * 2, actualSize * 2],
+      iconAnchor: [actualSize, actualSize],
+    });
+  }
+  
+  // Normal marker
   return L.divIcon({
     className: "custom-marker",
     html: `<div style="
