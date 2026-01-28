@@ -34,11 +34,11 @@ function generateKey(): string {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, password, verificationKey } = body;
+    const { email, password, verificationKey: providedKey } = body;
 
     // Verification flow
-    if (verificationKey) {
-      const pending = pendingVerifications.get(verificationKey);
+    if (providedKey) {
+      const pending = pendingVerifications.get(providedKey);
       
       if (!pending) {
         return NextResponse.json(
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
       }
 
       if (Date.now() > pending.expiresAt) {
-        pendingVerifications.delete(verificationKey);
+        pendingVerifications.delete(providedKey);
         return NextResponse.json(
           { error: 'Verification key expired' },
           { status: 400 }
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
         expiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
       });
 
-      pendingVerifications.delete(verificationKey);
+      pendingVerifications.delete(providedKey);
 
       return NextResponse.json({
         success: true,
@@ -92,8 +92,8 @@ export async function POST(request: NextRequest) {
     const hashedPassword = hashPassword(password);
 
     // Generate verification key
-    const verificationKey = generateKey();
-    pendingVerifications.set(verificationKey, {
+    const newVerificationKey = generateKey();
+    pendingVerifications.set(newVerificationKey, {
       email,
       password: hashedPassword,
       expiresAt: Date.now() + 15 * 60 * 1000, // 15 minutes
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
 
     // In production, send email with verification key
     // For now, return it in response
-    const verificationUrl = `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/ingest?verify=${verificationKey}`;
+    const verificationUrl = `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/ingest?verify=${newVerificationKey}`;
 
     // Simulate email sending
     console.log(`
@@ -115,7 +115,7 @@ export async function POST(request: NextRequest) {
       ${verificationUrl}
       
       Or enter this key manually:
-      ${verificationKey}
+      ${newVerificationKey}
       
       This link expires in 15 minutes.
       ========================================
@@ -124,7 +124,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: 'Verification email sent',
-      verificationKey, // Remove this in production
+      verificationKey: newVerificationKey, // Remove this in production
       verificationUrl, // Remove this in production
     });
 
