@@ -188,21 +188,37 @@ export default function ExplorerPage() {
 
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur border-b border-zinc-800">
-        <div className="px-4 py-3 flex items-center justify-between">
-          <div>
-            <h1 className="font-bold text-lg">Data Explorer</h1>
-            <p className="text-xs text-zinc-400">
-              {loading ? "Loading..." : `${filtered.length.toLocaleString()} of ${data?.records.length.toLocaleString()} facilities`}
-            </p>
-          </div>
-          <Link
-            href="/"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 text-sm hover:bg-zinc-700"
-          >
-            ← Back to Map
+      {/* Top Navigation Bar */}
+      <div className="bg-zinc-900/95 backdrop-blur border-b border-zinc-700 sticky top-0 z-50">
+        <div className="px-3 py-2 flex items-center gap-2 overflow-x-auto">
+          <Link href="/" className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium">
+            🗺️ Map
           </Link>
+          <Link href="/explorer" className="flex-shrink-0 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-medium">
+            📊 Explorer
+          </Link>
+          <Link href="/stacked" className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium">
+            📍 Stacked
+          </Link>
+          <Link href="/network" className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium">
+            🕸️ Network
+          </Link>
+          <Link href="/financials" className="flex-shrink-0 px-3 py-1 rounded-full bg-green-600 hover:bg-green-500 text-white text-xs font-medium">
+            💰 Financials
+          </Link>
+          <Link href="/about" className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium">
+            ℹ️ About
+          </Link>
+        </div>
+      </div>
+
+      {/* Header */}
+      <header className="bg-zinc-900/95 backdrop-blur border-b border-zinc-800">
+        <div className="px-4 py-3">
+          <h1 className="font-bold text-lg">Data Explorer</h1>
+          <p className="text-xs text-zinc-400">
+            {loading ? "Loading..." : `${filtered.length.toLocaleString()} of ${data?.records.length.toLocaleString()} facilities`}
+          </p>
         </div>
       </header>
 

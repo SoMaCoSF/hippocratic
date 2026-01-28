@@ -351,16 +351,22 @@ export default function Home() {
             📊 Explorer
           </Link>
           <Link
+            href="/stacked"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            📍 Stacked
+          </Link>
+          <Link
             href="/network"
             className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
           >
             🕸️ Network
           </Link>
           <Link
-            href="/stacked"
-            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+            href="/financials"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-green-600 hover:bg-green-500 text-white text-xs font-medium"
           >
-            ⚠️ Fraud
+            💰 Financials
           </Link>
           <Link
             href="/about"
@@ -403,152 +409,54 @@ export default function Home() {
 
         {!sidebarCollapsed && (
           <>
-            {/* Quick Stats - Clickable Filters */}
-            <div className="p-2 sm:p-3 border-b border-zinc-700 grid grid-cols-3 gap-1.5 sm:gap-2">
+            {/* Compact Stats */}
+            <div className="p-1.5 border-b border-zinc-700 grid grid-cols-4 gap-1">
               <button
                 onClick={() => { clearFilters(); }}
-                className={`rounded-lg p-1.5 sm:p-2 text-center transition-colors ${
-                  !hasActiveFilters ? "bg-blue-600 ring-2 ring-blue-400" : "bg-zinc-800 hover:bg-zinc-700"
+                className={`rounded p-1 text-center transition-colors ${
+                  !hasActiveFilters ? "bg-blue-600/20 ring-1 ring-blue-400" : "bg-zinc-800 hover:bg-zinc-700"
                 }`}
               >
-                <div className="text-base sm:text-lg font-bold text-blue-400">{data?.records.length.toLocaleString() ?? 0}</div>
-                <div className="text-[9px] sm:text-[10px] text-zinc-500">All Facilities</div>
+                <div className="text-xs font-bold text-blue-400">{data?.records.length.toLocaleString() ?? 0}</div>
+                <div className="text-[7px] text-zinc-500">All</div>
               </button>
-              <button
-                onClick={() => { setStackedOnly(!stackedOnly); setDuplicateFilter("any"); }}
-                className={`rounded-lg p-1.5 sm:p-2 text-center transition-colors ${
-                  stackedOnly ? "bg-amber-600 ring-2 ring-amber-400" : "bg-zinc-800 hover:bg-zinc-700"
-                }`}
-              >
-                <div className="text-base sm:text-lg font-bold text-amber-400">{stackedIds.size.toLocaleString()}</div>
-                <div className="text-[9px] sm:text-[10px] text-zinc-500">Stacked</div>
-              </button>
-              <button
-                onClick={() => { setDuplicateFilter(duplicateFilter === "any" && !stackedOnly ? "any" : "any"); setStackedOnly(false); setDuplicateFilter(duplicateFilter !== "none" ? "none" : "any"); }}
-                className={`rounded-lg p-1.5 sm:p-2 text-center transition-colors ${
-                  duplicateFilter !== "any" && duplicateFilter !== "none" ? "bg-red-600 ring-2 ring-red-400" : "bg-zinc-800 hover:bg-zinc-700"
-                }`}
-              >
-                <div className="text-base sm:text-lg font-bold text-red-400">{duplicateResult?.summary.totalFacilitiesWithDupes.toLocaleString() ?? 0}</div>
-                <div className="text-[9px] sm:text-[10px] text-zinc-500">W/ Dupes</div>
-              </button>
-            </div>
-
-            {/* Duplicate Type Stats - Clickable */}
-            <div className="p-2 sm:p-3 border-b border-zinc-700 grid grid-cols-4 gap-1">
               <button
                 onClick={() => { setDuplicateFilter(duplicateFilter === "address" ? "any" : "address"); setStackedOnly(false); }}
-                className={`rounded-lg p-1.5 text-center transition-colors ${
-                  duplicateFilter === "address" ? "bg-amber-600 ring-1 ring-amber-400" : "bg-zinc-800 hover:bg-zinc-700"
+                className={`rounded p-1 text-center transition-colors ${
+                  duplicateFilter === "address" ? "bg-amber-600/20 ring-1 ring-amber-400" : "bg-zinc-800 hover:bg-zinc-700"
                 }`}
               >
-                <div className="text-sm font-bold text-amber-400">{duplicateResult?.summary.address ?? 0}</div>
-                <div className="text-[9px] text-zinc-500">Address</div>
+                <div className="text-xs font-bold text-amber-400">{duplicateResult?.summary.address ?? 0}</div>
+                <div className="text-[7px] text-zinc-500">Addr</div>
               </button>
               <button
                 onClick={() => { setDuplicateFilter(duplicateFilter === "phone" ? "any" : "phone"); setStackedOnly(false); }}
-                className={`rounded-lg p-1.5 text-center transition-colors ${
-                  duplicateFilter === "phone" ? "bg-purple-600 ring-1 ring-purple-400" : "bg-zinc-800 hover:bg-zinc-700"
+                className={`rounded p-1 text-center transition-colors ${
+                  duplicateFilter === "phone" ? "bg-purple-600/20 ring-1 ring-purple-400" : "bg-zinc-800 hover:bg-zinc-700"
                 }`}
               >
-                <div className="text-sm font-bold text-purple-400">{duplicateResult?.summary.phone ?? 0}</div>
-                <div className="text-[9px] text-zinc-500">Phone</div>
-              </button>
-              <button
-                onClick={() => { setDuplicateFilter(duplicateFilter === "owner" ? "any" : "owner"); setStackedOnly(false); }}
-                className={`rounded-lg p-1.5 text-center transition-colors ${
-                  duplicateFilter === "owner" ? "bg-cyan-600 ring-1 ring-cyan-400" : "bg-zinc-800 hover:bg-zinc-700"
-                }`}
-              >
-                <div className="text-sm font-bold text-cyan-400">{duplicateResult?.summary.owner ?? 0}</div>
-                <div className="text-[9px] text-zinc-500">Owner</div>
+                <div className="text-xs font-bold text-purple-400">{duplicateResult?.summary.phone ?? 0}</div>
+                <div className="text-[7px] text-zinc-500">Phone</div>
               </button>
               <button
                 onClick={() => { setDuplicateFilter(duplicateFilter === "admin" ? "any" : "admin"); setStackedOnly(false); }}
-                className={`rounded-lg p-1.5 text-center transition-colors ${
-                  duplicateFilter === "admin" ? "bg-pink-600 ring-1 ring-pink-400" : "bg-zinc-800 hover:bg-zinc-700"
+                className={`rounded p-1 text-center transition-colors ${
+                  duplicateFilter === "admin" ? "bg-pink-600/20 ring-1 ring-pink-400" : "bg-zinc-800 hover:bg-zinc-700"
                 }`}
               >
-                <div className="text-sm font-bold text-pink-400">{duplicateResult?.summary.admin ?? 0}</div>
-                <div className="text-[9px] text-zinc-500">Admin</div>
+                <div className="text-xs font-bold text-pink-400">{duplicateResult?.summary.admin ?? 0}</div>
+                <div className="text-[7px] text-zinc-500">Admin</div>
               </button>
             </div>
 
-            {/* Search */}
-            <div className="p-2 sm:p-3 border-b border-zinc-700">
-              <div className="relative">
-                <input
-                  type="text"
-                  value={q}
-                  onChange={(e) => setQ(e.target.value)}
-                  placeholder="Search facilities..."
-                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-xs sm:text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
-                />
-                {q && (
-                  <button
-                    onClick={() => setQ("")}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white"
-                  >
-                    ×
-                  </button>
-                )}
-              </div>
-            </div>
-
-            {/* Quick Filter Buttons */}
-            <div className="p-2 sm:p-3 border-b border-zinc-700 space-y-2">
-              <div className="text-[10px] sm:text-xs text-zinc-500 font-medium">Quick Filters</div>
-              <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                <button
-                  onClick={() => { setStackedOnly(!stackedOnly); setDuplicateFilter("any"); }}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                    stackedOnly ? "bg-amber-500 text-black" : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-                  }`}
-                >
-                  Stacked Only
-                </button>
-                <button
-                  onClick={() => { setDuplicateFilter(duplicateFilter === "address" ? "any" : "address"); setStackedOnly(false); }}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                    duplicateFilter === "address" ? "bg-amber-500 text-black" : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-                  }`}
-                >
-                  Address Dups
-                </button>
-                <button
-                  onClick={() => { setDuplicateFilter(duplicateFilter === "phone" ? "any" : "phone"); setStackedOnly(false); }}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                    duplicateFilter === "phone" ? "bg-purple-500 text-white" : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-                  }`}
-                >
-                  Phone Dups
-                </button>
-                <button
-                  onClick={() => { setDuplicateFilter(duplicateFilter === "owner" ? "any" : "owner"); setStackedOnly(false); }}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                    duplicateFilter === "owner" ? "bg-cyan-500 text-black" : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-                  }`}
-                >
-                  Owner Dups
-                </button>
-              </div>
-              {hasActiveFilters && (
-                <button
-                  onClick={clearFilters}
-                  className="text-xs text-red-400 hover:text-red-300"
-                >
-                  Clear all filters
-                </button>
-              )}
-            </div>
-
-            {/* Filters */}
-            <div className="p-2 sm:p-3 border-b border-zinc-700 space-y-2">
-              <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+            {/* Filters - Single Row Each */}
+            <div className="p-1.5 border-b border-zinc-700 space-y-1.5">
+              {/* Categories & Status */}
+              <div className="flex gap-1.5">
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-[10px] sm:text-xs text-white"
+                  className="flex-1 bg-zinc-800 border border-zinc-700 rounded px-2 py-1 text-[10px] text-white"
                 >
                   <option value="ALL">All Categories</option>
                   {categories.map((c) => (
@@ -558,42 +466,49 @@ export default function Home() {
                 <select
                   value={status}
                   onChange={(e) => setStatus(e.target.value as typeof status)}
-                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-[10px] sm:text-xs text-white"
+                  className="flex-1 bg-zinc-800 border border-zinc-700 rounded px-2 py-1 text-[10px] text-white"
                 >
                   <option value="ALL">All Status</option>
                   <option value="IN_SERVICE">In Service</option>
                   <option value="NOT_IN_SERVICE">Not In Service</option>
                 </select>
               </div>
-              <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+
+              {/* Stacked & Duplicate Filters */}
+              <div className="flex gap-1.5">
+                <button
+                  onClick={() => { setStackedOnly(!stackedOnly); setDuplicateFilter("any"); }}
+                  className={`flex-1 px-2 py-1 rounded text-[10px] font-medium transition-colors ${
+                    stackedOnly ? "bg-amber-500 text-black" : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+                  }`}
+                >
+                  📍 Stacked
+                </button>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as SortOption)}
-                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-[10px] sm:text-xs text-white"
+                  className="flex-1 bg-zinc-800 border border-zinc-700 rounded px-2 py-1 text-[10px] text-white"
                 >
                   <option value="name">Sort: Name</option>
                   <option value="distance">Sort: Distance</option>
                   <option value="category">Sort: Category</option>
                   <option value="duplicates">Sort: Duplicates</option>
                 </select>
-                {userLoc && (
-                  <select
-                    value={radiusMiles}
-                    onChange={(e) => setRadiusMiles(Number(e.target.value))}
-                    className="bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-xs text-white"
-                  >
-                    <option value={10}>10 mi radius</option>
-                    <option value={25}>25 mi radius</option>
-                    <option value={50}>50 mi radius</option>
-                    <option value={100}>100 mi radius</option>
-                  </select>
-                )}
               </div>
+
+              {hasActiveFilters && (
+                <button
+                  onClick={clearFilters}
+                  className="text-[10px] text-red-400 hover:text-red-300"
+                >
+                  Clear filters
+                </button>
+              )}
             </div>
 
 
-            {/* Results List */}
-            <div className="flex-1 overflow-auto p-2 sm:p-3">
+            {/* Results List - Scrollable */}
+            <div className="flex-1 overflow-auto p-1.5 sm:p-2">
               {loading ? (
                 <div className="flex items-center justify-center py-8">
                   <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
@@ -925,6 +840,27 @@ export default function Home() {
                   )}
                 </div>
               )}
+            </div>
+
+            {/* Search Box - Below Scrolling List */}
+            <div className="p-1.5 border-t border-zinc-700">
+              <div className="relative">
+                <input
+                  type="text"
+                  value={q}
+                  onChange={(e) => setQ(e.target.value)}
+                  placeholder="Search facilities..."
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded px-2 py-1.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
+                />
+                {q && (
+                  <button
+                    onClick={() => setQ("")}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white text-sm"
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
             </div>
 
           </>
