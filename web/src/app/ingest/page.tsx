@@ -291,6 +291,15 @@ function IngestPageContent() {
     setExportStatus(`Exported ${convertedRecords.length} records to ${a.download}`);
   }, [convertedRecords, dataType]);
 
+  const clearData = useCallback(() => {
+    setCsvData(null);
+    setMapping({});
+    setFileName("");
+    setError(null);
+    setExportStatus(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  }, []);
+
   const handleSaveToStorage = useCallback(() => {
     if (convertedRecords.length === 0) return;
 
@@ -334,15 +343,6 @@ function IngestPageContent() {
       setExportStatus(`❌ Error: ${err instanceof Error ? err.message : String(err)}`);
     }
   }, [convertedRecords, dataType, clearData]);
-
-  const clearData = useCallback(() => {
-    setCsvData(null);
-    setMapping({});
-    setFileName("");
-    setError(null);
-    setExportStatus(null);
-    if (fileInputRef.current) fileInputRef.current.value = "";
-  }, []);
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
