@@ -75,10 +75,18 @@ export default function LandingPage() {
           </button>
         </div>
 
-        {/* Subtitle */}
-        <div className="text-center mb-8">
-          <p className="text-emerald-700 text-lg sm:text-xl font-medium">
-            Click the logo to start exploring
+        {/* Description */}
+        <div className="max-w-3xl mx-auto text-center mb-8 px-4">
+          <p className="text-emerald-800 text-lg sm:text-xl font-semibold mb-4">
+            Interactive fraud detection for California healthcare facilities
+          </p>
+          <p className="text-emerald-700 text-base sm:text-lg mb-4">
+            Hippocratic analyzes <strong>15,743 licensed healthcare facilities</strong> across California, 
+            identifying suspicious patterns through address clustering, phone sharing, and financial anomalies.
+          </p>
+          <p className="text-emerald-600 text-sm sm:text-base">
+            Click the logo to explore the interactive map, view suspicious clusters, and follow the money 
+            through our network analysis tools.
           </p>
         </div>
 
@@ -109,8 +117,38 @@ export default function LandingPage() {
           </Link>
         </div>
 
-        {/* Stats or features */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+        {/* Key Features */}
+        <div className="mt-12 mb-8">
+          <h2 className="text-2xl font-bold text-emerald-800 text-center mb-6">What We Detect</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-amber-200">
+              <div className="text-3xl mb-2">📍</div>
+              <div className="text-sm font-bold text-amber-700 mb-1">Address Clustering</div>
+              <div className="text-xs text-amber-600">Multiple facilities at same location</div>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-purple-200">
+              <div className="text-3xl mb-2">📞</div>
+              <div className="text-sm font-bold text-purple-700 mb-1">Phone Sharing</div>
+              <div className="text-xs text-purple-600">Shared contact numbers across entities</div>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-cyan-200">
+              <div className="text-3xl mb-2">👤</div>
+              <div className="text-sm font-bold text-cyan-700 mb-1">Ownership Networks</div>
+              <div className="text-xs text-cyan-600">Common owners and administrators</div>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-rose-200">
+              <div className="text-3xl mb-2">💰</div>
+              <div className="text-sm font-bold text-rose-700 mb-1">Financial Anomalies</div>
+              <div className="text-xs text-rose-600">Revenue patterns and profit margins</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats */}
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-4xl mx-auto">
           <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-emerald-100">
             <div className="text-4xl mb-2">🏥</div>
             <div className="text-2xl font-bold text-emerald-800">15,743</div>
