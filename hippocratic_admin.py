@@ -60,6 +60,7 @@ except ImportError:
 # Local imports
 sys.path.insert(0, str(Path(__file__).parent / "data_sources"))
 from privacy_proxy_adapter import PrivacyProxySession, OTEL_AVAILABLE as ADAPTER_OTEL
+from source_validator import SourceValidator
 
 # Setup logging
 logging.basicConfig(
@@ -92,6 +93,9 @@ class HippocraticAdmin:
         
         # Active sessions
         self.active_sessions: Dict[str, PrivacyProxySession] = {}
+        
+        # Source validator
+        self.validator = SourceValidator()
         
         # Database configurations (multi-DB support)
         self.db_configs = self.load_db_configs()
@@ -278,6 +282,13 @@ class HippocraticAdmin:
                 'scraper': scraper,
                 'database': db_key
             })
+        
+        @self.app.get("/api/scraper/validate/{scraper_name}")
+        async def validate_scraper_sources(scraper_name: str):
+            """Validate all data sources for a scraper."""
+            logger.info(f"Validating sources for scraper: {scraper_name}")
+            result = self.validator.validate_scraper_sources(scraper_name)
+            return JSONResponse(result)
     
     def render_dashboard(self) -> str:
         """Render HTML dashboard."""
@@ -542,6 +553,54 @@ class HippocraticAdmin:
             }}
         }}
         
+        async function validateScraper(name) {{
+            const validationDiv = document.getElementById(`validation-${{name}}`);
+            validationDiv.innerHTML = '<span style="color: #3b82f6;">⏳ Testing sources...</span>';
+            
+            try {{
+                const response = await fetch(`/api/scraper/validate/${{name}}`);
+                const data = await response.json();
+                
+                if (data.error) {{
+                    validationDiv.innerHTML = `<span style="color: #ef4444;">❌ ${{data.error}}</span>`;
+                    return;
+                }}
+                
+                const total = data.summary.total;
+                const accessible = data.summary.accessible;
+                const failed = data.summary.failed;
+                
+                let statusColor = accessible === total ? '#22c55e' : (accessible > 0 ? '#f59e0b' : '#ef4444');
+                let statusIcon = accessible === total ? '✅' : (accessible > 0 ? '⚠️' : '❌');
+                
+                let html = `<span style="color: ${{statusColor}};">${{statusIcon}} ${{accessible}}/${{total}} sources accessible</span>`;
+                
+                if (failed > 0) {{
+                    html += '<div style="margin-top: 5px; padding: 5px; background: #1e293b; border-radius: 4px; border-left: 2px solid #ef4444;">';
+                    for (const source of data.sources) {{
+                        if (!source.accessible) {{
+                            html += `<div style="font-size: 0.85em; color: #ef4444;">❌ ${{source.description}}</div>`;
+                            html += `<div style="font-size: 0.75em; color: #a1a1aa; margin-left: 15px;">Status: ${{source.status_code || 'N/A'}}</div>`;
+                            if (source.error) {{
+                                html += `<div style="font-size: 0.75em; color: #a1a1aa; margin-left: 15px;">Error: ${{source.error}}</div>`;
+                            }}
+                        }}
+                    }}
+                    html += '</div>';
+                }} else {{
+                    html += '<div style="margin-top: 5px; padding: 5px; background: #1e293b; border-radius: 4px; border-left: 2px solid #22c55e;">';
+                    for (const source of data.sources) {{
+                        html += `<div style="font-size: 0.85em; color: #22c55e;">✅ ${{source.description}} (${{source.response_time_ms}}ms)</div>`;
+                    }}
+                    html += '</div>';
+                }}
+                
+                validationDiv.innerHTML = html;
+            }} catch (error) {{
+                validationDiv.innerHTML = `<span style="color: #ef4444;">❌ Validation failed: ${{error.message}}</span>`;
+            }}
+        }}
+        
         // Load on page load
         document.addEventListener('DOMContentLoaded', () => {{
             loadDatabases();
@@ -589,26 +648,58 @@ class HippocraticAdmin:
             <a href="#db-config" style="color: #3b82f6; text-decoration: none;">Configure below ↓</a>
         </div>
         <div class="scraper-grid">
-            <button class="scraper-btn" onclick="startScraper('openfiscal')">
-                💰 Open FI$Cal<br>
-                <small style="opacity: 0.7;">Budget Data</small><br>
-                <small id="db-openfiscal" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
-            </button>
-            <button class="scraper-btn" onclick="startScraper('sco')">
-                📊 State Controller<br>
-                <small style="opacity: 0.7;">Spending Data</small><br>
-                <small id="db-sco" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
-            </button>
-            <button class="scraper-btn" onclick="startScraper('data_ca_gov')">
-                🏛️ data.ca.gov<br>
-                <small style="opacity: 0.7;">API Data</small><br>
-                <small id="db-data_ca_gov" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
-            </button>
-            <button class="scraper-btn" onclick="startScraper('chhs')">
-                🏥 CHHS Portal<br>
-                <small style="opacity: 0.7;">Health Data</small><br>
-                <small id="db-chhs" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
-            </button>
+            <div style="position: relative;">
+                <button class="scraper-btn" onclick="startScraper('openfiscal')">
+                    💰 Open FI$Cal<br>
+                    <small style="opacity: 0.7;">Budget Data</small><br>
+                    <small id="db-openfiscal" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
+                </button>
+                <button onclick="validateScraper('openfiscal')" 
+                        style="position: absolute; top: 5px; right: 5px; padding: 4px 8px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.75em;"
+                        title="Test data source accessibility">
+                    🔍 Test
+                </button>
+                <div id="validation-openfiscal" style="margin-top: 5px; font-size: 0.8em;"></div>
+            </div>
+            <div style="position: relative;">
+                <button class="scraper-btn" onclick="startScraper('sco')">
+                    📊 State Controller<br>
+                    <small style="opacity: 0.7;">Spending Data</small><br>
+                    <small id="db-sco" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
+                </button>
+                <button onclick="validateScraper('sco')" 
+                        style="position: absolute; top: 5px; right: 5px; padding: 4px 8px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.75em;"
+                        title="Test data source accessibility">
+                    🔍 Test
+                </button>
+                <div id="validation-sco" style="margin-top: 5px; font-size: 0.8em;"></div>
+            </div>
+            <div style="position: relative;">
+                <button class="scraper-btn" onclick="startScraper('data_ca_gov')">
+                    🏛️ data.ca.gov<br>
+                    <small style="opacity: 0.7;">API Data</small><br>
+                    <small id="db-data_ca_gov" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
+                </button>
+                <button onclick="validateScraper('data_ca_gov')" 
+                        style="position: absolute; top: 5px; right: 5px; padding: 4px 8px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.75em;"
+                        title="Test data source accessibility">
+                    🔍 Test
+                </button>
+                <div id="validation-data_ca_gov" style="margin-top: 5px; font-size: 0.8em;"></div>
+            </div>
+            <div style="position: relative;">
+                <button class="scraper-btn" onclick="startScraper('chhs')">
+                    🏥 CHHS Portal<br>
+                    <small style="opacity: 0.7;">Health Data</small><br>
+                    <small id="db-chhs" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
+                </button>
+                <button onclick="validateScraper('chhs')" 
+                        style="position: absolute; top: 5px; right: 5px; padding: 4px 8px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.75em;"
+                        title="Test data source accessibility">
+                    🔍 Test
+                </button>
+                <div id="validation-chhs" style="margin-top: 5px; font-size: 0.8em;"></div>
+            </div>
         </div>
     </div>
     
