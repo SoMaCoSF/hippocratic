@@ -1,0 +1,805 @@
+{
+  "iforest": {
+    "model": "Isolation Forest",
+    "contamination": 0.1,
+    "total_samples": 3726,
+    "anomalies_detected": 370,
+    "anomaly_rate": 9.930220075147611,
+    "top_anomalies": [
+      {
+        "name": "ANTHEM HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 806.0,
+        "profit_margin": -149.1315136476427,
+        "anomaly_score": 0.28165094650327743
+      },
+      {
+        "name": "ANTHEM HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 806.0,
+        "profit_margin": -149.1315136476427,
+        "anomaly_score": 0.28165094650327743
+      },
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0,
+        "profit_margin": -0.12300986002102433,
+        "anomaly_score": 0.27690814636337063
+      },
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0,
+        "profit_margin": -0.12300986002102433,
+        "anomaly_score": 0.27690814636337063
+      },
+      {
+        "name": "VIVA HOSPICE CARE",
+        "county": "VENTURA",
+        "category_name": "HOSPICE",
+        "total_revenue": 31402291.0,
+        "profit_margin": -3.228814611010388,
+        "anomaly_score": 0.2765004695612286
+      },
+      {
+        "name": "VIVA HOSPICE CARE",
+        "county": "VENTURA",
+        "category_name": "HOSPICE",
+        "total_revenue": 31402291.0,
+        "profit_margin": -3.228814611010388,
+        "anomaly_score": 0.2765004695612286
+      },
+      {
+        "name": "GLEN-IVY HOSPICE INC",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 2157.0,
+        "profit_margin": -89.09689383402875,
+        "anomaly_score": 0.2732150759869591
+      },
+      {
+        "name": "GLEN-IVY HOSPICE INC",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 2157.0,
+        "profit_margin": -89.09689383402875,
+        "anomaly_score": 0.2732150759869591
+      },
+      {
+        "name": "SUNCREST HOSPICE",
+        "county": "ALAMEDA",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0,
+        "profit_margin": 0.20979164963938293,
+        "anomaly_score": 0.2692903855823076
+      },
+      {
+        "name": "SUNCREST HOSPICE SAN JOSE, LLC",
+        "county": "SAN MATEO",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0,
+        "profit_margin": 0.20979164963938293,
+        "anomaly_score": 0.2692903855823076
+      },
+      {
+        "name": "SUNCREST HOSPICE WALNUT CREEK",
+        "county": "CONTRA COSTA",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0,
+        "profit_margin": 0.20979164963938293,
+        "anomaly_score": 0.2692903855823076
+      },
+      {
+        "name": "SUNCREST HOSPICE SAN JOSE, LLC",
+        "county": "SAN MATEO",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0,
+        "profit_margin": 0.20979164963938293,
+        "anomaly_score": 0.2692903855823076
+      },
+      {
+        "name": "SUNCREST HOSPICE WALNUT CREEK",
+        "county": "CONTRA COSTA",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0,
+        "profit_margin": 0.20979164963938293,
+        "anomaly_score": 0.2692903855823076
+      },
+      {
+        "name": "SUNCREST HOSPICE",
+        "county": "ALAMEDA",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0,
+        "profit_margin": 0.20979164963938293,
+        "anomaly_score": 0.2692903855823076
+      },
+      {
+        "name": "PURIFIED HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 23.0,
+        "profit_margin": -22.608695652173914,
+        "anomaly_score": 0.2632113771495364
+      },
+      {
+        "name": "PURIFIED HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 23.0,
+        "profit_margin": -22.608695652173914,
+        "anomaly_score": 0.2632113771495364
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - SANTA BARBARA BRANCH",
+        "county": "SANTA BARBARA",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 0.24599119885806103
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 0.24599119885806103
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - SANTA BARBARA BRANCH",
+        "county": "SANTA BARBARA",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 0.24599119885806103
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - PASO ROBLES BRANCH",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 0.24599119885806103
+      }
+    ]
+  },
+  "lof": {
+    "model": "Local Outlier Factor (LOF)",
+    "contamination": 0.1,
+    "total_samples": 3726,
+    "anomalies_detected": 322,
+    "anomaly_rate": 8.641975308641975,
+    "top_anomalies": [
+      {
+        "name": "VIVA HOSPICE CARE",
+        "county": "VENTURA",
+        "category_name": "HOSPICE",
+        "total_revenue": 31402291.0,
+        "profit_margin": -3.228814611010388,
+        "anomaly_score": 35.61023931280969
+      },
+      {
+        "name": "VIVA HOSPICE CARE",
+        "county": "VENTURA",
+        "category_name": "HOSPICE",
+        "total_revenue": 31402291.0,
+        "profit_margin": -3.228814611010388,
+        "anomaly_score": 35.61023931280969
+      },
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0,
+        "profit_margin": -0.12300986002102433,
+        "anomaly_score": 26.453134506286254
+      },
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0,
+        "profit_margin": -0.12300986002102433,
+        "anomaly_score": 26.453134506286254
+      },
+      {
+        "name": "ANTHEM HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 806.0,
+        "profit_margin": -149.1315136476427,
+        "anomaly_score": 17.4102145788967
+      },
+      {
+        "name": "ANTHEM HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 806.0,
+        "profit_margin": -149.1315136476427,
+        "anomaly_score": 17.4102145788967
+      },
+      {
+        "name": "GLEN-IVY HOSPICE INC",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 2157.0,
+        "profit_margin": -89.09689383402875,
+        "anomaly_score": 10.931265190986213
+      },
+      {
+        "name": "GLEN-IVY HOSPICE INC",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 2157.0,
+        "profit_margin": -89.09689383402875,
+        "anomaly_score": 10.931265190986213
+      },
+      {
+        "name": "SNL HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 14099787.0,
+        "profit_margin": -1.718808872786518,
+        "anomaly_score": 10.166033488191987
+      },
+      {
+        "name": "SNL HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 14099787.0,
+        "profit_margin": -1.718808872786518,
+        "anomaly_score": 10.166033488191987
+      },
+      {
+        "name": "ORANGE COUNTY CARE HOSPICE",
+        "county": "ORANGE",
+        "category_name": "HOSPICE",
+        "total_revenue": 76711948.0,
+        "profit_margin": 0.9913232551466429,
+        "anomaly_score": 8.618410846799538
+      },
+      {
+        "name": "ORANGE COUNTY CARE HOSPICE",
+        "county": "ORANGE",
+        "category_name": "HOSPICE",
+        "total_revenue": 76711948.0,
+        "profit_margin": 0.9913232551466429,
+        "anomaly_score": 8.618410846799538
+      },
+      {
+        "name": "PINNACLE CARE HOSPICE, INC.",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOSPICE",
+        "total_revenue": 46709654.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 5.623530451458368
+      },
+      {
+        "name": "PINNACLE CARE HOSPICE, INC.",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOSPICE",
+        "total_revenue": 46709654.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 5.623530451458368
+      },
+      {
+        "name": "HOSPICE OF THE CENTRAL COAST",
+        "county": "MONTEREY",
+        "category_name": "HOSPICE",
+        "total_revenue": 5307638.0,
+        "profit_margin": -1.0862500419207188,
+        "anomaly_score": 3.913866501451436
+      },
+      {
+        "name": "HOSPICE OF THE CENTRAL COAST",
+        "county": "MONTEREY",
+        "category_name": "HOSPICE",
+        "total_revenue": 5307638.0,
+        "profit_margin": -1.0862500419207188,
+        "anomaly_score": 3.913866501451436
+      },
+      {
+        "name": "BEST QUALITY CARE HOSPICE, INC.",
+        "county": "RIVERSIDE",
+        "category_name": "HOSPICE",
+        "total_revenue": 77696830.0,
+        "profit_margin": 0.03623697388941093,
+        "anomaly_score": 3.856807617085015
+      },
+      {
+        "name": "BEST QUALITY CARE HOSPICE, INC.",
+        "county": "RIVERSIDE",
+        "category_name": "HOSPICE",
+        "total_revenue": 77696830.0,
+        "profit_margin": 0.03623697388941093,
+        "anomaly_score": 3.856807617085015
+      },
+      {
+        "name": "SUNCREST HOSPICE SAN JOSE, LLC",
+        "county": "SAN MATEO",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0,
+        "profit_margin": 0.20979164963938293,
+        "anomaly_score": 3.594412284582218
+      },
+      {
+        "name": "SUNCREST HOSPICE SAN JOSE, LLC",
+        "county": "SAN MATEO",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0,
+        "profit_margin": 0.20979164963938293,
+        "anomaly_score": 3.594412284582218
+      }
+    ]
+  },
+  "ecod": {
+    "model": "ECOD",
+    "contamination": 0.1,
+    "total_samples": 3726,
+    "anomalies_detected": 372,
+    "anomaly_rate": 9.98389694041868,
+    "top_anomalies": [
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0,
+        "profit_margin": -0.12300986002102433,
+        "anomaly_score": 33.315029529350944
+      },
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0,
+        "profit_margin": -0.12300986002102433,
+        "anomaly_score": 33.315029529350944
+      },
+      {
+        "name": "VIVA HOSPICE CARE",
+        "county": "VENTURA",
+        "category_name": "HOSPICE",
+        "total_revenue": 31402291.0,
+        "profit_margin": -3.228814611010388,
+        "anomaly_score": 32.446124239388105
+      },
+      {
+        "name": "VIVA HOSPICE CARE",
+        "county": "VENTURA",
+        "category_name": "HOSPICE",
+        "total_revenue": 31402291.0,
+        "profit_margin": -3.228814611010388,
+        "anomaly_score": 32.446124239388105
+      },
+      {
+        "name": "ANTHEM HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 806.0,
+        "profit_margin": -149.1315136476427,
+        "anomaly_score": 30.85745608844039
+      },
+      {
+        "name": "ANTHEM HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 806.0,
+        "profit_margin": -149.1315136476427,
+        "anomaly_score": 30.85745608844039
+      },
+      {
+        "name": "PURIFIED HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 23.0,
+        "profit_margin": -22.608695652173914,
+        "anomaly_score": 29.91729835566527
+      },
+      {
+        "name": "PURIFIED HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 23.0,
+        "profit_margin": -22.608695652173914,
+        "anomaly_score": 29.91729835566527
+      },
+      {
+        "name": "TORRANCE MEMORIAL HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 8469670.0,
+        "profit_margin": -0.23095504311265963,
+        "anomaly_score": 29.065065873677597
+      },
+      {
+        "name": "TORRANCE MEMORIAL HOME HEALTH",
+        "county": "LOS ANGELES",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 8469670.0,
+        "profit_margin": -0.23095504311265963,
+        "anomaly_score": 29.065065873677597
+      },
+      {
+        "name": "TORRANCE MEMORIAL HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 8469670.0,
+        "profit_margin": -0.23095504311265963,
+        "anomaly_score": 29.065065873677597
+      },
+      {
+        "name": "TORRANCE MEMORIAL HOME HEALTH",
+        "county": "LOS ANGELES",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 8469670.0,
+        "profit_margin": -0.23095504311265963,
+        "anomaly_score": 29.065065873677597
+      },
+      {
+        "name": "PINNACLE CARE HOSPICE, INC.",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOSPICE",
+        "total_revenue": 46709654.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 28.505659560328656
+      },
+      {
+        "name": "PINNACLE CARE HOSPICE, INC.",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOSPICE",
+        "total_revenue": 46709654.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 28.505659560328656
+      },
+      {
+        "name": "GLEN-IVY HOSPICE INC",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 2157.0,
+        "profit_margin": -89.09689383402875,
+        "anomaly_score": 28.367079802891137
+      },
+      {
+        "name": "GLEN-IVY HOSPICE INC",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 2157.0,
+        "profit_margin": -89.09689383402875,
+        "anomaly_score": 28.367079802891137
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOSPICE",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 27.87432649376683
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - PASO ROBLES BRANCH",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 27.87432649376683
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 27.87432649376683
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - SANTA BARBARA BRANCH",
+        "county": "SANTA BARBARA",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 27.87432649376683
+      }
+    ]
+  },
+  "ensemble": {
+    "model": "Ensemble Voting",
+    "models_used": [
+      "iforest",
+      "lof",
+      "ecod"
+    ],
+    "voting_threshold": 2,
+    "total_samples": 3726,
+    "anomalies_detected": 320,
+    "anomaly_rate": 8.588298443370908,
+    "top_anomalies": [
+      {
+        "name": "ADVANTAGE HEALTH SYSTEMS",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 9937607.0,
+        "profit_margin": -0.19104569138224123,
+        "anomaly_score": 6.398914794126566,
+        "agreement_count": 3
+      },
+      {
+        "name": "PINNACLE CARE HOSPICE, INC.",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOSPICE",
+        "total_revenue": 46709654.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 11.446651623598164,
+        "agreement_count": 3
+      },
+      {
+        "name": "PROVIDER LINK HOSPICE AND PALLIATIVE CARE INC",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 7895178.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 7.363204744660859,
+        "agreement_count": 3
+      },
+      {
+        "name": "STEWARD HOSPICE CARE INC",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 125969.0,
+        "profit_margin": -5.253911676682359,
+        "anomaly_score": 6.938227077947228,
+        "agreement_count": 3
+      },
+      {
+        "name": "COMFORT MANAGEMENT HOSPICE",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 5604.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 7.489404773443823,
+        "agreement_count": 3
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - SANTA BARBARA BRANCH",
+        "county": "SANTA BARBARA",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 10.091879528287205,
+        "agreement_count": 3
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 10.091879528287205,
+        "agreement_count": 3
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOSPICE",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 10.091879528287205,
+        "agreement_count": 3
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - PASO ROBLES BRANCH",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 10.091879528287205,
+        "agreement_count": 3
+      },
+      {
+        "name": "A TO Z HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 4799.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 7.555138134174917,
+        "agreement_count": 3
+      },
+      {
+        "name": "ALLAY HOSPICE CARE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 1680.0,
+        "profit_margin": -20.04047619047619,
+        "anomaly_score": 9.961341594278736,
+        "agreement_count": 3
+      },
+      {
+        "name": "LIFELINK HOSPICE & PALLIATIVE CARE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 38754900.0,
+        "profit_margin": 0.3418618806912158,
+        "anomaly_score": 9.207734226071508,
+        "agreement_count": 3
+      },
+      {
+        "name": "QUEST HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 1986.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 7.906157306211962,
+        "agreement_count": 3
+      },
+      {
+        "name": "R AND A HOSPICE, INC.",
+        "county": "SAN MATEO",
+        "category_name": "HOSPICE",
+        "total_revenue": 62399.0,
+        "profit_margin": -10.654369461049056,
+        "anomaly_score": 7.8037265059167735,
+        "agreement_count": 3
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOSPICE",
+        "total_revenue": 20208923.0,
+        "profit_margin": 0.0933786031051729,
+        "anomaly_score": 10.091879528287205,
+        "agreement_count": 3
+      },
+      {
+        "name": "PRECIOUS LOVE HOSPICE",
+        "county": "RIVERSIDE",
+        "category_name": "HOSPICE",
+        "total_revenue": 568.0,
+        "profit_margin": 1.0,
+        "anomaly_score": 8.508008890570222,
+        "agreement_count": 3
+      },
+      {
+        "name": "BEST QUALITY CARE HOSPICE, INC.",
+        "county": "RIVERSIDE",
+        "category_name": "HOSPICE",
+        "total_revenue": 77696830.0,
+        "profit_margin": 0.03623697388941093,
+        "anomaly_score": 9.191047035941395,
+        "agreement_count": 3
+      },
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0,
+        "profit_margin": -0.12300986002102433,
+        "anomaly_score": 20.015024060666857,
+        "agreement_count": 3
+      },
+      {
+        "name": "SNOWLINE HEALTH",
+        "county": "EL DORADO",
+        "category_name": "HOSPICE",
+        "total_revenue": 13419161.0,
+        "profit_margin": -0.175791020019806,
+        "anomaly_score": 6.8665637987490165,
+        "agreement_count": 3
+      },
+      {
+        "name": "SNOWLINE HOSPICE",
+        "county": "SACRAMENTO",
+        "category_name": "HOSPICE",
+        "total_revenue": 13419161.0,
+        "profit_margin": -0.175791020019806,
+        "anomaly_score": 6.8665637987490165,
+        "agreement_count": 3
+      }
+    ]
+  },
+  "xgboost": {
+    "model": "XGBoost",
+    "train_samples": 4766,
+    "test_samples": 1118,
+    "accuracy": 0.9946332737030411,
+    "precision": 1.0,
+    "recall": 0.9381443298969072,
+    "f1_score": 0.9680851063829787,
+    "feature_importance": [
+      {
+        "feature": "total_visits",
+        "importance": 0.24532046914100647
+      },
+      {
+        "feature": "log_revenue",
+        "importance": 0.22482870519161224
+      },
+      {
+        "feature": "log_visits",
+        "importance": 0.17275868356227875
+      },
+      {
+        "feature": "total_revenue",
+        "importance": 0.13454163074493408
+      },
+      {
+        "feature": "net_income",
+        "importance": 0.09023021906614304
+      },
+      {
+        "feature": "total_expenses",
+        "importance": 0.058785151690244675
+      },
+      {
+        "feature": "expense_ratio",
+        "importance": 0.04691064730286598
+      },
+      {
+        "feature": "profit_margin",
+        "importance": 0.026624491438269615
+      },
+      {
+        "feature": "capacity",
+        "importance": 0.0
+      },
+      {
+        "feature": "total_patients",
+        "importance": 0.0
+      }
+    ]
+  },
+  "lightgbm": {
+    "model": "LightGBM",
+    "train_samples": 4766,
+    "test_samples": 1118,
+    "accuracy": 0.9946332737030411,
+    "precision": 1.0,
+    "recall": 0.9381443298969072,
+    "f1_score": 0.9680851063829787,
+    "feature_importance": [
+      {
+        "feature": "total_revenue",
+        "importance": 991.0
+      },
+      {
+        "feature": "net_income",
+        "importance": 870.0
+      },
+      {
+        "feature": "total_expenses",
+        "importance": 816.0
+      },
+      {
+        "feature": "profit_margin",
+        "importance": 659.0
+      },
+      {
+        "feature": "log_revenue",
+        "importance": 630.0
+      },
+      {
+        "feature": "expense_ratio",
+        "importance": 445.0
+      },
+      {
+        "feature": "total_visits",
+        "importance": 231.0
+      },
+      {
+        "feature": "log_visits",
+        "importance": 158.0
+      },
+      {
+        "feature": "capacity",
+        "importance": 0.0
+      },
+      {
+        "feature": "total_patients",
+        "importance": 0.0
+      }
+    ]
+  }
+}

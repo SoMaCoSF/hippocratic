@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-type ViewType = 'overview' | 'database' | 'traffic' | 'logs' | 'data' | 'fraud' | 'pandas';
+type ViewType = 'overview' | 'database' | 'traffic' | 'logs' | 'data' | 'fraud' | 'pandas' | 'ml';
 
 interface DataRecord {
   id: number;
@@ -197,6 +197,7 @@ export default function LCARSAdmin() {
           <NavTab label="DATA VIEW" active={currentView === 'data'} onClick={() => setCurrentView('data')} />
           <NavTab label="FRAUD DETECTION" active={currentView === 'fraud'} onClick={() => setCurrentView('fraud')} />
           <NavTab label="PANDAS ANALYSIS" active={currentView === 'pandas'} onClick={() => setCurrentView('pandas')} />
+          <NavTab label="ML DETECTION" active={currentView === 'ml'} onClick={() => setCurrentView('ml')} />
         </div>
 
         {/* Main Grid */}
@@ -224,6 +225,7 @@ export default function LCARSAdmin() {
             {currentView === 'data' && <DataPanel dataRecords={dataRecords} selectedRecord={selectedRecord} setSelectedRecord={setSelectedRecord} />}
             {currentView === 'fraud' && <FraudPanel />}
             {currentView === 'pandas' && <PandasPanel />}
+            {currentView === 'ml' && <MLDetectionPanel />}
           </div>
 
           {/* Right Panel - Scrapers */}
@@ -446,6 +448,175 @@ function FraudPanel() {
             )}
           </div>
         </div>
+      </div>
+    </>
+  );
+}
+
+function MLDetectionPanel() {
+  const [mlResults, setMlResults] = useState<any>(null);
+  const [highRisk, setHighRisk] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [selectedModel, setSelectedModel] = useState<string>('all');
+  
+  const runMLDetection = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/ml/run-all');
+      const data = await response.json();
+      setMlResults(data);
+      
+      // Fetch high-risk facilities
+      const riskResponse = await fetch('http://localhost:8000/api/ml/high-risk?limit=50');
+      const riskData = await riskResponse.json();
+      setHighRisk(riskData.high_risk_facilities || []);
+    } catch (error) {
+      console.error('Failed to run ML detection:', error);
+    }
+    setLoading(false);
+  };
+  
+  return (
+    <>
+      <div className="bg-gray-700 text-white p-3 rounded-2xl font-bold text-lg">
+        🤖 ML-POWERED FRAUD DETECTION (PyOD + XGBoost + LightGBM)
+      </div>
+      <div className="flex-1 bg-zinc-950 rounded-2xl p-6 overflow-y-auto border-2 border-gray-700">
+        
+        {/* Control Panel */}
+        <div className="mb-6">
+          <button
+            onClick={runMLDetection}
+            disabled={loading}
+            className="px-8 py-3 bg-green-700 hover:bg-green-600 text-white rounded-lg font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {loading ? '🔄 ANALYZING WITH 6 ML MODELS...' : '🚀 RUN COMPREHENSIVE ML ANALYSIS'}
+          </button>
+        </div>
+        
+        {loading && (
+          <div className="text-center py-12">
+            <div className="text-4xl mb-4">🤖</div>
+            <div className="text-white text-xl mb-2">Running Advanced ML Algorithms...</div>
+            <div className="text-gray-400">Isolation Forest • LOF • ECOD • Ensemble • XGBoost • LightGBM</div>
+          </div>
+        )}
+        
+        {/* Results Display */}
+        {mlResults && !loading && (
+          <div className="space-y-6">
+            
+            {/* Model Comparison Grid */}
+            <div className="grid grid-cols-3 gap-4">
+              {/* Unsupervised Models */}
+              {mlResults.models?.iforest && (
+                <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500">
+                  <div className="text-gray-400 text-sm">🌲 ISOLATION FOREST</div>
+                  <div className="text-white text-2xl font-bold">{mlResults.models.iforest.anomalies_detected}</div>
+                  <div className="text-gray-500 text-xs">{mlResults.models.iforest.anomaly_rate?.toFixed(1)}% anomaly rate</div>
+                </div>
+              )}
+              
+              {mlResults.models?.lof && (
+                <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-purple-500">
+                  <div className="text-gray-400 text-sm">🎯 LOCAL OUTLIER FACTOR</div>
+                  <div className="text-white text-2xl font-bold">{mlResults.models.lof.anomalies_detected}</div>
+                  <div className="text-gray-500 text-xs">{mlResults.models.lof.anomaly_rate?.toFixed(1)}% anomaly rate</div>
+                </div>
+              )}
+              
+              {mlResults.models?.ecod && (
+                <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-cyan-500">
+                  <div className="text-gray-400 text-sm">📊 ECOD</div>
+                  <div className="text-white text-2xl font-bold">{mlResults.models.ecod.anomalies_detected}</div>
+                  <div className="text-gray-500 text-xs">{mlResults.models.ecod.anomaly_rate?.toFixed(1)}% anomaly rate</div>
+                </div>
+              )}
+              
+              {/* Ensemble */}
+              {mlResults.models?.ensemble && (
+                <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-yellow-500">
+                  <div className="text-gray-400 text-sm">🎪 ENSEMBLE VOTING</div>
+                  <div className="text-yellow-400 text-2xl font-bold">{mlResults.models.ensemble.anomalies_detected}</div>
+                  <div className="text-gray-500 text-xs">2+ models agree</div>
+                </div>
+              )}
+              
+              {/* Supervised Models */}
+              {mlResults.models?.xgboost && (
+                <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-green-500">
+                  <div className="text-gray-400 text-sm">🚀 XGBOOST</div>
+                  <div className="text-green-400 text-2xl font-bold">F1: {mlResults.models.xgboost.f1_score?.toFixed(3)}</div>
+                  <div className="text-gray-500 text-xs">Precision: {mlResults.models.xgboost.precision?.toFixed(3)} | Recall: {mlResults.models.xgboost.recall?.toFixed(3)}</div>
+                </div>
+              )}
+              
+              {mlResults.models?.lightgbm && (
+                <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-green-500">
+                  <div className="text-gray-400 text-sm">⚡ LIGHTGBM</div>
+                  <div className="text-green-400 text-2xl font-bold">F1: {mlResults.models.lightgbm.f1_score?.toFixed(3)}</div>
+                  <div className="text-gray-500 text-xs">Precision: {mlResults.models.lightgbm.precision?.toFixed(3)} | Recall: {mlResults.models.lightgbm.recall?.toFixed(3)}</div>
+                </div>
+              )}
+            </div>
+            
+            {/* High-Risk Facilities */}
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-white font-bold mb-3">🚨 HIGH-RISK FACILITIES (Multiple Models Agreement)</h3>
+              <div className="text-gray-400 text-sm mb-3">
+                These facilities were flagged by 2 or more ML algorithms as high-risk for fraud
+              </div>
+              <div className="space-y-2 max-h-96 overflow-y-auto">
+                {highRisk.map((facility: any, idx: number) => (
+                  <div key={idx} className="p-3 bg-red-900/20 rounded border-l-4 border-red-500">
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <div className="text-white font-bold">#{idx + 1} {facility.name}</div>
+                        <div className="text-gray-400 text-sm">{facility.county} County • {facility.category_name}</div>
+                        <div className="flex gap-4 mt-1 text-xs">
+                          <span className="text-green-400">Revenue: ${facility.total_revenue?.toLocaleString()}</span>
+                          <span className={`${(facility.profit_margin || 0) < 0 ? 'text-red-400' : 'text-green-400'}`}>
+                            Margin: {((facility.profit_margin || 0) * 100).toFixed(1)}%
+                          </span>
+                        </div>
+                      </div>
+                      <div className="bg-red-600 text-white px-3 py-1 rounded text-xs font-bold">
+                        {facility.agreement_count || 3} MODELS
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                
+                {highRisk.length === 0 && (
+                  <div className="text-center text-gray-500 py-8">
+                    No high-risk facilities detected
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            {/* Feature Importance (XGBoost) */}
+            {mlResults.models?.xgboost?.feature_importance && (
+              <div className="bg-gray-800 rounded-lg p-4">
+                <h3 className="text-white font-bold mb-3">🎯 TOP FRAUD INDICATORS (XGBoost Feature Importance)</h3>
+                <div className="space-y-2">
+                  {mlResults.models.xgboost.feature_importance.slice(0, 10).map((feat: any, idx: number) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <div className="text-gray-400 text-sm w-48">{feat.feature}</div>
+                      <div className="flex-1 bg-gray-700 rounded-full h-4">
+                        <div 
+                          className="bg-green-500 h-4 rounded-full"
+                          style={{ width: `${feat.importance * 100}%` }}
+                        ></div>
+                      </div>
+                      <div className="text-white text-sm w-16 text-right">{(feat.importance * 100).toFixed(1)}%</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </>
   );

@@ -447,6 +447,92 @@ class HippocraticAdmin:
             except Exception as e:
                 raise HTTPException(500, f"Failed to get correlation: {str(e)}")
         
+        @self.app.get("/api/ml/run-all")
+        async def run_ml_fraud_detection(contamination: float = 0.1):
+            """Run all ML fraud detection models."""
+            try:
+                from ml_fraud_detector import MLFraudDetector
+                detector = MLFraudDetector()
+                results = detector.run_all_models(contamination)
+                return JSONResponse(results)
+            except Exception as e:
+                raise HTTPException(500, f"ML detection failed: {str(e)}")
+        
+        @self.app.get("/api/ml/isolation-forest")
+        async def run_isolation_forest(contamination: float = 0.1):
+            """Run Isolation Forest anomaly detection."""
+            try:
+                from ml_fraud_detector import MLFraudDetector
+                detector = MLFraudDetector()
+                result = detector.run_isolation_forest(contamination)
+                return JSONResponse(result)
+            except Exception as e:
+                raise HTTPException(500, f"Isolation Forest failed: {str(e)}")
+        
+        @self.app.get("/api/ml/lof")
+        async def run_lof(contamination: float = 0.1):
+            """Run Local Outlier Factor detection."""
+            try:
+                from ml_fraud_detector import MLFraudDetector
+                detector = MLFraudDetector()
+                result = detector.run_lof(contamination)
+                return JSONResponse(result)
+            except Exception as e:
+                raise HTTPException(500, f"LOF failed: {str(e)}")
+        
+        @self.app.get("/api/ml/ensemble")
+        async def run_ensemble():
+            """Run ensemble voting fraud detection."""
+            try:
+                from ml_fraud_detector import MLFraudDetector
+                detector = MLFraudDetector()
+                # Run individual models first
+                detector.run_isolation_forest(0.1)
+                detector.run_lof(0.1)
+                detector.run_ecod(0.1)
+                result = detector.run_ensemble_voting()
+                return JSONResponse(result)
+            except Exception as e:
+                raise HTTPException(500, f"Ensemble failed: {str(e)}")
+        
+        @self.app.get("/api/ml/xgboost")
+        async def run_xgboost():
+            """Run XGBoost supervised fraud classification."""
+            try:
+                from ml_fraud_detector import MLFraudDetector
+                detector = MLFraudDetector()
+                result = detector.train_xgboost()
+                return JSONResponse(result)
+            except Exception as e:
+                raise HTTPException(500, f"XGBoost failed: {str(e)}")
+        
+        @self.app.get("/api/ml/lightgbm")
+        async def run_lightgbm():
+            """Run LightGBM supervised fraud classification."""
+            try:
+                from ml_fraud_detector import MLFraudDetector
+                detector = MLFraudDetector()
+                result = detector.train_lightgbm()
+                return JSONResponse(result)
+            except Exception as e:
+                raise HTTPException(500, f"LightGBM failed: {str(e)}")
+        
+        @self.app.get("/api/ml/high-risk")
+        async def get_high_risk_facilities(limit: int = 50):
+            """Get high-risk facilities identified by ML models."""
+            try:
+                from ml_fraud_detector import MLFraudDetector
+                detector = MLFraudDetector()
+                # Run ensemble
+                detector.run_isolation_forest(0.1)
+                detector.run_lof(0.1)
+                detector.run_ecod(0.1)
+                detector.run_ensemble_voting()
+                facilities = detector.get_high_risk_facilities(limit)
+                return JSONResponse({'high_risk_facilities': facilities, 'total': len(facilities)})
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get high-risk facilities: {str(e)}")
+        
         @self.app.get("/api/scraper/validate/{scraper_name}")
         async def validate_scraper_sources(scraper_name: str):
             """Validate all data sources for a scraper."""
