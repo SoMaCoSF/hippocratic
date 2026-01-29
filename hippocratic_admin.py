@@ -23,6 +23,10 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, List, Optional
 
+# Fix Unicode encoding for Windows console
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
+
 # FastAPI for admin panel
 try:
     from fastapi import FastAPI, HTTPException, BackgroundTasks
