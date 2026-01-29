@@ -1,0 +1,1788 @@
+{
+  "generated_at": "2026-01-28T20:08:59.772037",
+  "summary": {
+    "facilities": {
+      "total": 15743,
+      "with_capacity": 0,
+      "total_capacity": 0,
+      "counties": 58,
+      "categories": 21
+    },
+    "financials": {
+      "total_records": 8484,
+      "unique_facilities": 4156,
+      "years": [
+        2024
+      ],
+      "total_revenue": 10467495652.0,
+      "total_expenses": 9486345210.0,
+      "total_net_income": 981150442.0
+    },
+    "coverage": {
+      "facilities_with_financials": 4207,
+      "coverage_percentage": 26.722987994664294
+    }
+  },
+  "data_profile_facilities": {
+    "table": "facilities",
+    "total_rows": 15743,
+    "total_columns": 18,
+    "memory_usage": "12.82 MB",
+    "columns": {
+      "id": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 15743,
+        "avg_length": 9.0,
+        "max_length": 9,
+        "most_common": "010000001"
+      },
+      "name": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 14761,
+        "avg_length": 28.94302229562345,
+        "max_length": 100,
+        "most_common": "UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY"
+      },
+      "license_number": {
+        "dtype": "str",
+        "null_count": 1349,
+        "null_percentage": 8.568887759639205,
+        "unique_count": 12181,
+        "avg_length": 9.0,
+        "max_length": 9,
+        "most_common": "040000149"
+      },
+      "category_code": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 42,
+        "avg_length": 4.845899764974909,
+        "max_length": 11,
+        "most_common": "HHA"
+      },
+      "category_name": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 21,
+        "avg_length": 18.781045544051324,
+        "max_length": 44,
+        "most_common": "HOME HEALTH AGENCY"
+      },
+      "address": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 15114,
+        "avg_length": 23.433081369497554,
+        "max_length": 67,
+        "most_common": "2067 W EL NORTE PKWY"
+      },
+      "city": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 715,
+        "avg_length": 9.232357238137585,
+        "max_length": 21,
+        "most_common": "LOS ANGELES"
+      },
+      "county": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 58,
+        "avg_length": 9.682525566918631,
+        "max_length": 15,
+        "most_common": "LOS ANGELES"
+      },
+      "zip": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1184,
+        "avg_length": 5.0,
+        "max_length": 5,
+        "most_common": "91411"
+      },
+      "phone": {
+        "dtype": "str",
+        "null_count": 1482,
+        "null_percentage": 9.413707679603633,
+        "unique_count": 12689,
+        "avg_length": 13.99964939345067,
+        "max_length": 14,
+        "most_common": "(209) 385-5554"
+      },
+      "lat": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 11682,
+        "mean": 35.11170055915455,
+        "median": 34.179561,
+        "std": 1.8721801690362345,
+        "min": 32.558553,
+        "max": 42.055875,
+        "q25": 34.042122,
+        "q75": 36.706642785
+      },
+      "lng": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 11845,
+        "mean": -119.07767619590294,
+        "median": -118.40454,
+        "std": 1.7225831161340392,
+        "min": -124.2885825,
+        "max": -114.3931185,
+        "q25": -120.05000100000001,
+        "q75": -118.0692495
+      },
+      "in_service": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2,
+        "mean": 0.8895382074572826,
+        "median": 1.0,
+        "std": 0.31347444366432453,
+        "min": 0.0,
+        "max": 1.0,
+        "q25": 1.0,
+        "q75": 1.0
+      },
+      "business_name": {
+        "dtype": "str",
+        "null_count": 1514,
+        "null_percentage": 9.61697262275297,
+        "unique_count": 9721,
+        "avg_length": 28.27964017148078,
+        "max_length": 74,
+        "most_common": "ALTAMED HEALTH SERVICES CORPORATION"
+      },
+      "owner_name": {
+        "dtype": "object",
+        "null_count": 15743,
+        "null_percentage": 100.0,
+        "unique_count": 0
+      },
+      "admin_name": {
+        "dtype": "object",
+        "null_count": 15743,
+        "null_percentage": 100.0,
+        "unique_count": 0
+      },
+      "capacity": {
+        "dtype": "object",
+        "null_count": 15743,
+        "null_percentage": 100.0,
+        "unique_count": 0
+      },
+      "created_at": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1,
+        "avg_length": 19.0,
+        "max_length": 19,
+        "most_common": "2026-01-29 00:41:02"
+      }
+    },
+    "timestamp": "2026-01-28T20:09:00.097952"
+  },
+  "data_profile_financials": {
+    "table": "financials",
+    "total_rows": 8484,
+    "total_columns": 13,
+    "memory_usage": "3.08 MB",
+    "columns": {
+      "id": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 8484,
+        "mean": 4242.5,
+        "median": 4242.5,
+        "std": 2449.264175216712,
+        "min": 1.0,
+        "max": 8484.0,
+        "q25": 2121.75,
+        "q75": 6363.25
+      },
+      "facility_id": {
+        "dtype": "object",
+        "null_count": 8484,
+        "null_percentage": 100.0,
+        "unique_count": 0
+      },
+      "oshpd_id": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 4242,
+        "avg_length": 9.0,
+        "max_length": 9,
+        "most_common": "406010021"
+      },
+      "facility_name": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 4101,
+        "avg_length": 27.342291371994342,
+        "max_length": 65,
+        "most_common": "AVEANNA HEALTHCARE"
+      },
+      "license_number": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 4156,
+        "avg_length": 9.0,
+        "max_length": 9,
+        "most_common": "550001137"
+      },
+      "year": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1,
+        "mean": 2024.0,
+        "median": 2024.0,
+        "std": 0.0,
+        "min": 2024.0,
+        "max": 2024.0,
+        "q25": 2024.0,
+        "q75": 2024.0
+      },
+      "total_revenue": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1796,
+        "mean": 1233792.5096652522,
+        "median": 0.0,
+        "std": 8694766.823303133,
+        "min": -13352.0,
+        "max": 516978208.0,
+        "q25": 0.0,
+        "q75": 1015337.0
+      },
+      "total_expenses": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1773,
+        "mean": 1118145.357142857,
+        "median": 0.0,
+        "std": 9594087.42919471,
+        "min": 0.0,
+        "max": 580571625.0,
+        "q25": 0.0,
+        "q75": 850970.0
+      },
+      "net_income": {
+        "dtype": "float64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 1817,
+        "mean": 115647.1525223951,
+        "median": 0.0,
+        "std": 2430189.6663992354,
+        "min": -101392176.0,
+        "max": 76046338.0,
+        "q25": 0.0,
+        "q75": 41405.0
+      },
+      "total_visits": {
+        "dtype": "int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2071,
+        "mean": 2864.0021216407354,
+        "median": 320.0,
+        "std": 7084.430516143119,
+        "min": 0.0,
+        "max": 220510.0,
+        "q25": 0.0,
+        "q75": 3408.0
+      },
+      "total_patients": {
+        "dtype": "object",
+        "null_count": 8484,
+        "null_percentage": 100.0,
+        "unique_count": 0
+      },
+      "revenue_per_visit": {
+        "dtype": "object",
+        "null_count": 8484,
+        "null_percentage": 100.0,
+        "unique_count": 0
+      },
+      "created_at": {
+        "dtype": "str",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2,
+        "avg_length": 19.0,
+        "max_length": 19,
+        "most_common": "2026-01-29 00:04:30"
+      }
+    },
+    "timestamp": "2026-01-28T20:09:00.435535"
+  },
+  "county_analysis": {
+    "counties": [
+      {
+        "county": "ALAMEDA",
+        "facility_id_count": 699,
+        "capacity_sum": 0,
+        "total_revenue_sum": 536718428.0,
+        "total_revenue_mean": 2217844.74,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 75567208.0,
+        "net_income_mean": 312261.19,
+        "total_visits_sum": 1479354.0
+      },
+      {
+        "county": "AMADOR",
+        "facility_id_count": 15,
+        "capacity_sum": 0,
+        "total_revenue_sum": 20107156.0,
+        "total_revenue_mean": 3351192.67,
+        "total_revenue_median": 5026789.0,
+        "net_income_sum": 2094876.0,
+        "net_income_mean": 349146.0,
+        "total_visits_sum": 20062.0
+      },
+      {
+        "county": "BUTTE",
+        "facility_id_count": 93,
+        "capacity_sum": 0,
+        "total_revenue_sum": 13179004.0,
+        "total_revenue_mean": 1098250.33,
+        "total_revenue_median": 0.0,
+        "net_income_sum": -381130.0,
+        "net_income_mean": -31760.83,
+        "total_visits_sum": 80186.0
+      },
+      {
+        "county": "CALAVERAS",
+        "facility_id_count": 14,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "total_revenue_median": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "COLUSA",
+        "facility_id_count": 13,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": 0.0,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 0.0,
+        "net_income_mean": 0.0,
+        "total_visits_sum": 19534.0
+      },
+      {
+        "county": "CONTRA COSTA",
+        "facility_id_count": 378,
+        "capacity_sum": 0,
+        "total_revenue_sum": 528482328.0,
+        "total_revenue_mean": 3523215.52,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 82147168.0,
+        "net_income_mean": 547647.79,
+        "total_visits_sum": 601052.0
+      },
+      {
+        "county": "CURRY",
+        "facility_id_count": 4,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": 0.0,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 0.0,
+        "net_income_mean": 0.0,
+        "total_visits_sum": 11330.0
+      },
+      {
+        "county": "DEL NORTE",
+        "facility_id_count": 25,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": 0.0,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 0.0,
+        "net_income_mean": 0.0,
+        "total_visits_sum": 11330.0
+      },
+      {
+        "county": "EL DORADO",
+        "facility_id_count": 39,
+        "capacity_sum": 0,
+        "total_revenue_sum": 50591032.0,
+        "total_revenue_mean": 3613645.14,
+        "total_revenue_median": 726351.0,
+        "net_income_sum": 298144.0,
+        "net_income_mean": 21296.0,
+        "total_visits_sum": 47278.0
+      },
+      {
+        "county": "FRESNO",
+        "facility_id_count": 424,
+        "capacity_sum": 0,
+        "total_revenue_sum": 201901788.0,
+        "total_revenue_mean": 2019017.88,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 31101972.0,
+        "net_income_mean": 311019.72,
+        "total_visits_sum": 514080.0
+      },
+      {
+        "county": "GLENN",
+        "facility_id_count": 13,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "total_revenue_median": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "HUMBOLDT",
+        "facility_id_count": 77,
+        "capacity_sum": 0,
+        "total_revenue_sum": 22283520.0,
+        "total_revenue_mean": 5570880.0,
+        "total_revenue_median": 5570880.0,
+        "net_income_sum": 1125582.0,
+        "net_income_mean": 281395.5,
+        "total_visits_sum": 24240.0
+      },
+      {
+        "county": "IMPERIAL",
+        "facility_id_count": 52,
+        "capacity_sum": 0,
+        "total_revenue_sum": 23634820.0,
+        "total_revenue_mean": 1969568.33,
+        "total_revenue_median": 1250751.0,
+        "net_income_sum": 919686.0,
+        "net_income_mean": 76640.5,
+        "total_visits_sum": 52216.0
+      },
+      {
+        "county": "INYO",
+        "facility_id_count": 16,
+        "capacity_sum": 0,
+        "total_revenue_sum": 590116.0,
+        "total_revenue_mean": 147529.0,
+        "total_revenue_median": 147529.0,
+        "net_income_sum": 220610.0,
+        "net_income_mean": 55152.5,
+        "total_visits_sum": 2856.0
+      },
+      {
+        "county": "KERN",
+        "facility_id_count": 326,
+        "capacity_sum": 0,
+        "total_revenue_sum": 197456214.0,
+        "total_revenue_mean": 2531489.92,
+        "total_revenue_median": 272431.0,
+        "net_income_sum": 55545502.0,
+        "net_income_mean": 712121.82,
+        "total_visits_sum": 265412.0
+      },
+      {
+        "county": "KINGS",
+        "facility_id_count": 51,
+        "capacity_sum": 0,
+        "total_revenue_sum": 14789520.0,
+        "total_revenue_mean": 3697380.0,
+        "total_revenue_median": 3697380.0,
+        "net_income_sum": 1301772.0,
+        "net_income_mean": 325443.0,
+        "total_visits_sum": 54716.0
+      },
+      {
+        "county": "LAKE",
+        "facility_id_count": 32,
+        "capacity_sum": 0,
+        "total_revenue_sum": 7605662.0,
+        "total_revenue_mean": 1267610.33,
+        "total_revenue_median": 0.0,
+        "net_income_sum": -1161184.0,
+        "net_income_mean": -193530.67,
+        "total_visits_sum": 23422.0
+      },
+      {
+        "county": "LASSEN",
+        "facility_id_count": 14,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": 0.0,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 0.0,
+        "net_income_mean": 0.0,
+        "total_visits_sum": 6254.0
+      },
+      {
+        "county": "LOS ANGELES",
+        "facility_id_count": 9930,
+        "capacity_sum": 0,
+        "total_revenue_sum": 3647670216.0,
+        "total_revenue_mean": 669051.76,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 463059750.0,
+        "net_income_mean": 84933.92,
+        "total_visits_sum": 12508288.0
+      },
+      {
+        "county": "MADERA",
+        "facility_id_count": 65,
+        "capacity_sum": 0,
+        "total_revenue_sum": 45939976.0,
+        "total_revenue_mean": 5742497.0,
+        "total_revenue_median": 51838.5,
+        "net_income_sum": 4515512.0,
+        "net_income_mean": 564439.0,
+        "total_visits_sum": 39176.0
+      },
+      {
+        "county": "MARIN",
+        "facility_id_count": 104,
+        "capacity_sum": 0,
+        "total_revenue_sum": 88482344.0,
+        "total_revenue_mean": 3403167.08,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 6008760.0,
+        "net_income_mean": 231106.15,
+        "total_visits_sum": 71916.0
+      },
+      {
+        "county": "MARIPOSA",
+        "facility_id_count": 11,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "total_revenue_median": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "MENDOCINO",
+        "facility_id_count": 50,
+        "capacity_sum": 0,
+        "total_revenue_sum": 6864448.0,
+        "total_revenue_mean": 1144074.67,
+        "total_revenue_median": 1716112.0,
+        "net_income_sum": -1058356.0,
+        "net_income_mean": -176392.67,
+        "total_visits_sum": 26524.0
+      },
+      {
+        "county": "MERCED",
+        "facility_id_count": 84,
+        "capacity_sum": 0,
+        "total_revenue_sum": 22362490.0,
+        "total_revenue_mean": 3727081.67,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 7715620.0,
+        "net_income_mean": 1285936.67,
+        "total_visits_sum": 19780.0
+      },
+      {
+        "county": "MODOC",
+        "facility_id_count": 8,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "total_revenue_median": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "MONO",
+        "facility_id_count": 4,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "total_revenue_median": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "MONTEREY",
+        "facility_id_count": 132,
+        "capacity_sum": 0,
+        "total_revenue_sum": 44524384.0,
+        "total_revenue_mean": 1309540.71,
+        "total_revenue_median": 0.0,
+        "net_income_sum": -14156042.0,
+        "net_income_mean": -416354.18,
+        "total_visits_sum": 324434.0
+      },
+      {
+        "county": "NAPA",
+        "facility_id_count": 51,
+        "capacity_sum": 0,
+        "total_revenue_sum": 26481908.0,
+        "total_revenue_mean": 1891564.86,
+        "total_revenue_median": 1527442.0,
+        "net_income_sum": 2348748.0,
+        "net_income_mean": 167767.71,
+        "total_visits_sum": 37380.0
+      },
+      {
+        "county": "NEVADA",
+        "facility_id_count": 36,
+        "capacity_sum": 0,
+        "total_revenue_sum": 23423460.0,
+        "total_revenue_mean": 2927932.5,
+        "total_revenue_median": 387418.5,
+        "net_income_sum": 4124264.0,
+        "net_income_mean": 515533.0,
+        "total_visits_sum": 16878.0
+      },
+      {
+        "county": "ORANGE",
+        "facility_id_count": 1196,
+        "capacity_sum": 0,
+        "total_revenue_sum": 846023362.0,
+        "total_revenue_mean": 1940420.56,
+        "total_revenue_median": 108268.0,
+        "net_income_sum": 231388660.0,
+        "net_income_mean": 530707.94,
+        "total_visits_sum": 1266452.0
+      },
+      {
+        "county": "PLACER",
+        "facility_id_count": 91,
+        "capacity_sum": 0,
+        "total_revenue_sum": 196558284.0,
+        "total_revenue_mean": 5459952.33,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 37588410.0,
+        "net_income_mean": 1044122.5,
+        "total_visits_sum": 341180.0
+      },
+      {
+        "county": "PLUMAS",
+        "facility_id_count": 16,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": 0.0,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 0.0,
+        "net_income_mean": 0.0,
+        "total_visits_sum": 6254.0
+      },
+      {
+        "county": "RIVERSIDE",
+        "facility_id_count": 745,
+        "capacity_sum": 0,
+        "total_revenue_sum": 635708200.0,
+        "total_revenue_mean": 2389880.45,
+        "total_revenue_median": 80793.0,
+        "net_income_sum": 28157764.0,
+        "net_income_mean": 105856.26,
+        "total_visits_sum": 1016296.0
+      },
+      {
+        "county": "SACRAMENTO",
+        "facility_id_count": 491,
+        "capacity_sum": 0,
+        "total_revenue_sum": 522961802.0,
+        "total_revenue_mean": 2377099.1,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 30246968.0,
+        "net_income_mean": 137486.22,
+        "total_visits_sum": 933052.0
+      },
+      {
+        "county": "SAN BENITO",
+        "facility_id_count": 13,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "total_revenue_median": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "SAN BERNARDINO",
+        "facility_id_count": 1004,
+        "capacity_sum": 0,
+        "total_revenue_sum": 612555586.0,
+        "total_revenue_mean": 1230031.3,
+        "total_revenue_median": 331112.0,
+        "net_income_sum": 166529242.0,
+        "net_income_mean": 334396.07,
+        "total_visits_sum": 1289970.0
+      },
+      {
+        "county": "SAN DIEGO",
+        "facility_id_count": 1049,
+        "capacity_sum": 0,
+        "total_revenue_sum": 1917531972.0,
+        "total_revenue_mean": 6897597.02,
+        "total_revenue_median": 0.0,
+        "net_income_sum": -25780928.0,
+        "net_income_mean": -92737.15,
+        "total_visits_sum": 1246006.0
+      },
+      {
+        "county": "SAN FRANCISCO",
+        "facility_id_count": 216,
+        "capacity_sum": 0,
+        "total_revenue_sum": 127428054.0,
+        "total_revenue_mean": 4247601.8,
+        "total_revenue_median": 0.0,
+        "net_income_sum": -570854.0,
+        "net_income_mean": -19028.47,
+        "total_visits_sum": 132634.0
+      },
+      {
+        "county": "SAN JOAQUIN",
+        "facility_id_count": 262,
+        "capacity_sum": 0,
+        "total_revenue_sum": 235234306.0,
+        "total_revenue_mean": 3095188.24,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 35844988.0,
+        "net_income_mean": 471644.58,
+        "total_visits_sum": 233920.0
+      },
+      {
+        "county": "SAN LUIS OBISPO",
+        "facility_id_count": 167,
+        "capacity_sum": 0,
+        "total_revenue_sum": 233469062.0,
+        "total_revenue_mean": 3891151.03,
+        "total_revenue_median": 309400.0,
+        "net_income_sum": 38562268.0,
+        "net_income_mean": 642704.47,
+        "total_visits_sum": 756564.0
+      },
+      {
+        "county": "SAN MATEO",
+        "facility_id_count": 235,
+        "capacity_sum": 0,
+        "total_revenue_sum": 340672148.0,
+        "total_revenue_mean": 3476246.41,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 48103742.0,
+        "net_income_mean": 490854.51,
+        "total_visits_sum": 609234.0
+      },
+      {
+        "county": "SANTA BARBARA",
+        "facility_id_count": 173,
+        "capacity_sum": 0,
+        "total_revenue_sum": 185014202.0,
+        "total_revenue_mean": 3557965.42,
+        "total_revenue_median": 1540476.0,
+        "net_income_sum": 30487672.0,
+        "net_income_mean": 586301.38,
+        "total_visits_sum": 430204.0
+      },
+      {
+        "county": "SANTA CLARA",
+        "facility_id_count": 442,
+        "capacity_sum": 0,
+        "total_revenue_sum": 239268242.0,
+        "total_revenue_mean": 1684987.62,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 20502906.0,
+        "net_income_mean": 144386.66,
+        "total_visits_sum": 592934.0
+      },
+      {
+        "county": "SANTA CRUZ",
+        "facility_id_count": 70,
+        "capacity_sum": 0,
+        "total_revenue_sum": 139884252.0,
+        "total_revenue_mean": 11657021.0,
+        "total_revenue_median": 10919065.0,
+        "net_income_sum": 7026704.0,
+        "net_income_mean": 585558.67,
+        "total_visits_sum": 64928.0
+      },
+      {
+        "county": "SHASTA",
+        "facility_id_count": 100,
+        "capacity_sum": 0,
+        "total_revenue_sum": 23888784.0,
+        "total_revenue_mean": 853170.86,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 4157036.0,
+        "net_income_mean": 148465.57,
+        "total_visits_sum": 141614.0
+      },
+      {
+        "county": "SIERRA",
+        "facility_id_count": 4,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "total_revenue_median": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "SISKIYOU",
+        "facility_id_count": 27,
+        "capacity_sum": 0,
+        "total_revenue_sum": 5766176.0,
+        "total_revenue_mean": 1441544.0,
+        "total_revenue_median": 1441544.0,
+        "net_income_sum": 94898.0,
+        "net_income_mean": 23724.5,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "SOLANO",
+        "facility_id_count": 141,
+        "capacity_sum": 0,
+        "total_revenue_sum": 104149584.0,
+        "total_revenue_mean": 2002876.62,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 7146550.0,
+        "net_income_mean": 137433.65,
+        "total_visits_sum": 338864.0
+      },
+      {
+        "county": "SONOMA",
+        "facility_id_count": 149,
+        "capacity_sum": 0,
+        "total_revenue_sum": 313502526.0,
+        "total_revenue_mean": 10450084.2,
+        "total_revenue_median": 15924.0,
+        "net_income_sum": 39053040.0,
+        "net_income_mean": 1301768.0,
+        "total_visits_sum": 167596.0
+      },
+      {
+        "county": "STANISLAUS",
+        "facility_id_count": 186,
+        "capacity_sum": 0,
+        "total_revenue_sum": 203910648.0,
+        "total_revenue_mean": 3641261.57,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 29952040.0,
+        "net_income_mean": 534857.86,
+        "total_visits_sum": 338876.0
+      },
+      {
+        "county": "SUTTER",
+        "facility_id_count": 43,
+        "capacity_sum": 0,
+        "total_revenue_sum": 16209876.0,
+        "total_revenue_mean": 1157848.29,
+        "total_revenue_median": 0.0,
+        "net_income_sum": 122986.0,
+        "net_income_mean": 8784.71,
+        "total_visits_sum": 178520.0
+      },
+      {
+        "county": "TEHAMA",
+        "facility_id_count": 23,
+        "capacity_sum": 0,
+        "total_revenue_sum": 9062606.0,
+        "total_revenue_mean": 1510434.33,
+        "total_revenue_median": 998582.0,
+        "net_income_sum": -601800.0,
+        "net_income_mean": -100300.0,
+        "total_visits_sum": 10348.0
+      },
+      {
+        "county": "TRINITY",
+        "facility_id_count": 7,
+        "capacity_sum": 0,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "total_revenue_median": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "county": "TULARE",
+        "facility_id_count": 183,
+        "capacity_sum": 0,
+        "total_revenue_sum": 127974326.0,
+        "total_revenue_mean": 7109684.78,
+        "total_revenue_median": 3777911.0,
+        "net_income_sum": 43889478.0,
+        "net_income_mean": 2438304.33,
+        "total_visits_sum": 61702.0
+      },
+      {
+        "county": "TUOLUMNE",
+        "facility_id_count": 22,
+        "capacity_sum": 0,
+        "total_revenue_sum": 6898266.0,
+        "total_revenue_mean": 1724566.5,
+        "total_revenue_median": 1724566.5,
+        "net_income_sum": -1342006.0,
+        "net_income_mean": -335501.5,
+        "total_visits_sum": 27966.0
+      },
+      {
+        "county": "VENTURA",
+        "facility_id_count": 529,
+        "capacity_sum": 0,
+        "total_revenue_sum": 324728796.0,
+        "total_revenue_mean": 1278459.83,
+        "total_revenue_median": 0.0,
+        "net_income_sum": -170485370.0,
+        "net_income_mean": -671202.24,
+        "total_visits_sum": 732702.0
+      },
+      {
+        "county": "YOLO",
+        "facility_id_count": 49,
+        "capacity_sum": 0,
+        "total_revenue_sum": 30436692.0,
+        "total_revenue_mean": 7609173.0,
+        "total_revenue_median": 7609173.0,
+        "net_income_sum": 3101414.0,
+        "net_income_mean": 775353.5,
+        "total_visits_sum": 6342.0
+      },
+      {
+        "county": "YUBA",
+        "facility_id_count": 25,
+        "capacity_sum": 0,
+        "total_revenue_sum": 21633364.0,
+        "total_revenue_mean": 5408341.0,
+        "total_revenue_median": 5408341.0,
+        "net_income_sum": 4558238.0,
+        "net_income_mean": 1139559.5,
+        "total_visits_sum": 22640.0
+      }
+    ],
+    "total_counties": 58,
+    "top_revenue_county": "LOS ANGELES",
+    "top_facilities_county": "LOS ANGELES"
+  },
+  "category_analysis": {
+    "categories": [
+      {
+        "category_name": "ACUTE PSYCHIATRIC HOSPITAL",
+        "facility_id_count": 126,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "ADULT DAY HEALTH CARE",
+        "facility_id_count": 338,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "ALTERNATIVE BIRTHING CENTER",
+        "facility_id_count": 6,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "CHEMICAL DEPENDENCY RECOVERY HOSPITAL",
+        "facility_id_count": 10,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "CHRONIC DIALYSIS CLINIC",
+        "facility_id_count": 752,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "CONGREGATE LIVING HEALTH FACILITY",
+        "facility_id_count": 261,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "CORRECTIONAL TREATMENT CENTER",
+        "facility_id_count": 20,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "GENERAL ACUTE CARE HOSPITAL",
+        "facility_id_count": 435,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "HOME HEALTH AGENCY",
+        "facility_id_count": 7046,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 332355742.0,
+        "total_revenue_mean": 64938.6,
+        "net_income_sum": 24627996.0,
+        "net_income_mean": 4812.04,
+        "total_visits_sum": 26638282.0
+      },
+      {
+        "category_name": "HOSPICE",
+        "facility_id_count": 4609,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 12611204188.0,
+        "total_revenue_mean": 3350479.33,
+        "net_income_sum": 1304444512.0,
+        "net_income_mean": 346558.05,
+        "total_visits_sum": 566214.0
+      },
+      {
+        "category_name": "HOSPICE FACILITY",
+        "facility_id_count": 13,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "INTERMEDIATE CARE FACILITY",
+        "facility_id_count": 8,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "INTERMEDIATE CARE FACILITY-DD/H/N/CN/IID",
+        "facility_id_count": 978,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "OTHER",
+        "facility_id_count": 202,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "PEDIATRIC DAY HEALTH & RESPITE CARE FACILITY",
+        "facility_id_count": 26,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "PRIMARY CARE CLINIC",
+        "facility_id_count": 3284,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "PSYCHOLOGY CLINIC",
+        "facility_id_count": 30,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "REFERRAL AGENCY",
+        "facility_id_count": 4,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "REHABILITATION CLINIC",
+        "facility_id_count": 86,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "SKILLED NURSING FACILITY",
+        "facility_id_count": 1191,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      },
+      {
+        "category_name": "SURGICAL CLINIC",
+        "facility_id_count": 993,
+        "capacity_sum": 0,
+        "capacity_mean": NaN,
+        "total_revenue_sum": 0.0,
+        "total_revenue_mean": NaN,
+        "net_income_sum": 0.0,
+        "net_income_mean": NaN,
+        "total_visits_sum": 0.0
+      }
+    ],
+    "total_categories": 21
+  },
+  "revenue_distribution": {
+    "bins": [
+      "$1 - $51,697,821",
+      "$51,697,821 - $103,395,642",
+      "$103,395,642 - $155,093,463",
+      "$155,093,463 - $206,791,283",
+      "$206,791,283 - $258,489,104",
+      "$258,489,104 - $310,186,925",
+      "$310,186,925 - $361,884,745",
+      "$361,884,745 - $413,582,566",
+      "$413,582,566 - $465,280,387",
+      "$465,280,387 - $516,978,208"
+    ],
+    "counts": [
+      3584,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "total": 3592,
+    "mean_revenue": 2914128.295100223,
+    "median_revenue": 1303514.0,
+    "total_revenue": 10467548836.0
+  },
+  "capacity_analysis": {
+    "total": 0
+  },
+  "time_series": {
+    "years": [
+      2024
+    ],
+    "data": [
+      {
+        "year": 2024,
+        "total_revenue_sum": 10467495652.0,
+        "total_revenue_mean": 1233792.51,
+        "total_revenue_count": 8484,
+        "total_expenses_sum": 9486345210.0,
+        "total_expenses_mean": 1118145.36,
+        "net_income_sum": 981150442.0,
+        "net_income_mean": 115647.15,
+        "total_visits_sum": 24298194
+      }
+    ]
+  },
+  "correlation": {
+    "columns": [],
+    "matrix": []
+  },
+  "outliers_revenue": {
+    "column": "total_revenue",
+    "threshold": 3.0,
+    "lower_bound": -3174537.0,
+    "upper_bound": 4232716.0,
+    "outlier_count": 630,
+    "total_count": 8882,
+    "outlier_percentage": 7.092997072731366,
+    "outliers": [
+      {
+        "name": "ASSISTED HOSPICE CARE",
+        "county": "LOS ANGELES",
+        "total_revenue": 5750051.0
+      },
+      {
+        "name": "ASSISTED HOSPICE CARE",
+        "county": "LOS ANGELES",
+        "total_revenue": 5750051.0
+      },
+      {
+        "name": "GRACE HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "total_revenue": 6282826.0
+      },
+      {
+        "name": "GRACE HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "total_revenue": 6282826.0
+      },
+      {
+        "name": "ROZE ROOM HOSPICE",
+        "county": "LOS ANGELES",
+        "total_revenue": 10003883.0
+      },
+      {
+        "name": "ROZE ROOM HOSPICE",
+        "county": "LOS ANGELES",
+        "total_revenue": 10003883.0
+      },
+      {
+        "name": "HEALING CARE HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "total_revenue": 13012805.0
+      },
+      {
+        "name": "HEALING CARE HOSPICE, INC.",
+        "county": "LOS ANGELES",
+        "total_revenue": 13012805.0
+      },
+      {
+        "name": "AMERIBEST HOSPICE INC",
+        "county": "LOS ANGELES",
+        "total_revenue": 4243305.0
+      },
+      {
+        "name": "AMERIBEST HOSPICE INC",
+        "county": "LOS ANGELES",
+        "total_revenue": 4243305.0
+      },
+      {
+        "name": "VITAS HEALTHCARE CORPORATION OF CALIFORNIA",
+        "county": "LOS ANGELES",
+        "total_revenue": 12175324.0
+      },
+      {
+        "name": "VITAS HEALTHCARE CORPORATION OF CALIFORNIA",
+        "county": "LOS ANGELES",
+        "total_revenue": 12175324.0
+      },
+      {
+        "name": "PROVIDENCE HOSPICE LA COUNTY",
+        "county": "LOS ANGELES",
+        "total_revenue": 22153900.0
+      },
+      {
+        "name": "PROVIDENCE HOSPICE LA COUNTY",
+        "county": "LOS ANGELES",
+        "total_revenue": 9494528.0
+      },
+      {
+        "name": "PROVIDENCE HOSPICE LA COUNTY",
+        "county": "LOS ANGELES",
+        "total_revenue": 22153900.0
+      },
+      {
+        "name": "PROVIDENCE HOSPICE LA COUNTY",
+        "county": "LOS ANGELES",
+        "total_revenue": 9494528.0
+      },
+      {
+        "name": "AGAPE HOSPICE & PALLIATIVE CARE LLC",
+        "county": "LOS ANGELES",
+        "total_revenue": 4801748.0
+      },
+      {
+        "name": "AGAPE HOSPICE & PALLIATIVE CARE LLC",
+        "county": "LOS ANGELES",
+        "total_revenue": 4801748.0
+      },
+      {
+        "name": "TORRANCE MEMORIAL HOME HEALTH",
+        "county": "LOS ANGELES",
+        "total_revenue": 8469670.0
+      },
+      {
+        "name": "TORRANCE MEMORIAL HOME HEALTH",
+        "county": "LOS ANGELES",
+        "total_revenue": 8469670.0
+      },
+      {
+        "name": "TORRANCE MEMORIAL HOSPICE",
+        "county": "LOS ANGELES",
+        "total_revenue": 8469670.0
+      },
+      {
+        "name": "TORRANCE MEMORIAL HOSPICE",
+        "county": "LOS ANGELES",
+        "total_revenue": 8469670.0
+      },
+      {
+        "name": "EVERGREEN HOSPICE CARE, INC.",
+        "county": "LOS ANGELES",
+        "total_revenue": 7252116.0
+      },
+      {
+        "name": "EVERGREEN HOSPICE CARE, INC.",
+        "county": "LOS ANGELES",
+        "total_revenue": 7252116.0
+      },
+      {
+        "name": "HEALTHVIEW HOSPICE & PALLIATIVE CARE",
+        "county": "LOS ANGELES",
+        "total_revenue": 6339227.0
+      },
+      {
+        "name": "HEALTHVIEW HOSPICE & PALLIATIVE CARE",
+        "county": "LOS ANGELES",
+        "total_revenue": 6339227.0
+      },
+      {
+        "name": "PROVIDENCE HOSPICE LA COUNTY",
+        "county": "LOS ANGELES",
+        "total_revenue": 22153900.0
+      },
+      {
+        "name": "PROVIDENCE HOSPICE LA COUNTY",
+        "county": "LOS ANGELES",
+        "total_revenue": 9494528.0
+      },
+      {
+        "name": "PROVIDENCE HOSPICE LA COUNTY",
+        "county": "LOS ANGELES",
+        "total_revenue": 22153900.0
+      },
+      {
+        "name": "PROVIDENCE HOSPICE LA COUNTY",
+        "county": "LOS ANGELES",
+        "total_revenue": 9494528.0
+      },
+      {
+        "name": "RELIANCE HOSPICE AND PALLIATIVE CARE",
+        "county": "LOS ANGELES",
+        "total_revenue": 6861165.0
+      },
+      {
+        "name": "RELIANCE HOSPICE AND PALLIATIVE CARE",
+        "county": "LOS ANGELES",
+        "total_revenue": 6861165.0
+      },
+      {
+        "name": "BRISTOL HOSPICE - GREATER LOS ANGELES",
+        "county": "LOS ANGELES",
+        "total_revenue": 11712351.0
+      },
+      {
+        "name": "BRISTOL HOSPICE - GREATER LOS ANGELES",
+        "county": "LOS ANGELES",
+        "total_revenue": 11712351.0
+      },
+      {
+        "name": "ORANGE COUNTY CARE HOSPICE",
+        "county": "ORANGE",
+        "total_revenue": 76711948.0
+      },
+      {
+        "name": "ORANGE COUNTY CARE HOSPICE",
+        "county": "ORANGE",
+        "total_revenue": 76711948.0
+      },
+      {
+        "name": "UNIFIED HOSPICE CARE, LLC",
+        "county": "ORANGE",
+        "total_revenue": 5059843.0
+      },
+      {
+        "name": "UNIFIED HOSPICE CARE, LLC",
+        "county": "ORANGE",
+        "total_revenue": 5059843.0
+      },
+      {
+        "name": "HAVEN HEALTH",
+        "county": "LOS ANGELES",
+        "total_revenue": 16926749.0
+      },
+      {
+        "name": "HAVEN HEALTH",
+        "county": "LOS ANGELES",
+        "total_revenue": 16926749.0
+      },
+      {
+        "name": "ROZE ROOM HOSPICE OF SOUTH BAY",
+        "county": "LOS ANGELES",
+        "total_revenue": 5134047.0
+      },
+      {
+        "name": "ROZE ROOM HOSPICE OF SOUTH BAY",
+        "county": "LOS ANGELES",
+        "total_revenue": 5134047.0
+      },
+      {
+        "name": "CATALIA HOSPICE, INC",
+        "county": "LOS ANGELES",
+        "total_revenue": 5331635.0
+      },
+      {
+        "name": "CATALIA HOSPICE, INC",
+        "county": "LOS ANGELES",
+        "total_revenue": 5331635.0
+      },
+      {
+        "name": "MISSION HOSPICE",
+        "county": "LOS ANGELES",
+        "total_revenue": 6107511.0
+      },
+      {
+        "name": "MISSION HOSPICE",
+        "county": "LOS ANGELES",
+        "total_revenue": 6107511.0
+      },
+      {
+        "name": "FAITH & HOPE HOSPICE CARE INC.",
+        "county": "LOS ANGELES",
+        "total_revenue": 7690118.0
+      },
+      {
+        "name": "FAITH & HOPE HOSPICE CARE INC.",
+        "county": "LOS ANGELES",
+        "total_revenue": 7690118.0
+      },
+      {
+        "name": "ROZE ROOM HOSPICE OF SAN GABRIEL VALLEY",
+        "county": "LOS ANGELES",
+        "total_revenue": 6906929.0
+      },
+      {
+        "name": "ROZE ROOM HOSPICE OF SAN GABRIEL VALLEY",
+        "county": "LOS ANGELES",
+        "total_revenue": 6906929.0
+      }
+    ]
+  },
+  "top_facilities_revenue": {
+    "metric": "total_revenue",
+    "facilities": [
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0
+      },
+      {
+        "name": "ANCHOR HOSPICE & PALLIATIVE CARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 516978208.0
+      },
+      {
+        "name": "SUNCREST HOSPICE SAN JOSE, LLC",
+        "county": "SAN MATEO",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0
+      },
+      {
+        "name": "SUNCREST HOSPICE SAN JOSE, LLC",
+        "county": "SAN MATEO",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0
+      },
+      {
+        "name": "SUNCREST HOSPICE",
+        "county": "ALAMEDA",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0
+      },
+      {
+        "name": "SUNCREST HOSPICE",
+        "county": "ALAMEDA",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0
+      },
+      {
+        "name": "SUNCREST HOSPICE WALNUT CREEK",
+        "county": "CONTRA COSTA",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0
+      },
+      {
+        "name": "SUNCREST HOSPICE WALNUT CREEK",
+        "county": "CONTRA COSTA",
+        "category_name": "HOSPICE",
+        "total_revenue": 79884047.0
+      },
+      {
+        "name": "BEST QUALITY CARE HOSPICE, INC.",
+        "county": "RIVERSIDE",
+        "category_name": "HOSPICE",
+        "total_revenue": 77696830.0
+      },
+      {
+        "name": "BEST QUALITY CARE HOSPICE, INC.",
+        "county": "RIVERSIDE",
+        "category_name": "HOSPICE",
+        "total_revenue": 77696830.0
+      },
+      {
+        "name": "ORANGE COUNTY CARE HOSPICE",
+        "county": "ORANGE",
+        "category_name": "HOSPICE",
+        "total_revenue": 76711948.0
+      },
+      {
+        "name": "ORANGE COUNTY CARE HOSPICE",
+        "county": "ORANGE",
+        "category_name": "HOSPICE",
+        "total_revenue": 76711948.0
+      },
+      {
+        "name": "PINNACLE CARE HOSPICE, INC.",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOSPICE",
+        "total_revenue": 46709654.0
+      },
+      {
+        "name": "PINNACLE CARE HOSPICE, INC.",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOSPICE",
+        "total_revenue": 46709654.0
+      },
+      {
+        "name": "LIFELINK HOSPICE & PALLIATIVE CARE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 38754900.0
+      },
+      {
+        "name": "LIFELINK HOSPICE & PALLIATIVE CARE, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOSPICE",
+        "total_revenue": 38754900.0
+      },
+      {
+        "name": "SHARP HOSPICECARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 36953377.0
+      },
+      {
+        "name": "SHARP HOSPICECARE",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 36953377.0
+      },
+      {
+        "name": "MISSION HOSPICE SERVICES OF SAN DIEGO, LLC",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 36273852.0
+      },
+      {
+        "name": "MISSION HOSPICE SERVICES OF SAN DIEGO, LLC",
+        "county": "SAN DIEGO",
+        "category_name": "HOSPICE",
+        "total_revenue": 36273852.0
+      }
+    ]
+  },
+  "top_facilities_visits": {
+    "metric": "total_visits",
+    "facilities": [
+      {
+        "name": "ISOCARE MEDICAL EXTENDERS SERVICES, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 220510.0
+      },
+      {
+        "name": "ISOCARE MEDICAL EXTENDERS SERVICES, INC.",
+        "county": "LOS ANGELES",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 220510.0
+      },
+      {
+        "name": "BEST HOME HEALTH CARE INC",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 117509.0
+      },
+      {
+        "name": "BEST HOME HEALTH CARE INC",
+        "county": "SAN BERNARDINO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 117509.0
+      },
+      {
+        "name": "TOTAL CARE HOME HEALTH AGENCY",
+        "county": "RIVERSIDE",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 103471.0
+      },
+      {
+        "name": "TOTAL CARE HOME HEALTH AGENCY",
+        "county": "RIVERSIDE",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 103471.0
+      },
+      {
+        "name": "NEOGEN CARE CORP",
+        "county": "LOS ANGELES",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 99359.0
+      },
+      {
+        "name": "NEOGEN CARE CORP",
+        "county": "LOS ANGELES",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 99359.0
+      },
+      {
+        "name": "SUTTER CARE AT HOME",
+        "county": "PLACER",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 85838.0
+      },
+      {
+        "name": "SUTTER CARE AT HOME",
+        "county": "PLACER",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 85838.0
+      },
+      {
+        "name": "SUTTER CARE AT HOME",
+        "county": "SAN MATEO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 70759.0
+      },
+      {
+        "name": "SUTTER CARE AT HOME",
+        "county": "SAN MATEO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 70759.0
+      },
+      {
+        "name": "SUTTER CARE AT HOME",
+        "county": "SACRAMENTO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 67621.0
+      },
+      {
+        "name": "SUTTER CARE AT HOME",
+        "county": "SACRAMENTO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 67621.0
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - SANTA BARBARA BRANCH",
+        "county": "SANTA BARBARA",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 63616.0
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH - SANTA BARBARA BRANCH",
+        "county": "SANTA BARBARA",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 63616.0
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 63616.0
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOME HEALTH AGENCY",
+        "total_visits": 63616.0
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOSPICE",
+        "total_visits": 63616.0
+      },
+      {
+        "name": "CENTRAL COAST HOME HEALTH INC",
+        "county": "SAN LUIS OBISPO",
+        "category_name": "HOSPICE",
+        "total_visits": 63616.0
+      }
+    ]
+  }
+}

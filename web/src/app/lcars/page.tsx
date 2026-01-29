@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-type ViewType = 'overview' | 'database' | 'traffic' | 'logs' | 'data' | 'fraud';
+type ViewType = 'overview' | 'database' | 'traffic' | 'logs' | 'data' | 'fraud' | 'pandas';
 
 interface DataRecord {
   id: number;
@@ -196,6 +196,7 @@ export default function LCARSAdmin() {
           <NavTab label="LOGS" active={currentView === 'logs'} onClick={() => setCurrentView('logs')} />
           <NavTab label="DATA VIEW" active={currentView === 'data'} onClick={() => setCurrentView('data')} />
           <NavTab label="FRAUD DETECTION" active={currentView === 'fraud'} onClick={() => setCurrentView('fraud')} />
+          <NavTab label="PANDAS ANALYSIS" active={currentView === 'pandas'} onClick={() => setCurrentView('pandas')} />
         </div>
 
         {/* Main Grid */}
@@ -222,6 +223,7 @@ export default function LCARSAdmin() {
             {currentView === 'logs' && <LogsPanel logs={logs} logRef={logRef} />}
             {currentView === 'data' && <DataPanel dataRecords={dataRecords} selectedRecord={selectedRecord} setSelectedRecord={setSelectedRecord} />}
             {currentView === 'fraud' && <FraudPanel />}
+            {currentView === 'pandas' && <PandasPanel />}
           </div>
 
           {/* Right Panel - Scrapers */}
@@ -444,6 +446,309 @@ function FraudPanel() {
             )}
           </div>
         </div>
+      </div>
+    </>
+  );
+}
+
+function PandasPanel() {
+  const [summary, setSummary] = useState<any>(null);
+  const [countyData, setCountyData] = useState<any>(null);
+  const [categoryData, setCategoryData] = useState<any>(null);
+  const [revenueDistribution, setRevenueDistribution] = useState<any>(null);
+  const [outliers, setOutliers] = useState<any>(null);
+  const [topFacilities, setTopFacilities] = useState<any>(null);
+  const [selectedView, setSelectedView] = useState<'summary' | 'county' | 'category' | 'outliers' | 'top'>('summary');
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    fetchSummary();
+  }, []);
+  
+  const fetchSummary = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/api/pandas/summary');
+      const data = await response.json();
+      setSummary(data);
+    } catch (error) {
+      console.error('Failed to fetch summary:', error);
+    }
+  };
+  
+  const fetchCountyData = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/pandas/county');
+      const data = await response.json();
+      setCountyData(data);
+    } catch (error) {
+      console.error('Failed to fetch county data:', error);
+    }
+    setLoading(false);
+  };
+  
+  const fetchCategoryData = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/pandas/category');
+      const data = await response.json();
+      setCategoryData(data);
+    } catch (error) {
+      console.error('Failed to fetch category data:', error);
+    }
+    setLoading(false);
+  };
+  
+  const fetchOutliers = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/pandas/outliers/total_revenue');
+      const data = await response.json();
+      setOutliers(data);
+    } catch (error) {
+      console.error('Failed to fetch outliers:', error);
+    }
+    setLoading(false);
+  };
+  
+  const fetchTopFacilities = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/pandas/top-facilities/total_revenue?limit=20');
+      const data = await response.json();
+      setTopFacilities(data);
+    } catch (error) {
+      console.error('Failed to fetch top facilities:', error);
+    }
+    setLoading(false);
+  };
+  
+  const handleViewChange = (view: 'summary' | 'county' | 'category' | 'outliers' | 'top') => {
+    setSelectedView(view);
+    if (view === 'county' && !countyData) fetchCountyData();
+    if (view === 'category' && !categoryData) fetchCategoryData();
+    if (view === 'outliers' && !outliers) fetchOutliers();
+    if (view === 'top' && !topFacilities) fetchTopFacilities();
+  };
+  
+  return (
+    <>
+      <div className="bg-gray-700 text-white p-3 rounded-2xl font-bold text-lg">
+        📊 PANDAS STATISTICAL ANALYSIS
+      </div>
+      <div className="flex-1 bg-zinc-950 rounded-2xl p-6 overflow-y-auto border-2 border-gray-700">
+        
+        {/* View Selector */}
+        <div className="mb-6 flex gap-2 flex-wrap">
+          <button
+            onClick={() => handleViewChange('summary')}
+            className={`px-4 py-2 rounded-lg font-bold ${selectedView === 'summary' ? 'bg-green-700 text-white' : 'bg-gray-800 text-gray-400 hover:bg-gray-700'}`}
+          >
+            SUMMARY
+          </button>
+          <button
+            onClick={() => handleViewChange('county')}
+            className={`px-4 py-2 rounded-lg font-bold ${selectedView === 'county' ? 'bg-green-700 text-white' : 'bg-gray-800 text-gray-400 hover:bg-gray-700'}`}
+          >
+            BY COUNTY
+          </button>
+          <button
+            onClick={() => handleViewChange('category')}
+            className={`px-4 py-2 rounded-lg font-bold ${selectedView === 'category' ? 'bg-green-700 text-white' : 'bg-gray-800 text-gray-400 hover:bg-gray-700'}`}
+          >
+            BY CATEGORY
+          </button>
+          <button
+            onClick={() => handleViewChange('outliers')}
+            className={`px-4 py-2 rounded-lg font-bold ${selectedView === 'outliers' ? 'bg-green-700 text-white' : 'bg-gray-800 text-gray-400 hover:bg-gray-700'}`}
+          >
+            OUTLIERS
+          </button>
+          <button
+            onClick={() => handleViewChange('top')}
+            className={`px-4 py-2 rounded-lg font-bold ${selectedView === 'top' ? 'bg-green-700 text-white' : 'bg-gray-800 text-gray-400 hover:bg-gray-700'}`}
+          >
+            TOP 20
+          </button>
+        </div>
+        
+        {/* Summary View */}
+        {selectedView === 'summary' && summary && (
+          <div className="space-y-6">
+            {/* Key Stats Grid */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-green-500">
+                <div className="text-gray-400 text-sm">TOTAL FACILITIES</div>
+                <div className="text-white text-3xl font-bold">{summary.facilities?.total?.toLocaleString() || 0}</div>
+                <div className="text-gray-500 text-xs mt-1">{summary.facilities?.counties} counties, {summary.facilities?.categories} categories</div>
+              </div>
+              <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500">
+                <div className="text-gray-400 text-sm">FINANCIAL RECORDS</div>
+                <div className="text-white text-3xl font-bold">{summary.financials?.total_records?.toLocaleString() || 0}</div>
+                <div className="text-gray-500 text-xs mt-1">{summary.financials?.unique_facilities} unique facilities</div>
+              </div>
+              <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-yellow-500">
+                <div className="text-gray-400 text-sm">DATA COVERAGE</div>
+                <div className="text-white text-3xl font-bold">{summary.coverage?.coverage_percentage?.toFixed(1) || 0}%</div>
+                <div className="text-gray-500 text-xs mt-1">{summary.coverage?.facilities_with_financials} with financials</div>
+              </div>
+            </div>
+            
+            {/* Financial Stats */}
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-white font-bold mb-3">💰 FINANCIAL OVERVIEW</h3>
+              <div className="grid grid-cols-3 gap-4">
+                <div>
+                  <div className="text-gray-400 text-sm">Total Revenue</div>
+                  <div className="text-green-400 text-2xl font-bold">
+                    ${((summary.financials?.total_revenue || 0) / 1000000000).toFixed(2)}B
+                  </div>
+                </div>
+                <div>
+                  <div className="text-gray-400 text-sm">Total Expenses</div>
+                  <div className="text-red-400 text-2xl font-bold">
+                    ${((summary.financials?.total_expenses || 0) / 1000000000).toFixed(2)}B
+                  </div>
+                </div>
+                <div>
+                  <div className="text-gray-400 text-sm">Net Income</div>
+                  <div className={`text-2xl font-bold ${(summary.financials?.total_net_income || 0) >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                    ${((summary.financials?.total_net_income || 0) / 1000000).toFixed(1)}M
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Capacity Stats */}
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-white font-bold mb-3">🏥 CAPACITY ANALYSIS</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <div className="text-gray-400 text-sm">Total Capacity</div>
+                  <div className="text-white text-xl font-bold">{summary.facilities?.total_capacity?.toLocaleString() || 0} beds</div>
+                </div>
+                <div>
+                  <div className="text-gray-400 text-sm">Facilities with Capacity Data</div>
+                  <div className="text-white text-xl font-bold">{summary.facilities?.with_capacity?.toLocaleString() || 0}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* County View */}
+        {selectedView === 'county' && (
+          <div className="bg-gray-800 rounded-lg p-4">
+            <h3 className="text-white font-bold mb-3">🗺️ COUNTY ANALYSIS</h3>
+            {loading && <div className="text-gray-400">Loading...</div>}
+            {countyData && (
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-700">
+                      <th className="text-left p-2 text-gray-400">County</th>
+                      <th className="text-right p-2 text-gray-400">Facilities</th>
+                      <th className="text-right p-2 text-gray-400">Total Revenue</th>
+                      <th className="text-right p-2 text-gray-400">Avg Revenue</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {countyData.counties?.slice(0, 20).map((county: any, idx: number) => (
+                      <tr key={idx} className="border-b border-gray-700/50 hover:bg-gray-700/30">
+                        <td className="p-2 text-white">{county.county}</td>
+                        <td className="p-2 text-right text-white">{county.facility_id_count}</td>
+                        <td className="p-2 text-right text-green-400">${((county.total_revenue_sum || 0) / 1000000).toFixed(1)}M</td>
+                        <td className="p-2 text-right text-blue-400">${((county.total_revenue_mean || 0) / 1000).toFixed(0)}K</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        )}
+        
+        {/* Category View */}
+        {selectedView === 'category' && (
+          <div className="bg-gray-800 rounded-lg p-4">
+            <h3 className="text-white font-bold mb-3">📋 CATEGORY ANALYSIS</h3>
+            {loading && <div className="text-gray-400">Loading...</div>}
+            {categoryData && (
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-700">
+                      <th className="text-left p-2 text-gray-400">Category</th>
+                      <th className="text-right p-2 text-gray-400">Count</th>
+                      <th className="text-right p-2 text-gray-400">Total Revenue</th>
+                      <th className="text-right p-2 text-gray-400">Avg Capacity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {categoryData.categories?.map((cat: any, idx: number) => (
+                      <tr key={idx} className="border-b border-gray-700/50 hover:bg-gray-700/30">
+                        <td className="p-2 text-white">{cat.category_name}</td>
+                        <td className="p-2 text-right text-white">{cat.facility_id_count}</td>
+                        <td className="p-2 text-right text-green-400">${((cat.total_revenue_sum || 0) / 1000000).toFixed(1)}M</td>
+                        <td className="p-2 text-right text-blue-400">{(cat.capacity_mean || 0).toFixed(0)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        )}
+        
+        {/* Outliers View */}
+        {selectedView === 'outliers' && (
+          <div className="bg-gray-800 rounded-lg p-4">
+            <h3 className="text-white font-bold mb-3">⚠️ REVENUE OUTLIERS (IQR Method)</h3>
+            {loading && <div className="text-gray-400">Loading...</div>}
+            {outliers && (
+              <>
+                <div className="mb-4 p-3 bg-gray-900 rounded">
+                  <div className="text-gray-400 text-sm">Found {outliers.outlier_count} outliers ({outliers.outlier_percentage?.toFixed(1)}%)</div>
+                  <div className="text-gray-400 text-sm">Range: ${outliers.lower_bound?.toFixed(0)} - ${outliers.upper_bound?.toLocaleString()}</div>
+                </div>
+                <div className="space-y-2 max-h-96 overflow-y-auto">
+                  {outliers.outliers?.map((facility: any, idx: number) => (
+                    <div key={idx} className="p-3 bg-gray-900 rounded hover:bg-gray-700/50">
+                      <div className="text-white font-bold">{facility.name}</div>
+                      <div className="text-gray-400 text-sm">{facility.county} County</div>
+                      <div className="text-yellow-400 text-sm mt-1">Revenue: ${facility.total_revenue?.toLocaleString()}</div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        )}
+        
+        {/* Top Facilities View */}
+        {selectedView === 'top' && (
+          <div className="bg-gray-800 rounded-lg p-4">
+            <h3 className="text-white font-bold mb-3">🏆 TOP 20 BY REVENUE</h3>
+            {loading && <div className="text-gray-400">Loading...</div>}
+            {topFacilities && (
+              <div className="space-y-2 max-h-96 overflow-y-auto">
+                {topFacilities.facilities?.map((facility: any, idx: number) => (
+                  <div key={idx} className="p-3 bg-gray-900 rounded hover:bg-gray-700/50">
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <div className="text-white font-bold">#{idx + 1} {facility.name}</div>
+                        <div className="text-gray-400 text-sm">{facility.county} County • {facility.category_name}</div>
+                      </div>
+                      <div className="text-green-400 font-bold text-lg">
+                        ${((facility.total_revenue || 0) / 1000000).toFixed(1)}M
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </>
   );

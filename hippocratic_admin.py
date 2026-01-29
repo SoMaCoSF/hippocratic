@@ -367,6 +367,86 @@ class HippocraticAdmin:
             except Exception as e:
                 raise HTTPException(500, f"Failed to get fraud stats: {str(e)}")
         
+        @self.app.get("/api/pandas/summary")
+        async def get_pandas_summary():
+            """Get pandas analysis summary statistics."""
+            try:
+                from pandas_analyzer import PandasAnalyzer
+                analyzer = PandasAnalyzer()
+                return JSONResponse(analyzer.get_summary_statistics())
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get summary: {str(e)}")
+        
+        @self.app.get("/api/pandas/profile/{table}")
+        async def get_data_profile(table: str):
+            """Get data profile for a specific table."""
+            try:
+                from pandas_analyzer import PandasAnalyzer
+                analyzer = PandasAnalyzer()
+                return JSONResponse(analyzer.get_data_profile(table))
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get profile: {str(e)}")
+        
+        @self.app.get("/api/pandas/county")
+        async def get_county_analysis():
+            """Get county-level analysis."""
+            try:
+                from pandas_analyzer import PandasAnalyzer
+                analyzer = PandasAnalyzer()
+                return JSONResponse(analyzer.get_county_analysis())
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get county analysis: {str(e)}")
+        
+        @self.app.get("/api/pandas/category")
+        async def get_category_analysis():
+            """Get category-level analysis."""
+            try:
+                from pandas_analyzer import PandasAnalyzer
+                analyzer = PandasAnalyzer()
+                return JSONResponse(analyzer.get_category_analysis())
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get category analysis: {str(e)}")
+        
+        @self.app.get("/api/pandas/revenue-distribution")
+        async def get_revenue_distribution():
+            """Get revenue distribution histogram."""
+            try:
+                from pandas_analyzer import PandasAnalyzer
+                analyzer = PandasAnalyzer()
+                return JSONResponse(analyzer.get_revenue_distribution())
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get revenue distribution: {str(e)}")
+        
+        @self.app.get("/api/pandas/outliers/{column}")
+        async def get_outliers(column: str, threshold: float = 3.0):
+            """Get outlier analysis for a column."""
+            try:
+                from pandas_analyzer import PandasAnalyzer
+                analyzer = PandasAnalyzer()
+                return JSONResponse(analyzer.get_outlier_analysis(column, threshold))
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get outliers: {str(e)}")
+        
+        @self.app.get("/api/pandas/top-facilities/{metric}")
+        async def get_top_facilities(metric: str, limit: int = 20):
+            """Get top facilities by metric."""
+            try:
+                from pandas_analyzer import PandasAnalyzer
+                analyzer = PandasAnalyzer()
+                return JSONResponse(analyzer.get_top_facilities(metric, limit))
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get top facilities: {str(e)}")
+        
+        @self.app.get("/api/pandas/correlation")
+        async def get_correlation():
+            """Get correlation matrix."""
+            try:
+                from pandas_analyzer import PandasAnalyzer
+                analyzer = PandasAnalyzer()
+                return JSONResponse(analyzer.get_correlation_matrix())
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get correlation: {str(e)}")
+        
         @self.app.get("/api/scraper/validate/{scraper_name}")
         async def validate_scraper_sources(scraper_name: str):
             """Validate all data sources for a scraper."""
