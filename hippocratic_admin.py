@@ -89,8 +89,74 @@ class HippocraticAdmin:
         # Active sessions
         self.active_sessions: Dict[str, PrivacyProxySession] = {}
         
+        # Database configurations (multi-DB support)
+        self.db_configs = self.load_db_configs()
+        self.default_db = self.get_default_db()
+        
+        # Scraper-to-DB mappings
+        self.scraper_db_mapping = self.load_scraper_mappings()
+        
         if self.app:
             self.setup_routes()
+    
+    def load_db_configs(self) -> Dict[str, Dict[str, str]]:
+        """Load database configurations."""
+        config_file = Path(__file__).parent / "db_configs.json"
+        
+        if config_file.exists():
+            import json
+            with open(config_file, 'r') as f:
+                return json.load(f)
+        
+        # Default configs
+        return {
+            'main': {
+                'name': 'Main Production DB',
+                'type': 'turso' if os.getenv('TURSO_DATABASE_URL') else 'sqlite',
+                'path': os.getenv('TURSO_DATABASE_URL', 'local.db'),
+                'token': os.getenv('TURSO_AUTH_TOKEN', ''),
+                'description': 'Primary database for production data'
+            }
+        }
+    
+    def save_db_configs(self):
+        """Save database configurations to file."""
+        config_file = Path(__file__).parent / "db_configs.json"
+        import json
+        with open(config_file, 'w') as f:
+            json.dump(self.db_configs, f, indent=2)
+    
+    def load_scraper_mappings(self) -> Dict[str, str]:
+        """Load scraper-to-database mappings."""
+        mapping_file = Path(__file__).parent / "scraper_db_mappings.json"
+        
+        if mapping_file.exists():
+            import json
+            with open(mapping_file, 'r') as f:
+                return json.load(f)
+        
+        # Default: all scrapers use main DB
+        return {
+            'openfiscal': 'main',
+            'sco': 'main',
+            'data_ca_gov': 'main',
+            'chhs': 'main',
+        }
+    
+    def save_scraper_mappings(self):
+        """Save scraper mappings to file."""
+        mapping_file = Path(__file__).parent / "scraper_db_mappings.json"
+        import json
+        with open(mapping_file, 'w') as f:
+            json.dump(self.scraper_db_mapping, f, indent=2)
+    
+    def get_default_db(self) -> str:
+        """Get default database key."""
+        return 'main'
+    
+    def get_db_for_scraper(self, scraper_name: str) -> str:
+        """Get database key for a specific scraper."""
+        return self.scraper_db_mapping.get(scraper_name, self.default_db)
     
     def setup_routes(self):
         """Setup FastAPI routes."""
@@ -130,6 +196,84 @@ class HippocraticAdmin:
             """Semantic search using vector embeddings."""
             results = await self.vector_search(query, limit)
             return JSONResponse(results)
+        
+        @self.app.get("/api/databases")
+        async def get_databases():
+            """Get all configured databases."""
+            return JSONResponse({
+                'databases': self.db_configs,
+                'default': self.default_db
+            })
+        
+        @self.app.post("/api/databases")
+        async def create_database(data: dict):
+            """Create a new database configuration."""
+            db_key = data.get('key')
+            if not db_key:
+                raise HTTPException(400, "Database key required")
+            
+            if db_key in self.db_configs:
+                raise HTTPException(400, f"Database '{db_key}' already exists")
+            
+            self.db_configs[db_key] = {
+                'name': data.get('name', f'Database {db_key}'),
+                'type': data.get('type', 'sqlite'),
+                'path': data.get('path', f'{db_key}.db'),
+                'token': data.get('token', ''),
+                'description': data.get('description', '')
+            }
+            
+            self.save_db_configs()
+            return JSONResponse({'status': 'created', 'key': db_key})
+        
+        @self.app.delete("/api/databases/{db_key}")
+        async def delete_database(db_key: str):
+            """Delete a database configuration."""
+            if db_key == 'main':
+                raise HTTPException(400, "Cannot delete main database")
+            
+            if db_key not in self.db_configs:
+                raise HTTPException(404, "Database not found")
+            
+            del self.db_configs[db_key]
+            
+            # Remove from scraper mappings
+            for scraper, mapped_db in list(self.scraper_db_mapping.items()):
+                if mapped_db == db_key:
+                    self.scraper_db_mapping[scraper] = 'main'
+            
+            self.save_db_configs()
+            self.save_scraper_mappings()
+            return JSONResponse({'status': 'deleted'})
+        
+        @self.app.get("/api/scrapers/mappings")
+        async def get_scraper_mappings():
+            """Get scraper-to-database mappings."""
+            return JSONResponse({
+                'mappings': self.scraper_db_mapping,
+                'scrapers': list(self.scraper_db_mapping.keys())
+            })
+        
+        @self.app.post("/api/scrapers/mappings")
+        async def update_scraper_mapping(data: dict):
+            """Update scraper-to-database mapping."""
+            scraper = data.get('scraper')
+            db_key = data.get('database')
+            
+            if not scraper or not db_key:
+                raise HTTPException(400, "Scraper and database required")
+            
+            if db_key not in self.db_configs:
+                raise HTTPException(404, f"Database '{db_key}' not found")
+            
+            self.scraper_db_mapping[scraper] = db_key
+            self.save_scraper_mappings()
+            
+            return JSONResponse({
+                'status': 'updated',
+                'scraper': scraper,
+                'database': db_key
+            })
     
     def render_dashboard(self) -> str:
         """Render HTML dashboard."""
@@ -265,6 +409,141 @@ class HippocraticAdmin:
             setTimeout(refreshStats, 1000);
         }}
         
+        async function loadDatabases() {{
+            const response = await fetch('/api/databases');
+            const data = await response.json();
+            
+            const list = document.getElementById('databases-list');
+            list.innerHTML = '';
+            
+            for (const [key, db] of Object.entries(data.databases)) {{
+                const isDefault = key === data.default;
+                const div = document.createElement('div');
+                div.style.cssText = 'padding: 15px; background: #1e293b; border-radius: 6px; margin-bottom: 10px; border-left: 3px solid ' + (isDefault ? '#22c55e' : '#3b82f6');
+                div.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <strong>${{db.name}}</strong> 
+                            ${{isDefault ? '<span style="color: #22c55e; font-size: 0.8em;">(DEFAULT)</span>' : ''}}
+                            <br>
+                            <small style="color: #a1a1aa;">Key: ${{key}} | Type: ${{db.type}} | Path: ${{db.path.substring(0, 40)}}...</small>
+                        </div>
+                        ${{key !== 'main' ? `<button onclick="deleteDatabase('${{key}}')" style="padding: 8px 15px; background: #ef4444; border: none; border-radius: 6px; color: white; cursor: pointer;">Delete</button>` : ''}}
+                    </div>
+                `;
+                list.appendChild(div);
+            }}
+        }}
+        
+        async function createDatabase() {{
+            const key = document.getElementById('new-db-key').value;
+            const name = document.getElementById('new-db-name').value;
+            const type = document.getElementById('new-db-type').value;
+            const path = document.getElementById('new-db-path').value;
+            const token = document.getElementById('new-db-token').value;
+            
+            if (!key || !name || !path) {{
+                alert('Please fill in required fields (key, name, path)');
+                return;
+            }}
+            
+            const response = await fetch('/api/databases', {{
+                method: 'POST',
+                headers: {{ 'Content-Type': 'application/json' }},
+                body: JSON.stringify({{ key, name, type, path, token }})
+            }});
+            
+            if (response.ok) {{
+                alert('Database created successfully!');
+                document.getElementById('new-db-key').value = '';
+                document.getElementById('new-db-name').value = '';
+                document.getElementById('new-db-path').value = '';
+                document.getElementById('new-db-token').value = '';
+                loadDatabases();
+                loadScraperMappings();
+            }} else {{
+                const error = await response.json();
+                alert('Error: ' + error.detail);
+            }}
+        }}
+        
+        async function deleteDatabase(key) {{
+            if (!confirm(`Delete database '${{key}}'?`)) return;
+            
+            const response = await fetch(`/api/databases/${{key}}`, {{ method: 'DELETE' }});
+            
+            if (response.ok) {{
+                alert('Database deleted');
+                loadDatabases();
+                loadScraperMappings();
+            }} else {{
+                alert('Error deleting database');
+            }}
+        }}
+        
+        async function loadScraperMappings() {{
+            const [mappingsRes, databasesRes] = await Promise.all([
+                fetch('/api/scrapers/mappings'),
+                fetch('/api/databases')
+            ]);
+            
+            const mappings = await mappingsRes.json();
+            const databases = await databasesRes.json();
+            
+            const container = document.getElementById('scraper-mappings');
+            container.innerHTML = '';
+            
+            for (const [scraper, dbKey] of Object.entries(mappings.mappings)) {{
+                const div = document.createElement('div');
+                div.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #1e293b; border-radius: 6px; margin-bottom: 8px;';
+                
+                const select = document.createElement('select');
+                select.style.cssText = 'padding: 8px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: white; cursor: pointer;';
+                
+                for (const key of Object.keys(databases.databases)) {{
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = databases.databases[key].name;
+                    option.selected = key === dbKey;
+                    select.appendChild(option);
+                }}
+                
+                select.onchange = () => updateScraperMapping(scraper, select.value);
+                
+                div.innerHTML = `<strong>${{scraper}}</strong>`;
+                div.appendChild(select);
+                container.appendChild(div);
+                
+                // Update scraper button labels
+                const scraperLabel = document.getElementById(`db-${{scraper}}`);
+                if (scraperLabel) {{
+                    scraperLabel.textContent = `→ ${{dbKey}}`;
+                    scraperLabel.style.color = dbKey === 'main' ? '#a1a1aa' : '#3b82f6';
+                }}
+            }}
+        }}
+        
+        async function updateScraperMapping(scraper, database) {{
+            const response = await fetch('/api/scrapers/mappings', {{
+                method: 'POST',
+                headers: {{ 'Content-Type': 'application/json' }},
+                body: JSON.stringify({{ scraper, database }})
+            }});
+            
+            if (response.ok) {{
+                console.log(`Updated ${{scraper}} → ${{database}}`);
+                loadScraperMappings();
+            }} else {{
+                alert('Error updating mapping');
+            }}
+        }}
+        
+        // Load on page load
+        document.addEventListener('DOMContentLoaded', () => {{
+            loadDatabases();
+            loadScraperMappings();
+        }});
+        
         // Auto-refresh every 30 seconds
         setInterval(refreshStats, 30000);
     </script>
@@ -301,23 +580,73 @@ class HippocraticAdmin:
     
     <div class="section">
         <h2>🤖 Data Scrapers</h2>
+        <div style="margin-bottom: 15px; padding: 10px; background: #1e293b; border-radius: 6px; border-left: 3px solid #3b82f6;">
+            <strong>💡 Database Routing:</strong> Each scraper can write to a different database. 
+            <a href="#db-config" style="color: #3b82f6; text-decoration: none;">Configure below ↓</a>
+        </div>
         <div class="scraper-grid">
             <button class="scraper-btn" onclick="startScraper('openfiscal')">
                 💰 Open FI$Cal<br>
-                <small style="opacity: 0.7;">Budget Data</small>
+                <small style="opacity: 0.7;">Budget Data</small><br>
+                <small id="db-openfiscal" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
             </button>
             <button class="scraper-btn" onclick="startScraper('sco')">
                 📊 State Controller<br>
-                <small style="opacity: 0.7;">Spending Data</small>
+                <small style="opacity: 0.7;">Spending Data</small><br>
+                <small id="db-sco" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
             </button>
             <button class="scraper-btn" onclick="startScraper('data_ca_gov')">
                 🏛️ data.ca.gov<br>
-                <small style="opacity: 0.7;">API Data</small>
+                <small style="opacity: 0.7;">API Data</small><br>
+                <small id="db-data_ca_gov" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
             </button>
             <button class="scraper-btn" onclick="startScraper('chhs')">
                 🏥 CHHS Portal<br>
-                <small style="opacity: 0.7;">Health Data</small>
+                <small style="opacity: 0.7;">Health Data</small><br>
+                <small id="db-chhs" style="opacity: 0.5; font-size: 0.8em;">→ main</small>
             </button>
+        </div>
+    </div>
+    
+    <div class="section" id="db-config">
+        <h2>🗄️ Database Configuration</h2>
+        <p style="color: #a1a1aa; margin-bottom: 15px;">
+            Configure multiple databases and route scrapers to specific targets.
+        </p>
+        
+        <div style="margin-bottom: 20px;">
+            <h3 style="font-size: 1.1em; margin-bottom: 10px;">Configured Databases</h3>
+            <div id="databases-list">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <h3 style="font-size: 1.1em; margin-bottom: 10px;">Add New Database</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <input type="text" id="new-db-key" placeholder="Database Key (e.g., testing)" 
+                       style="padding: 10px; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: white;">
+                <input type="text" id="new-db-name" placeholder="Display Name" 
+                       style="padding: 10px; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: white;">
+                <select id="new-db-type" style="padding: 10px; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: white;">
+                    <option value="sqlite">SQLite (Local)</option>
+                    <option value="turso">Turso (Cloud)</option>
+                </select>
+                <input type="text" id="new-db-path" placeholder="Path or URL" 
+                       style="padding: 10px; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: white;">
+                <input type="text" id="new-db-token" placeholder="Auth Token (Turso only)" 
+                       style="padding: 10px; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: white;">
+                <button onclick="createDatabase()" style="padding: 10px; background: #22c55e; border: none; border-radius: 6px; color: white; cursor: pointer; font-weight: bold;">
+                    ➕ Add Database
+                </button>
+            </div>
+        </div>
+        
+        <div>
+            <h3 style="font-size: 1.1em; margin-bottom: 10px;">Scraper → Database Routing</h3>
+            <div id="scraper-mappings">
+                <!-- Populated by JavaScript -->
+            </div>
         </div>
     </div>
     
@@ -502,8 +831,15 @@ class HippocraticAdmin:
         self.stats['active_scrapers'] += 1
         self.stats['total_scrapers_run'] += 1
         
+        # Get database for this scraper
+        db_key = self.get_db_for_scraper(scraper_name)
+        db_config = self.db_configs.get(db_key, self.db_configs['main'])
+        
         try:
             logger.info(f"Starting scraper: {scraper_name}")
+            logger.info(f"Target database: {db_config['name']} ({db_key})")
+            logger.info(f"Database type: {db_config['type']}")
+            logger.info(f"Database path: {db_config['path']}")
             
             # Create session with OTel
             session = PrivacyProxySession(
@@ -514,10 +850,12 @@ class HippocraticAdmin:
             
             self.active_sessions[scraper_name] = session
             
-            # TODO: Actually run the scraper
-            await asyncio.sleep(5)  # Simulate scraping
+            # TODO: Actually run the scraper with the configured database
+            # For now, simulate scraping
+            await asyncio.sleep(5)
             
             logger.info(f"Scraper completed: {scraper_name}")
+            logger.info(f"Data written to: {db_config['name']}")
             
         except Exception as e:
             logger.error(f"Scraper error: {e}")
