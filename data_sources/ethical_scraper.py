@@ -58,14 +58,27 @@ class EthicalScraper:
         
         # Session for connection pooling
         self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': self.user_agent,
-            'Accept': 'text/html,application/json,text/csv,application/pdf',
-            'Accept-Language': 'en-US,en;q=0.9',
-            'Accept-Encoding': 'gzip, deflate',
-            'Connection': 'keep-alive',
-            'From': 'somacosf@gmail.com',  # Contact email for server admins
-        })
+        
+        # Try to use privacy proxy adapter if available
+        try:
+            from privacy_proxy_adapter import GovernmentScraperHeaders
+            self.headers_manager = GovernmentScraperHeaders(
+                contact_email='somacosf@gmail.com',
+                strip_cookies=True,
+                randomize_minor_fingerprint=True
+            )
+            logger.info("Privacy proxy adapter enabled")
+        except ImportError:
+            self.headers_manager = None
+            # Fallback to basic headers
+            self.session.headers.update({
+                'User-Agent': self.user_agent,
+                'Accept': 'text/html,application/json,text/csv,application/pdf',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive',
+                'From': 'somacosf@gmail.com',  # Contact email for server admins
+            })
         
         logger.info(f"Initialized EthicalScraper with {rate_limit_delay}s rate limit")
     
@@ -151,6 +164,13 @@ class EthicalScraper:
         for attempt in range(self.max_retries):
             try:
                 logger.info(f"Fetching {url} (attempt {attempt + 1}/{self.max_retries})")
+                
+                # Use privacy-enhanced headers if available
+                if self.headers_manager:
+                    privacy_headers = self.headers_manager.get_headers(url)
+                    if 'headers' in kwargs:
+                        privacy_headers.update(kwargs['headers'])
+                    kwargs['headers'] = privacy_headers
                 
                 response = self.session.get(
                     url,
