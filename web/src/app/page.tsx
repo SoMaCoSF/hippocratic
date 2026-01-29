@@ -187,6 +187,12 @@ export default function Home() {
     for (const f of data.records) {
       // Stacked filter
       if (stackedOnly && !stackedIds.has(f.id)) continue;
+      
+      // Financials filter - ACTUALLY FILTER BY FINANCIAL DATA
+      if (financialsOnly) {
+        const fin = getFinancials(f);
+        if (!fin || !hasFinancialData(fin)) continue;
+      }
 
       // Duplicate filter
       if (duplicateFilter !== "any" && duplicateResult) {
