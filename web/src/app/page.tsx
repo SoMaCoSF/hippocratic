@@ -369,6 +369,12 @@ export default function Home() {
             💰 Financials
           </Link>
           <Link
+            href="/ingest"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-yellow-600 hover:bg-yellow-500 text-white text-xs font-medium"
+          >
+            📥 Ingest
+          </Link>
+          <Link
             href="/about"
             className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
           >

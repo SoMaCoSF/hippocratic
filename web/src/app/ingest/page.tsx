@@ -362,16 +362,28 @@ function IngestPageContent() {
             📊 Explorer
           </Link>
           <Link
+            href="/stacked"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+          >
+            📍 Stacked
+          </Link>
+          <Link
             href="/network"
             className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
           >
             🕸️ Network
           </Link>
           <Link
-            href="/stacked"
-            className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium"
+            href="/financials"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-green-600 hover:bg-green-500 text-white text-xs font-medium"
           >
-            ⚠️ Fraud
+            💰 Financials
+          </Link>
+          <Link
+            href="/ingest"
+            className="flex-shrink-0 px-3 py-1 rounded-full bg-yellow-600 text-white text-xs font-medium"
+          >
+            📥 Ingest
           </Link>
           <Link
             href="/about"
