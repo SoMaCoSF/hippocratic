@@ -36,6 +36,7 @@ export default function FinancialsPage() {
         if (facilityRes.ok) {
           const facilityData = await facilityRes.json();
           console.log("Facilities loaded:", facilityData.facilities?.length);
+          console.log("Sample facility:", facilityData.facilities?.[0]);
           setFacilities(facilityData.facilities || []);
         } else {
           console.error("Failed to fetch facilities:", facilityRes.status);
@@ -44,6 +45,9 @@ export default function FinancialsPage() {
         if (financialRes.ok) {
           const financialData = await financialRes.json();
           console.log("Financials loaded:", financialData.financials?.length);
+          console.log("Sample financial:", financialData.financials?.[0]);
+          const withRevenue = financialData.financials?.filter((f: any) => f.totalRevenue > 0);
+          console.log("Financials with revenue > 0:", withRevenue?.length);
           setFinancials(financialData.financials || []);
         } else {
           console.error("Failed to fetch financials:", financialRes.status);
@@ -80,8 +84,7 @@ export default function FinancialsPage() {
     // Process financials
     financials.forEach((fin) => {
       const facility = facilityMap.get(fin.licenseNumber);
-      if (!facility) return;
-
+      
       const revenue = fin.totalRevenue ?? 0;
       const expenses = fin.totalExpenses ?? 0;
       const netIncome = fin.netIncome ?? 0;
@@ -99,19 +102,19 @@ export default function FinancialsPage() {
         }
 
         // Revenue by category
-        const cat = facility.categoryName ?? "Unknown";
+        const cat = facility?.categoryName ?? "Unknown";
         stats.revenueByCategory.set(cat, (stats.revenueByCategory.get(cat) ?? 0) + revenue);
 
         // Top/bottom performers
         if (revenue > 0) {
           stats.topRevenue.push({ 
-            name: facility.name || fin.facilityName, 
+            name: facility?.name || fin.facilityName || "Unknown", 
             revenue, 
             netIncome, 
             category: cat 
           });
           stats.bottomIncome.push({ 
-            name: facility.name || fin.facilityName, 
+            name: facility?.name || fin.facilityName || "Unknown", 
             revenue, 
             netIncome, 
             category: cat 
