@@ -1,0 +1,16 @@
+{
+  "main": {
+    "name": "Main Production DB",
+    "type": "sqlite",
+    "path": "local.db",
+    "token": "",
+    "description": "Primary database for production data"
+  },
+  "test_01": {
+    "name": "ca_finance_02012026",
+    "type": "sqlite",
+    "path": "d:\\somacosf\\outputs\\ca_med_fraud\\",
+    "token": "",
+    "description": ""
+  }
+}

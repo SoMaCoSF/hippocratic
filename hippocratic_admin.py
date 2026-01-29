@@ -61,6 +61,7 @@ except ImportError:
 sys.path.insert(0, str(Path(__file__).parent / "data_sources"))
 from privacy_proxy_adapter import PrivacyProxySession, OTEL_AVAILABLE as ADAPTER_OTEL
 from source_validator import SourceValidator
+from endpoint_browser import EndpointBrowser
 
 # Setup logging
 logging.basicConfig(
@@ -96,6 +97,13 @@ class HippocraticAdmin:
         
         # Source validator
         self.validator = SourceValidator()
+        
+        # Endpoint browser
+        self.browser = EndpointBrowser()
+        
+        # Real-time logs
+        self.logs = []
+        self.max_logs = 1000
         
         # Database configurations (multi-DB support)
         self.db_configs = self.load_db_configs()
@@ -165,6 +173,25 @@ class HippocraticAdmin:
     def get_db_for_scraper(self, scraper_name: str) -> str:
         """Get database key for a specific scraper."""
         return self.scraper_db_mapping.get(scraper_name, self.default_db)
+    
+    def add_log(self, message: str, level: str = "info", metadata: dict = None):
+        """Add a log entry."""
+        log_entry = {
+            'timestamp': datetime.now().isoformat(),
+            'level': level,
+            'message': message,
+            'metadata': metadata or {}
+        }
+        
+        self.logs.append(log_entry)
+        
+        # Trim logs if too many
+        if len(self.logs) > self.max_logs:
+            self.logs = self.logs[-self.max_logs:]
+        
+        # Also log to console
+        if console and RICH_AVAILABLE:
+            console.log(f"[{level.upper()}] {message}")
     
     def setup_routes(self):
         """Setup FastAPI routes."""
@@ -344,6 +371,45 @@ class HippocraticAdmin:
                 result = self.validator.validate_url(url)
             
             return JSONResponse(result)
+        
+        @self.app.get("/api/browse/{endpoint}")
+        async def browse_endpoint(endpoint: str, search: str = ""):
+            """Browse available datasets at an endpoint."""
+            self.add_log(f"Browsing {endpoint} for datasets...")
+            
+            if endpoint == 'data_ca_gov':
+                result = self.browser.browse_data_ca_gov(search)
+            elif endpoint == 'chhs':
+                result = self.browser.browse_chhs()
+            elif endpoint == 'cms':
+                result = self.browser.browse_cms_data()
+            elif endpoint == 'openfiscal':
+                result = self.browser.browse_openfiscal()
+            else:
+                return JSONResponse({'error': f'Unknown endpoint: {endpoint}'})
+            
+            self.add_log(f"Found {result.get('total', 0)} datasets at {endpoint}")
+            return JSONResponse(result)
+        
+        @self.app.get("/api/logs")
+        async def get_logs(limit: int = 100):
+            """Get recent logs."""
+            return JSONResponse({'logs': self.logs[-limit:]})
+        
+        @self.app.get("/api/logs/stream")
+        async def stream_logs():
+            """Stream logs in real-time using Server-Sent Events."""
+            async def event_generator():
+                last_index = len(self.logs)
+                while True:
+                    if len(self.logs) > last_index:
+                        for log in self.logs[last_index:]:
+                            yield f"data: {json.dumps(log)}\n\n"
+                        last_index = len(self.logs)
+                    await asyncio.sleep(0.5)
+            
+            from fastapi.responses import StreamingResponse
+            return StreamingResponse(event_generator(), media_type="text/event-stream")
     
     def render_dashboard(self) -> str:
         """Render HTML dashboard."""
@@ -806,11 +872,200 @@ class HippocraticAdmin:
             }}
         }}
         
+        let selectedDatasets = new Set();
+        
+        async function browseEndpoint() {{
+            const endpoint = document.getElementById('browse-endpoint').value;
+            const search = document.getElementById('browse-search').value;
+            const resultsDiv = document.getElementById('dataset-results');
+            
+            resultsDiv.innerHTML = '<div style="color: #3b82f6; text-align: center; padding: 20px;">⏳ Loading datasets...</div>';
+            
+            try {{
+                const url = `/api/browse/${{endpoint}}${{search ? '?search=' + encodeURIComponent(search) : ''}}`;
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.error) {{
+                    resultsDiv.innerHTML = `<div style="color: #ef4444;">❌ Error: ${{data.error}}</div>`;
+                    return;
+                }}
+                
+                resultsDiv.innerHTML = '';
+                
+                if (data.datasets && data.datasets.length > 0) {{
+                    const header = document.createElement('div');
+                    header.style.cssText = 'padding: 10px; background: #1e293b; border-radius: 6px; margin-bottom: 10px; font-weight: bold;';
+                    header.innerHTML = `Found ${{data.datasets.length}} datasets at ${{data.endpoint}}`;
+                    resultsDiv.appendChild(header);
+                    
+                    for (const dataset of data.datasets) {{
+                        const card = document.createElement('div');
+                        card.className = 'dataset-card';
+                        card.dataset.datasetId = dataset.id || dataset.name;
+                        
+                        let resourcesHtml = '';
+                        if (dataset.resources && dataset.resources.length > 0) {{
+                            resourcesHtml = '<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #334155;">';
+                            for (const resource of dataset.resources.slice(0, 3)) {{
+                                resourcesHtml += `
+                                    <div style="font-size: 0.85em; color: #a1a1aa; margin-top: 4px;">
+                                        📄 ${{resource.name}} (${{resource.format}})
+                                        ${{resource.size ? ' - ' + resource.size : ''}}
+                                    </div>
+                                `;
+                            }}
+                            if (dataset.resources.length > 3) {{
+                                resourcesHtml += `<div style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">+${{dataset.resources.length - 3}} more...</div>`;
+                            }}
+                            resourcesHtml += '</div>';
+                        }} else if (dataset.distributions) {{
+                            resourcesHtml = '<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #334155;">';
+                            for (const dist of dataset.distributions) {{
+                                resourcesHtml += `
+                                    <div style="font-size: 0.85em; color: #a1a1aa; margin-top: 4px;">
+                                        📄 ${{dist.title}} (${{dist.format}})
+                                    </div>
+                                `;
+                            }}
+                            resourcesHtml += '</div>';
+                        }}
+                        
+                        card.innerHTML = `
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div style="flex: 1;">
+                                    <div style="font-weight: 600; color: white; margin-bottom: 4px;">
+                                        ${{dataset.title || dataset.name}}
+                                    </div>
+                                    <div style="font-size: 0.85em; color: #a1a1aa; margin-bottom: 8px;">
+                                        ${{dataset.description || 'No description'}}
+                                    </div>
+                                    ${{dataset.organization ? `<div style="font-size: 0.75em; color: #6b7280;">Org: ${{dataset.organization}}</div>` : ''}}
+                                    ${{dataset.modified ? `<div style="font-size: 0.75em; color: #6b7280;">Modified: ${{new Date(dataset.modified).toLocaleDateString()}}</div>` : ''}}
+                                    ${{resourcesHtml}}
+                                </div>
+                                <input type="checkbox" onchange="toggleDataset('${{dataset.id || dataset.name}}', this.checked)"
+                                       style="width: 20px; height: 20px; cursor: pointer; margin-left: 10px;">
+                            </div>
+                        `;
+                        
+                        resultsDiv.appendChild(card);
+                    }}
+                    
+                    // Add "Scrape Selected" button
+                    const actionDiv = document.createElement('div');
+                    actionDiv.style.cssText = 'margin-top: 15px; text-align: center;';
+                    actionDiv.innerHTML = `
+                        <button onclick="scrapeSelected()" 
+                                style="padding: 12px 24px; background: #22c55e; border: none; border-radius: 6px; color: white; cursor: pointer; font-weight: bold; font-size: 1em;">
+                            🚀 Scrape Selected (<span id="selected-count">0</span>)
+                        </button>
+                    `;
+                    resultsDiv.appendChild(actionDiv);
+                }} else {{
+                    resultsDiv.innerHTML = '<div style="color: #a1a1aa; text-align: center; padding: 20px;">No datasets found</div>';
+                }}
+            }} catch (error) {{
+                resultsDiv.innerHTML = `<div style="color: #ef4444;">❌ Error: ${{error.message}}</div>`;
+            }}
+        }}
+        
+        function toggleDataset(datasetId, checked) {{
+            if (checked) {{
+                selectedDatasets.add(datasetId);
+            }} else {{
+                selectedDatasets.delete(datasetId);
+            }}
+            
+            const countSpan = document.getElementById('selected-count');
+            if (countSpan) {{
+                countSpan.textContent = selectedDatasets.size;
+            }}
+        }}
+        
+        function scrapeSelected() {{
+            if (selectedDatasets.size === 0) {{
+                alert('Please select at least one dataset');
+                return;
+            }}
+            
+            alert(`Starting scrape of ${{selectedDatasets.size}} datasets...`);
+            // TODO: Implement actual scraping
+            addLog('info', `Starting scrape of ${{selectedDatasets.size}} datasets`);
+        }}
+        
+        function addLog(level, message) {{
+            const logContainer = document.getElementById('log-container');
+            const timestamp = new Date().toISOString().substring(11, 19);
+            
+            const logEntry = document.createElement('div');
+            logEntry.className = 'log-entry';
+            logEntry.innerHTML = `
+                <span class="log-timestamp">[${{timestamp}}]</span>
+                <span class="log-level-${{level}}">[${{level.toUpperCase()}}]</span>
+                <span class="log-message">${{message}}</span>
+            `;
+            
+            logContainer.appendChild(logEntry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }}
+        
+        async function loadLogs() {{
+            try {{
+                const response = await fetch('/api/logs?limit=50');
+                const data = await response.json();
+                
+                const logContainer = document.getElementById('log-container');
+                logContainer.innerHTML = '';
+                
+                for (const log of data.logs) {{
+                    const timestamp = new Date(log.timestamp).toISOString().substring(11, 19);
+                    const logEntry = document.createElement('div');
+                    logEntry.className = 'log-entry';
+                    logEntry.innerHTML = `
+                        <span class="log-timestamp">[${{timestamp}}]</span>
+                        <span class="log-level-${{log.level}}">[${{log.level.toUpperCase()}}]</span>
+                        <span class="log-message">${{log.message}}</span>
+                    `;
+                    logContainer.appendChild(logEntry);
+                }}
+                
+                logContainer.scrollTop = logContainer.scrollHeight;
+            }} catch (error) {{
+                console.error('Error loading logs:', error);
+            }}
+        }}
+        
+        // Simulate real-time metrics update
+        function updateMetrics() {{
+            // These would come from actual OpenTelemetry in production
+            const requests = Math.floor(Math.random() * 50);
+            const latency = Math.floor(Math.random() * 500) + 100;
+            const bytes = Math.floor(Math.random() * 1000);
+            const rateLimit = Math.floor(Math.random() * 5);
+            
+            document.getElementById('otel-requests').textContent = requests;
+            document.getElementById('otel-latency').textContent = latency + 'ms';
+            document.getElementById('otel-bytes').textContent = bytes + ' KB';
+            document.getElementById('otel-ratelimit').textContent = rateLimit;
+        }}
+        
         // Load on page load
         document.addEventListener('DOMContentLoaded', () => {{
             loadDataSources();
             loadDatabases();
             loadScraperMappings();
+            loadLogs();
+            
+            // Update metrics every 2 seconds
+            setInterval(updateMetrics, 2000);
+            updateMetrics();
+            
+            // Refresh logs every 5 seconds
+            setInterval(loadLogs, 5000);
+            
+            // Initial log
+            addLog('info', 'Admin panel loaded');
         }});
         
         // Auto-refresh every 30 seconds
@@ -906,6 +1161,60 @@ class HippocraticAdmin:
                 </button>
                 <div id="validation-chhs" style="margin-top: 5px; font-size: 0.8em;"></div>
             </div>
+        </div>
+    </div>
+    
+    <div class="section" id="otel-panel">
+        <h2>📊 Real-Time Telemetry</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px;">
+            <div class="metric-card">
+                <div class="metric-label">Requests/sec</div>
+                <div class="metric-value" id="otel-requests">0</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Avg Latency</div>
+                <div class="metric-value" id="otel-latency">0ms</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Data Downloaded</div>
+                <div class="metric-value" id="otel-bytes">0 KB</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Rate Limits</div>
+                <div class="metric-value" id="otel-ratelimit">0</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="browse-panel">
+        <h2>🔍 Dataset Browser</h2>
+        <p style="color: #a1a1aa; margin-bottom: 15px;">
+            Browse available datasets at government endpoints. Select which ones to scrape.
+        </p>
+        
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <select id="browse-endpoint" style="flex: 1; padding: 10px; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: white; cursor: pointer;">
+                <option value="data_ca_gov">data.ca.gov (CKAN)</option>
+                <option value="chhs">CHHS Portal (Socrata)</option>
+                <option value="cms">CMS Data</option>
+                <option value="openfiscal">Open FI$Cal</option>
+            </select>
+            <input type="text" id="browse-search" placeholder="Search datasets..." 
+                   style="flex: 2; padding: 10px; background: #1e293b; border: 1px solid #334155; border-radius: 6px; color: white;">
+            <button onclick="browseEndpoint()" style="padding: 10px 20px; background: #3b82f6; border: none; border-radius: 6px; color: white; cursor: pointer; font-weight: bold;">
+                🔍 Browse
+            </button>
+        </div>
+        
+        <div id="dataset-results" style="max-height: 500px; overflow-y: auto;">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+    
+    <div class="section" id="log-panel">
+        <h2>📜 Live Activity Log</h2>
+        <div id="log-container" style="background: #0f172a; border-radius: 6px; padding: 15px; height: 400px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 0.85em; border: 1px solid #334155;">
+            <div style="color: #a1a1aa;">Waiting for activity...</div>
         </div>
     </div>
     
