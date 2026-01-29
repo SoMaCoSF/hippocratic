@@ -11,6 +11,7 @@ interface DataRecord {
   source: string;
   timestamp: string;
   size: string;
+  data?: any;
 }
 
 export default function LCARSAdmin() {
@@ -82,15 +83,40 @@ export default function LCARSAdmin() {
         activeScrapers: prev.activeScrapers - 1
       }));
       
-      // Add data records
+      // Add data records with realistic content
       for (let i = 0; i < Math.min(recordCount, 20); i++) {
+        const recordType = i % 3 === 0 ? 'Facility' : i % 3 === 1 ? 'Financial' : 'Budget';
         addDataRecord({
           id: Date.now() + i,
-          name: `${name.toUpperCase()} Record ${i + 1}`,
-          type: i % 3 === 0 ? 'Facility' : i % 3 === 1 ? 'Financial' : 'Budget',
+          name: `${name.toUpperCase()} ${recordType} Record ${i + 1}`,
+          type: recordType,
           source: name,
           timestamp: new Date().toISOString(),
-          size: `${Math.floor(Math.random() * 50) + 10}KB`
+          size: `${Math.floor(Math.random() * 50) + 10}KB`,
+          data: recordType === 'Facility' ? {
+            facilityName: `Healthcare Facility ${i + 1}`,
+            address: `${Math.floor(Math.random() * 9999)} Main St`,
+            city: 'Los Angeles',
+            state: 'CA',
+            zip: `90${String(Math.floor(Math.random() * 999)).padStart(3, '0')}`,
+            licenseNumber: `L${Math.floor(Math.random() * 999999)}`,
+            capacity: Math.floor(Math.random() * 200) + 10,
+            type: 'Skilled Nursing Facility'
+          } : recordType === 'Financial' ? {
+            facilityName: `Healthcare Facility ${i + 1}`,
+            totalRevenue: `$${(Math.random() * 10000000).toFixed(2)}`,
+            netIncome: `$${(Math.random() * 1000000).toFixed(2)}`,
+            operatingExpenses: `$${(Math.random() * 8000000).toFixed(2)}`,
+            patientDays: Math.floor(Math.random() * 50000),
+            fiscalYear: '2024'
+          } : {
+            department: 'Health Services',
+            program: `Program ${i + 1}`,
+            budgetedAmount: `$${(Math.random() * 5000000).toFixed(2)}`,
+            actualAmount: `$${(Math.random() * 5000000).toFixed(2)}`,
+            variance: `${(Math.random() * 20 - 10).toFixed(1)}%`,
+            fiscalYear: '2024-2025'
+          }
         });
       }
       
@@ -130,11 +156,13 @@ export default function LCARSAdmin() {
   }, []);
 
   const scrapers = [
-    { id: 'data_ca_gov', label: 'DATA.CA.GOV', color: 'bg-emerald-500' },
-    { id: 'chhs', label: 'CHHS PORTAL', color: 'bg-green-500' },
-    { id: 'cms', label: 'CMS DATA', color: 'bg-teal-500' },
-    { id: 'openfiscal', label: 'OPEN FISCAL', color: 'bg-lime-500' }
+    { id: 'data_ca_gov', label: 'DATA.CA.GOV', color: 'bg-green-700' },
+    { id: 'chhs', label: 'CHHS PORTAL', color: 'bg-green-600' },
+    { id: 'cms', label: 'CMS DATA', color: 'bg-emerald-700' },
+    { id: 'openfiscal', label: 'OPEN FISCAL', color: 'bg-teal-700' }
   ];
+
+  const [selectedRecord, setSelectedRecord] = useState<DataRecord | null>(null);
 
   return (
     <div className="h-screen bg-zinc-900 text-white overflow-hidden">
@@ -142,7 +170,7 @@ export default function LCARSAdmin() {
       <div className="absolute top-0 left-0 w-64 h-32 bg-gradient-to-br from-gray-600 to-gray-700 rounded-br-[100px]" />
       
       {/* Corner Accent - Top Right */}
-      <div className="absolute top-0 right-0 w-32 h-64 bg-gradient-to-bl from-emerald-600 to-green-700 rounded-bl-[100px]" />
+      <div className="absolute top-0 right-0 w-32 h-64 bg-gradient-to-bl from-green-800 to-green-900 rounded-bl-[100px]" />
 
       {/* Main Content */}
       <div className="relative z-10 h-full flex flex-col p-4 gap-3">
@@ -152,10 +180,10 @@ export default function LCARSAdmin() {
           <div className="bg-gradient-to-r from-gray-500 to-gray-600 rounded-r-full w-32 flex items-center justify-center text-white font-bold text-xl">
             LCARS
           </div>
-          <div className="flex-1 bg-gradient-to-r from-gray-700 via-emerald-700 to-green-700 rounded-3xl flex items-center px-6 text-2xl font-bold tracking-wider text-white">
+          <div className="flex-1 bg-gradient-to-r from-gray-700 via-green-900 to-green-800 rounded-3xl flex items-center px-6 text-2xl font-bold tracking-wider text-white">
             HIPPOCRATIC COMMAND - MEDICAL FRAUD DETECTION SYSTEM
           </div>
-          <div className="bg-gradient-to-l from-emerald-500 to-green-600 rounded-l-full w-32 flex items-center justify-center text-white font-bold text-xl">
+          <div className="bg-gradient-to-l from-green-800 to-green-700 rounded-l-full w-32 flex items-center justify-center text-white font-bold text-xl">
             {new Date().toLocaleTimeString()}
           </div>
         </div>
@@ -178,11 +206,11 @@ export default function LCARSAdmin() {
               TELEMETRY
             </div>
             
-            <MetricCard label="REQUESTS" value={metrics.requests} color="bg-emerald-600" />
-            <MetricCard label="LATENCY" value={`${metrics.latency}MS`} color="bg-green-600" />
-            <MetricCard label="DATA DL" value={`${(metrics.bytes / 1024).toFixed(1)}MB`} color="bg-teal-600" />
-            <MetricCard label="RECORDS" value={metrics.records.toLocaleString()} color="bg-lime-600" />
-            <MetricCard label="ACTIVE" value={metrics.activeScrapers} color="bg-emerald-500" />
+            <MetricCard label="REQUESTS" value={metrics.requests} color="bg-green-800" />
+            <MetricCard label="LATENCY" value={`${metrics.latency}MS`} color="bg-green-700" />
+            <MetricCard label="DATA DL" value={`${(metrics.bytes / 1024).toFixed(1)}MB`} color="bg-emerald-800" />
+            <MetricCard label="RECORDS" value={metrics.records.toLocaleString()} color="bg-teal-800" />
+            <MetricCard label="ACTIVE" value={metrics.activeScrapers} color="bg-green-700" />
           </div>
 
           {/* Center Panel - Dynamic Content */}
@@ -191,7 +219,7 @@ export default function LCARSAdmin() {
             {currentView === 'database' && <DatabasePanel dbStats={dbStats} />}
             {currentView === 'traffic' && <TrafficPanel trafficLog={trafficLog} />}
             {currentView === 'logs' && <LogsPanel logs={logs} logRef={logRef} />}
-            {currentView === 'data' && <DataPanel dataRecords={dataRecords} />}
+            {currentView === 'data' && <DataPanel dataRecords={dataRecords} selectedRecord={selectedRecord} setSelectedRecord={setSelectedRecord} />}
           </div>
 
           {/* Right Panel - Scrapers */}
@@ -226,8 +254,8 @@ export default function LCARSAdmin() {
             <div className="flex-1" />
 
             {/* Quick Stats */}
-            <div className="bg-gradient-to-b from-gray-800 to-zinc-900 rounded-2xl p-4 border-2 border-emerald-600">
-              <div className="text-emerald-400 font-bold mb-2">DATABASE STATUS</div>
+            <div className="bg-gradient-to-b from-gray-800 to-zinc-900 rounded-2xl p-4 border-2 border-green-800">
+              <div className="text-green-500 font-bold mb-2">DATABASE STATUS</div>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span className="text-gray-400">FACILITIES:</span>
@@ -255,10 +283,10 @@ export default function LCARSAdmin() {
           <div className="bg-gradient-to-r from-gray-600 to-gray-700 rounded-full w-48 flex items-center justify-center text-white font-bold">
             SYSTEM NOMINAL
           </div>
-          <div className="flex-1 bg-gradient-to-r from-gray-700 to-emerald-700 rounded-full flex items-center justify-center text-sm font-mono text-gray-200">
+          <div className="flex-1 bg-gradient-to-r from-gray-700 to-green-900 rounded-full flex items-center justify-center text-sm font-mono text-gray-200">
             CA DEPT OF PUBLIC HEALTH • FRAUD DETECTION • REAL-TIME ANALYSIS
           </div>
-          <div className="bg-gradient-to-l from-emerald-600 to-green-600 rounded-full w-48 flex items-center justify-center text-white font-bold">
+          <div className="bg-gradient-to-l from-green-800 to-green-700 rounded-full w-48 flex items-center justify-center text-white font-bold">
             ONLINE
           </div>
         </div>
@@ -268,7 +296,7 @@ export default function LCARSAdmin() {
       <div className="absolute bottom-0 left-0 w-32 h-64 bg-gradient-to-tr from-gray-600 to-gray-700 rounded-tr-[100px]" />
       
       {/* Corner Accent - Bottom Right */}
-      <div className="absolute bottom-0 right-0 w-64 h-32 bg-gradient-to-tl from-emerald-600 to-green-700 rounded-tl-[100px]" />
+      <div className="absolute bottom-0 right-0 w-64 h-32 bg-gradient-to-tl from-green-800 to-green-900 rounded-tl-[100px]" />
     </div>
   );
 }
@@ -289,7 +317,7 @@ function NavTab({ label, active, onClick }: { label: string; active: boolean; on
       className={`
         px-6 py-2 rounded-t-2xl font-bold transition-all
         ${active 
-          ? 'bg-emerald-600 text-white' 
+          ? 'bg-green-800 text-white' 
           : 'bg-gray-700 text-gray-400 hover:bg-gray-600'}
       `}
     >
@@ -330,8 +358,8 @@ function DatabasePanel({ dbStats }: any) {
       </div>
       <div className="flex-1 bg-zinc-950 rounded-2xl p-6 overflow-y-auto border-2 border-gray-700">
         <div className="grid grid-cols-2 gap-6">
-          <div className="bg-gray-800 rounded-xl p-4 border-2 border-emerald-600">
-            <h3 className="text-emerald-400 font-bold mb-4">TABLES</h3>
+          <div className="bg-gray-800 rounded-xl p-4 border-2 border-green-800">
+            <h3 className="text-green-500 font-bold mb-4">TABLES</h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-gray-300">facilities</span>
@@ -352,8 +380,8 @@ function DatabasePanel({ dbStats }: any) {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-xl p-4 border-2 border-green-600">
-            <h3 className="text-green-400 font-bold mb-4">STORAGE</h3>
+          <div className="bg-gray-800 rounded-xl p-4 border-2 border-green-700">
+            <h3 className="text-green-500 font-bold mb-4">STORAGE</h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-gray-300">Total Size:</span>
@@ -369,24 +397,24 @@ function DatabasePanel({ dbStats }: any) {
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-300">Connections:</span>
-                <span className="text-emerald-400 font-bold">Active</span>
+                <span className="text-green-500 font-bold">Active</span>
               </div>
             </div>
           </div>
 
-          <div className="col-span-2 bg-gray-800 rounded-xl p-4 border-2 border-teal-600">
-            <h3 className="text-teal-400 font-bold mb-4">ACTIONS</h3>
+          <div className="col-span-2 bg-gray-800 rounded-xl p-4 border-2 border-emerald-800">
+            <h3 className="text-emerald-500 font-bold mb-4">ACTIONS</h3>
             <div className="grid grid-cols-4 gap-3">
-              <button className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-4 rounded-lg">
+              <button className="bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
                 BACKUP
               </button>
-              <button className="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg">
+              <button className="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg">
                 OPTIMIZE
               </button>
-              <button className="bg-teal-600 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded-lg">
+              <button className="bg-emerald-800 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-lg">
                 EXPORT
               </button>
-              <button className="bg-lime-600 hover:bg-lime-500 text-white font-bold py-2 px-4 rounded-lg">
+              <button className="bg-teal-800 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg">
                 VACUUM
               </button>
             </div>
@@ -406,7 +434,7 @@ function TrafficPanel({ trafficLog }: any) {
       <div className="flex-1 bg-zinc-950 rounded-2xl p-4 overflow-y-auto border-2 border-gray-700">
         <table className="w-full text-sm font-mono">
           <thead className="sticky top-0 bg-gray-800">
-            <tr className="text-left text-emerald-400">
+            <tr className="text-left text-green-500">
               <th className="p-2">TIME</th>
               <th className="p-2">METHOD</th>
               <th className="p-2">ENDPOINT</th>
@@ -418,14 +446,14 @@ function TrafficPanel({ trafficLog }: any) {
             {trafficLog.map((entry: any, idx: number) => (
               <tr key={idx} className="border-t border-gray-800 hover:bg-gray-900">
                 <td className="p-2 text-gray-400">{entry.timestamp}</td>
-                <td className="p-2 text-cyan-400 font-bold">{entry.method}</td>
+                <td className="p-2 text-teal-400 font-bold">{entry.method}</td>
                 <td className="p-2 text-white truncate max-w-xs">{entry.endpoint}</td>
                 <td className="p-2">
-                  <span className={`font-bold ${entry.status === 200 ? 'text-emerald-400' : 'text-red-400'}`}>
+                  <span className={`font-bold ${entry.status === 200 ? 'text-green-500' : 'text-red-400'}`}>
                     {entry.status}
                   </span>
                 </td>
-                <td className="p-2 text-green-400">{entry.latency}ms</td>
+                <td className="p-2 text-emerald-500">{entry.latency}ms</td>
               </tr>
             ))}
           </tbody>
@@ -459,45 +487,151 @@ function LogsPanel({ logs, logRef }: any) {
   );
 }
 
-function DataPanel({ dataRecords }: any) {
+function DataPanel({ dataRecords, selectedRecord, setSelectedRecord }: any) {
   return (
     <>
       <div className="bg-gray-700 text-white p-3 rounded-2xl font-bold text-lg">
         INGESTED DATA RECORDS
       </div>
-      <div className="flex-1 bg-zinc-950 rounded-2xl p-4 overflow-y-auto border-2 border-gray-700">
-        <table className="w-full text-sm">
-          <thead className="sticky top-0 bg-gray-800">
-            <tr className="text-left text-emerald-400">
-              <th className="p-2">ID</th>
-              <th className="p-2">NAME</th>
-              <th className="p-2">TYPE</th>
-              <th className="p-2">SOURCE</th>
-              <th className="p-2">TIMESTAMP</th>
-              <th className="p-2">SIZE</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dataRecords.map((record: DataRecord) => (
-              <tr key={record.id} className="border-t border-gray-800 hover:bg-gray-900">
-                <td className="p-2 text-gray-400">{record.id}</td>
-                <td className="p-2 text-white">{record.name}</td>
-                <td className="p-2">
-                  <span className={`px-2 py-1 rounded text-xs font-bold ${
-                    record.type === 'Facility' ? 'bg-emerald-600' :
-                    record.type === 'Financial' ? 'bg-green-600' :
-                    'bg-teal-600'
-                  }`}>
-                    {record.type}
-                  </span>
-                </td>
-                <td className="p-2 text-cyan-400">{record.source}</td>
-                <td className="p-2 text-gray-400">{new Date(record.timestamp).toLocaleTimeString()}</td>
-                <td className="p-2 text-lime-400">{record.size}</td>
+      <div className="flex-1 flex gap-3 overflow-hidden">
+        {/* Records Table */}
+        <div className="flex-1 bg-zinc-950 rounded-2xl p-4 overflow-y-auto border-2 border-gray-700">
+          <table className="w-full text-sm">
+            <thead className="sticky top-0 bg-gray-800">
+              <tr className="text-left text-green-500">
+                <th className="p-2">ID</th>
+                <th className="p-2">NAME</th>
+                <th className="p-2">TYPE</th>
+                <th className="p-2">SOURCE</th>
+                <th className="p-2">TIMESTAMP</th>
+                <th className="p-2">SIZE</th>
+                <th className="p-2">ACTION</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {dataRecords.map((record: DataRecord) => (
+                <tr 
+                  key={record.id} 
+                  className={`border-t border-gray-800 hover:bg-gray-900 cursor-pointer ${
+                    selectedRecord?.id === record.id ? 'bg-gray-800' : ''
+                  }`}
+                  onClick={() => setSelectedRecord(record)}
+                >
+                  <td className="p-2 text-gray-400">{record.id}</td>
+                  <td className="p-2 text-white">{record.name}</td>
+                  <td className="p-2">
+                    <span className={`px-2 py-1 rounded text-xs font-bold ${
+                      record.type === 'Facility' ? 'bg-green-800' :
+                      record.type === 'Financial' ? 'bg-green-700' :
+                      'bg-emerald-800'
+                    }`}>
+                      {record.type}
+                    </span>
+                  </td>
+                  <td className="p-2 text-teal-400">{record.source}</td>
+                  <td className="p-2 text-gray-400">{new Date(record.timestamp).toLocaleTimeString()}</td>
+                  <td className="p-2 text-green-400">{record.size}</td>
+                  <td className="p-2">
+                    <button 
+                      onClick={(e) => { e.stopPropagation(); setSelectedRecord(record); }}
+                      className="bg-green-800 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-bold"
+                    >
+                      VIEW
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Data Preview Panel */}
+        <div className="w-96 bg-zinc-950 rounded-2xl p-4 border-2 border-green-800 overflow-y-auto">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-green-500 font-bold text-lg">RECORD DETAILS</h3>
+            {selectedRecord && (
+              <button 
+                onClick={() => setSelectedRecord(null)}
+                className="text-gray-400 hover:text-white text-sm"
+              >
+                ✕ CLOSE
+              </button>
+            )}
+          </div>
+          
+          {selectedRecord ? (
+            <div className="space-y-4">
+              {/* Header Info */}
+              <div className="bg-gray-800 rounded-lg p-3 border-l-4 border-green-700">
+                <div className="text-xs text-gray-400 mb-1">RECORD ID</div>
+                <div className="text-white font-bold">{selectedRecord.id}</div>
+              </div>
+
+              <div className="bg-gray-800 rounded-lg p-3 border-l-4 border-green-700">
+                <div className="text-xs text-gray-400 mb-1">NAME</div>
+                <div className="text-white font-bold">{selectedRecord.name}</div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-gray-800 rounded-lg p-2">
+                  <div className="text-xs text-gray-400">TYPE</div>
+                  <div className="text-green-400 font-bold">{selectedRecord.type}</div>
+                </div>
+                <div className="bg-gray-800 rounded-lg p-2">
+                  <div className="text-xs text-gray-400">SOURCE</div>
+                  <div className="text-teal-400 font-bold">{selectedRecord.source}</div>
+                </div>
+              </div>
+
+              {/* Full Data Content */}
+              {selectedRecord.data && (
+                <div className="bg-gray-800 rounded-lg p-3 border-l-4 border-emerald-700">
+                  <div className="text-xs text-gray-400 mb-2">FULL DATA</div>
+                  <div className="space-y-2 text-sm">
+                    {Object.entries(selectedRecord.data).map(([key, value]) => (
+                      <div key={key} className="flex justify-between border-b border-gray-700 pb-1">
+                        <span className="text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}:</span>
+                        <span className="text-white font-mono">{String(value)}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Metadata */}
+              <div className="bg-gray-800 rounded-lg p-3">
+                <div className="text-xs text-gray-400 mb-2">METADATA</div>
+                <div className="space-y-1 text-xs">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Timestamp:</span>
+                    <span className="text-white">{new Date(selectedRecord.timestamp).toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Size:</span>
+                    <span className="text-green-400">{selectedRecord.size}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Actions */}
+              <div className="flex gap-2">
+                <button className="flex-1 bg-green-800 hover:bg-green-700 text-white py-2 rounded font-bold text-sm">
+                  EXPORT JSON
+                </button>
+                <button className="flex-1 bg-emerald-800 hover:bg-emerald-700 text-white py-2 rounded font-bold text-sm">
+                  EXPORT CSV
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="flex items-center justify-center h-full text-gray-500 text-center">
+              <div>
+                <div className="text-4xl mb-2">📄</div>
+                <div>Click on a record to view details</div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
