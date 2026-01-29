@@ -14,7 +14,7 @@ export default function LandingPage() {
     
     // Add a little animation effect
     setTimeout(() => {
-      router.push("/");
+      router.push("/map");
     }, 300);
   };
 

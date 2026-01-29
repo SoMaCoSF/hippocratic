@@ -606,7 +606,7 @@ export default function NetworkPage() {
         {/* Navigation */}
         <div className="mt-8 pt-6 border-t border-zinc-800">
           <div className="flex flex-wrap gap-4">
-            <Link href="/" className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium">
+            <Link href="/map" className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium">
               Map View
             </Link>
             <Link href="/explorer" className="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-medium">

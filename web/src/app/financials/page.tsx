@@ -209,7 +209,7 @@ export default function FinancialsPage() {
       {/* Top Navigation Bar */}
       <div className="bg-zinc-900/95 backdrop-blur border-b border-zinc-700 sticky top-0 z-50">
         <div className="px-3 py-2 flex items-center gap-2 overflow-x-auto">
-          <Link href="/" className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium">
+          <Link href="/map" className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium">
             🗺️ Map
           </Link>
           <Link href="/explorer" className="flex-shrink-0 px-3 py-1 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-medium">
