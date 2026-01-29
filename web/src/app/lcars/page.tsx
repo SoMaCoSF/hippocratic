@@ -457,17 +457,34 @@ function MLDetectionPanel() {
   const [mlResults, setMlResults] = useState<any>(null);
   const [highRisk, setHighRisk] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-  const [selectedModel, setSelectedModel] = useState<string>('all');
+  const [databases, setDatabases] = useState<any>({});
+  const [selectedDb, setSelectedDb] = useState<string>('main');
+  const [contamination, setContamination] = useState<number>(0.1);
+  
+  useEffect(() => {
+    fetchDatabases();
+  }, []);
+  
+  const fetchDatabases = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/api/databases');
+      const data = await response.json();
+      setDatabases(data.databases || {});
+      setSelectedDb(data.default || 'main');
+    } catch (error) {
+      console.error('Failed to fetch databases:', error);
+    }
+  };
   
   const runMLDetection = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/ml/run-all');
+      const response = await fetch(`http://localhost:8000/api/ml/run-all?db_key=${selectedDb}&contamination=${contamination}`);
       const data = await response.json();
       setMlResults(data);
       
       // Fetch high-risk facilities
-      const riskResponse = await fetch('http://localhost:8000/api/ml/high-risk?limit=50');
+      const riskResponse = await fetch(`http://localhost:8000/api/ml/high-risk?limit=50&db_key=${selectedDb}`);
       const riskData = await riskResponse.json();
       setHighRisk(riskData.high_risk_facilities || []);
     } catch (error) {
@@ -484,14 +501,58 @@ function MLDetectionPanel() {
       <div className="flex-1 bg-zinc-950 rounded-2xl p-6 overflow-y-auto border-2 border-gray-700">
         
         {/* Control Panel */}
-        <div className="mb-6">
+        <div className="mb-6 space-y-4">
+          {/* Database Selection */}
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-gray-400 text-sm block mb-2">SELECT DATABASE</label>
+                <select
+                  value={selectedDb}
+                  onChange={(e) => setSelectedDb(e.target.value)}
+                  className="w-full px-4 py-2 bg-gray-900 text-white rounded border border-gray-700"
+                  disabled={loading}
+                >
+                  {Object.entries(databases).map(([key, config]: [string, any]) => (
+                    <option key={key} value={key}>
+                      {config.name} ({config.type}) - {config.path}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="text-gray-400 text-sm block mb-2">CONTAMINATION (FRAUD RATE)</label>
+                <select
+                  value={contamination}
+                  onChange={(e) => setContamination(parseFloat(e.target.value))}
+                  className="w-full px-4 py-2 bg-gray-900 text-white rounded border border-gray-700"
+                  disabled={loading}
+                >
+                  <option value={0.05}>5% (Conservative)</option>
+                  <option value={0.1}>10% (Balanced)</option>
+                  <option value={0.15}>15% (Aggressive)</option>
+                  <option value={0.2}>20% (Very Aggressive)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          {/* Run Button */}
           <button
             onClick={runMLDetection}
             disabled={loading}
-            className="px-8 py-3 bg-green-700 hover:bg-green-600 text-white rounded-lg font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-8 py-3 bg-green-700 hover:bg-green-600 text-white rounded-lg font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? '🔄 ANALYZING WITH 6 ML MODELS...' : '🚀 RUN COMPREHENSIVE ML ANALYSIS'}
           </button>
+          
+          {mlResults && (
+            <div className="text-gray-400 text-sm">
+              Database: <span className="text-white">{mlResults.database}</span> • 
+              Path: <span className="text-white">{mlResults.database_path}</span> • 
+              Contamination: <span className="text-white">{(mlResults.contamination * 100).toFixed(0)}%</span>
+            </div>
+          )}
         </div>
         
         {loading && (

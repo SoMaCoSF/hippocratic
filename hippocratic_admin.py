@@ -448,12 +448,24 @@ class HippocraticAdmin:
                 raise HTTPException(500, f"Failed to get correlation: {str(e)}")
         
         @self.app.get("/api/ml/run-all")
-        async def run_ml_fraud_detection(contamination: float = 0.1):
+        async def run_ml_fraud_detection(contamination: float = 0.1, db_key: str = 'main'):
             """Run all ML fraud detection models."""
             try:
+                # Get database path from configuration
+                db_config = self.db_configs.get(db_key, self.db_configs.get('main'))
+                
+                # Determine database path
+                if db_config['type'] == 'turso':
+                    # For Turso, would need libsql-client, for now use local
+                    db_path = db_config.get('path', 'local.db')
+                else:
+                    db_path = db_config.get('path', 'local.db')
+                
                 from ml_fraud_detector import MLFraudDetector
-                detector = MLFraudDetector()
+                detector = MLFraudDetector(db_path=db_path)
                 results = detector.run_all_models(contamination)
+                results['database'] = db_key
+                results['database_path'] = db_path
                 return JSONResponse(results)
             except Exception as e:
                 raise HTTPException(500, f"ML detection failed: {str(e)}")
@@ -518,18 +530,27 @@ class HippocraticAdmin:
                 raise HTTPException(500, f"LightGBM failed: {str(e)}")
         
         @self.app.get("/api/ml/high-risk")
-        async def get_high_risk_facilities(limit: int = 50):
+        async def get_high_risk_facilities(limit: int = 50, db_key: str = 'main'):
             """Get high-risk facilities identified by ML models."""
             try:
+                # Get database path from configuration
+                db_config = self.db_configs.get(db_key, self.db_configs.get('main'))
+                db_path = db_config.get('path', 'local.db')
+                
                 from ml_fraud_detector import MLFraudDetector
-                detector = MLFraudDetector()
+                detector = MLFraudDetector(db_path=db_path)
                 # Run ensemble
                 detector.run_isolation_forest(0.1)
                 detector.run_lof(0.1)
                 detector.run_ecod(0.1)
                 detector.run_ensemble_voting()
                 facilities = detector.get_high_risk_facilities(limit)
-                return JSONResponse({'high_risk_facilities': facilities, 'total': len(facilities)})
+                return JSONResponse({
+                    'high_risk_facilities': facilities, 
+                    'total': len(facilities),
+                    'database': db_key,
+                    'database_path': db_path
+                })
             except Exception as e:
                 raise HTTPException(500, f"Failed to get high-risk facilities: {str(e)}")
         

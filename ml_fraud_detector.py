@@ -45,7 +45,19 @@ class MLFraudDetector:
     
     def __init__(self, db_path: str = "local.db"):
         self.db_path = db_path
-        self.conn = sqlite3.connect(db_path)
+        print(f"📂 Connecting to database: {db_path}")
+        try:
+            self.conn = sqlite3.connect(db_path)
+            # Test connection
+            cursor = self.conn.cursor()
+            cursor.execute("SELECT COUNT(*) FROM facilities")
+            facility_count = cursor.fetchone()[0]
+            cursor.execute("SELECT COUNT(*) FROM financials")
+            financial_count = cursor.fetchone()[0]
+            print(f"✅ Database connected: {facility_count} facilities, {financial_count} financial records")
+        except Exception as e:
+            print(f"❌ Database connection failed: {e}")
+            raise
         self.models = {}
         self.scalers = {}
         self.results = {}
