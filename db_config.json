@@ -1,0 +1,16 @@
+{
+  "main": {
+    "name": "Main Production DB",
+    "type": "sqlite",
+    "path": "local.db",
+    "token": "",
+    "description": "Primary database for production data"
+  },
+  "testing": {
+    "name": "Testing Database",
+    "type": "sqlite",
+    "path": "testing.db",
+    "token": "",
+    "description": "Test database for experimental scraping"
+  }
+}
