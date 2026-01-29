@@ -319,9 +319,11 @@ class OSINTNetworkScene(Scene):
             dot = Dot(pos, radius=0.12, color=color)
             node_dots[f['id']] = dot
 
-            # Truncate name for label
+            # Truncate name for label - ADD REVENUE IF AVAILABLE
             short_name = f['name'][:20] + "..." if len(f['name']) > 20 else f['name']
-            label = Text(short_name, font_size=10, color=GREY_A)
+            if revenue > 0:
+                short_name = f"💰${revenue/1e6:.1f}M | " + short_name
+            label = Text(short_name, font_size=10, color=GREY_A if revenue == 0 else WHITE)
             label.next_to(dot, normalize(pos) * 0.3, buff=0.05)
             label.rotate(angle if -PI/2 < angle < PI/2 else angle + PI)
             node_labels[f['id']] = label
