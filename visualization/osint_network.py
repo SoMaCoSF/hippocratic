@@ -33,15 +33,19 @@ import random
 from pathlib import Path
 from collections import defaultdict
 
-# Color palette matching the web app
+# Color palette matching the web app - MONEY FOCUSED
 COLORS = {
-    "standard": "#3b82f6",  # blue - default facility
-    "address": "#f59e0b",   # amber - shared address
-    "phone": "#a855f7",     # purple - shared phone
-    "owner": "#06b6d4",     # cyan - shared owner
-    "admin": "#ec4899",     # pink - shared admin
-    "multiple": "#ef4444",  # red - multiple connection types
-    "selected": "#22c55e",  # green - selected node
+    "standard": "#3b82f6",      # blue - default facility
+    "address": "#f59e0b",       # amber - shared address
+    "phone": "#a855f7",         # purple - shared phone
+    "owner": "#06b6d4",         # cyan - shared owner
+    "admin": "#ec4899",         # pink - shared admin
+    "multiple": "#ef4444",      # red - multiple connection types
+    "selected": "#22c55e",      # green - selected node
+    "profit": "#10b981",        # emerald - profitable facility
+    "loss": "#ef4444",          # red - losing money
+    "no_data": "#52525b",       # gray - no financial data
+    "high_revenue": "#fbbf24",  # gold - high revenue
 }
 
 def hex_to_rgb(hex_color):
@@ -80,8 +84,9 @@ def create_connection_legend():
 
 class OSINTNetworkScene(Scene):
     """
-    Animated visualization of the CA Healthcare Facility OSINT network.
+    Animated visualization of the CA Healthcare Facility OSINT network - MONEY FOCUSED.
     Shows suspicious clusters with shared addresses, phones, owners, and admins.
+    Node size and prominence based on revenue - connections show money flow patterns.
     """
 
     def construct(self):
@@ -98,6 +103,9 @@ class OSINTNetworkScene(Scene):
 
         with open(data_path, 'r') as f:
             clusters = json.load(f)
+        
+        # Load financial data
+        financial_data = self.load_financial_data()
 
         # Title sequence
         self.show_title()
@@ -111,6 +119,58 @@ class OSINTNetworkScene(Scene):
         # Final summary
         self.show_final_summary(clusters)
 
+    def load_financial_data(self):
+        """Load financial data from CSV file - MONEY IS THE KEY."""
+        financial_path = Path(__file__).parent.parent / "web" / "public" / "data" / "enrichment" / "state" / "CA" / "hcai_hhah_util_2024.csv"
+        
+        financial_map = {}
+        
+        if financial_path.exists():
+            import csv
+            with open(financial_path, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    license_num = row.get('LICENSE_NO', '').strip()
+                    if license_num:
+                        try:
+                            revenue = float(row.get('HOSPICE_TOT_OPER_REVENUE', 0) or 0)
+                            net_income = float(row.get('HOSPICE_NET_INCOME', 0) or 0)
+                            financial_map[license_num] = {
+                                'revenue': revenue,
+                                'net_income': net_income,
+                                'has_data': revenue > 0 or net_income != 0
+                            }
+                        except:
+                            pass
+        
+        return financial_map
+    
+    def get_node_size_from_revenue(self, revenue):
+        """Calculate node radius based on revenue - BIGGER = MORE MONEY."""
+        if revenue > 5000000:  # $5M+
+            return 0.35
+        elif revenue > 2000000:  # $2M+
+            return 0.28
+        elif revenue > 1000000:  # $1M+
+            return 0.22
+        elif revenue > 0:
+            return 0.18
+        else:
+            return 0.12  # No financial data
+    
+    def get_node_color_from_finances(self, revenue, net_income):
+        """Get node color based on financial status - MONEY DETERMINES COLOR."""
+        if revenue > 3000000:
+            return COLORS['high_revenue']  # Gold for high revenue
+        elif net_income > 0:
+            return COLORS['profit']  # Green for profitable
+        elif net_income < 0:
+            return COLORS['loss']  # Red for losing money
+        elif revenue > 0:
+            return COLORS['standard']  # Blue for has data but breakeven
+        else:
+            return COLORS['no_data']  # Gray for no data
+    
     def show_error(self, message):
         """Display error message."""
         error = Text(message, color=RED, font_size=48)
