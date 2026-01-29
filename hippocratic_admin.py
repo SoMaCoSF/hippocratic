@@ -289,6 +289,61 @@ class HippocraticAdmin:
             logger.info(f"Validating sources for scraper: {scraper_name}")
             result = self.validator.validate_scraper_sources(scraper_name)
             return JSONResponse(result)
+        
+        @self.app.get("/api/sources/list")
+        async def list_all_sources():
+            """List all data sources across all scrapers."""
+            sources_config = {
+                'openfiscal': {
+                    'name': 'California Open FI$Cal',
+                    'icon': '💰',
+                    'urls': [
+                        {'id': 'openfiscal_portal', 'url': 'https://open.fiscal.ca.gov/', 'type': 'portal', 'description': 'Main portal'},
+                        {'id': 'openfiscal_alt', 'url': 'https://bythenumbers.sco.ca.gov/', 'type': 'portal', 'description': 'Alternative access'},
+                    ]
+                },
+                'sco': {
+                    'name': 'State Controller\'s Office',
+                    'icon': '📊',
+                    'urls': [
+                        {'id': 'sco_raw', 'url': 'https://bythenumbers.sco.ca.gov/Raw-Data', 'type': 'portal', 'description': 'Raw data portal'},
+                        {'id': 'sco_pay', 'url': 'https://publicpay.ca.gov/', 'type': 'api', 'description': 'Public pay data'},
+                    ]
+                },
+                'data_ca_gov': {
+                    'name': 'data.ca.gov',
+                    'icon': '🏛️',
+                    'urls': [
+                        {'id': 'data_health', 'url': 'https://data.ca.gov/api/3/action/package_search?q=healthcare', 'type': 'json', 'description': 'Healthcare datasets'},
+                        {'id': 'data_budget', 'url': 'https://data.ca.gov/api/3/action/package_search?q=budget', 'type': 'json', 'description': 'Budget datasets'},
+                    ]
+                },
+                'chhs': {
+                    'name': 'CHHS Open Data Portal',
+                    'icon': '🏥',
+                    'urls': [
+                        {'id': 'chhs_meta', 'url': 'https://data.chhs.ca.gov/api/views/metadata/v1', 'type': 'json', 'description': 'API metadata'},
+                        {'id': 'chhs_browse', 'url': 'https://data.chhs.ca.gov/browse?limitTo=datasets&page=1', 'type': 'portal', 'description': 'Dataset browser'},
+                    ]
+                }
+            }
+            return JSONResponse(sources_config)
+        
+        @self.app.get("/api/sources/validate-one")
+        async def validate_single_source(url: str, format: str = 'auto'):
+            """Validate a single URL."""
+            logger.info(f"Validating single source: {url}")
+            
+            if format == 'csv':
+                result = self.validator.validate_csv(url)
+            elif format == 'pdf':
+                result = self.validator.validate_pdf(url)
+            elif format == 'json':
+                result = self.validator.validate_json(url)
+            else:
+                result = self.validator.validate_url(url)
+            
+            return JSONResponse(result)
     
     def render_dashboard(self) -> str:
         """Render HTML dashboard."""
@@ -601,8 +656,159 @@ class HippocraticAdmin:
             }}
         }}
         
+        async function loadDataSources() {{
+            const response = await fetch('/api/sources/list');
+            const data = await response.json();
+            
+            const container = document.getElementById('sources-list');
+            container.innerHTML = '';
+            
+            for (const [scraper, config] of Object.entries(data)) {{
+                const scraperDiv = document.createElement('div');
+                scraperDiv.style.cssText = 'margin-bottom: 20px; padding: 15px; background: #1e293b; border-radius: 8px; border-left: 3px solid #3b82f6;';
+                
+                let html = `
+                    <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 10px;">
+                        <h3 style="margin: 0; font-size: 1.1em;">
+                            ${{config.icon}} ${{config.name}}
+                        </h3>
+                        <button onclick="validateAllInScraper('${{scraper}}')" 
+                                style="padding: 6px 12px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.85em; margin-left: auto;">
+                            Test All
+                        </button>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px; margin-top: 10px;">
+                `;
+                
+                for (const source of config.urls) {{
+                    const typeColors = {{
+                        'portal': '#8b5cf6',
+                        'api': '#ec4899',
+                        'json': '#14b8a6',
+                        'csv': '#f59e0b',
+                        'pdf': '#ef4444'
+                    }};
+                    const typeColor = typeColors[source.type] || '#6b7280';
+                    
+                    html += `
+                        <div class="source-card" data-source-id="${{source.id}}" onclick="validateSource('${{source.url}}', '${{source.type}}', '${{source.id}}')"
+                             style="padding: 12px; background: #0f172a; border-radius: 6px; cursor: pointer; transition: all 0.2s; border: 1px solid #334155; position: relative;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                                <div style="flex: 1;">
+                                    <div style="font-weight: 600; color: white; margin-bottom: 4px;">${{source.description}}</div>
+                                    <div style="font-size: 0.75em; color: #a1a1aa; word-break: break-all;">${{source.url.substring(0, 50)}}...</div>
+                                </div>
+                                <span style="padding: 2px 8px; background: ${{typeColor}}; border-radius: 4px; color: white; font-size: 0.7em; font-weight: 600; margin-left: 8px;">
+                                    ${{source.type.toUpperCase()}}
+                                </span>
+                            </div>
+                            <div id="status-${{source.id}}" style="margin-top: 8px; padding: 8px; background: #1e293b; border-radius: 4px; font-size: 0.85em; display: none;">
+                                <span style="color: #a1a1aa;">Click to test...</span>
+                            </div>
+                        </div>
+                    `;
+                }}
+                
+                html += '</div>';
+                scraperDiv.innerHTML = html;
+                container.appendChild(scraperDiv);
+            }}
+        }}
+        
+        async function validateSource(url, type, sourceId) {{
+            const statusDiv = document.getElementById(`status-${{sourceId}}`);
+            statusDiv.style.display = 'block';
+            statusDiv.innerHTML = '<span style="color: #3b82f6;">⏳ Testing...</span>';
+            
+            try {{
+                const response = await fetch(`/api/sources/validate-one?url=${{encodeURIComponent(url)}}&format=${{type}}`);
+                const data = await response.json();
+                
+                let html = '';
+                if (data.accessible) {{
+                    html = `
+                        <div style="color: #22c55e;">
+                            ✅ Accessible
+                            <span style="color: #a1a1aa; margin-left: 8px;">
+                                ${{data.status_code}} | ${{data.response_time_ms}}ms
+                            </span>
+                        </div>
+                        <div style="font-size: 0.8em; color: #a1a1aa; margin-top: 4px;">
+                            Type: ${{data.content_type}}
+                        </div>
+                    `;
+                    
+                    // Add format-specific info
+                    if (data.format === 'csv' && data.columns) {{
+                        html += `<div style="font-size: 0.8em; color: #a1a1aa; margin-top: 4px;">
+                            Columns: ${{data.columns.length}} | Sample rows: ${{data.sample_rows}}
+                        </div>`;
+                    }} else if (data.format === 'json' && data.top_level_keys) {{
+                        html += `<div style="font-size: 0.8em; color: #a1a1aa; margin-top: 4px;">
+                            Keys: ${{data.top_level_keys.join(', ')}}
+                        </div>`;
+                    }}
+                }} else {{
+                    html = `
+                        <div style="color: #ef4444;">
+                            ❌ Failed
+                            <span style="color: #a1a1aa; margin-left: 8px;">
+                                ${{data.status_code || 'N/A'}}
+                            </span>
+                        </div>
+                        <div style="font-size: 0.8em; color: #ef4444; margin-top: 4px;">
+                            ${{data.error || 'Unknown error'}}
+                        </div>
+                    `;
+                }}
+                
+                statusDiv.innerHTML = html;
+            }} catch (error) {{
+                statusDiv.innerHTML = `<span style="color: #ef4444;">❌ Error: ${{error.message}}</span>`;
+            }}
+        }}
+        
+        async function validateAllInScraper(scraper) {{
+            const response = await fetch(`/api/scraper/validate/${{scraper}}`);
+            const data = await response.json();
+            
+            for (const source of data.sources) {{
+                // Find the source ID by URL matching
+                const sourceCard = Array.from(document.querySelectorAll('.source-card')).find(card => 
+                    card.textContent.includes(source.url.substring(0, 30))
+                );
+                
+                if (sourceCard) {{
+                    const sourceId = sourceCard.dataset.sourceId;
+                    const statusDiv = document.getElementById(`status-${{sourceId}}`);
+                    
+                    if (statusDiv) {{
+                        statusDiv.style.display = 'block';
+                        
+                        if (source.accessible) {{
+                            statusDiv.innerHTML = `
+                                <div style="color: #22c55e;">
+                                    ✅ Accessible | ${{source.status_code}} | ${{source.response_time_ms}}ms
+                                </div>
+                            `;
+                        }} else {{
+                            statusDiv.innerHTML = `
+                                <div style="color: #ef4444;">
+                                    ❌ Failed | ${{source.status_code || 'N/A'}}
+                                </div>
+                                <div style="font-size: 0.8em; color: #ef4444; margin-top: 4px;">
+                                    ${{source.error || 'Unknown error'}}
+                                </div>
+                            `;
+                        }}
+                    }}
+                }}
+            }}
+        }}
+        
         // Load on page load
         document.addEventListener('DOMContentLoaded', () => {{
+            loadDataSources();
             loadDatabases();
             loadScraperMappings();
         }});
@@ -700,6 +906,17 @@ class HippocraticAdmin:
                 </button>
                 <div id="validation-chhs" style="margin-top: 5px; font-size: 0.8em;"></div>
             </div>
+        </div>
+    </div>
+    
+    <div class="section" id="sources-panel">
+        <h2>🔗 Data Sources</h2>
+        <p style="color: #a1a1aa; margin-bottom: 15px;">
+            Test individual data sources for accessibility. Click any source to validate.
+        </p>
+        
+        <div id="sources-list">
+            <!-- Populated by JavaScript -->
         </div>
     </div>
     
