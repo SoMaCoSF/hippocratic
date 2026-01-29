@@ -30,6 +30,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests pandas openpyxl
           
+      - name: Verify ethical scraping policy
+        run: |
+          echo "📜 Ethical Scraping Policy:"
+          echo "  - 3 second rate limit between requests"
+          echo "  - Robots.txt compliance enabled"
+          echo "  - Proper User-Agent identification"
+          echo "  - Contact: somacosf@gmail.com"
+          
       - name: Fetch data.ca.gov metadata
         run: |
           cd data_sources

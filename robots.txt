@@ -1,0 +1,18 @@
+# robots.txt for Hippocratic Project GitHub Repository
+
+# We respect robots.txt and expect the same courtesy
+# Our scrapers follow ethical practices:
+# - 3 second minimum delay between requests
+# - Proper identification in User-Agent
+# - Respect for 429/403 responses
+# - Contact email for concerns
+
+User-agent: *
+Allow: /
+
+# If you're a government server administrator and found us in your logs:
+# Contact: somacosf@gmail.com
+# We're happy to adjust our scraping practices!
+
+# Our User-Agent:
+# HippocraticBot/1.0 (+https://github.com/SoMaCoSF/hippocratic; Academic/Research: California Healthcare Fraud Detection; Contact: somacosf@gmail.com)

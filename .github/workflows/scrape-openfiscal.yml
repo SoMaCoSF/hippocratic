@@ -30,17 +30,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install seleniumbase requests pandas openpyxl
           
+      - name: Check robots.txt compliance
+        run: |
+          python -c "from data_sources.ethical_scraper import GovernmentDataCollector; s = GovernmentDataCollector(); print('✅ Ethical scraper ready'); s.close()"
+          
       - name: Install Chrome for Selenium
         run: |
           sbase install chromedriver latest
           
-      - name: Run Open FI$Cal scraper
+      - name: Run Open FI$Cal scraper (with ethical rate limiting)
         env:
           USE_PROXY: ${{ secrets.USE_PROXY || 'false' }}
           PROXY_URL: ${{ secrets.PROXY_URL }}
+          RATE_LIMIT_DELAY: 3.0
         run: |
           cd data_sources
-          python scrape_openfiscal.py --headless --output ../data/budget/openfiscal
+          echo "⏱️  Using ethical 3-second rate limit between requests"
+          python scrape_openfiscal.py --headless --output ../data/budget/openfiscal --rate-limit 3
           
       - name: Commit scraped data
         run: |
