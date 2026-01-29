@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-type ViewType = 'overview' | 'database' | 'traffic' | 'logs' | 'data';
+type ViewType = 'overview' | 'database' | 'traffic' | 'logs' | 'data' | 'fraud';
 
 interface DataRecord {
   id: number;
@@ -195,6 +195,7 @@ export default function LCARSAdmin() {
           <NavTab label="TRAFFIC" active={currentView === 'traffic'} onClick={() => setCurrentView('traffic')} />
           <NavTab label="LOGS" active={currentView === 'logs'} onClick={() => setCurrentView('logs')} />
           <NavTab label="DATA VIEW" active={currentView === 'data'} onClick={() => setCurrentView('data')} />
+          <NavTab label="FRAUD DETECTION" active={currentView === 'fraud'} onClick={() => setCurrentView('fraud')} />
         </div>
 
         {/* Main Grid */}

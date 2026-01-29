@@ -1,0 +1,399 @@
+{
+  "dataset_stats": {
+    "total_facilities": 15743,
+    "total_financials": 8484,
+    "facilities_with_financials": 4207,
+    "total_revenue": 10467495652.0,
+    "avg_revenue": 2914128.295100223,
+    "min_revenue": 1.0,
+    "max_revenue": 516978208.0
+  },
+  "timestamp": "2026-01-28T20:02:02.973228",
+  "analyses": {
+    "high_revenue_low_patients": {
+      "count": 2,
+      "alerts": [
+        {
+          "facility_id": "240001294",
+          "facility_name": "REDLANDS COMMUNITY HOSP. HOME HEALTH CARE SERVICES",
+          "license": "240000543",
+          "address": "350 TERRACINA BLVD, REDLANDS",
+          "revenue": 4029242.0,
+          "total_visits": 4162,
+          "revenue_per_visit": 968.1023546371937,
+          "z_score": 3.7516968120711547,
+          "severity": "high"
+        },
+        {
+          "facility_id": "240001294",
+          "facility_name": "REDLANDS COMMUNITY HOSP. HOME HEALTH CARE SERVICES",
+          "license": "240000543",
+          "address": "350 TERRACINA BLVD, REDLANDS",
+          "revenue": 4029242.0,
+          "total_visits": 4162,
+          "revenue_per_visit": 968.1023546371937,
+          "z_score": 3.7516968120711547,
+          "severity": "high"
+        }
+      ]
+    },
+    "duplicate_addresses": {
+      "count": 480,
+      "clusters": [
+        {
+          "address": "2067 W EL NORTE PKWY",
+          "city": "ESCONDIDO",
+          "facility_count": 16,
+          "facilities": "MOUNTAIN SHADOWS COMMUNITY  HOMES - WILLOW | MOUNTAIN SHADOWS COMMUNITY HOMES - APPLE | MOUNTAIN SHADOWS COMMUNITY HOMES - ASH | MOUNTAIN SHADOWS COMMUNITY HOMES - BIRCH | MOUNTAIN SHADOWS COMMUNITY HOMES - CEDAR | MOUNTAIN SHADOWS COMMUNITY HOMES - CREPE MYRTLE | MOUNTAIN SHADOWS COMMUNITY HOMES - JACARANDA | MOUNTAIN SHADOWS COMMUNITY HOMES - LEMON | MOUNTAIN SHADOWS COMMUNITY HOMES - MAPLE | MOUNTAIN SHADOWS COMMUNITY HOMES - OLIVE | MOUNTAIN SHADOWS COMMUNITY HOMES - ORANGE | MOUNTAIN SHADOWS COMMUNITY HOMES - PALM | MOUNTAIN SHADOWS COMMUNITY HOMES - PINE | MOUNTAIN SHADOWS COMMUNITY HOMES - PLUM | MOUNTAIN SHADOWS COMMUNITY HOMES - SPRUCE | MOUNTAIN SHADOWS COMMUNITY HOMES - TANGELO",
+          "licenses": "090000271, 090000275, 090000261, 090000257, 090000264, 090000258, 090000262, 090000276, 090000274, 090000253, 090000273, 090000263, 090000254, 090000272, 090000269, 090000270"
+        },
+        {
+          "address": "1999 MOWRY AVE",
+          "city": "FREMONT",
+          "facility_count": 8,
+          "facilities": "BACH DENTAL MOBILE CLINIC V | BACH MOBILE HEALTH #10 | BACH MOBILE HEALTH #11 | BACH MOBILE HEALTH #9 | BACH MOBILE HEALTH CLINIC - CHOMP #2 | BACH MOBILE HEALTH CLINIC - CHOMP #3 | BACH MOBILE HEALTH CLINIC IV | BACH SENIOR MOBILE HEALTH CLINIC I",
+          "licenses": "550000139, 550000139, 550000139, 550000139, 550000139, 550000139, 550000139, 550000139"
+        },
+        {
+          "address": "4004 BEYER BLVD",
+          "city": "SAN YSIDRO",
+          "facility_count": 6,
+          "facilities": "SAN YSIDRO HEALTH HIV & LGBTQ MOBILE CLINIC SERVICES | SAN YSIDRO HEALTH MOBILE HEALTH SERVICES 1F | SAN YSIDRO HEALTH MOBILE HEALTH SERVICES 1G | SAN YSIDRO HEALTH MOBILE HEALTH SERVICES 1H | SAN YSIDRO HEALTH MOBILE HEALTH SERVICES 1J | SAN YSIDRO HEALTH SAN YSIDRO HEALTH CENTER",
+          "licenses": "550008752, 550000117, 550000116, 550002193, 550008716, 090000140"
+        },
+        {
+          "address": "150 TEJAS PL",
+          "city": "NIPOMO",
+          "facility_count": 5,
+          "facilities": "COMMUNITY HEALTH CENTERS MOBILE MEDICAL VAN 1 | COMMUNITY HEALTH CENTERS MOBILE MEDICAL VAN 2 | COMMUNITY HEALTH CENTERS MOBILE MEDICAL VAN 3 | COMMUNITY HEALTH CENTERS, MOBILE DENTAL VAN 2 | NIPOMO COMMUNITY MEDICAL CENTER",
+          "licenses": "550002256, 550002255, 550002254, 550002022, 050000111"
+        },
+        {
+          "address": "150 VALPREDA RD",
+          "city": "SAN MARCOS",
+          "facility_count": 5,
+          "facilities": "TRUECARE | TRUECARE (MOBILE UNIT) | TRUECARE (MOBILE UNIT) | TRUECARE MOBILE UNIT | TRUECARE MOBILE UNIT 2",
+          "licenses": "080000167, 080000167, 080000167, 080000167, 080000167"
+        },
+        {
+          "address": "2650 WIGWAM DR, UNIT O",
+          "city": "STOCKTON",
+          "facility_count": 5,
+          "facilities": "COMMUNITY MEDICAL CENTERS, CARELINK DENTAL VAN | COMMUNITY MEDICAL CENTERS, MOBILE UNIT 101 | COMMUNITY MEDICAL CENTERS, MOBILE UNIT 102 | COMMUNITY MEDICAL CENTERS, MOBILE UNIT 104 | COMMUNITY MEDICAL CENTERS, MOBILE UNIT 105",
+          "licenses": "550003006, 550003006, 550003006, 550003006, 550003006"
+        },
+        {
+          "address": "5555 GROSSMONT CENTER DR",
+          "city": "LA MESA",
+          "facility_count": 5,
+          "facilities": "GROSSMONT HOSPITAL | GROSSMONT HOSPITAL | GROSSMONT HOSPITAL | GROSSMONT HOSPITAL D/P APH | GROSSMONT HOSPITAL D/P SNF",
+          "licenses": "080000006, 080000006, 080000006, 080000006, 080000006"
+        },
+        {
+          "address": "823 GATEWAY CENTER WAY",
+          "city": "SAN DIEGO",
+          "facility_count": 5,
+          "facilities": "KIDCARE EXPRESS | MOBILE COUNSELING CENTER I | MOBILE MEDICAL UNIT II | MOBILE MEDICAL UNIT III | MOBILE SCREENING UNIT",
+          "licenses": "090000612, 550000024, 550000465, 550000465, 550003099"
+        },
+        {
+          "address": "1 HOPE DR",
+          "city": "TUSTIN",
+          "facility_count": 4,
+          "facilities": "FOR EVERY WOMEN MEDICAL MOBILE CLINIC | HURTT FAMILY HEALTH CLINIC | HURTT FAMILY HEALTH CLINIC-MOBILE | HURTT FAMILY MOBILE CLINIC",
+          "licenses": "550001902, 060000772, 550001809, 060000873"
+        },
+        {
+          "address": "1000 W CARSON ST",
+          "city": "TORRANCE",
+          "facility_count": 4,
+          "facilities": "LAC/HARBOR UCLA MEDICAL CENTER | LAC/HARBOR UCLA MEDICAL CENTER | LAC/HARBOR-UCLA MEDICAL CENTER | LAC/HARBOR-UCLA MEDICAL CENTER D/P APH",
+          "licenses": "060000129, 060000129, 060000129, 060000129"
+        },
+        {
+          "address": "1001 POTRERO AVE",
+          "city": "SAN FRANCISCO",
+          "facility_count": 4,
+          "facilities": "PRISCILLA CHAN AND MARK ZUCKERBERG SAN FRANCISCO GENERAL HOSPITAL AND TRAUMA CENTER | SAN FRANCISCO GENERAL HOSPITAL D/P APH | SAN FRANCISCO GENERAL HOSPITAL D/P SNF | SAN FRANCISCO GENERAL HOSPITAL RENAL CENTER",
+          "licenses": "220000063, 220000063, 220000063, 220000063"
+        },
+        {
+          "address": "101 THE CITY DR S",
+          "city": "ORANGE",
+          "facility_count": 4,
+          "facilities": "UCI HEALTH-ORANGE | UNIVERSITY OF CALIFORNIA IRVINE - TRANSPLANT CENTER | UNIVERSITY OF CALIFORNIA IRVINE MEDICAL CENTER | UNIVERSITY OF CALIFORNIA IRVINE MEDICAL CENTER",
+          "licenses": "060000148, 060000148, 060000148, 060000148"
+        },
+        {
+          "address": "1206 E 17TH ST",
+          "city": "SANTA ANA",
+          "facility_count": 4,
+          "facilities": "SERVE THE PEOPLE MOBILE DENTAL CLINIC | SERVE THE PEOPLE MOBILE DENTAL CLINIC 2 | SERVE THE PEOPLE MOBILE VISION CLINIC | SERVE THE PEOPLE MOBILE VISION CLINIC 2",
+          "licenses": "550001441, 550001441, 550001441, 550001441"
+        },
+        {
+          "address": "1276 HALYARD DR",
+          "city": "WEST SACRAMENTO",
+          "facility_count": 4,
+          "facilities": "ELICA  HEALTHCENTERS HEALTH ON WHEELS-2 | ELICA HEALTH CENTERS HEALTH ON WHEELS - 3 | ELICA HEALTH CENTERS HEALTH ON WHEELS - 4 | ELICA HEALTH CENTERS-HALYARD MEDICAL CENTER",
+          "licenses": "550004525, 550004525, 550004525, 550004525"
+        },
+        {
+          "address": "1329 N H ST",
+          "city": "SAN BERNARDINO",
+          "facility_count": 4,
+          "facilities": "CENTRAL NEIGHBORHOOD HEALTH FOUNDATION - H STREET | CENTRAL NEIGHBORHOOD HEALTH FOUNDATION MOBILE CARE CLINIC | CENTRAL NEIGHBORHOOD HEALTH FOUNDATION MOBILE CARE CLINIC #2 | CENTRAL NEIGHBORHOOD HEALTH FOUNDATION MOBILE CARE CLINIC #3",
+          "licenses": "550000837, 550000837, 550000837, 550000837"
+        },
+        {
+          "address": "1441 CONSTITUTION BLVD",
+          "city": "SALINAS",
+          "facility_count": 4,
+          "facilities": "LAUREL FAMILY PRACTICE CLINIC | LAUREL PEDIATRICS CLINIC | NATIVIDAD MEDICAL CENTER | NATIVIDAD MEDICAL CENTER D/P APH",
+          "licenses": "070000070, 070000070"
+        },
+        {
+          "address": "15615 POMERADO RD",
+          "city": "POWAY",
+          "facility_count": 4,
+          "facilities": "PALOMAR MEDICAL CENTER POWAY | PALOMAR MEDICAL CENTER POWAY | PALOMAR MEDICAL CENTER POWAY D/P APH | THE VILLAS AT POWAY",
+          "licenses": "080000127, 080000127, 080000127, 080000127"
+        },
+        {
+          "address": "199 E WEBSTER ST",
+          "city": "COLUSA",
+          "facility_count": 4,
+          "facilities": "COLUSA MEDICAL CENTER | COLUSA MEDICAL CENTER - SNF | COLUSA MEDICAL CENTER HOME HEALTH AGENCY | COLUSA MEDICAL CENTER HOSPICE",
+          "licenses": "230000149, 230000149, 230000144, 550004134"
+        },
+        {
+          "address": "222 W 39TH AVE",
+          "city": "SAN MATEO",
+          "facility_count": 4,
+          "facilities": "39TH AVENUE CLINICS (MAIN CLINIC) | SAN MATEO MEDICAL CENTER | SAN MATEO MEDICAL CENTER D/P APH | SAN MATEO MEDICAL CENTER D/P SNF",
+          "licenses": "220000015, 220000015, 220000015"
+        },
+        {
+          "address": "26501 AVENUE 140",
+          "city": "PORTERVILLE",
+          "facility_count": 4,
+          "facilities": "PORTERVILLE DEVELOPMENTAL CENTER | PORTERVILLE DEVELOPMENTAL CENTER D/P ICF-DD STAR | PORTERVILLE DEVELOPMENTAL CENTER D/P ICFDD | PORTERVILLE DEVELOPMENTAL CENTER D/P ICFDD (STP)",
+          "licenses": "170000837, 170000837, 170000837, 170000837"
+        }
+      ]
+    },
+    "missing_financials": {
+      "count": 0,
+      "facilities": []
+    },
+    "extreme_profit_margins": {
+      "count": 678,
+      "alerts": [
+        {
+          "facility_id": "630020306",
+          "facility_name": "ANTHEM HOSPICE",
+          "license": "550006236",
+          "revenue": 806.0,
+          "net_income": -120200.0,
+          "profit_margin": -149.1315136476427,
+          "margin_pct": -14913.15136476427,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630020306",
+          "facility_name": "ANTHEM HOSPICE",
+          "license": "550006236",
+          "revenue": 806.0,
+          "net_income": -120200.0,
+          "profit_margin": -149.1315136476427,
+          "margin_pct": -14913.15136476427,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630020062",
+          "facility_name": "GLEN-IVY HOSPICE INC",
+          "license": "550006734",
+          "revenue": 2157.0,
+          "net_income": -192182.0,
+          "profit_margin": -89.09689383402875,
+          "margin_pct": -8909.689383402874,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630020062",
+          "facility_name": "GLEN-IVY HOSPICE INC",
+          "license": "550006734",
+          "revenue": 2157.0,
+          "net_income": -192182.0,
+          "profit_margin": -89.09689383402875,
+          "margin_pct": -8909.689383402874,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630020297",
+          "facility_name": "PURIFIED HOSPICE, INC.",
+          "license": "550006925",
+          "revenue": 23.0,
+          "net_income": -520.0,
+          "profit_margin": -22.608695652173914,
+          "margin_pct": -2260.8695652173915,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630020297",
+          "facility_name": "PURIFIED HOSPICE, INC.",
+          "license": "550006925",
+          "revenue": 23.0,
+          "net_income": -520.0,
+          "profit_margin": -22.608695652173914,
+          "margin_pct": -2260.8695652173915,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630021446",
+          "facility_name": "ALLAY HOSPICE CARE, INC.",
+          "license": "550007303",
+          "revenue": 1680.0,
+          "net_income": -33668.0,
+          "profit_margin": -20.04047619047619,
+          "margin_pct": -2004.047619047619,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630021446",
+          "facility_name": "ALLAY HOSPICE CARE, INC.",
+          "license": "550007303",
+          "revenue": 1680.0,
+          "net_income": -33668.0,
+          "profit_margin": -20.04047619047619,
+          "margin_pct": -2004.047619047619,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630014962",
+          "facility_name": "RELIANT HOSPICE INC.",
+          "license": "550002750",
+          "revenue": 10500.0,
+          "net_income": -207968.0,
+          "profit_margin": -19.80647619047619,
+          "margin_pct": -1980.647619047619,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630014962",
+          "facility_name": "RELIANT HOSPICE INC.",
+          "license": "550002750",
+          "revenue": 10500.0,
+          "net_income": -207968.0,
+          "profit_margin": -19.80647619047619,
+          "margin_pct": -1980.647619047619,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630016833",
+          "facility_name": "ALORIA HEALTHCARE",
+          "license": "550003659",
+          "revenue": 21195.0,
+          "net_income": -351553.0,
+          "profit_margin": -16.586600613352207,
+          "margin_pct": -1658.6600613352207,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630016833",
+          "facility_name": "ALORIA HEALTHCARE",
+          "license": "550003659",
+          "revenue": 21195.0,
+          "net_income": -351553.0,
+          "profit_margin": -16.586600613352207,
+          "margin_pct": -1658.6600613352207,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630021020",
+          "facility_name": "CAREPLUS HOSPICE",
+          "license": "550006423",
+          "revenue": 1334.0,
+          "net_income": -14506.0,
+          "profit_margin": -10.874062968515743,
+          "margin_pct": -1087.4062968515743,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630021020",
+          "facility_name": "CAREPLUS HOSPICE",
+          "license": "550006423",
+          "revenue": 1334.0,
+          "net_income": -14506.0,
+          "profit_margin": -10.874062968515743,
+          "margin_pct": -1087.4062968515743,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630020590",
+          "facility_name": "R AND A HOSPICE, INC.",
+          "license": "550006515",
+          "revenue": 62399.0,
+          "net_income": -664822.0,
+          "profit_margin": -10.654369461049056,
+          "margin_pct": -1065.4369461049055,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630020590",
+          "facility_name": "R AND A HOSPICE, INC.",
+          "license": "550006515",
+          "revenue": 62399.0,
+          "net_income": -664822.0,
+          "profit_margin": -10.654369461049056,
+          "margin_pct": -1065.4369461049055,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630019253",
+          "facility_name": "EZRA HOSPICE, INC.",
+          "license": "550005613",
+          "revenue": 8002.0,
+          "net_income": -78365.0,
+          "profit_margin": -9.793176705823544,
+          "margin_pct": -979.3176705823545,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630019253",
+          "facility_name": "EZRA HOSPICE, INC.",
+          "license": "550005613",
+          "revenue": 8002.0,
+          "net_income": -78365.0,
+          "profit_margin": -9.793176705823544,
+          "margin_pct": -979.3176705823545,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630021553",
+          "facility_name": "PEACEFUL JOURNEY HOSPICE CARE, INC.",
+          "license": "550006769",
+          "revenue": 4390.0,
+          "net_income": -42328.0,
+          "profit_margin": -9.641913439635536,
+          "margin_pct": -964.1913439635535,
+          "severity": "high"
+        },
+        {
+          "facility_id": "630021553",
+          "facility_name": "PEACEFUL JOURNEY HOSPICE CARE, INC.",
+          "license": "550006769",
+          "revenue": 4390.0,
+          "net_income": -42328.0,
+          "profit_margin": -9.641913439635536,
+          "margin_pct": -964.1913439635535,
+          "severity": "high"
+        }
+      ]
+    },
+    "shared_administrators": {
+      "count": 0,
+      "clusters": []
+    }
+  }
+}

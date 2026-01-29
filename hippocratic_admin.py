@@ -317,6 +317,56 @@ class HippocraticAdmin:
                 'database': db_key
             })
         
+        @self.app.get("/api/fraud/analysis")
+        async def get_fraud_analysis():
+            """Get comprehensive fraud analysis results."""
+            try:
+                from financial_analyzer import FinancialAnalyzer
+                analyzer = FinancialAnalyzer()
+                results = analyzer.run_full_analysis()
+                return JSONResponse(results)
+            except Exception as e:
+                raise HTTPException(500, f"Analysis failed: {str(e)}")
+        
+        @self.app.get("/api/fraud/alerts")
+        async def get_fraud_alerts(limit: int = 100, severity: str = None):
+            """Get fraud alerts from database."""
+            try:
+                from financial_analyzer import FinancialAnalyzer
+                analyzer = FinancialAnalyzer()
+                alerts = analyzer.get_fraud_alerts(limit)
+                
+                if severity:
+                    alerts = [a for a in alerts if a['severity'] == severity]
+                
+                return JSONResponse({
+                    'total': len(alerts),
+                    'alerts': alerts
+                })
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get alerts: {str(e)}")
+        
+        @self.app.get("/api/fraud/stats")
+        async def get_fraud_stats():
+            """Get fraud detection statistics."""
+            try:
+                from financial_analyzer import FinancialAnalyzer
+                analyzer = FinancialAnalyzer()
+                stats = analyzer.get_dataset_stats()
+                alerts = analyzer.get_fraud_alerts(1000)
+                
+                return JSONResponse({
+                    'dataset': stats,
+                    'alert_counts': {
+                        'total': len(alerts),
+                        'high': len([a for a in alerts if a['severity'] == 'high']),
+                        'medium': len([a for a in alerts if a['severity'] == 'medium']),
+                        'low': len([a for a in alerts if a['severity'] == 'low'])
+                    }
+                })
+            except Exception as e:
+                raise HTTPException(500, f"Failed to get fraud stats: {str(e)}")
+        
         @self.app.get("/api/scraper/validate/{scraper_name}")
         async def validate_scraper_sources(scraper_name: str):
             """Validate all data sources for a scraper."""
