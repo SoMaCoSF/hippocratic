@@ -1,0 +1,42 @@
+# Hippocratic Admin Server Requirements
+# Install: pip install -r requirements-admin.txt
+
+# Core Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Beautiful CLI Output
+rich==13.7.0
+
+# OpenTelemetry (Telemetry & Monitoring)
+opentelemetry-api==1.22.0
+opentelemetry-sdk==1.22.0
+opentelemetry-exporter-otlp==1.22.0
+opentelemetry-exporter-prometheus==0.43b0
+opentelemetry-instrumentation-fastapi==0.43b0
+
+# Vector Search & Embeddings
+sentence-transformers==2.3.1
+numpy==1.26.3
+torch==2.1.2  # CPU version, use torch+cu118 for GPU
+
+# Database
+libsql-client==0.2.0
+# sqlite3 is built-in
+
+# Existing scraper dependencies
+requests==2.31.0
+seleniumbase==4.23.0
+pandas==2.2.0
+openpyxl==3.1.2
+pdfplumber==0.11.0
+PyPDF2==3.0.1
+
+# Configuration
+pyyaml==6.0.1
+python-dotenv==1.0.0
+
+# Async support
+aiofiles==23.2.1
+httpx==0.26.0
