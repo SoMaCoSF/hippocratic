@@ -186,11 +186,12 @@ function ZoomTracker({ onZoomChange }: { onZoomChange: (zoom: number) => void })
   return null;
 }
 
-// Map rotation control
+// Map rotation and orbit control
 function RotationControl() {
   const map = useMap();
   const [bearing, setBearing] = useState(0);
   const [tilt, setTilt] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const container = map.getContainer();
@@ -284,9 +285,30 @@ function RotationControl() {
     };
   }, [map, bearing, tilt]);
 
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="absolute top-4 right-4 z-[1000] bg-zinc-900/95 backdrop-blur rounded-lg p-2 text-xs shadow-xl border border-zinc-700 hover:bg-zinc-800"
+        title="Show Orbit Controls"
+      >
+        🔄
+      </button>
+    );
+  }
+
   return (
-    <div className="absolute top-4 right-4 z-[1000] bg-zinc-900/95 backdrop-blur rounded-lg p-3 text-xs shadow-xl border border-zinc-700">
-      <div className="font-bold text-zinc-300 mb-2">Map Controls</div>
+    <div className="absolute top-4 right-4 z-[1000] bg-zinc-900/95 backdrop-blur rounded-lg p-3 text-xs shadow-xl border border-zinc-700 max-w-xs">
+      <div className="flex justify-between items-center mb-2">
+        <div className="font-bold text-zinc-300">Orbit Controls</div>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-zinc-500 hover:text-white"
+          title="Hide controls"
+        >
+          ✕
+        </button>
+      </div>
       <div className="space-y-2">
         <div>
           <div className="text-zinc-400 mb-1">Rotation: {bearing.toFixed(0)}°</div>

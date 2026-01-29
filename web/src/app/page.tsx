@@ -78,6 +78,7 @@ export default function Home() {
   const [duplicateFilter, setDuplicateFilter] = useState<DuplicateFilter>("any");
   const [sortBy, setSortBy] = useState<SortOption>("name");
   const [stackedOnly, setStackedOnly] = useState(false);
+  const [financialsOnly, setFinancialsOnly] = useState(false);
 
   const [userLoc, setUserLoc] = useState<Geo | null>(null);
   const [geoLoading, setGeoLoading] = useState(false);
@@ -319,9 +320,10 @@ export default function Home() {
     setStatus("ALL");
     setDuplicateFilter("any");
     setStackedOnly(false);
+    setFinancialsOnly(false);
   };
 
-  const hasActiveFilters = q || category !== "ALL" || status !== "ALL" || duplicateFilter !== "any" || stackedOnly;
+  const hasActiveFilters = q || category !== "ALL" || status !== "ALL" || duplicateFilter !== "any" || stackedOnly || financialsOnly;
 
   return (
     <div className="h-screen w-screen bg-zinc-900 flex flex-col overflow-hidden relative">
@@ -480,7 +482,7 @@ export default function Home() {
                 </select>
               </div>
 
-              {/* Stacked & Duplicate Filters */}
+              {/* Stacked & Financials Filters */}
               <div className="flex gap-1.5">
                 <button
                   onClick={() => { setStackedOnly(!stackedOnly); setDuplicateFilter("any"); }}
@@ -490,6 +492,18 @@ export default function Home() {
                 >
                   📍 Stacked
                 </button>
+                <button
+                  onClick={() => { setFinancialsOnly(!financialsOnly); }}
+                  className={`flex-1 px-2 py-1 rounded text-[10px] font-medium transition-colors ${
+                    financialsOnly ? "bg-green-500 text-black" : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+                  }`}
+                >
+                  💰 Has $
+                </button>
+              </div>
+              
+              {/* Sort Filter */}
+              <div className="flex gap-1.5">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as SortOption)}
