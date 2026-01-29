@@ -257,7 +257,7 @@ export default function Home() {
     return null;
   }, [selectedId, userLoc, data]);
 
-  const visibleForMap = useMemo(() => filtered.slice(0, 500), [filtered]);
+  const visibleForMap = useMemo(() => filtered.slice(0, 5000), [filtered]);
 
   const onSelect = (id: string) => {
     setSelectedId(id);

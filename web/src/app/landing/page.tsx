@@ -51,8 +51,8 @@ export default function LandingPage() {
               filter: isHovered ? 'drop-shadow(0 20px 40px rgba(16, 185, 129, 0.4))' : 'drop-shadow(0 10px 20px rgba(16, 185, 129, 0.2))'
             }}
           >
-            {/* Pulsing ring animation */}
-            <div className={`absolute inset-0 rounded-full bg-emerald-500 opacity-20 ${isHovered ? 'animate-ping' : ''}`} />
+            {/* Subtle ring on hover */}
+            <div className={`absolute inset-0 rounded-full bg-emerald-500 opacity-10 transition-opacity ${isHovered ? 'opacity-20' : ''}`} />
             
             {/* Logo image */}
             <div className="relative">
@@ -67,28 +67,18 @@ export default function LandingPage() {
               
               {/* Click me indicator */}
               <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-                <div className="bg-emerald-600/95 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-xl shadow-2xl transform transition-transform duration-300 hover:scale-110">
-                  🔍 Click Me!
+                <div className="bg-emerald-600/95 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-xl shadow-2xl">
+                  Click to Explore
                 </div>
               </div>
-
-              {/* Animated sparkles on hover */}
-              {isHovered && (
-                <>
-                  <div className="absolute top-10 right-10 text-3xl animate-bounce">✨</div>
-                  <div className="absolute bottom-10 left-10 text-3xl animate-bounce delay-100">💰</div>
-                  <div className="absolute top-1/2 right-5 text-2xl animate-pulse">🚨</div>
-                  <div className="absolute top-1/2 left-5 text-2xl animate-pulse delay-200">📊</div>
-                </>
-              )}
             </div>
           </button>
         </div>
 
-        {/* Subtitle with animation */}
+        {/* Subtitle */}
         <div className="text-center mb-8">
-          <p className="text-emerald-700 text-lg sm:text-xl font-medium animate-pulse">
-            👆 Click the hippo to start exploring
+          <p className="text-emerald-700 text-lg sm:text-xl font-medium">
+            Click the logo to start exploring
           </p>
         </div>
 
