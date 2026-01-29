@@ -13,32 +13,33 @@
 
 import Link from "next/link";
 import { useEffect, useState, useMemo } from "react";
-import type { FacilityAllMin } from "@/lib/facilities";
-import { parseFinancialCSV, formatCurrency, formatNumber, hasFinancialData, type FinancialData } from "@/lib/financials";
+import { formatCurrency, formatNumber } from "@/lib/financials";
 import dynamic from "next/dynamic";
 
 const ReactECharts = dynamic(() => import("echarts-for-react"), { ssr: false });
 
 export default function FinancialsPage() {
-  const [data, setData] = useState<FacilityAllMin | null>(null);
-  const [financialData, setFinancialData] = useState<Map<string, FinancialData>>(new Map());
+  const [facilities, setFacilities] = useState<any[]>([]);
+  const [financials, setFinancials] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
       try {
+        // Fetch from database API routes
         const [facilityRes, financialRes] = await Promise.all([
-          fetch("/data/state/CA/all.min.json"),
-          fetch("/data/enrichment/state/CA/hcai_hhah_util_2024.csv"),
+          fetch("/api/facilities?limit=10000"),
+          fetch("/api/financials?limit=10000"),
         ]);
 
         if (facilityRes.ok) {
-          setData(await facilityRes.json());
+          const facilityData = await facilityRes.json();
+          setFacilities(facilityData.facilities || []);
         }
 
         if (financialRes.ok) {
-          const text = await financialRes.text();
-          setFinancialData(parseFinancialCSV(text));
+          const financialData = await financialRes.json();
+          setFinancials(financialData.financials || []);
         }
       } catch (err) {
         console.error("Error loading data:", err);
@@ -49,7 +50,6 @@ export default function FinancialsPage() {
   }, []);
 
   const financialStats = useMemo(() => {
-    const facilities = data?.records ?? [];
     const stats = {
       totalRevenue: 0,
       totalExpenses: 0,
@@ -62,15 +62,27 @@ export default function FinancialsPage() {
       bottomIncome: [] as Array<{ name: string; revenue: number; netIncome: number; category: string }>,
     };
 
+    // Create a map of license number to facility for quick lookup
+    const facilityMap = new Map<string, any>();
     facilities.forEach((f) => {
-      const fin = financialData.get(f.licenseNumber ?? "");
-      if (fin && hasFinancialData(fin)) {
-        const revenue = fin.hospiceTotalRevenue ?? 0;
-        const netIncome = fin.hospiceNetIncome ?? 0;
-        const visits = (fin.hhahMediCalVisits ?? 0) + (fin.hhahMedicareVisits ?? 0);
+      if (f.licenseNumber) {
+        facilityMap.set(f.licenseNumber, f);
+      }
+    });
 
+    // Process financials
+    financials.forEach((fin) => {
+      const facility = facilityMap.get(fin.licenseNumber);
+      if (!facility) return;
+
+      const revenue = fin.totalRevenue ?? 0;
+      const expenses = fin.totalExpenses ?? 0;
+      const netIncome = fin.netIncome ?? 0;
+      const visits = fin.totalVisits ?? 0;
+
+      if (revenue > 0 || netIncome !== 0 || visits > 0) {
         stats.totalRevenue += revenue;
-        stats.totalExpenses += (revenue - netIncome);
+        stats.totalExpenses += expenses;
         stats.totalNetIncome += netIncome;
         stats.totalVisits += visits;
         stats.facilitiesWithData++;
@@ -80,13 +92,23 @@ export default function FinancialsPage() {
         }
 
         // Revenue by category
-        const cat = f.categoryName ?? "Unknown";
+        const cat = facility.categoryName ?? "Unknown";
         stats.revenueByCategory.set(cat, (stats.revenueByCategory.get(cat) ?? 0) + revenue);
 
         // Top/bottom performers
         if (revenue > 0) {
-          stats.topRevenue.push({ name: f.name, revenue, netIncome, category: cat });
-          stats.bottomIncome.push({ name: f.name, revenue, netIncome, category: cat });
+          stats.topRevenue.push({ 
+            name: facility.name || fin.facilityName, 
+            revenue, 
+            netIncome, 
+            category: cat 
+          });
+          stats.bottomIncome.push({ 
+            name: facility.name || fin.facilityName, 
+            revenue, 
+            netIncome, 
+            category: cat 
+          });
         }
       }
     });
@@ -95,7 +117,7 @@ export default function FinancialsPage() {
     stats.bottomIncome.sort((a, b) => a.netIncome - b.netIncome).splice(20);
 
     return stats;
-  }, [data, financialData]);
+  }, [facilities, financials]);
 
   // Chart options
   const revenueByCategory = useMemo(() => {
