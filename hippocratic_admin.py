@@ -273,7 +273,9 @@ class HippocraticAdmin:
     <div class="header">
         <h1>🏥 Hippocratic Admin</h1>
         <p>California Healthcare Fraud Detection System</p>
-        <p style="font-size: 0.9em; margin-top: 10px;">Uptime: {stats['uptime']}</p>
+        <p style="font-size: 0.9em; margin-top: 10px;">
+            Uptime: {stats['uptime']} | Database: {stats.get('db_type', 'Unknown')}
+        </p>
     </div>
     
     <div class="stats-grid">
@@ -377,29 +379,62 @@ class HippocraticAdmin:
         """Get system statistics."""
         uptime = datetime.now() - self.stats['uptime_start']
         
-        # Get DB stats
+        # Get DB stats from Turso or local SQLite
         try:
-            import sqlite3
-            db_path = Path(__file__).parent / "local.db"
-            if db_path.exists():
-                conn = sqlite3.connect(str(db_path))
-                cursor = conn.cursor()
-                
-                facilities = cursor.execute("SELECT COUNT(*) FROM facilities").fetchone()[0]
-                financials = cursor.execute("SELECT COUNT(*) FROM financials").fetchone()[0]
+            # Check for Turso connection
+            turso_url = os.getenv("TURSO_DATABASE_URL")
+            
+            if turso_url:
+                # Use Turso
                 try:
-                    budgets = cursor.execute("SELECT COUNT(*) FROM government_budgets").fetchone()[0]
-                    sources = cursor.execute("SELECT COUNT(*) FROM data_sources").fetchone()[0]
-                except:
-                    budgets = 0
-                    sources = 0
-                
-                conn.close()
-            else:
-                facilities = financials = budgets = sources = 0
+                    from libsql_client import create_client
+                    db = create_client(turso_url, auth_token=os.getenv("TURSO_AUTH_TOKEN"))
+                    
+                    facilities = db.execute("SELECT COUNT(*) FROM facilities").rows[0][0]
+                    financials = db.execute("SELECT COUNT(*) FROM financials").rows[0][0]
+                    try:
+                        budgets = db.execute("SELECT COUNT(*) FROM government_budgets").rows[0][0]
+                        sources = db.execute("SELECT COUNT(*) FROM data_sources").rows[0][0]
+                        embeddings = db.execute("SELECT COUNT(*) FROM facility_embeddings").rows[0][0]
+                    except:
+                        budgets = sources = embeddings = 0
+                    
+                    logger.debug("Using Turso database")
+                except ImportError:
+                    logger.warning("libsql-client not available, falling back to local")
+                    turso_url = None
+            
+            if not turso_url:
+                # Use local SQLite
+                import sqlite3
+                db_path = Path(__file__).parent / "local.db"
+                if db_path.exists():
+                    conn = sqlite3.connect(str(db_path))
+                    cursor = conn.cursor()
+                    
+                    facilities = cursor.execute("SELECT COUNT(*) FROM facilities").fetchone()[0]
+                    financials = cursor.execute("SELECT COUNT(*) FROM financials").fetchone()[0]
+                    try:
+                        budgets = cursor.execute("SELECT COUNT(*) FROM government_budgets").fetchone()[0]
+                        sources = cursor.execute("SELECT COUNT(*) FROM data_sources").fetchone()[0]
+                        embeddings = cursor.execute("SELECT COUNT(*) FROM facility_embeddings").fetchone()[0]
+                    except:
+                        budgets = sources = embeddings = 0
+                    
+                    conn.close()
+                    logger.debug("Using local SQLite database")
+                else:
+                    facilities = financials = budgets = sources = embeddings = 0
+                    
         except Exception as e:
             logger.error(f"Error getting DB stats: {e}")
-            facilities = financials = budgets = sources = 0
+            facilities = financials = budgets = sources = embeddings = 0
+        
+        # Update stats
+        self.stats['db_records'] = facilities + financials + budgets
+        self.stats['vector_embeddings'] = embeddings
+        
+        db_type = "Turso Cloud" if os.getenv("TURSO_DATABASE_URL") else "Local SQLite"
         
         return {
             **self.stats,
@@ -408,7 +443,8 @@ class HippocraticAdmin:
             'financials_count': financials,
             'budgets_count': budgets,
             'sources_count': sources,
-            'db_records': facilities + financials + budgets,
+            'embeddings_count': embeddings,
+            'db_type': db_type,
         }
     
     def get_session_stats(self) -> Dict[str, Any]:
