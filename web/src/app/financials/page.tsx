@@ -26,6 +26,7 @@ export default function FinancialsPage() {
   useEffect(() => {
     (async () => {
       try {
+        console.log("Fetching financial data...");
         // Fetch from database API routes
         const [facilityRes, financialRes] = await Promise.all([
           fetch("/api/facilities?limit=10000"),
@@ -34,12 +35,18 @@ export default function FinancialsPage() {
 
         if (facilityRes.ok) {
           const facilityData = await facilityRes.json();
+          console.log("Facilities loaded:", facilityData.facilities?.length);
           setFacilities(facilityData.facilities || []);
+        } else {
+          console.error("Failed to fetch facilities:", facilityRes.status);
         }
 
         if (financialRes.ok) {
           const financialData = await financialRes.json();
+          console.log("Financials loaded:", financialData.financials?.length);
           setFinancials(financialData.financials || []);
+        } else {
+          console.error("Failed to fetch financials:", financialRes.status);
         }
       } catch (err) {
         console.error("Error loading data:", err);
