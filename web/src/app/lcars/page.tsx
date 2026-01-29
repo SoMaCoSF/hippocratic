@@ -221,6 +221,7 @@ export default function LCARSAdmin() {
             {currentView === 'traffic' && <TrafficPanel trafficLog={trafficLog} />}
             {currentView === 'logs' && <LogsPanel logs={logs} logRef={logRef} />}
             {currentView === 'data' && <DataPanel dataRecords={dataRecords} selectedRecord={selectedRecord} setSelectedRecord={setSelectedRecord} />}
+            {currentView === 'fraud' && <FraudPanel />}
           </div>
 
           {/* Right Panel - Scrapers */}
@@ -308,6 +309,143 @@ function MetricCard({ label, value, color }: { label: string; value: string | nu
       <div className="text-xs font-bold opacity-75">{label}</div>
       <div className="text-2xl font-bold">{value}</div>
     </div>
+  );
+}
+
+function FraudPanel() {
+  const [fraudStats, setFraudStats] = useState<any>(null);
+  const [fraudAlerts, setFraudAlerts] = useState<any[]>([]);
+  const [selectedSeverity, setSelectedSeverity] = useState<string>('all');
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    fetchFraudStats();
+  }, []);
+  
+  const fetchFraudStats = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/api/fraud/stats');
+      const data = await response.json();
+      setFraudStats(data);
+      
+      const alertsResponse = await fetch('http://localhost:8000/api/fraud/alerts?limit=100');
+      const alertsData = await alertsResponse.json();
+      setFraudAlerts(alertsData.alerts || []);
+    } catch (error) {
+      console.error('Failed to fetch fraud stats:', error);
+    }
+  };
+  
+  const runAnalysis = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/fraud/analysis');
+      await response.json();
+      await fetchFraudStats();
+    } catch (error) {
+      console.error('Analysis failed:', error);
+    }
+    setLoading(false);
+  };
+  
+  const filteredAlerts = selectedSeverity === 'all' 
+    ? fraudAlerts 
+    : fraudAlerts.filter((a: any) => a.severity === selectedSeverity);
+  
+  return (
+    <>
+      <div className="bg-gray-700 text-white p-3 rounded-2xl font-bold text-lg">
+        FRAUD DETECTION ANALYSIS
+      </div>
+      <div className="flex-1 bg-zinc-950 rounded-2xl p-6 overflow-y-auto border-2 border-gray-700">
+        
+        {/* Control Panel */}
+        <div className="mb-6 flex gap-4">
+          <button
+            onClick={runAnalysis}
+            disabled={loading}
+            className="px-6 py-2 bg-green-700 hover:bg-green-600 text-white rounded-lg font-bold disabled:opacity-50"
+          >
+            {loading ? 'ANALYZING...' : 'RUN ANALYSIS'}
+          </button>
+          
+          <select
+            value={selectedSeverity}
+            onChange={(e) => setSelectedSeverity(e.target.value)}
+            className="px-4 py-2 bg-gray-800 text-white rounded-lg border border-gray-700"
+          >
+            <option value="all">ALL SEVERITIES</option>
+            <option value="high">HIGH</option>
+            <option value="medium">MEDIUM</option>
+            <option value="low">LOW</option>
+          </select>
+        </div>
+        
+        {/* Stats Grid */}
+        {fraudStats && (
+          <div className="grid grid-cols-4 gap-4 mb-6">
+            <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-green-500">
+              <div className="text-gray-400 text-sm">TOTAL FACILITIES</div>
+              <div className="text-white text-2xl font-bold">{fraudStats.dataset?.total_facilities?.toLocaleString() || 0}</div>
+            </div>
+            <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-red-500">
+              <div className="text-gray-400 text-sm">HIGH ALERTS</div>
+              <div className="text-red-400 text-2xl font-bold">{fraudStats.alert_counts?.high || 0}</div>
+            </div>
+            <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-yellow-500">
+              <div className="text-gray-400 text-sm">MEDIUM ALERTS</div>
+              <div className="text-yellow-400 text-2xl font-bold">{fraudStats.alert_counts?.medium || 0}</div>
+            </div>
+            <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500">
+              <div className="text-gray-400 text-sm">TOTAL REVENUE</div>
+              <div className="text-white text-2xl font-bold">
+                ${((fraudStats.dataset?.total_revenue || 0) / 1000000).toFixed(1)}M
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Alerts Table */}
+        <div className="bg-gray-800 rounded-lg p-4">
+          <h3 className="text-white font-bold mb-3">🚨 FRAUD ALERTS ({filteredAlerts.length})</h3>
+          <div className="space-y-2 max-h-96 overflow-y-auto">
+            {filteredAlerts.map((alert: any, idx: number) => (
+              <div 
+                key={idx}
+                className={`p-3 rounded border-l-4 ${
+                  alert.severity === 'high' ? 'bg-red-900/20 border-red-500' :
+                  alert.severity === 'medium' ? 'bg-yellow-900/20 border-yellow-500' :
+                  'bg-blue-900/20 border-blue-500'
+                }`}
+              >
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    <div className="text-white font-bold">{alert.facility_name}</div>
+                    <div className="text-gray-400 text-sm mt-1">{alert.description}</div>
+                    <div className="text-gray-500 text-xs mt-1">
+                      Type: {alert.alert_type} | Detected: {new Date(alert.detected_at).toLocaleString()}
+                    </div>
+                  </div>
+                  <div className={`px-3 py-1 rounded text-xs font-bold ${
+                    alert.severity === 'high' ? 'bg-red-600 text-white' :
+                    alert.severity === 'medium' ? 'bg-yellow-600 text-white' :
+                    'bg-blue-600 text-white'
+                  }`}>
+                    {alert.severity.toUpperCase()}
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            {filteredAlerts.length === 0 && (
+              <div className="text-center text-gray-500 py-8">
+                No fraud alerts found
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
