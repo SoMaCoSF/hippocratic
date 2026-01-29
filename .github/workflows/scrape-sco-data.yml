@@ -1,0 +1,56 @@
+name: Scrape State Controller Data
+
+on:
+  schedule:
+    # Run every Tuesday at 6 AM UTC
+    - cron: '0 6 * * 2'
+  workflow_dispatch:  # Allow manual triggering
+  
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install seleniumbase requests pandas openpyxl
+          
+      - name: Install Chrome for Selenium
+        run: |
+          sbase install chromedriver latest
+          
+      - name: Run SCO scraper
+        env:
+          USE_PROXY: ${{ secrets.USE_PROXY || 'false' }}
+          PROXY_URL: ${{ secrets.PROXY_URL }}
+        run: |
+          cd data_sources
+          python seleniumbase_scraper.py --headless --output ../data/budget/sco
+          
+      - name: Commit scraped data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add data/budget/sco/
+          git diff --staged --quiet || git commit -m "🤖 Auto-scraped SCO data - $(date +'%Y-%m-%d %H:%M UTC')"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

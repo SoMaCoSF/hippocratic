@@ -1,0 +1,55 @@
+name: Fetch API Data (data.ca.gov, CHHS, CMS)
+
+on:
+  schedule:
+    # Run every Wednesday at 6 AM UTC
+    - cron: '0 6 * * 3'
+  workflow_dispatch:  # Allow manual triggering
+  
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas openpyxl
+          
+      - name: Fetch data.ca.gov metadata
+        run: |
+          cd data_sources
+          python quick_fetch.py
+          
+      - name: Run ingestion pipeline
+        run: |
+          cd data_sources
+          python ingestion_pipeline.py --discover --download
+          
+      - name: Commit fetched data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add data/metadata/
+          git add data/raw/
+          git diff --staged --quiet || git commit -m "🤖 Auto-fetched API data - $(date +'%Y-%m-%d %H:%M UTC')"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

@@ -1,0 +1,17 @@
+# Proxy list for web scraping
+# Format: http://ip:port or http://username:password@ip:port
+# One proxy per line. Lines starting with # are comments.
+
+# Example free proxies (replace with your own):
+# http://8.219.97.248:80
+# http://20.111.54.16:80
+
+# Example paid proxy (BrightData, Oxylabs, etc):
+# http://brd-customer-USERNAME:PASSWORD@brd.superproxy.io:22225
+
+# For GitHub Actions, set these as repository secrets:
+# - USE_PROXY=true
+# - PROXY_URL=your_proxy_url_here
+
+# Leave this file empty to disable proxy rotation
+# The proxy_config.py will fall back to PROXY_URL env var

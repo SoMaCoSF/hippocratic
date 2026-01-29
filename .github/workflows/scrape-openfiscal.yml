@@ -1,0 +1,64 @@
+name: Scrape Open FI$Cal Data
+
+on:
+  schedule:
+    # Run every Monday at 6 AM UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:  # Allow manual triggering
+  
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install seleniumbase requests pandas openpyxl
+          
+      - name: Install Chrome for Selenium
+        run: |
+          sbase install chromedriver latest
+          
+      - name: Run Open FI$Cal scraper
+        env:
+          USE_PROXY: ${{ secrets.USE_PROXY || 'false' }}
+          PROXY_URL: ${{ secrets.PROXY_URL }}
+        run: |
+          cd data_sources
+          python scrape_openfiscal.py --headless --output ../data/budget/openfiscal
+          
+      - name: Commit scraped data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add data/budget/openfiscal/
+          git diff --staged --quiet || git commit -m "🤖 Auto-scraped Open FI$Cal data - $(date +'%Y-%m-%d %H:%M UTC')"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          
+      - name: Create ingestion log
+        if: always()
+        run: |
+          python data_sources/log_ingestion.py \
+            --source "Open FI$Cal Portal" \
+            --status "${{ job.status }}" \
+            --files "$(find data/budget/openfiscal -type f -name '*.csv' | wc -l)"
