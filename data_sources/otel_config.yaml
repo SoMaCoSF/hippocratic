@@ -1,0 +1,32 @@
+# OpenTelemetry Configuration for Hippocratic Scrapers
+# Copy to otel_config.local.yaml and customize
+
+# OpenTelemetry Collector endpoint
+# Install: docker run -p 4317:4317 -p 16686:16686 otel/opentelemetry-collector
+otel_endpoint: "http://localhost:4317"
+
+# Service identification
+service:
+  name: "hippocratic-scraper"
+  version: "1.0.0"
+  environment: "development"  # or "production"
+
+# Feature flags (all OFF by default)
+features:
+  strip_cookies: false  # Set to true to enable
+  randomize_fingerprint: false  # Set to true to enable
+  enable_otel: false  # Set to true to enable telemetry
+
+# Metrics export interval
+metrics:
+  export_interval_ms: 10000  # 10 seconds
+
+# Traces sampling
+traces:
+  sample_rate: 1.0  # 1.0 = 100% sampling
+
+# Example: Enable all features for testing
+# features:
+#   strip_cookies: true
+#   randomize_fingerprint: true
+#   enable_otel: true

@@ -60,16 +60,18 @@ class EthicalScraper:
         self.session = requests.Session()
         
         # Try to use privacy proxy adapter if available
+        # NOTE: Privacy features are OFF by default - must opt-in
         try:
             from privacy_proxy_adapter import GovernmentScraperHeaders
             self.headers_manager = GovernmentScraperHeaders(
                 contact_email='somacosf@gmail.com',
-                strip_cookies=True,
-                randomize_minor_fingerprint=True
+                strip_cookies=False,  # OFF by default
+                randomize_minor_fingerprint=False  # OFF by default
             )
-            logger.info("Privacy proxy adapter enabled")
+            logger.info("Privacy proxy adapter available (features disabled by default)")
         except ImportError:
             self.headers_manager = None
+            logger.info("Privacy proxy adapter not available - using basic headers")
             # Fallback to basic headers
             self.session.headers.update({
                 'User-Agent': self.user_agent,
